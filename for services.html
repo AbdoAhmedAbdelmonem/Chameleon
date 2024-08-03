@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header class="header">
+    <a href="#home" class="logo">CenLab<span>FCDS</span></a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="#services" class="active">services</a>
+    </nav>
+</header>
+
+<section class="services">
+    <h2 class="heading"> services for <span>Knowledge</span> </h2>
+
+    <div class="services-container">
+        <a href="Quiz.html" class="service-box">
+            <div  class="service-info">
+                <h4>Quizes</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore enim nemo quibusdam quo voluptate. Aliquam animi ea ex minus natus?
+                </p>
+            </div>
+         </a>
+
+        <div class="service-box">
+            <div class="service-info">
+                <h4>summaries</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore enim nemo quibusdam quo voluptate. Aliquam animi ea ex minus natus?
+                </p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-info">
+                <h4>Original Materials</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore enim nemo quibusdam quo voluptate. Aliquam animi ea ex minus natus?
+                </p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-info">
+                <h4>addition Knowledge</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore enim nemo quibusdam quo voluptate. Aliquam animi ea ex minus natus?
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('header nav a');
+
+    window.onscroll=()=>{
+        sections.forEach(sec => {
+            let top = window.scrollY;  // corrected to window.scrollY
+            let offset = sec.offsetTop - 150;
+            let height= sec.offsetHeight;
+            let id = sec.getAttribute('id'); // added to get section id
+            if(top >= offset && top < offset + height){ // corrected comparison operator
+                navLinks.forEach(links=>{
+                    links.classList.remove('active');
+                    document.querySelector('header nav a[href*='+id+']').classList.add('active')
+                })
+            }
+        })
+    }
+    menuIcon.onclick=()=>{
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

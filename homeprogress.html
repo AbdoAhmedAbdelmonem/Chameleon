@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz progress</title>
+    <style>
+        .quiz-section .result-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.9);
+            width: 500px;
+            background: transparent;
+            border: 2px solid #30cb0e;
+            border-radius: 6px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            pointer-events: none;
+            transition: 0.3s ease;
+
+        }
+
+        .quiz-section .result-box.active{
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%,-50%) scale(1);
+        }
+        .result-box h2{
+            font-size: 52px;
+        }
+        .result-box .percentage-container{
+            width: 300px;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0 40px;
+            display: flex;
+        }
+        .percentage-container .circular-progress{
+            position: relative;
+            width: 250px;
+            height: 250px;
+            align-items: center;
+            background: conic-gradient(#80e02c 3.6deg ,rgba(255,255,255,0.1) 0deg);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+        }
+        .percentage-container .circular-progress:before{
+            content: "";
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            background-color: rgb(13, 20, 24);
+            border-radius: 50%;
+        }
+        .circular-progress .progress-value{
+            position: relative;
+            font-size: 45px;
+            font-weight: 600;
+        }
+        .percentage-container .score-text{
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .buttons button{
+            width: 130px;
+            height: 47px;
+            background: #30cb0e;
+            border: 2px solid #80e02c;
+            outline: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+            margin: 0 20px 28px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .buttons button:nth-child(2){
+            background: transparent;
+            color: #80e02c;
+        }
+        .buttons button:nth-child(2):hover{
+            color: white;
+            background: #80e02c;
+        }
+        .buttons button:nth-child(1){
+            background: transparent;
+            color: #80e02c;
+        }
+        .buttons button:nth-child(1):hover {
+            color: white;
+            background: #80e02c;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-section">
+            <div class="result-box">
+                <h2>Quiz Result</h2>
+                <div class="percentage-container">
+                    <div class="circular-progress">
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <span class="score-text">Your score 0 out of 5</span>
+                </div>
+                <div class="buttons">
+                    <button class="tryagain-btn">try again</button>
+                    <button class="gohome-btn">Go to home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
