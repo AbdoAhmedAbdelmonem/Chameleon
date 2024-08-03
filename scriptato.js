@@ -6,7 +6,7 @@ const continueBtn = document.querySelector('.continue-btn');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
-const tryAgainBtn = document.querySelector('.tryagain-btn');
+
 
 startBtn.onclick = () => {
     popupInfo.classList.add('active');
@@ -28,18 +28,6 @@ continueBtn.onclick = () => {
     questionCounter(1);
     headerScore();
 }
-
-tryAgainBtn.onclick = () => {
-    quizBox.classList.add('active');
-    nextBtn.classList.remove('active');
-    resultBox.classList.remove('active');
-    questionCount = 0;
-    questionNumb = 1;
-    userScore = 0;
-    showQuestions(questionCounter);
-    questionCounter(questionNumb);
-    headerScore();
-};
 
 let questionCount = 0;
 let questionNumb = 1;
@@ -77,42 +65,47 @@ backBtn.onclick = () => {
 const optionList = document.querySelector('.option-list');
 
 function showQuestions(index) {
+    console.log('Showing question:', index); // Debug line
     const questionText = document.querySelector('.question-text');
-    questionText.textContent = `${question[index].numb} . ${question[index].question}`;
-    let optionTag = `<div class="option"><span>${question[index].options[0]}</span></div>
+    if (questionText) {
+        questionText.textContent = `${question[index].numb} . ${question[index].question}`;
+        let optionTag = `<div class="option"><span>${question[index].options[0]}</span></div>
 <div class="option"><span>${question[index].options[1]}</span></div>
 <div class="option"><span>${question[index].options[2]}</span></div>
 <div class="option"><span>${question[index].options[3]}</span></div>`;
-
-    optionList.innerHTML = optionTag;
-    const option = document.querySelectorAll('.option');
-    for (let i = 0; i < option.length; i++) {
-        option[i].setAttribute('onclick', 'optionSelected(this)')
-    }
-
-    // Disable options and mark answers if the question was already answered
-    if (answeredQuestions[index]) {
-        let correctAnswer = question[index].answer;
+        optionList.innerHTML = optionTag;
+        const option = document.querySelectorAll('.option');
         for (let i = 0; i < option.length; i++) {
-            option[i].classList.add('disabled');
-            if (option[i].textContent === correctAnswer) {
-                option[i].classList.add('correct');
-            } else {
-                if (answeredQuestions[index].userAnswer === option[i].textContent) {
-                    option[i].classList.add('incorrect');
+            option[i].setAttribute('onclick', 'optionSelected(this)')
+        }
+
+        // Disable options and mark answers if the question was already answered
+        if (answeredQuestions[index]) {
+            let correctAnswer = question[index].answer;
+            for (let i = 0; i < option.length; i++) {
+                option[i].classList.add('disabled');
+                if (option[i].textContent === correctAnswer) {
+                    option[i].classList.add('correct');
+                } else {
+                    if (answeredQuestions[index].userAnswer === option[i].textContent) {
+                        option[i].classList.add('incorrect');
+                    }
                 }
             }
+            nextBtn.classList.add('active');
+        } else {
+            for (let i = 0; i < option.length; i++) {
+                option[i].classList.remove('disabled');
+                option[i].classList.remove('correct');
+                option[i].classList.remove('incorrect');
+            }
+            nextBtn.classList.remove('active');
         }
-        nextBtn.classList.add('active');
     } else {
-        for (let i = 0; i < option.length; i++) {
-            option[i].classList.remove('disabled');
-            option[i].classList.remove('correct');
-            option[i].classList.remove('incorrect');
-        }
-        nextBtn.classList.remove('active');
+        console.error('Question text element not found.');
     }
 }
+
 
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
