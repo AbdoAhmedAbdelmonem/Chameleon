@@ -466,7 +466,7 @@ body{
     .popup-info {
         width: 90%;
         padding: 10px;
-        overflow: hidden;
+        overflow: auto;
 
     }
     .popup-info h2 {
@@ -479,14 +479,14 @@ body{
         width: 100px;
         height: 40px;
         font-size: 14px;
-        overflow: hidden;
+        overflow: auto;
 
     }
     .quiz-section .quiz-box,
     .quiz-section .result-box {
         width: 90%;
         padding: 15px;
-        overflow: hidden;
+        overflow: auto;
     }
     .quiz-box h1 {
         font-size: 24px;
@@ -514,13 +514,13 @@ body{
     .percentage-container .circular-progress {
         width: 200px;
         height: 200px;
-        overflow: hidden;
+        overflow: auto;
 
     }
     .percentage-container .circular-progress:before {
         width: 170px;
         height: 170px;
-        overflow: hidden;
+        overflow: auto;
 
     }
     .circular-progress .progress-value {
