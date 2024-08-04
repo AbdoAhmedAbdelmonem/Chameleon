@@ -9,7 +9,7 @@
 
 body{
     color: #fff;
-    background: #09001d;
+    background: #f5f5f5;
     overflow: hidden;
 }
 
@@ -19,7 +19,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px;
-    background:transparent;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ body{
     color: white;
     text-decoration: none;
     font-weight: 700;
-    filter: drop-shadow(0 0 5px #09001d);
+    filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
 }
 
 .navbar a{
@@ -45,8 +45,6 @@ body{
 
 .navbar a:hover{
     color: #ffc324;
-    box-shadow: 0 0 50px #ffffff;
-
 }
 .navbar a.active{
     border-bottom: 2px solid #b0cce0;
@@ -63,8 +61,8 @@ body{
 .main.active{
     filter: blur(15px);
     pointer-events: none;
-
 }
+
 .container{
     display: flex;
     height: 100vh;
@@ -79,10 +77,9 @@ body{
     background: rgb(13, 20, 24);
     justify-content: center;
     align-items: center;
-    z-index:100;
+    z-index: 100;
     transition: 0.8s ease-in-out;
     transition-delay: 0.25s;
-
 }
 
 .quiz-section.active{
@@ -108,12 +105,12 @@ body{
 .home-content h1{
     font-size: 78px;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(0 ,0 ,0 ,0.3);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .home-content p{
     font-size: 16px;
     text-align: center;
-    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 30px;
 }
 .home-content .start-btn{
@@ -129,14 +126,15 @@ body{
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
-    transition:0.5s ;
+    transition: 0.5s;
 }
 
 .home-content .start-btn:hover{
     background: #ffc234;
     box-shadow: 0 0 25px #ffc234,
-0 0 50px #ffc234;
+    0 0 50px #ffc234;
 }
+
 .popup-info{
     position: absolute;
     top: 50%;
@@ -176,6 +174,7 @@ body{
     margin-top: 10px;
     padding: 15px 0 7px;
 }
+
 .popup-info .btn-group .info-btn{
     display: inline-flex;
     justify-content: center;
@@ -190,7 +189,7 @@ body{
     font-size: 16px;
     color: #fff;
     font-weight: 600;
-    box-shadow: 0 0 10px rgba(0 ,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.5s;
 }
@@ -224,7 +223,7 @@ body{
     background: transparent;
     border: 2px solid #ffc234;
     border-radius: 6px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 20px 30px;
     opacity: 0;
@@ -243,7 +242,7 @@ body{
 .quiz-box h1{
     font-size: 32px;
     text-align: center;
-    background: linear-gradient(45deg,transparent, #ffc234, transparent);
+    background: linear-gradient(45deg, transparent, #ffc234, transparent);
     border-radius: 6px;
 }
 .quiz-box .quiz-header{
@@ -283,10 +282,10 @@ body{
 }
 
 .option-list .option:hover{
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.1);
-    box-shadow: 0 0 15px #ffffff,
-    0 0 20px #ffffff;
+    background: WHITE;
+    border-color: WHITE;
+    box-shadow: 0 0 15px WHITE,
+    0 0 20px WHITE;
 }
 
 .quiz-box .quiz-footer{
@@ -296,7 +295,6 @@ body{
     border-top: 2px solid #ffc234;
     padding-top: 20px;
     margin-top: 25px;
-
 }
 
 .quiz-footer .question-total{
@@ -304,7 +302,7 @@ body{
     font-weight: 600;
 }
 
-.quiz-footer .next-btn ,.quiz-footer .back-btn{
+.quiz-footer .next-btn, .quiz-footer .back-btn{
     width: 100px;
     height: 45px;
     background: rgb(255, 194, 52);
@@ -317,7 +315,7 @@ body{
     cursor: pointer;
     transition: 0.5s;
 }
-.quiz-footer .next-btn:hover ,.quiz-footer .back-btn:hover{
+.quiz-footer .next-btn:hover, .quiz-footer .back-btn:hover{
     background: #ffc234;
     border-color: #ffc234;
     box-shadow: 0 0 15px #ffc234,
@@ -353,7 +351,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
     width: 500px;
     background: transparent;
     border: 2px solid #ffc234;
@@ -365,13 +363,12 @@ body{
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
-
 }
 
 .quiz-section .result-box.active{
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 .result-box h2{
     font-size: 52px;
@@ -388,7 +385,7 @@ body{
     width: 250px;
     height: 250px;
     align-items: center;
-    background: conic-gradient(#ffc234 3.6deg ,rgba(255,255,255,0.1) 0deg);
+    background: conic-gradient(#ffc234 3.6deg, rgba(255, 255, 255, 0.1) 0deg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -411,7 +408,7 @@ body{
     font-weight: 600;
     margin-top: 20px;
 }
-.buttons button{
+.buttons .gohome-btn{
     width: 130px;
     height: 47px;
     background: #ffc234;
@@ -440,4 +437,92 @@ body{
 .buttons button:nth-child(1):hover{
     color: white;
     background: #ffc234;
+}
+
+/* Media Queries for Phones */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .navbar a {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    .home-content h1 {
+        font-size: 48px;
+    }
+    .home-content p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .home-content .start-btn {
+        width: 150px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .popup-info {
+        width: 90%;
+        padding: 10px;
+    }
+    .popup-info h2 {
+        font-size: 36px;
+    }
+    .popup-info .info {
+        font-size: 14px;
+    }
+    .popup-info .btn-group .info-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .quiz-section .quiz-box,
+    .quiz-section .result-box {
+        width: 90%;
+        padding: 15px;
+    }
+    .quiz-box h1 {
+        font-size: 24px;
+    }
+    .quiz-box .quiz-header span {
+        font-size: 14px;
+    }
+    .quiz-box .question-text {
+        font-size: 18px;
+    }
+    .option-list .option {
+        font-size: 14px;
+    }
+    .quiz-footer .question-total {
+        font-size: 14px;
+    }
+    .quiz-footer .next-btn, .quiz-footer .back-btn {
+        width: 80px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .result-box h2 {
+        font-size: 36px;
+    }
+    .percentage-container .circular-progress {
+        width: 200px;
+        height: 200px;
+    }
+    .percentage-container .circular-progress:before {
+        width: 170px;
+        height: 170px;
+    }
+    .circular-progress .progress-value {
+        font-size: 36px;
+    }
+    .percentage-container .score-text {
+        font-size: 20px;
+    }
+    .buttons .gohome-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
 }
