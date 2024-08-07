@@ -108,14 +108,9 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.home-content h1{
-    font-size: 78px;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 .home-content img{
     width: 650px;
-    padding: 20px;
+
     margin-top: -20px;
     justify-content: center;
     justify-items: center;
@@ -551,5 +546,13 @@ body{
         width: 100px;
         height: 40px;
         font-size: 14px;
+    }
+    .home-content img{
+        width: 300px;
+        margin-top: -20px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
     }
 }
