@@ -369,12 +369,12 @@ span{
     padding: 5rem 5rem;
 }
 .service-info h4{
-    font-size: 5.78rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 2;
 }
 .service-info p{
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     max-height: 100px;
     line-height: 1.7;
@@ -519,6 +519,18 @@ span{
         align-items: center;
         gap: 2.5rem;
     }
+    .service-info h4{
+        font-size: 5rem;
+        font-weight: 800;
+        line-height: 2;
+    }
+    .service-info p{
+        font-size: 2.25rem;
+        font-weight: 600;
+        max-height: 100px;
+        line-height: 1.7;
+        margin: auto;
+    }
 }
 @media (max-width: 895px) {
     #menu-icon{
@@ -637,5 +649,17 @@ span{
         align-items: center;
         gap: 2.5rem;
         margin-bottom: 20px;
+    }
+    .service-info h4{
+        font-size: 5rem;
+        font-weight: 800;
+        line-height: 2;
+    }
+    .service-info p{
+        font-size: 2.25rem;
+        font-weight: 600;
+        max-height: 100px;
+        line-height: 1.7;
+        margin: auto;
     }
 }
