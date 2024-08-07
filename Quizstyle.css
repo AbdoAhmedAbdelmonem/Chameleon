@@ -36,7 +36,10 @@ body{
     font-weight: 700;
     filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
 }
-
+.logo .img{
+    margin-right: -30px;
+    height: 40px;
+}
 .navbar a{
     font-size: 18px;
     color: white;
@@ -109,6 +112,15 @@ body{
     font-size: 78px;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.home-content img{
+    width: 650px;
+    padding: 20px;
+    margin-top: -20px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 .home-content p{
     font-size: 16px;
