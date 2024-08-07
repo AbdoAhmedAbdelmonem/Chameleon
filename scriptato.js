@@ -6,6 +6,11 @@ const continueBtn = document.querySelector('.continue-btn');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
+const home = document.querySelector('.gohome-btn');
+
+home.onclick = ()=>{
+    window.location.href = 'index.html';
+}
 
 
 startBtn.onclick = () => {
