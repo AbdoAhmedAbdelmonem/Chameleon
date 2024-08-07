@@ -6,6 +6,9 @@
     font-family: "Arial Rounded MT Bold", sans-serif;
     box-sizing: border-box;
 }
+html{
+    overflow: hidden;
+}
 
 body{
     color: #fff;
@@ -441,6 +444,9 @@ body{
 
 /* Media Queries for Phones */
 @media (max-width: 768px) {
+    body,html{
+        overflow: hidden;
+    }
     .header {
         padding: 10px;
     }
@@ -466,6 +472,8 @@ body{
     .popup-info {
         width: 90%;
         padding: 10px;
+        overflow: auto;
+
     }
     .popup-info h2 {
         font-size: 36px;
@@ -477,11 +485,14 @@ body{
         width: 100px;
         height: 40px;
         font-size: 14px;
+        overflow: auto;
+
     }
     .quiz-section .quiz-box,
     .quiz-section .result-box {
         width: 90%;
         padding: 15px;
+        overflow: auto;
     }
     .quiz-box h1 {
         font-size: 24px;
@@ -509,10 +520,14 @@ body{
     .percentage-container .circular-progress {
         width: 200px;
         height: 200px;
+        overflow: auto;
+
     }
     .percentage-container .circular-progress:before {
         width: 170px;
         height: 170px;
+        overflow: auto;
+
     }
     .circular-progress .progress-value {
         font-size: 36px;
@@ -524,9 +539,5 @@ body{
         width: 100px;
         height: 40px;
         font-size: 14px;
-    }
-    .quiz-box{
-        overflow: hidden;
-        display: block;
     }
 }
