@@ -109,8 +109,8 @@ body{
     flex-direction: column;
 }
 .home-content img{
-    width: 650px;
-
+    width: 450px;
+    padding: 20px;
     margin-top: -20px;
     justify-content: center;
     justify-items: center;
@@ -548,7 +548,8 @@ body{
         font-size: 14px;
     }
     .home-content img{
-        width: 320px;
+        width: 300px;
+
         margin-top: -20px;
         justify-content: center;
         justify-items: center;
