@@ -7,11 +7,21 @@ const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
 const home = document.querySelector('.gohome-btn');
+const about = document.querySelector('.popo');
+const popup2 = document.querySelector('.popup2');
+const ok = document.querySelector('.info-ok-btn');
 
 home.onclick = ()=>{
     window.location.href = 'index.html';
 }
-
+about.onclick=()=>{
+    popup2.classList.add('active');
+    main.classList.add('active');
+};
+ok.onclick=()=>{
+    popup2.classList.remove('active');
+    main.classList.remove('active');
+};
 
 startBtn.onclick = () => {
     popupInfo.classList.add('active');
