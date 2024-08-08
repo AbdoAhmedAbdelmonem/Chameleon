@@ -145,7 +145,7 @@ body{
     0 0 50px #ffc234;
 }
 
-.popup-info{
+.popup-info , .popup2{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -159,16 +159,16 @@ body{
     transition: 0.3s ease;
 }
 
-.popup-info.active{
+.popup-info.active , .popup2.active{
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
-.popup-info h2{
+.popup-info h2 , .popup2 h2{
     font-size: 50px;
     color: #37a2d0;
 }
-.popup-info .info{
+.popup-info .info , .popup2 .gran{
     display: inline-block;
     font-size: 16px;
     color: #000000;
@@ -176,7 +176,7 @@ body{
     margin: 4px 0;
 }
 
-.popup-info .btn-group{
+.popup-info .btn-group , .popup2 .btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -185,7 +185,7 @@ body{
     padding: 15px 0 7px;
 }
 
-.popup-info .btn-group .info-btn{
+.popup-info .btn-group .info-btn , .popup2 .btn .info-ok-btn{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -203,8 +203,12 @@ body{
     cursor: pointer;
     transition: 0.5s;
 }
+.popup2 .btn {
+    display: flex;
+    justify-content: center;
+}
 
-.popup-info .btn-group .info-btn:nth-child(1){
+.popup-info .btn-group .info-btn:nth-child(1) {
     background: transparent;
     color: #ff0000;
     border: 2px solid #da0707;
@@ -256,8 +260,9 @@ body{
     width: 160px;
     font-size: 32px;
     text-align: center;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-contentb: center;
     background: linear-gradient(45deg, #da0707, #15325d,  #30cb0e);
     border-radius: 6px;
 }
