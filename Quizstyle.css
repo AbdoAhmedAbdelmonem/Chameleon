@@ -492,19 +492,19 @@ body{
         height: 45px;
         font-size: 16px;
     }
-    .popup-info {
+    .popup-info , .popup2{
         width: 90%;
         padding: 10px;
         overflow: auto;
 
     }
-    .popup-info h2 {
+    .popup-info h2 , .popup2 h2{
         font-size: 36px;
     }
-    .popup-info .info {
+    .popup-info .info , .popup2 .gran {
         font-size: 14px;
     }
-    .popup-info .btn-group .info-btn {
+    .popup-info .btn-group .info-btn , .popup2 .btn .info-ok-btn{
         width: 100px;
         height: 40px;
         font-size: 14px;
