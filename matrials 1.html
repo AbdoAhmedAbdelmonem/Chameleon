@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<style>
+    * , body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial Rounded MT Bold', sans-serif;
+    }
+    section {
+        position: relative;
+        background: url("../MDA/panda.jpg") no-repeat fixed center;
+        background-size: cover;
+        min-height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        backdrop-filter: blur(30px);
+        padding-top: 100px; /* Ensure this is needed */
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo{
+        font-size: 32px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
+        background: transparent;
+    }
+    .logo .img{
+        margin-right: 30px;
+        height: 60px;
+        padding-left: 20px;
+        background: transparent;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+        color: #37a2d0;
+    }
+
+    .box{
+        position: relative;
+        min-width: 350px;
+        min-height: 400px;
+        background-color: rgba(255,255,255,0.1);
+        box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+        border-right:1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-radius: 10px;
+        z-index: 10;
+        backdrop-filter: blur(100px);
+    }
+    .box .imgBx1, .box .imgBx2, .box .imgBx3, .box .imgBx4, .box .imgBx5 , .box .imgBx6,.box .imgBx7 {
+        position: relative;
+        min-width: 70px;
+        min-height: 30px;
+        border-radius: 6px;
+        padding: 19px;
+        margin-right: 12px;
+        color: black;
+        justify-content: center;
+        display: flex;
+        font-family: 'Poppins' , sans-serif;
+        font-size: 30px;
+    }
+    .box .imgBx1 {
+        background: yellow;
+    }
+    .box .imgBx2 {
+        background: #37a2d0;
+    }
+    .box .imgBx3 {
+        background: #30cb0e;
+    }
+    .box .imgBx4 {
+        background: #da0707;
+    }
+    .box .imgBx5 {
+        background: orange;
+    }
+    .box .imgBx6 {
+        background: #a207ff;
+    }
+    .box .imgBx7 {
+        background: #ff4d00;
+    }
+    .box a {
+        text-decoration: none;
+    }
+    .box .list {
+        padding: 20px;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        background: rgba(0,0,0,0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+        color: white;
+    }
+    .box .list:hover {
+        background: white;
+        color: black;
+        transform: scale(1.2);
+    }
+    .list .content h3{
+        background: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 2px solid white;
+    }
+    .list .content p {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+    @media (max-width: 768px) {
+        section{
+            background: url("../MDA/portaple.jpg") no-repeat;
+            background-size:cover ;
+        }
+        .box{
+            position: relative;
+            min-width: 250px;
+            min-height: 300px;
+            background-color: rgba(255,255,255,0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+            border-right:1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            z-index: 10;
+            backdrop-filter: blur(100px);
+        }
+    }
+</style>
+<body>
+<main class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../MDA/panda2.png" class="img" width="150" height="102" alt="">
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <section>
+        <div class="box">
+            <a href="prog1.html"><div class="list">
+                <div class="imgBx1"><b>PR</b></div>
+                <div class="content">
+                    <h3>Programming 1</h3>
+                    <p>Java typically covers the basics of Java<br>
+                        syntax, object-oriented principles, and foundational<br>
+                        programming concepts like variables and simple algorithms.</p>
+                </div>
+            </div></a>
+            <a href="linear.html"><div class="list">
+                <div class="imgBx2"><b>LA</b></div>
+                <div class="content">
+                    <h3>Linear Algebra</h3>
+                    <p>involves the study of vectors and matrices,<br>
+                        focusing on operations such as addition and multiplication <br>
+                        and their applications in systems of linear equations.</p>
+                </div>
+            </div></a>
+            <a href="calc.html"><div class="list">
+                <div class="imgBx3"><b>CA</b></div>
+                <div class="content">
+                    <h3>Calculus</h3>
+                    <p>the mathematical study of continuous change, <br>
+                        focusing on concepts such as derivatives, integrals,<br>
+                        limits, analyze and model dynamic systems.</p>
+                </div>
+            </div></a>
+            <a href="prop1.html"><div class="list">
+                <div class="imgBx4"><b>PT</b></div>
+                <div class="content">
+                    <h3>Probability 1</h3>
+                    <p>introduces the foundational concepts of probability <br>
+                        theory, including basic probability rules, random<br>
+                        variables, distributions, expectation, and variance.</p>
+                </div>
+            </div></a>
+            <a href="cs.html"><div class="list">
+                <div class="imgBx5"><b>CS</b></div>
+                <div class="content">
+                    <h3>Introduction to CS</h3>
+                    <p>"Intro to Computer Systems" explores computer hardware, <br>
+                        software interactions, and data representation basics <br>
+                        and system performance </p>
+                </div>
+            </div></a>
+            <a href="math0.html"><div class="list">
+                <div class="imgBx6"><b>M0</b></div>
+                <div class="content">
+                    <h3>Math 0</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit.
+                        Accusamus alias cum deleniti doloremque dolores,.</p>
+                </div>
+            </div></a>
+            <a href="crit.html"><div class="list">
+                <div class="imgBx7"><b>CT</b></div>
+                <div class="content">
+                    <h3>Critical Thinking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit.
+                        Accusamus alias cum deleniti doloremque dolores,.</p>
+                </div>
+            </div></a>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<style>
+    * , body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial Rounded MT Bold', sans-serif;
+    }
+
+    section {
+        position: relative;
+        background: url("../MDA/mat1.jpg") no-repeat center;
+        background-size: cover;
+        min-height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* Stack heading and boxes vertically */
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(30px);
+        padding: 2rem; /* Add padding for spacing */
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 32px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
+        background: transparent;
+    }
+
+    .logo .img {
+        margin-right: 30px;
+        height: 60px;
+        padding-left: 20px;
+        background: transparent;
+    }
+
+    /* Navigation styling */
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #37a2d0;
+    }
+
+    .services h2 {
+        color: white;
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 2rem; /* Add space between heading and boxes */
+    }
+    .heading span{
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: 'Poppins' ,sans-serif;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+        width: 100%;
+        max-width: 1200px; /* Constrain the width of the container */
+    }
+
+    .services-container a {
+        color: black;
+    }
+
+    .service-box {
+        background-color: #37a2d0;
+        height: 200px;
+        border-radius: 15px;
+        border: 4px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-box:hover {
+        background: white;
+        color: black;
+        border: 4px solid #000000;
+        transform: scale(1.05);
+    }
+
+    .service-info {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .service-info h4 {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.5;
+    }
+
+    .service-info p {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        section{
+            background: url("../MDA/mat2.jpg") no-repeat center fixed;
+        }
+        .services-container {
+            grid-template-columns: 1fr; /* Stack boxes vertically on mobile */
+        }
+
+        .service-box {
+            height: auto; /* Let the height adjust based on content */
+        }
+        .service-box , .services-container a{
+            background-color: #643e31;
+            color: white;
+            border-color: white;
+        }
+    }
+</style>
+<body>
+<header class="header">
+    <a href="#" class="logo">
+        <img src="../cenlab_new/MDA/panda2.png" class="img">
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+<section class="services">
+    <h2 class="heading">services for <br><span>Programming 2</span></h2>
+
+    <div class="services-container">
+        <a href="temp1.html" class="service-box">
+            <div class="service-info">
+                <h4>Quizzes</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </a>
+
+        <a class="service-box" href="temp1.html">
+            <div class="service-info">
+                <h4>Summaries</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </a>
+
+        <a class="service-box" href="temp1.html">
+            <div class="service-info">
+                <h4>Original Materials</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </a>
+
+        <a class="service-box" href="temp1.html">
+            <div class="service-info">
+                <h4>Videos and Tutorials</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </a>
+    </div>
+</section>
+</body>
+</html>
