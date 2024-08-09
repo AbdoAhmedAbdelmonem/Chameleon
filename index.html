@@ -16,7 +16,7 @@
             <a href="#home" class="active">home</a>
             <a href="#education">Materials</a>
             <a href="#contact">contact</a>
-            <a href="#hello">hello</a>
+            <a href="#user settings" class="user">User Settings</a>
         </nav>
     </header>
     <section class="home" id="home">
@@ -32,13 +32,13 @@
                 voluptatum?
             </p>
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#" class="linkedin"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" class="github"><i class='bx bxl-github' ></i></a>
+                <a href="#" class="instagram"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#" class="twitter"><i class='bx bxl-twitter' ></i></a>
             </div>
             <div class="btn-group">
-                <a href="#" class="btn">hire</a>
+                <a href="#" class="btn">What's new</a>
                 <a href="#contact" class="btn">contact</a>
             </div>
         </div>
@@ -50,15 +50,13 @@
         <h2 class="heading">Materials</h2>
         <div class="timeline-items">
             <div class="timeline-dot"></div>
-                <div class="timeline-date">1</div>
-            <a href="for services.html">
+                <div class="timeline-date">Year #1</div>
+            <a href="matrials 1.html">
                 <div class="timeline-content">
-                    <h3>introduction to data base</h3>
+                    <h3>First term</h3>
                     <p>
-                        Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Error,
-                        explicabo fugiat fugit hic in molestiae mollitia
-                        necessitatibus quos repudiandae voluptatibus.
+                        available Materials :<br>
+                        programming 1 , Calculus , Linear Algebra , probability 1 , Intro to CS , Math 0 , Critical Thinking
                     </p>
                 </div>
             </a>
@@ -67,16 +65,13 @@
 
         <div class="timeline-items">
             <div class="timeline-dot"></div>
-                <div class="timeline-date">2
-                </div>
-            <a href="for services.html">
+                <div class="timeline-date">Year #1</div>
+            <a href="matrials 2.html">
                 <div class="timeline-content">
-                    <h3>Knowledge</h3>
+                    <h3>Second Level</h3>
                     <p>
-                        Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Error,
-                        explicabo fugiat fugit hic in molestiae mollitia
-                        necessitatibus quos repudiandae voluptatibus.
+                        available Materials :<br>
+                        programming 2 , Advanced Calculus , Intro to DS , Intro to Ai , Discrete Math , Innovation
                     </p>
                 </div>
             </a>
@@ -85,10 +80,10 @@
 
         <div class="timeline-items">
             <div class="timeline-dot"></div>
-                <div class="timeline-date">3</div>
+                <div class="timeline-date">Year #2</div>
                 <a href="for services.html">
                     <div class="timeline-content">
-                        <h3>Probability ||</h3>
+                        <h3>First term</h3>
                         <p>
                             Lorem ipsum dolor sit amet,
                             consectetur adipisicing elit. Error,
@@ -101,11 +96,10 @@
 
         <div class="timeline-items">
             <div class="timeline-dot"></div>
-                <div class="timeline-date">Data Science
-                </div>
+                <div class="timeline-date">Year #2</div>
                 <a href="for services.html">
                     <div class="timeline-content">
-                        <h3>Numerical theory</h3>
+                        <h3>Second Term</h3>
                         <p>
                             Lorem ipsum dolor sit amet,
                             consectetur adipisicing elit. Error,
@@ -122,12 +116,12 @@
         <form action="">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="full name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" id="fullName" placeholder="full name">
+                    <input type="email" id="email" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <input type="text" placeholder="Phone Number" maxlength="11" minlength="11">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Phone Number" id="phone" cmaxlength="11" minlength="11">
+                    <input type="text" id="subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
@@ -164,5 +158,35 @@
         </p>
     </footer>
     <script src="script.js"></script>
+    <script src="loginsign.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            var googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdOKIPuhZKYQ1Sz8VtL6WnF1QXMR9YHavSWFgCKXDItmd2pAA/formResponse"; // Replace with your expanded URL
+            var formData = new FormData();
+            formData.append("entry.1410524725", fullName);
+            formData.append("entry.180283924", email);
+            formData.append("entry.998231608", phone);
+            formData.append("entry.4567890123", subject);
+            formData.append("entry.1286664585", message);
+
+            fetch(googleFormUrl, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            }).then(function(response) {
+                alert("Message sent successfully!");
+            }).catch(function(error) {
+                alert("There was a problem sending your message.");
+            });
+        });
+    </script>
 </body>
 </html>
