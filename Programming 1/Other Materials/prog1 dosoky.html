@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+    <title>Programming1 by Eldesoky</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: 'Poppins' ,sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+<div class="container">
+    <header>
+        <img src="../../../MDA/panda2.png" class="logo">
+        <nav>
+            <a href="../prog1.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+        <hr>
+
+    <h1>ElDesoky's Videos</h1>
+        <hr>
+
+    <div class="pdf-list">
+        <a href="https://youtu.be/FbviMTJ_vP8?si=PIkKFnh1gxJgejFc" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>00 - Java Programming for Beginners - Introduction</span>
+        </a>
+        <a href="https://youtu.be/KYhy6Q914C0?si=uwvrm4Wgcv_PX7Fu" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>01 - Java Programming for Beginners - What is programming ?</span>
+        </a>
+        <a href="https://youtu.be/dfOe9XIj6EY?si=05YOU9MnCR6BPlTJ" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>02 - Java Programming for Beginners - How to Install Java ?</span>
+        </a>
+        <a href="https://youtu.be/pleAjW8KJrg?si=Oxm0CJroKBxrWTTo" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>03 - Java Programming for Beginners - Your First Program In java</span>
+        </a>
+        <a href="https://youtu.be/0uU-DwqpY74?si=VKXiijtOb4_G9kO3" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>04 - Java Programming for Beginners - Displaying Program Output</span>
+        </a>
+        <a href="https://youtu.be/0Nb4wHNj5bE?si=WwLCW26NbJcFHT-b" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>05 - Java Programming for Beginners - Input and Variables - Part 1</span>
+        </a>
+        <a href="https://youtu.be/IUu7_6pecHQ?si=4Hmvs8Zfu1ACABh8" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>06 - Java Programming for Beginners - Input and Variables - Part 2</span>
+        </a>
+        <a href="https://youtu.be/eAVLutX8bL0?si=afXCAG9LHxo-Hr5N" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>07 - Java Programming for Beginners -Arithmetic Operators - Part 1</span>
+        </a>
+        <a href="https://youtu.be/xHdc_z4vTlg?si=jID2B3ogRvo3oKMO" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>08 - Java Programming for Beginners -Arithmetic Operators - Part 2</span>
+        </a>
+        <a href="https://youtu.be/FG7-8gAJ-5k?si=6gN135ntDvEGkclz" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>09 - Java Programming for Beginners - IF statement - Part 1</span>
+        </a>
+        <a href="https://youtu.be/igBAvIb8kVA?si=Vv9zJYk59FpXxXWx" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>10 - Java Programming for Beginners - IF statement - Part 2</span>
+        </a>
+        <a href="https://youtu.be/B_hJVREXkxo?si=2FAwr3DN3wZK_kSw" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>11 - Java Programming for Beginners - Switch statement - Part 1</span>
+        </a>
+        <a href="https://youtu.be/usiSqquehcs?si=e77RHhNDTz5o6OA5" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>12 - Java Programming for Beginners - Switch statement - Part 2</span>
+        </a>
+        <a href="https://youtu.be/4HOpxzgyNoo?si=rqZrEVucQarL-Pa0" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>13 - Java Programming for Beginners - While Loop Statement</span>
+        </a>
+        <a href="https://youtu.be/MI3RMJ07zdU?si=fuYseTyH8UEzUtAn" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>13.1 - Java Programming for Beginners - Flag Controlled While Loop</span>
+        </a>
+        <a href="https://youtu.be/uu3ezsqDI5g?si=RVA9qrHJkOCAehpD" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>13.2 - Java Programming for Beginners - Flag Controlled While Loop</span>
+        </a>
+        <a href="https://youtu.be/qvs_hmpMsmQ?si=3kGoJZeaXw8H2djH" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>14 - Java Programming for Beginners - Do While Loop Statement</span>
+        </a>
+        <a href="https://youtu.be/V4W5vNAP-t0?si=MqmO0K4slVumbkgU" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>15 - Java Programming for Beginners - For Loop Statement</span>
+        </a>
+        <a href="https://youtu.be/J_-M2HuO8Ng?si=JK0iGoMXzRcX6tWT" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>16 - Java Programming for Beginners - Break and Continue statements</span>
+        </a>
+        <a href="https://youtu.be/KNJZqS6IwaU?si=F2dvrUtKWkNlfHyb" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>17 - Java Programming for Beginners - Revision on Loops and Conditional Statements</span>
+        </a>
+        <a href="https://youtu.be/GDb7diTDq9I?si=fTDRCX14mAjazJWV" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>18 - Java Programming for Beginners - Introduction To Methods</span>
+        </a>
+        <a href="https://youtu.be/up20my-_yCY?si=lsApFXzf6mllQGmP" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>19 - Java Programming for Beginners - Methods With Parameters</span>
+        </a>
+        <a href="https://youtu.be/joiBD693gLc?si=FujjnfoKJWr5q8Ol" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>20 - Java Programming for Beginners - Methods and Variable Scope</span>
+        </a>
+        <a href="https://youtu.be/n5pcp_WOMWY?si=mPbmxeqK7ygdgbzp" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>21 - Java Programming for Beginners - Methods Overloading</span>
+        </a>
+    </div>
+            <hr>
+
+</div>
+</div>
+<div class="popup2">
+    <h2>Mohammed Eldesouky</h2>
+    <span class="gran">This tutorial is prepared for beginners who need to learn java programming language or even for who need to start understanding the programming basic concepts. 
+It is delivered in Arabic to come over the language barrier and to concentrate on Understanding the idea behind any programming concept.
+    <br> page code : #2191535920</span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

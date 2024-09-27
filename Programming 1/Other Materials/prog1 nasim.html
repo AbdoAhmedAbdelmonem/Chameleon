@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming1 by Adel Nasim</title>
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: 'Poppins' ,sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+<div class="container">
+    <header>
+        <img src="../../../MDA/panda2.png" class="logo">
+        <nav>
+            <a href="../prog1.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+        <hr>
+
+    <h1>Videos and Tutorials(Adel Nasim)</h1>
+        <hr>
+
+    <div class="pdf-list">
+        <a href="https://youtu.be/mNvJipMTKSM?si=tZg9BF9I9LZrnIZH" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#00 [JAVA] - Introduction</span>
+        </a>
+        <a href="https://youtu.be/wJKgqYj4mtU?si=LsdMxION9JwyFwE6" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#01 [JAVA] - Installing the Java Development Tools (JDK,  Apache NetBeans IDE)</span>
+        </a>
+        <a href="https://youtu.be/vtHwpyk5v08?si=1EtWME7B-8aL0PFM" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#02 [JAVA] - Escape Sequences and Comments</span>
+        </a>
+        <a href="https://youtu.be/mY8yxPP9_AE?si=uRZz5wd5ubiQ4lab" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#03 [JAVA] - Data Types</span>
+        </a>
+        <a href="https://youtu.be/r-msBvRW56g?si=50CXx6SzV_EzNg4r" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#04 [JAVA] - Arithmetic Operators</span>
+        </a>
+        <a href="https://youtu.be/XN2nusxpvPE?si=5RhBlrBwlptpYlCO" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#05 [JAVA] - Arithmetic Operators (Prefix & Postfix)</span>
+        </a>
+        <a href="https://youtu.be/kilmBWdI0NE?si=DrxmrnsRPqg3poMc" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#06 [JAVA] - Java User Input (Scanner), Printf methods</span>
+        </a>
+        <a href="https://youtu.be/EDhPw1OI-KY?si=CPDRh14C3iEKiSwK" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#07 [JAVA] - Selection Statement ( if - if else - if else if )</span>
+        </a>
+        <a href="https://youtu.be/SNJFgGXmmRQ?si=sXN88FmfRXON3BPB" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#08 [JAVA] - Selection Statement ( Exercises, Practice, Ternary Operator ), Instanceof Method</span>
+        </a>
+        <a href="https://youtu.be/x-NRDz7RvtU?si=ouZDmtpRT3et-cj2" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#09 [JAVA] - Selection Statement (Switch Statements)</span>
+        </a>
+        <a href="https://youtu.be/YECkwn988-Q?si=qqsHyRLpKJf2g8ub" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#010 [JAVA] - Repetition Control Statement (While Loop)</span>
+        </a>
+        <a href="https://youtu.be/cUehdvQTH6c?si=Slvy_ReqtZ6_P7wQ" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#011 [JAVA] - Sentinel and Flag-Controlled While Loops</span>
+        </a>
+        <a href="https://youtu.be/ZRRCM0HvIn4?si=ffLEbR-a3i4KMQ7m" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#012 [JAVA] - Repetition Control Statement (Do-While Loop)</span>
+        </a>
+        <a href="https://youtu.be/BnTI67QhuuU?si=ZrpkKhJGqgK7SeLf" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#013 [JAVA] - Repetition Control Statement (For Loop)</span>
+        </a>
+        <a href="https://youtu.be/WSf_V9s_Cf4?si=1d7EygsXp4OzArh9" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#014 [JAVA] - Questions and Exercises in Loops</span>
+        </a>
+        <a href="https://youtu.be/tFkMZFSruhI?si=GuapWCvbFKQfwymA" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#015 [JAVA] - Branching Statements ( Break/Continue )</span>
+        </a>
+        <a href="https://youtu.be/b8EO1O6XDKM?si=6AiunAzcTBhhtVtZ" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#016 [JAVA] - Repetition Control Statement (Nested Loops)</span>
+        </a>
+        <a href="https://youtu.be/HqCSeKHXrhQ?si=-s-2imS3OWY3Jy7e" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#017 [JAVA] - Branching Statements (Labeled Break / Labeled Continue)</span>
+        </a>
+        <a href="https://youtu.be/izzJtoZnbHY?si=OYUZqDnF_suf-GF3" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#018 [JAVA] - Method / Function Part 1</span>
+        </a>
+        <a href="https://youtu.be/UJ-MVRviD28?si=6VwtLDC7DSGi6R5s" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#019 [JAVA] - Method / Function Part 2 (Examples)</span>
+        </a>
+        <a href="https://youtu.be/Gxb4oZ5XIkY?si=50Y_MN4E6miCiAHG" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#020 [JAVA] - Built in Method / Function</span>
+        </a>
+        <a href="https://youtu.be/kTqAyh8rjCM?si=t38E12n8SfTAUNCq" class="pdf-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+            <span>#021 [JAVA] - Overloading Method / Function</span>
+        </a>
+    </div>
+            <hr>
+
+</div>
+    <div class="popup2">
+        <h2>Adel Nasim</h2>
+        <span class="gran"> Java programming course for beginners in Arabic:
+            What is a programming language, why do we use it, and what are its applications in real life.
+            <br> page code : #9337566753
+</span>
+        <div class="btn">
+            <button class="info-ok-btn">OK</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</html>
