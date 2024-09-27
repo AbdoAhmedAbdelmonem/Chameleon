@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+    <title>Linear Videos</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: 'Poppins' ,sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../linear.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>Linear Algebra Videos by (Eng/Anas Abu Zahra)</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://youtu.be/LSOObL2qTxY?si=GdayygzgphCoauQP" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Linear Algebra - Introduction to linear systems</span>
+            </a>
+            <a href="https://youtu.be/siOiin3BcI8?si=NPYaM4yHMqb9LJBg" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Linear Algebra - Elementry Row Operations</span>
+            </a>
+            <a href="https://youtu.be/HnTL8h8Q4f0?si=pUyidS97_HAYRJTG" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Linear Algebra - Gaussian Elemination</span>
+            </a>
+            <a href="https://youtu.be/YYD94MmPoyw?si=4nuzSXMy5a348MYu" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Linear Algebra - Homogeneous Linear System</span>
+            </a>
+            <a href="https://youtu.be/XVny91HGaqs?si=-0Cb9zia2MrzASSw" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Basics Of Matrices</span>
+            </a>
+            <a href="https://youtu.be/4_P14b0WN7w?si=LWmNeGC9doG7SFmm" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Linear Algebra - Matrices</span>
+            </a>
+            <a href="https://youtu.be/WKZSyQ6ACnM?si=Azv_levi97Fo25ZK" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Diagonal ,Triangular and Symmetric Matrices</span>
+            </a>
+            <a href="https://youtu.be/cNfI-fpPyWw?si=n-96fFhFJKxJCYvA" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Linear Algebra - Chapter 2 : Determinants</span>
+            </a>
+            <a href="https://youtu.be/D4Es8Xfkofc?si=R-ZSRr7l61A2hInV" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-1 : Real Vector Space Part 1</span>
+            </a>
+            <a href="https://youtu.be/fTntu2LtggE?si=r9vAS9JkbQvUb0P0" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-1 : Real Vector Space Part 2</span>
+            </a>
+            <a href="https://youtu.be/SlPl7AXkH94?si=Lg5xaJo002b1CW4e" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-2 : Subspace Part 1</span>
+            </a>
+            <a href="https://youtu.be/UPwTF07otNI?si=vqdRSfZ2X-6ru-Yu" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-2 : Subspace Part 2</span>
+            </a>
+            <a href="https://youtu.be/WGqR-E2qOPo?si=x06wdH3i9OQ7fq18" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-2 : Subspace Part 3</span>
+            </a>
+            <a href="https://youtu.be/9oDs9XU0Fvs?si=QjxlQwijnx_9opIQ" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-3 : Linear Independence</span>
+            </a>
+            <a href="https://youtu.be/QhsPACDn9HU?si=pCBTmP85Jeju7DbU" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-4 : Basis abd Coordinates</span>
+            </a>
+            <a href="https://youtu.be/AJMIj6ojBDo?si=JE7IOmRNiTa4yFKB" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-5 : Dimensions</span>
+            </a>
+            <a href="https://youtu.be/XPVbGeSHpVw?si=H5_TI6oex-eXYqoa" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-6 : Change Of Basis</span>
+            </a>
+            <a href="https://youtu.be/XPVbGeSHpVw?si=H5_TI6oex-eXYqoa" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 4-7,8 : Row Space ,Column Space, Null Space,Rank and Nullity</span>
+            </a>
+            <a href="https://youtu.be/E4E1cGj9zOU?si=_Pjmz4QUeZx0M1AU" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 5-1 : Eigen Value & Eigen Vector</span>
+            </a>
+            <a href="https://youtu.be/OLpQP6g-i44?si=KHcZv4J3Rh-3O0ZP" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 5-2 : Diagonalization</span>
+            </a>
+            <a href="https://youtu.be/gWvsY62YXnQ?si=X6K2hu70Ucm3xm5F" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>Chapter 5-3 : Linear Transformation</span>
+            </a>
+        </div>
+                <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code : #2530679211 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

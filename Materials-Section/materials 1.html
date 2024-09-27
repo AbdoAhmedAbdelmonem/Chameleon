@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
+    <title>1-1 Materials</title>
+
+    <!-- Preload critical font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- Asynchronous CSS Loading -->
+</head>
+<style>
+    * , body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial Rounded MT Bold', sans-serif;
+    }
+
+    section {
+        position: relative;
+        background: url("../../MDA/panda.jpg") no-repeat center center / cover;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px; /* Ensure this is needed */
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 32px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        background: transparent;
+        filter: drop-shadow(0 0 3px rgba(9, 0, 29, 0.29));
+    }
+
+    .logo .img {
+        margin-right: 30px;
+        height: 60px;
+        padding-left: 20px;
+        background: transparent;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        filter: drop-shadow(0 0 3px rgba(9, 0, 29, 0.29));
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #37a2d0;
+    }
+
+    .box {
+        position: relative;
+        min-width: 350px;
+        min-height: 400px;
+        background-color: rgba(255,255,255,0.1);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-right: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-radius: 10px;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        contain: layout paint; /* CSS containment */
+    }
+
+    .box .imgBx1, .box .imgBx2, .box .imgBx3, .box .imgBx4, .box .imgBx5, .box .imgBx6, .box .imgBx7 {
+        position: relative;
+        width: 70px;
+        height: 75px;
+        border-radius: 6px;
+        padding: 19px;
+        margin-right: 12px;
+        color: black;
+        justify-content: center;
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+    }
+
+    .box .imgBx1 { background: yellow; }
+    .box .imgBx2 { background: #37a2d0; }
+    .box .imgBx3 { background: #30cb0e; }
+    .box .imgBx4 { background: #da0707; }
+    .box .imgBx5 { background: orange; }
+    .box .imgBx6 { background: #a207ff; }
+    .box .imgBx7 { background: #ff4d00; }
+
+    .box a {
+        text-decoration: none;
+    }
+
+    .box .list {
+        padding: 20px;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        background: rgba(0,0,0,0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+        color: white;
+    }
+
+    .box .list:hover {
+        background: white;
+        color: black;
+        transform: scale(1.03);
+    }
+
+    .list .content h3 {
+        background: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 2px solid white;
+    }
+
+    .list .content p {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            background: url("../../MDA/525252.jpg") no-repeat center center / cover;
+        }
+        .box{
+            position: relative;
+            min-width: 250px;
+            min-height: 300px;
+            background-color: rgba(255,255,255,0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-right:1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            z-index: 10;
+            backdrop-filter: blur(1px);
+        }
+    }
+        .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+        font-family: Segoe UI Semibold,sans-serif;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        section{
+            background: url("../../MDA/mat2.jpg") no-repeat center fixed;
+        }
+        .header {
+            background-color: #342019;
+        }
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+            font-family: Segoe UI Semibold,sans-serif;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+            font-family: Segoe UI Semibold,sans-serif;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+            font-family: Segoe UI Semibold,sans-serif;
+
+        }
+    }
+    
+</style>
+<body>
+<div class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../../MDA/panda2.png" class="img" width="150" height="102" alt="">
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <section>
+        <div class="box">
+            <a href="../Programming 1/prog1.html"><div class="list">
+                <div class="imgBx1"><b>PR1</b></div>
+                <div class="content">
+                    <h3>Programming 1</h3>
+                    <p>typically covers the basics of Java<br>
+                        syntax, object-oriented principles, and foundational<br>
+                        programming concepts like variables and simple algorithms.</p>
+                </div>
+            </div></a>
+            <a href="../Linear Algebra/linear.html"><div class="list">
+                <div class="imgBx2"><b>LIA</b></div>
+                <div class="content">
+                    <h3>Linear Algebra</h3>
+                    <p>involves the study of vectors and matrices,<br>
+                        focusing on operations such as addition and multiplication <br>
+                        and their applications in systems of linear equations.</p>
+                </div>
+            </div></a>
+            <a href="../Calculus/calc.html"><div class="list">
+                <div class="imgBx3"><b>CAL</b></div>
+                <div class="content">
+                    <h3>Calculus</h3>
+                    <p>the mathematical study of continuous change, <br>
+                        focusing on concepts such as derivatives, integrals,<br>
+                        limits, analyze and model dynamic systems.</p>
+                </div>
+            </div></a>
+            <a href="../Data Science/ds.html"><div class="list">
+                <div class="imgBx4"><b>DAS</b></div>
+                <div class="content">
+                    <h3>Introduction to Data Science</h3>
+                    <p>This dynamic field blends statistics to uncover insights <br>
+                        from vast amounts of data. exploring patterns, predicting <br>
+                        or solving problems, it offers the tools to make informed</p>
+                </div>
+            </div></a>
+            <a href="../Computer System/cs.html"><div class="list">
+                <div class="imgBx5"><b>CSY</b></div>
+                <div class="content">
+                    <h3>Introduction to Computer System</h3>
+                    <p>"Intro to Computer Systems" explores computer hardware, <br>
+                        software interactions, and data representation basics <br>
+                        and system performance </p>
+                </div>
+            </div></a>
+            <a href="../Math 0/math0.html"><div class="list">
+                <div class="imgBx6"><b>MA0</b></div>
+                <div class="content">
+                    <h3>Math 0</h3>
+                    <p>A material intended for science students who did not study <br> mathematics in high school.</p>
+                </div>
+            </div></a>
+            <a href="../Critical Thinking/crit.html"><div class="list">
+                <div class="imgBx7"><b>CRT</b></div>
+                <div class="content">
+                    <h3>Critical Thinking</h3>
+                    <p>التفكير الناقد هو عملية تحليل وتقييم متأنٍ للمعلومات بهدف الوصول إلى استنتاجات<br> منطقية ومدعومة بالأدلة. يسهم في تعزيز الفهم العميق واتخاذ قرارات مستنيرة.</p>
+                </div>
+            </div></a>
+        </div>
+    </section>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code : #3131135676 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

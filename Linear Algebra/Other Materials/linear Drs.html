@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+    <title>Drs Gate</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: 'Poppins' ,sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255));
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+    }
+    .golden-item{
+        padding: 10px;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        color: #000000;
+        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
+        background-size: 400% 400%;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        animation: gold-animation 2.5s infinite;
+        transition: transform 0.3s;
+    }
+    @keyframes gold-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .golden-item span{
+        padding-left: 10px;
+    }
+    .golden-item:hover{
+        transform: scale(1.02) translateY(-7px);
+        background-color: #ffffff;
+        box-shadow: 0 0 35px #ffad00;
+    }
+    .pdf-item img .golden-item img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a .golden-item a{
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover .golden-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../linear.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>Dr/Mohammed Saad</h1>
+                <hr>
+
+        <div class="pdf-list">
+            Materials
+            <a href="https://drive.google.com/file/d/1NgOHMJR4wib0v-wO1xnXHWSj6OlrRpvl/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Chapter 1</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1Njcsyto-yxywIMqIASlALo8CzxT7kIx2/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Chapter 2</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1ws2B-aAOfiqezGJJ0_0_W3sy7KgCbo-Z/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Chapter 3</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1wtBl0-uxOglmIh7d8tBOsO83oCy2o2s4/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Chapter 5</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1lel89LHUyYSEoYp6bfPWSVk7vAhkryU-/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Linear Algebra - Mohammed Saad</span>
+            </a>
+            Lectures
+            <a href="https://drive.google.com/file/d/1-NXCDIa7x2UAPpNCp1fNYtf_xPN6MvGb/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Lecture 1</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1-TTF8E7qVv6ei_QncL5XixqOUW4EgfBS/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Lecture 2</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1C32I0swcPRsLmXzLUFG7Ha-_fv3fRwZY/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Lecture 3</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1ZVuVCATYMvL1RpOacpb6DE5bUX-jI58I/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Lecture 5 & 6</span>
+            </a>
+        </div>
+                <hr>
+
+        <h1>Dr/Mohammed Waleed</h1>
+                <hr>
+
+        <div class="pdf-list">
+            Materials
+            <a href="https://drive.google.com/file/d/11l_p2Z2rHvy3AuMK3d-51xcJX6f6vVVd/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Matrices</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1Os4Or1H93Yt28VLtKjaKgVFtUI8as3nN/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Linear Transformation</span>
+            </a>
+            Recorded Lectures by (TLMO🌟)
+            <a href="https://drive.google.com/file/d/1V9KRB0cvsp7Gyehi_L9-4mEbB3TZLr8T/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>1- Linear Algebra Recorded Lecture (21/10/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1sHz8lsR4GBnl6idUYGogf0ALz_6iGOcp/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>2- Linear Algebra Recorded Lecture (28/10/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1Xmt26Ci4bXvOf4bGYsKZyTMsW9vkV_gs/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>3- Linear Algebra Recorded Lecture (4/11/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1ioUSfkPRhljkqV_djwo_Dr-Qwpf1IcWc/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>4- Linear Algebra Recorded Lecture (25/11/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/12TAjWpsXWaOJ2l7A8Rx701SXGUTIiGoh/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>5- Linear Algebra Recorded Lecture (2/12/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1BIkFvRVtAhm0RqzZ-nB-VXlPZ61IIwyI/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>6- Linear Algebra Recorded Lecture (9/12/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1IEcfJSoJoHejk_xfqD9ZV0Q0gNQr-yM5/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>7- Linear Algebra Recorded Lecture (16/12/2023)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1SiKlmE4FB2HrQ9BIpCXjcUSNYCVzAKWv/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAftJREFUSEvt1kuoT1EUwOHvek28ZWCGlGfKyATlkceIkkfJACmZGIgwMBQpZahQYiBKYSIUkoGZyGOCDDxGRMwkzqr11+1e5+5zuNzU3XVqn3PWWr+91tp7rd1lgEbXAHH9LngWlmEibuFuWwfagifjJJb3AD3CWrxouoA24HF4hkk1xl9iHj43gbcBn8COgtEjONDf4CeYXTD6FHP6G/wVwwpGQ2ZEf4O/NzFIs5PSJseD4LrIN4piI6EkDIb6r4Q6yt4oHMOeJHzByMKRCr0xKRO6u7OEdr79VK/LcdTkmVWluljV540pfQ8LCuDbVadamjKXsnE8xtyeenXg09iGTxiP2FhrqiZwuQBehesYig/pfdT4nU3Bq3ElhTfhfM6PYm8NfB/if4zt2T5jvhI3moKH4Dmm4g3m420qr6u82YVF+X61apXh1bV8n4b7eUmIlEXT6HUU+zrHm3EujYWBFZUnrwuhnp7exYUhRqQnFtZrlArIBWxIrXeZq04KuhsLO7HQ45iQP36Z245SCRwhP4T93SgfK08eIHbr8Axl3DxGp8w3HMThvqJTAnd0F+JUtclmFEIdC9qKhwW5Zr0zjcQi1+cTl72x+f19bqyz1Tm/WQI2DXWdncWIYhFjCe40Bf634CnYkqs/U81f/SuP23Jan+M/BtQZ+AFNiFQfFD3UzAAAAABJRU5ErkJggg=="/>
+                <span>8- Linear Algebra Recorded Lecture (23/12/2023)</span>
+            </a>
+        </div>
+                <hr>
+
+        <h1>Summaries And Books</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://drive.google.com/file/d/1ABpKD8RMBoBG-p9qxHdlvLSutESUn8hz/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Linear Algebra By (Omar Mohammed)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1OoqHEvJeodTvqqo5btJ_gAfblghl7L-k/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Linear Algebra Proofs</span>
+            </a>
+            <a href="https://drive.google.com/file/d/125r9mE7YNmK5rogx-d4C1Pepmzy1pEv2/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Text Book - Larson - Edwards y flavo Elementary Linear Algebra</span>
+            </a>
+        </div>
+                <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code : #9253489482 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>
