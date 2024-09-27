@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+    <title>Quizzes</title>
+</head>
+<style>
+    body {
+        font-family: Segoe UI Semibold, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: Segoe UI Semibold, sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+    }
+    .golden-item{
+        padding: 10px;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        color: #000000;
+        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
+        background-size: 400% 400%;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        animation: gold-animation 2.5s infinite;
+        transition: transform 0.3s;
+    }
+    .golden-item span{
+        padding-left: 10px;
+    }
+    @keyframes gold-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .golden-item:hover{
+        transform: scale(1.02) translateY(-7px);
+        background-color: #ffffff;
+        box-shadow: 0 0 35px #ffad00;
+    }
+    .pdf-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+        .pdf-list span{
+            padding-left: 10px;
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../crit.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>ڤيديوهات شرح مادة التفكير الناقد</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://youtu.be/c7B4LFv4r4s?si=KyfBpQLOs3IDmfRv" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة الاولي - تعريف التفكير الناقد وأنواعه</span>
+            </a>
+            <a href="https://youtu.be/huRIwlAIhEQ?si=edISiV4hrYFkoqnG" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>الفيديو الثاني - مفهوم التفكير الناقد</span>
+            </a>
+            <a href="https://youtu.be/mBpoz2tgLe4?si=vOoWOCgdyq5YWyGS" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة الثالثة - علاقة التفكير الناقد بالتفكير الإبداعي وحل المشكلات</span>
+            </a>
+            <a href="https://youtu.be/_dt3JYxuU7Y?si=cNRjNdyJ8BDv1SZk" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة الرابعة - علاقة التفكير الناقد ببعض المتغيرات</span>
+            </a>
+            <a href="https://youtu.be/tR0nciJjoFM?si=XQqHWIOYwuHL4lXg" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة الخامسة - المكونات العاملية للتفكير الناقد</span>
+            </a>
+            <a href="https://youtu.be/rcIxjl576oo?si=8h4y0GmfDqFANtsY" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة السادسة - سمات ذوي التفكير الناقد</span>
+            </a>
+            <a href="https://youtu.be/rcIxjl576oo?si=8h4y0GmfDqFANtsY" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة السابعة - التفكير الناقد قديما وفي الحضارة الإسلامية </span>
+            </a>
+            <a href="https://youtu.be/98uwUlNEA58?si=u59V5OVcKpO5oQ02" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة الثامنة - التفكير الناقد في الحضارة الغربية</span>
+            </a>
+            <a href="https://youtu.be/TOqPYXEleDo?si=2quRcVOVMsp4d5vy" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة التاسعة - خطوات التفكير الناقد</span>
+            </a>
+            <a href="https://youtu.be/mfNuuhsoRE0?si=It4BIJ3QqVIxt3Zg" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة العاشرة - مهارات توليد المعلومات واخطاء التفكير الناقد</span>
+            </a>
+            <a href="https://youtu.be/5k0JTcdMYCc?si=2TV1haznqogpdiKx" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>المحاضرة الحادية عشر - الحجج وأنواعها وعلاقتها بالتفكير الناقد </span>
+            </a>
+            <a href="https://youtu.be/O40yDm8kXFQ?si=-AwBnFXcZSvIz9CP" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>ملخص سريع لمادة التفكير الناقد</span>
+            </a>
+        </div>
+                <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>معلومات الصفحة</h2>
+    <span class="gran"> كود الصفحة : #5847083396 </span>
+    <div class="btn">
+        <button class="info-ok-btn">حسنا</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

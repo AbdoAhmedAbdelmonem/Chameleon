@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+
+    <title>Cs - Videos and tutorials</title>
+</head>
+<style>
+    body {
+        font-family: Segoe UI Semibold, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: Segoe UI Semibold, sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-item img .golden-item img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .golden-item{
+        padding: 10px;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        color: #000000;
+        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
+        background-size: 400% 400%;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        animation: gold-animation 2.5s infinite;
+        transition: transform 0.3s;
+    }
+    @keyframes gold-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .golden-item span{
+        padding-left: 10px;
+    }
+    .golden-item:hover{
+        transform: scale(1.02) translateY(-7px);
+        background-color: #ffffff;
+        box-shadow: 0 0 35px #ffad00;
+    }
+
+    .pdf-item a .golden-item a{
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover .golden-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+    .container span{
+        padding-left: 10px;
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../cs.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>CS Videos & Tutorials</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://youtu.be/TTLYJko70Qo?si=Jyfjy22beJlTulIu" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>01-"Introduction to the World of Computers" part1/3</span>
+            </a>
+            <a href="https://youtu.be/DCn4AQy5MWg?si=agcZkRx9HyHpDcpQ" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>01-"Introduction to the World of Computers" part2/3</span>
+            </a>
+            <a href="https://youtu.be/0QcM3eBOqrg?si=y1ddrAeBmD1mF3ee" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>01-"Introduction to the World of Computers" part3/3</span>
+            </a>
+            <a href="https://youtu.be/2E8Xri9_Yn8?si=_djwvIg2sxeYDQFK" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>02"The System Unit: Processing and Memory" part1/3</span>
+            </a>
+            <a href="https://youtu.be/9euL-hnrC_c?si=_FjMz7VKbcDqQ7tb" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>02"The System Unit: Processing and Memory" part2/3</span>
+            </a>
+            <a href="https://youtu.be/oBYM4tQfScU?si=Ok9iCjK_7dSOUvWq" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>02"The System Unit: Processing and Memory" part3/3</span>
+            </a>
+            <a href="https://youtu.be/BKLZsHHWKI8?si=wj18zhscD1KDIIrl" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>03"Storage" part1/3</span>
+            </a>
+            <a href="https://youtu.be/OSaeqoaYy_I?si=DcDr9rLlMpBLUrxv" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>03"Storage" version2 part1/3</span>
+            </a>
+            <a href="https://youtu.be/r0L2dmNVK8s?si=z4scsdK752KGR_KE" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>03"Storage" part2/3</span>
+            </a>
+            <a href="https://youtu.be/KxJn4RAPQDs?si=MuvQh97-e98MzufO" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>03"Storage" version2 part2/3</span>
+            </a>
+            <a href="https://youtu.be/kK8Lx44dsag?si=fgmiScAXXQd5-Jly" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>03"Storage" part3/3</span>
+            </a>
+            <a href="https://youtu.be/Toxey11_dS4?si=no0W8KcPWxM7s9Av" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>03"Storage" version2 part3/3</span>
+            </a>
+            <a href="https://youtu.be/5AA_D-V6IgE?si=QPD_IlSMkSKlypFH" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>04"Input and Output" part1/2</span>
+            </a>
+            <a href="https://youtu.be/bd2UkKKftRw?si=tiOk7DVnTj8M7-Ku" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>04"Input and Output" part2/2</span>
+            </a>
+            <a href="https://youtu.be/iIoU9FzKXIE?si=xvD6RbcG3ddD_wp4" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>05"System Software: Operating System and Utility Programs" part1/2</span>
+            </a>
+            <a href="https://youtu.be/JWM8HVey32Y?si=YnevF9VSCjlwxG4X" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>05"System Software: Operating System and Utility Programs" part2/2</span>
+            </a>
+            <a href="https://youtu.be/f5llb4bNbaQ?si=O3YcuFMZFcYJT2px" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>07"Computer Networks" part1/3</span>
+            </a>
+            <a href="https://youtu.be/bNFSEdsWCvE?si=UuWPZr-qsv7mgZCU" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>07"Computer Networks" part2/3</span>
+            </a>
+            <a href="https://youtu.be/G5-NZQndE_w?si=bajxq5ah6076o1y8" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>07"Computer Networks" part3/3</span>
+            </a>
+            <a href="https://youtu.be/tXNsJ4GmJj0?si=KV1FY-L6UKwQ1nv7" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>13"Program Development and Programming Languages" part1/3</span>
+            </a>
+            <a href="https://youtu.be/cKIPHL6FPJY?si=S1luzdWixqWPXRdp" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>13"Program Development and Programming Languages" part2/3</span>
+            </a>
+            <a href="https://youtu.be/WzceEHetZ8s?si=h9VdrhjlO-IanQJc" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>
+                <span>13"Program Development and Programming Languages" part3/3</span>
+            </a>
+        </div>
+                <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran">Page Code : #8904798484 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+
+    <title>Eng.Huda Hemdan</title>
+</head>
+<style>
+    body {
+        font-family: Segoe UI Semibold, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: Segoe UI Semibold, sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-item img .golden-item img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .golden-item{
+        padding: 10px;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        color: #000000;
+        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
+        background-size: 400% 400%;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        animation: gold-animation 2.5s infinite;
+        transition: transform 0.3s;
+    }
+    @keyframes gold-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .golden-item span{
+        padding-left: 10px;
+    }
+    .golden-item:hover{
+        transform: scale(1.02) translateY(-7px);
+        background-color: #ffffff;
+        box-shadow: 0 0 35px #ffad00;
+    }
+
+    .pdf-item a .golden-item a{
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover .golden-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+    .container span{
+        padding-left: 10px;
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../cs.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>Eng.Huda Hemdan</h1>
+        <hr>
+
+        <div class="pdf-list">
+            Materials
+            <a href="https://drive.google.com/file/d/1dHZyECUbPKI4YPz7knyjwjDxsAyZP2k8/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>1's and 2's complement</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1d089Aq4z0YPbuPgYkt9C5285l2Vv94My/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Numbering System</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1cQY7ciMkXLKtz3q9Ol2AbX1g7nUheWzr/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Section 1</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1cbHoaf2L6urvMmyDDDTl0gjU48srSCLQ/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Section 2 and 3 (rules of numbering system)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1cl3b1K68Q1-U9pTX-Gn5q1obpXzHujcV/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Section 2 handwritten</span>
+            </a>
+            Sheets
+            <a href="https://drive.google.com/file/d/1csk3RHGpuKgwWCfE4Zde55Qc7XP_QHgx/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Sheet 1</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1bd70HEvd--N-Uf6nI4qY4rAInURiQLDM/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Sheet 2</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1d1ilAJymwltyZbQ5stKUn7eCcZGLEwzJ/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Sheet 3</span>
+            </a>
+            Revisions
+            <a href="https://drive.google.com/file/d/1dJU3DbtVd71BGdfcqzbI0CrQbrEifoA4/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Review 1 (readable file)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1d-JyrtnqjSNxROfv0HMzEd5qBrAQGX60/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>Review 2 (MCQ file)</span>
+            </a>
+        </div>
+                <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> Page Code : #5459717706 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

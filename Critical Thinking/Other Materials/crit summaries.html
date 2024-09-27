@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+
+    <title>Critical thinking Materials</title>
+</head>
+<style>
+    *{
+        font-family: Segoe UI Semibold, sans-serif;
+    }
+    body {
+        font-family: Andalus, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Segoe UI Semibold, sans-serif;
+        margin-bottom: 20px;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        background-clip: text;
+        color: transparent;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-list span{
+        padding-left: 10px;
+    }
+    .pdf-item img .golden-item img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .golden-item{
+        padding: 10px;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        color: #000000;
+        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
+        background-size: 400% 400%;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        animation: gold-animation 2.5s infinite;
+        transition: transform 0.3s;
+    }
+    @keyframes gold-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .pdf-item span ,.golden-item span{
+        padding-left: 10px;
+    }
+    .golden-item:hover{
+        transform: scale(1.02) translateY(-7px);
+        background-color: #ffffff;
+        box-shadow: 0 0 35px #ffad00;
+    }
+
+    .pdf-item a .golden-item a{
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover .golden-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../crit.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>ملخصات مريم مدحت</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://drive.google.com/file/d/1YzUqmiJoxEPebRBPYmBBVUPbm6M014cx/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>المحاضرة التاسعة - خطوات التفكير الناقد</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1n4vX2-Eeo6NkShN1MBY3-frmS4dyvI3h/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>المحاضرة العاشرة - مهارات توليد المعلومات وأخطاء التفكير الناقد</span>
+            </a>
+            <a href="https://drive.google.com/file/d/10oWOefO207iMqM8UOOXe78pcAl9zxonN/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>المحاضرة الحادية عشر - الحجج وأنواعها وعلاقتها بالتفكير الناقد</span>
+            </a>
+            <a href="https://drive.google.com/file/d/12FgLK6LdwERw8XQWNtsh4oEfBsz1prGt/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>المحاضرة الثانية عشر - تقوية الحجج او إضعافها</span>
+            </a>
+        </div>
+                <hr>
+
+        <h1> ملخصات آية مدحت</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://drive.google.com/file/d/1uY9tmEUcsBq3KU94Hq-3nz6G27j-rV1R/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 1</span>
+            </a>
+            <a href="https://drive.google.com/file/d/16mFE1PRqz8dDURAJ5fbvCqX4W7lzAcra/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 2</span>
+            </a>
+            <a href="https://drive.google.com/file/d/155eCYpvt94rEJqv-mm-HabWMJG9T-ACk/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 3</span>
+            </a>
+            <a href="https://drive.google.com/file/d/153-29YjFA-ovsdOB_hPX8_fd2ARED--Q/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 4 & 5</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1mkaNp21VRxl2UKHgqr1CIsFsR-wl466l/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 6</span>
+            </a>
+            <a href="https://drive.google.com/file/d/11Ndra0F4qAMy5HpZ9mV6JPcNjS-xr7gO/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 7 & 8</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1WgJgWThO3mdY0ZY7A8f6Cmrp6fHpBkIf/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 9</span>
+            </a>
+            <a href="https://drive.google.com/file/d/196u4Deh_EGL4Msi1_PyvLj7naZU3wdqe/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 10</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1vRJCemyA3qxhUH_lVUs1LmroQojsEVhY/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص 11 & 12</span>
+            </a>
+        </div>
+                <hr>
+
+        <h1>ملخصات فارس محمد وأخرون</h1>
+                <hr>
+
+        <div class="pdf-list">
+            <a href="https://drive.google.com/file/d/1GdSx38FP7AqAnwoyRu6bbp4m6_F-rMgJ/view?usp=drive_link" class="golden-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص التفكير الناقد (فارس محمد)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1RoBw1-42yrIu1FZd8YZj9tMI02_N6ci9/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>critical thinking(فنان غير معروف)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1Ro1iqWXf0Z9mx13_5OoGrAvUMg2jKMxK/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>علماء التفكير الناقد (فنان غير معروف)</span>
+            </a>
+            <a href="https://drive.google.com/file/d/16D9MQ9vUdFqyEeC2uBDd0Iz_VPSOuswb/view?usp=drive_link" class="pdf-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1z9oFUEQx/FPiphCgoWCdhYKERXERgT/C5GktRBLRdNKGoOgoI0IIio2GlEQW6sUqdJEsRIbESwVOwuFtBpC3IVVHnpn5j03PAjZ6u72t/Pd2d2ZnRvQpzbQJ65/gQ/hKIYCk/uI5wHdb0kb+Aaud2MI13AzOqYN/BWbo0Y6dJdxJzKuDbwcGVw02cup5O1geQ/Ba4CPYwNmu4HXAr/EaDfwGuATmC/LHIbXBmd+CL4a4Cb4X5wa4HdYaIiCXdhavq8KOBJ56+DWS6KbzLX2lvoznhW3TuJIuipvYQn7U/LIKXMjpvGl6M5he8dS9HS4cjo8jUeYwNsCvI1veID3GMcO7EU18Fm8wCnMYQyvsQ8j5S6+h51JtyfF9SQ21fA4gw7iWDKWi4ThDnBOFFdxt4Czx9XA55HLm18tg+/jU8pOD/GhLPWV9Hym4Zj3tMf5cM3gUofBfLh+lHos7+c2PMZh7K4FjsTpSpqePF7JaKQ/DO612GuaRA65LX92tF2LT3Ah4kpA8xQXo+BcMeZi/kCwoG/if8cbvErhthgFBxz5P0nf/p1+AszoVh+FneLOAAAAAElFTkSuQmCC"/>
+                <span>ملخص التفكير الناقد (فنان غير معروف)</span>
+            </a>
+        </div>
+                <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>معلومات الصفحة</h2>
+    <span class="gran"> كود الصفحة : #2215882336 </span>
+    <div class="btn">
+        <button class="info-ok-btn">حسنا</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>
