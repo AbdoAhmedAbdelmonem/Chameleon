@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
 
-    <title>Data Science Methodology Quizzes</title>
+    <title>DSM Quizzes</title>
 </head>
 <style>
     body {
@@ -51,9 +51,7 @@
     h1 {
         text-align: center;
         margin-bottom: 20px;
-        background: linear-gradient(
-                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
-        );
+        background: linear-gradient(45deg, #9160f3, #f360d8, #6022e8, #60f3bb, #9160f3,#f360d8,#6022e8);
         background-clip: text;
         color: transparent;
         font-family: Segoe UI Semibold, sans-serif;
@@ -108,33 +106,14 @@
         font-weight: bold;
         align-items: center;
         color: #000000;
-        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
+        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #e0e0e0, #FFD700,#FFD700,#FFD700);
         background-size: 400% 400%;
-        border: 2px solid #ffffff;
+        border: 2px solid #e0e0e0;
         border-radius: 10px;
         text-decoration: none;
         cursor: pointer;
         animation: gold-animation 2.5s infinite;
         transition: transform 0.3s;
-    }
-    @keyframes gold-animation {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    .golden-item span{
-        padding-left: 10px;
-    }
-    .golden-item:hover{
-        transform: scale(1.02) translateY(-7px);
-        background-color: #ffffff;
-        box-shadow: 0 0 35px #ffad00;
     }
     .diamond-item{
         padding: 10px;
@@ -150,6 +129,17 @@
         cursor: pointer;
         animation: diamond-animation 4.5s infinite;
         transition: transform 0.3s;
+    }
+    @keyframes gold-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
     @keyframes diamond-animation {
         0% {
@@ -197,12 +187,6 @@
     .pdf-item a:hover, .golden-item a:hover,.diamond-item a:hover {
         text-decoration: underline;
     }
-
-    .pdf-item a .golden-item a{
-        text-decoration: none;
-        font-size: 18px;
-        color: inherit;
-    }
     .popup2{
         position: absolute;
         top: 50%;
@@ -220,6 +204,10 @@
         opacity: 1;
         pointer-events: auto;
         transform: translate(-50%, -50%) scale(1);
+    }
+    .blur {
+        filter: blur(8px);
+        transition: filter 0.3s ease;
     }
     .popup2 h2{
         font-size: 50px;
@@ -303,20 +291,22 @@
             </nav>
         </header>
         <hr>
-        <h1>Data Science Methodology Quizzes</h1>
+
+        <h1>Chameleon Quizzes For Data Science Methodology</h1>
         <hr>
+
         <div class="pdf-list">
-<!--            <a href="" class="diamond-item">-->
-<!--                <img src="data:image/png;base64,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"/>                <span></span>-->
-<!--            </a>-->
+            <a href="../Quizzes/135599715.html" class="diamond-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAgFJREFUSEvF18vLTVEYx/HPOzAycM8lijIQKQOS5FIyMJL8AQZuuZSBkjJAkZmBeg3c5maGBiYokgkxIHIpuUWhDCRlP9pb6z3t7ayz9/s6T53O3qe1nu/ze9Zaz7POiCHZyJC4+oGnYQWWYWZmkJ/wGA/wpWlOE3gezmF7Jqxp2FUcLD4RzBirAy/FDcztCK2mv8QmxPdf6wUvwH3MHido5eYVVqXKe8HXsHWcoZW7C9hbvaTgSO3bCYKG2x+Yge/xkoJ34lIH8FdM6TN/C673go/iTEvwO6wtMrYH4afJDpWnZYziEzjeAvwTy/G0nHsKxxr8nCx+D05ncBSIqTiPAyVsPp5gcg28Fhxq/0STaeF8PU5jNy6WSu9hUYOP8B/w1ooDugEfS8Bo8by/LJGRgSbrlOpYy4B+SLxHtYvaPKlPtlqDn2Md3ieAJbiFWRlL1AocZW9ND3Qx7mRCI66BwQENpW8SVQG9jTkZSqshA4FjLVfWQCO9g3awgcA3sTFRtRB3B1TaSnEKDmikN4pEGzuMs7nnOIp/HJWw2MFdevW24ioVrbd1AWmj9lfRIKbj2/8GXy426K4q4rQft+1OOepfYHXT1WeiwM+wGa/TCFPF+8r2lqMgd8wVHMHn3gkpOK4tO8oNkOu4blx0rEd4WG2kukH9/kl0CeCfc4cG/g1ngWYfXKrKeAAAAABJRU5ErkJggg=="/>
+                <span>Lecture 1 - Introduction to Data Science Methodology</span>
+            </a>
         </div>
         <hr>
-        <h1 style="font-size: 30px;border: 3px yellow solid;border-radius: 6px;color: yellow">It seems that there are no resources available here<span>:(</span></h1>
     </div>
 </div>
 <div class="popup2">
     <h2>Page Information</h2>
-    <span class="gran"> page code : #1314645880 </span>
+    <span class="gran">  Page Code : #1314645880 </span>
     <div class="btn">
         <button class="info-ok-btn">OK</button>
     </div>
