@@ -26,6 +26,8 @@ body{
     background: var(--d2-color);
     color: var(--white-color);
     transition: background 1s ease-in-out;
+    animation: changeColors 390s infinite;
+
 }
 body.light{
     background: var(--white-color);
@@ -43,6 +45,8 @@ body.light{
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    animation: changeColors 390s infinite;
+
 }
 .logo{
     font-size: 3rem;
@@ -50,18 +54,21 @@ body.light{
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
+    animation: changeColors 390s infinite;
 }
 .logo:hover{
     transform: scale(1.1);
-}  .logo span{
-       text-shadow: 0 0 25px var(--main-color) ;
-   }
+}
+.logo span{
+    text-shadow: 0 0 25px var(--main-color) ;
+}
 .switch {
     font-size: 17px;
     position: relative;
     display: inline-block;
     width: 3.5em;
     height: 2em;
+    animation: slide-in-left 1s ease-in-out forwards;
 }
 
 .switch input {
@@ -106,6 +113,7 @@ body.light{
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+    animation: slide-in-left 1s ease-in-out forwards
 }
 .navbar a:hover,.navbar a.active{
     color: var(--main-color);
@@ -115,6 +123,8 @@ body.light{
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+    animation: changeColors 390s infinite;
+
 }
 section{
     min-height: 100vh;
@@ -125,10 +135,55 @@ section{
     align-items: center;
     justify-content: center;
     gap: 15rem;
-    background: url("../MDA/81_generated-removebg-preview.png") no-repeat center center; /* Applies the background image */
     background-size: cover; /* Ensures the image covers the div */
     z-index: 6;
 }
+@keyframes changeColors {
+    0% {--main-color : #ffc324}
+    5%{--main-color : #87ff24}
+    10%{--main-color : #24ffd7}
+    15%{--main-color : #ff5a00}
+    20%{--main-color : #ff2424}
+    25%{--main-color : #0ceeff}
+    30%{--main-color : #0800ff}
+    35%{--main-color : #c124ff}
+    40%{--main-color : #8d8c9f}
+    45%{--main-color : #029b05}
+    50%{--main-color : #a66125}
+    55%{--main-color : #0ceeff}
+    60%{--main-color : #ff2424}
+    65%{--main-color : #2436ff}
+    70%{--main-color : #ffc324}
+    75%{--main-color : #ff5a00}
+    80%{--main-color : #24ff9c}
+    85%{--main-color : #c124ff}
+    90%{--main-color : #41ff24}
+    95%{--main-color : #2436ff}
+    100% {--main-color : #ffc324}
+}
+    @keyframes changeWallpaper {
+        0%{content: url("MDA/1212-removebg-preview.png")}
+        5%{content: url("MDA/2.png")}
+        10%{content: url("MDA/3.png")}
+        15%{content: url("MDA/4.png")}
+        20%{content: url("MDA/5.png")}
+        25%{content: url("MDA/3.png")}
+        30%{content: url("MDA/7.png")}
+        35%{content: url("MDA/8.png")}
+        40%{content: url("MDA/9.png")}
+        45%{content: url("MDA/10.png")}
+        50%{content: url("MDA/11.png")}
+        55%{content: url("MDA/last.png")}
+        60%{content: url("MDA/5.png")}
+        65%{content: url("MDA/7.png")}
+        70%{content: url("MDA/1212-removebg-preview.png")}
+        75%{content: url("MDA/4.png")}
+        80%{content: url("MDA/3.png")}
+        85%{content: url("MDA/8.png")}
+        90%{content: url("MDA/2.png")}
+        95%{content: url("MDA/7.png")}
+        100%{content: url("MDA/1212-removebg-preview.png")}
+    }
 
 .home-content{
     display: flex;
@@ -148,15 +203,22 @@ span{
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size:3.5rem ;
+    animation: slide-in-left 1s ease-in-out forwards;
+
 }
 .home-content h1{
     font-size: 7rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
+    animation: slide-in-left 1s ease-in-out forwards;
 }
 .home-image{
     border-radius: 50%;
+    animation: changeWallpaper 390s infinite;
+    max-width: 800px;
+    height: auto;
+    transition: slide-in-left 1s ease-in-out;
 }
 .home-image img{
     position: relative;
@@ -166,6 +228,8 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    animation: slide-in-right 1s ease-in-out forwards;
+
 }
 .home-image img:hover{
     box-shadow: 0 0 25px var(--main-color),
@@ -177,6 +241,8 @@ span{
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
+    animation: slide-in-left 1s ease-in-out forwards;
+
 }
 .social-icons a {
     display: inline-flex;
@@ -192,6 +258,8 @@ span{
     margin: 3rem 1.5rem 3rem 0;
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    animation: slide-in-down 1s ease-in-out forwards;
+
 }
 .social-icons a:hover{
     color:var(--white-color);
@@ -215,6 +283,8 @@ span{
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     background-color: transparent;
+    animation: slide-in-down 1s ease-in-out forwards;
+
 
 }
 
@@ -309,6 +379,28 @@ span{
 .text-animation span{
     position: relative;
 }
+.background-x {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90vw;
+    height: 80vh;
+    background: linear-gradient(45deg, transparent 70%, var(--main-color) 70%);
+    z-index: -1;
+    animation: slide-in-right 2s ease-in-out forwards;
+
+}
+.background-y{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90vw;
+    height: 100vh;
+    background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
+    z-index: -1;
+    animation: slide-in-right 2s ease-in-out forwards;
+
+}
 .text-animation span:before{
     content:"'m Never Give Up";
     color: var(--main-color);
@@ -347,15 +439,15 @@ span{
 }
 @keyframes words {
     0%,
-    20% {content: "have Learned Something";}
+    20% {content: " Have EveryThing";}
     21%,
-    40%{content: "'m Coming To Change" ;}
+    40%{content: "'m Coming For Changing" ;}
     41%,
     60%{content: "'ll Never Give Up";}
     61%,
-    80%{content: "Want To Be The First" ;}
+    80%{content: " Want to reach the horizon" ;}
     81%,
-    100%{content: "'m Levi Ackerman <3" ;}
+    100%{content: " Levi Ackerman >_<" ;}
 }
 @keyframes typing {
     10%,
@@ -382,6 +474,38 @@ span{
         width: calc(100% + 8px);
     }
 }
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slide-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .heading{
     font-size: 8rem;
     text-align: center;
@@ -398,6 +522,8 @@ span{
 }
 .education h2{
     margin-bottom: 5rem;
+    animation: slide-in-down 1s ease-in-out forwards;
+
 }
 .timeline-items{
     max-width: 1200px;
@@ -405,6 +531,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     position: relative;
+
 }
 .timeline-items::before{
     content: "";
@@ -443,9 +570,13 @@ span{
 .timeline-items:nth-child(odd){
     padding-right: calc(50% + 30px);
     text-align: right;
+    animation: slide-in-left 1s ease-in-out forwards;
+
 }
 .timeline-items:nth-child(even){
     padding-left: calc(50% + 30px);
+    animation: slide-in-right 1s ease-in-out forwards;
+
 }
 .timeline-dot {
     height: 20px; /* Ensure height is correct */
@@ -539,10 +670,14 @@ span{
     margin-bottom: 3rem;
     color: var(--white-color);
     transition: background 1s ease-in-out;
+    animation: slide-in-down 1s ease-in-out forwards;
+
 }
 .contact.light h2{
     margin-bottom: 3rem;
     color: var(--d2-color);
+    animation: slide-in-down 1s ease-in-out forwards;
+
 }
 .contact form{
     display: flex;
@@ -568,6 +703,10 @@ span{
     margin: 1.5rem 0;
     resize: none;
     transition: background 1s ease-in-out;
+    animation: slide-in-left 1s ease-in-out forwards;
+}
+.contact form textarea{
+    animation: slide-in-right 1s ease-in-out forwards;
 }
 .contact.light form .input-box input,.contact.light form textarea{
     width:100%;
@@ -582,6 +721,8 @@ span{
 }
 .contact form .btn{
     margin-top: 2rem;
+    animation: slide-in-left 1s ease-in-out forwards;
+
 }
 /* Container styles */
 .container {
@@ -634,7 +775,8 @@ span{
     top: 50%;
     transform: translate(-50%, -50%);
     left: 30px;
-    fill: rgba(255, 195, 36, 1);
+    fill: var(--main-color);
+    animation: changeColors 390s infinite;
 }
 .button.light .icon {
     fill: black;
@@ -717,7 +859,7 @@ span{
 .footer .social{
     padding-bottom: 25px;
     text-align: center;
-    color: var(--d1-color);
+    color: var(--white-color);
 }
 .footer .social a{
     font-size: 25px;
@@ -994,7 +1136,8 @@ span{
 
     .home {
         flex-direction: column;
-        margin: 5rem 4rem;
+        margin: 100px 2rem; /* Remove the 5rem 4rem margin */
+        padding: 0; /* Ensure no padding is present */
     }
 
     .home-content h3 {
@@ -1010,9 +1153,17 @@ span{
         max-width: 680px;
         margin: 0 auto;
     }
+    .home-image{
+        border-radius: 50%;
+        animation: changeWallpaper 390s infinite;
+        max-width: 500px;
+        height: auto;
+        margin: -120px 0;
+
+    }
 
     .home-image img {
-        width: 56vw;
+        width: 96vw;
     }
 
     .services h2 {
@@ -1060,4 +1211,14 @@ span{
         overflow: auto;
 
     }
+    .background-y{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 120vh;
+        background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
+        z-index: -1;
+    }
+
 }
