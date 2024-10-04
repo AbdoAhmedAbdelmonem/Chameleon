@@ -218,7 +218,7 @@ span{
     animation: changeWallpaper 390s infinite,slide-in-right 1s ease-in-out;
     max-width: 800px;
     height: auto;
-    background-color: black;
+    background-color: var(--d2-color);
 }
 .home-image img{
     position: relative;
