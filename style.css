@@ -1122,6 +1122,9 @@ span{
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
+    .btn-group{
+        flex-direction: column;
+    }
 
     .navbar.active {
         display: block;
