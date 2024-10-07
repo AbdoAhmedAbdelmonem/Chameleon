@@ -49,7 +49,7 @@
                                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
                             ></path>
                         </svg>
-                        <span class="text">Whats New! <i class='bx bxs-zap'></i></span>
+                        <span class="text">What's New? <i class='bx bxs-zap'></i></span>
                         <span class="circle"></span>
                         <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -65,7 +65,7 @@
                                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
                             ></path>
                         </svg>
-                        <span class="text">Contact <i class='bx bx-conversation'></i></span>
+                        <span class="text">Contact Me <i class='bx bx-conversation'></i></span>
                         <span class="circle"></span>
                         <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -78,9 +78,13 @@
             </div>
         </div>
         <div class="background-x"></div>
-        <div class="background-y"></div>
+        <div class="background-y">
+        </div>
+
+
         <div class="home-image">
-            <img src="MDA/1212.jpg" alt="">
+            <img src="MDA/chameleon.png" alt="">
+            <div class="ball ball1"></div>
         </div>
     </section>
     <section class="education" id="education">
@@ -268,6 +272,7 @@
         const footer = document.querySelector('.footer');
         const send = document.querySelector('.button');
         const home = document.querySelector('.home');
+        const homeImg = document.querySelector('.home-image');
 
 
 
@@ -281,6 +286,7 @@
             contact.classList.toggle('light');
             footer.classList.toggle('light');
             send.classList.toggle('light');
+            homeImg.classList.toggle('light');
 
             // Apply light mode to all input boxes
             input_boxes.forEach(box => {
@@ -294,7 +300,7 @@
             timeline_dates.forEach(date => {
                 date.classList.toggle('light');
             });
-        }, 250); // Delay of 250 milliseconds before switching mode
+        }, 250);
     }
     const main = document.querySelector('.main');
     const about = document.querySelector('.popo');
