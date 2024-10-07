@@ -26,7 +26,7 @@ body{
     background: var(--d2-color);
     color: var(--white-color);
     transition: background 1s ease-in-out;
-    animation: changeColors 390s infinite;
+    animation: changeColors 390s infinite ease-in-out;
 
 }
 body.light{
@@ -45,7 +45,7 @@ body.light{
     justify-content: space-between;
     align-items: center;
     z-index: 5;
-    animation: changeColors 390s infinite;
+    animation: changeColors 390s infinite ease-in-out;
 
 }
 .logo{
@@ -54,7 +54,7 @@ body.light{
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
-    animation: changeColors 390s infinite;
+    animation: changeColors 390s infinite ease-in-out;
 }
 .logo:hover{
     transform: scale(1.1);
@@ -123,7 +123,7 @@ body.light{
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
-    animation: changeColors 390s infinite;
+    animation: changeColors 390s infinite ease-in-out;
 
 }
 section{
@@ -161,30 +161,6 @@ section{
     95%{--main-color : #2436ff}
     100% {--main-color : #ffc324}
 }
-    @keyframes changeWallpaper {
-        0%{content: url("MDA/1212-removebg-preview.png")}
-        5%{content: url("MDA/2.png")}
-        10%{content: url("MDA/3.png")}
-        15%{content: url("MDA/4.png")}
-        20%{content: url("MDA/5.png")}
-        25%{content: url("MDA/3.png")}
-        30%{content: url("MDA/7.png")}
-        35%{content: url("MDA/8.png")}
-        40%{content: url("MDA/9.png")}
-        45%{content: url("MDA/10.png")}
-        50%{content: url("MDA/11.png")}
-        55%{content: url("MDA/last.png")}
-        60%{content: url("MDA/5.png")}
-        65%{content: url("MDA/7.png")}
-        70%{content: url("MDA/1212-removebg-preview.png")}
-        75%{content: url("MDA/4.png")}
-        80%{content: url("MDA/3.png")}
-        85%{content: url("MDA/8.png")}
-        90%{content: url("MDA/2.png")}
-        95%{content: url("MDA/7.png")}
-        100%{content: url("MDA/1212-removebg-preview.png")}
-    }
-
 .home-content{
     display: flex;
     flex-direction: column;
@@ -215,10 +191,11 @@ span{
 }
 .home-image{
     border-radius: 50%;
-    animation: changeWallpaper 390s infinite,slide-in-right 1s ease-in-out;
+    animation: changeWallpaper 390s infinite ease-in-out,slide-in-right 1s ease-in-out;
     max-width: 800px;
     height: auto;
-    background-color: var(--d2-color);
+    position: relative; /* Ensures the yellow circle and image are positioned relative to this container */
+    display: inline-block;
 }
 .home-image img{
     position: relative;
@@ -229,6 +206,7 @@ span{
     cursor: pointer;
     transition: 0.4s ease-in-out;
     animation: slide-in-right 1s ease-in-out forwards;
+    z-index: 1;  /* Ensures the image is above the yellow circle */
 
 }
 .home-image img:hover{
@@ -394,7 +372,7 @@ span{
     position: absolute;
     right: 0;
     top: 0;
-    width: 90vw;
+    width: 150vw;
     height: 100vh;
     background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
     z-index: -1;
@@ -921,17 +899,17 @@ span{
 }
 
 .popup2{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.9);
-        width: 500px;
-        background: #ffffff;
-        border-radius: 6px;
-        padding: 10px 25px;
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 500px;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
 }
 .popup2.active{
     opacity: 1;
@@ -1095,19 +1073,23 @@ span{
         align-items: center;
         gap: 2.5rem;
     }
+
 }
 @media (max-width: 480px) {
     #menu-icon {
         display: block;
     }
     .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
-    background: transparent;
-    background-size: cover; /* Ensures the image covers the div */
-    z-index: 6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15rem;
+        background: transparent;
+        background-size: cover; /* Ensures the image covers the div */
+        z-index: 6;
+    }
+    .yellow-circle{
+        opacity: 0;
     }
     .navbar {
         position: absolute;
@@ -1223,5 +1205,36 @@ span{
         background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
         z-index: -1;
     }
+    .yellow-circle {
+        width: 600px; /* Adjust size for smaller screens */
+        height: 2000px; /* Adjust size for smaller screens */
+        top: -600px; /* Adjust position for smaller screens */
+        right: -600px; /* Adjust position for smaller screens */
+        opacity: 0; /* Ensure the circle is visible */
+        position: absolute;
+        display: none;
 
+    }
+}
+
+.ball {
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    z-index: 5;
+}
+.ball.ball1 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: 5%;
+    z-index: -1;
+}
+@media(max-width: 480px) {
+    .ball.ball1 {
+        width: 300px;
+        height: 300px;
+        top: 20%;
+        left: 20%;
+    }
 }
