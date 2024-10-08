@@ -5,20 +5,179 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
-    <title>1-2 Materials</title>
+    <title>1-1 Materials</title>
+
+    <!-- Preload critical font -->
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- Asynchronous CSS Loading -->
 </head>
 <style>
     * , body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Arial Rounded MT Bold', sans-serif;
+        font-family: 'Alexandria', sans-serif;
+    }
+    body {
+        background: #262a2b;
+    }
+    a h2{
+        color: aliceblue;
+    }
+    .tilesWrap {
+        padding: 0;
+        margin: 50px auto;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tilesWrap li {
+        display: inline-block;
+        width: 25%; /* Each tile takes up 30% of the width to make a 3-column grid */
+        min-width: 200px;
+        padding: 80px 20px 40px;
+        position: relative;
+        vertical-align: top;
+        margin: 10px;
+        font-family: 'Alexandria', san-serif,serif;
+        min-height: 25vh;
+        background: #000000;
+        border: 1px solid #252727;
+        text-align: left;
+    }
+    .tilesWrap li h2 {
+        font-size: 114px;
+        margin: 0;
+        position: absolute;
+        opacity: 0.2;
+        top: 50px;
+        right: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    .tilesWrap li h3 {
+        font-size: 30px;
+        color: #b7b7b7;
+        margin-bottom: 5px;
+    }
+    .tilesWrap li p {
+        font-size: 16px;
+        line-height: 18px;
+        color: #b7b7b7;
+        margin-top: 5px;
+    }
+    .tilesWrap li button {
+        background: transparent;
+        border: 1px solid #b7b7b7;
+        padding: 10px 20px;
+        color: #b7b7b7;
+        border-radius: 3px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-40px);
+        opacity: 0;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .tilesWrap li button:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 120%;
+        background: #b7b7b7;
+        top: 0;
+        opacity: 0;
+        left: -140px;
+        border-radius: 0 20px 20px 0;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+
+    }
+    .tilesWrap li:hover button {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+    .tilesWrap li button:hover {
+        color: #262a2b;
+    }
+    .tilesWrap li button:hover:before {
+        left: 0;
+        opacity: 1;
+    }
+    .tilesWrap li:hover h2 {
+        top: 0px;
+        opacity: 0.6;
+    }
+    button{
+    }
+
+    .tilesWrap li:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1;
+        background: #fff;
+        transform: skew(2deg, 2deg);
+    }
+    .tilesWrap li:after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .tilesWrap li:nth-child(1):before {
+        background: #C9FFBF;
+        background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
+        background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+    }
+    .tilesWrap li:nth-child(2):before {
+        background: #f2709c;
+        background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+        background: linear-gradient(to right, #ff9472, #f2709c);
+    }
+    .tilesWrap li:nth-child(3):before {
+        background: #c21500;
+        background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+        background: linear-gradient(to right, #ffc500, #c21500);
+    }
+    .tilesWrap li:nth-child(4):before {
+        background: #FC354C;
+        background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+        background: linear-gradient(to right, #0ABFBC, #FC354C);
+    }
+    .tilesWrap li:nth-child(5):before {
+        background: #FC354C;
+        background: -webkit-linear-gradient(to right, #0ABFBC, #efb94c);
+        background: linear-gradient(to right, #029b05, #0ceeff);
+    }
+    .tilesWrap li:nth-child(6):before {
+        background: #FC354C;
+        background: -webkit-linear-gradient(to right, #2436ff, #efb94c);
+        background: linear-gradient(to right, #c124ff, #029b05);
+    }
+    li{
+        cursor: pointer;
     }
 
     section {
         position: relative;
-        background: url("../../MDA/panda.jpg") no-repeat center center / cover;
+        background: url("../MDA/black0106.jpg") no-repeat center center / cover;
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -75,92 +234,10 @@
         color: #37a2d0;
     }
 
-    .box {
-        position: relative;
-        min-width: 350px;
-        min-height: 400px;
-        background-color: rgba(255,255,255,0.1);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        border-right: 1px solid rgba(255,255,255,0.2);
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-        border-radius: 10px;
-        z-index: 10;
-        backdrop-filter: blur(10px);
-        contain: layout paint; /* CSS containment */
-    }
-
-    .box .imgBx1, .box .imgBx2, .box .imgBx3, .box .imgBx4, .box .imgBx5, .box .imgBx6, .box .imgBx7 {
-        position: relative;
-        width: 70px;
-        height: 75px;
-        border-radius: 6px;
-        padding: 19px;
-        margin-right: 12px;
-        color: black;
-        justify-content: center;
-        display: flex;
-        font-family: 'Poppins', sans-serif;
-        font-size: 30px;
-    }
-
-    .box .imgBx1 { background: yellow; }
-    .box .imgBx2 { background: #37a2d0; }
-    .box .imgBx3 { background: #30cb0e; }
-    .box .imgBx4 { background: #da0707; }
-    .box .imgBx5 { background: orange; }
-    .box .imgBx6 { background: #a207ff; }
-    .box .imgBx7 { background: #ff4d00; }
-
-    .box a {
-        text-decoration: none;
-    }
-
-    .box .list {
-        padding: 20px;
-        margin: 10px;
-        position: relative;
-        display: flex;
-        background: rgba(0,0,0,0.1);
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.5s;
-        color: white;
-    }
-
-    .box .list:hover {
-        background: white;
-        color: black;
-        transform: scale(1.03);
-    }
-
-    .list .content h3 {
-        background: none;
-        margin: 0;
-        padding: 0;
-        border-bottom: 2px solid white;
-    }
-
-    .list .content p {
-        background: none;
-        margin: 0;
-        padding: 0;
-    }
 
     @media (max-width: 768px) {
         section {
             background: url("../../MDA/525252.jpg") no-repeat center center / cover;
-        }
-        .box{
-            position: relative;
-            min-width: 250px;
-            min-height: 300px;
-            background-color: rgba(255,255,255,0.1);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-right:1px solid rgba(255,255,255,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-            z-index: 10;
-            backdrop-filter: blur(1px);
         }
     }
     .popup2{
@@ -228,10 +305,10 @@
 
     @media (max-width: 768px) {
         section{
-            background: url("../../MDA/mat2.jpg") no-repeat center fixed;
+            background: url("../../MDA/ad1.jpg") no-repeat center fixed;
         }
         .header {
-            background-color: #342019;
+            background-color: transparent;
         }
         .popup2 {
             width: 90%;
@@ -258,6 +335,20 @@
             font-family: Segoe UI Semibold,sans-serif;
 
         }
+        .tilesWrap li {
+            display: inline-block;
+            width: 80%; /* Each tile takes up 30% of the width to make a 3-column grid */
+            min-width: 200px;
+            padding: 80px 20px 40px;
+            position: relative;
+            vertical-align: top;
+            margin: 10px;
+            font-family: 'helvetica', san-serif,serif;
+            min-height: 25vh;
+            background: #262a2b;
+            border: 1px solid #252727;
+            text-align: left;
+        }
     }
 
 </style>
@@ -273,59 +364,64 @@
         </nav>
     </header>
     <section>
-        <div class="box">
-            <a href="../Programming%202/prog2.html"><div class="list">
-                <div class="imgBx1"><b>PR2</b></div>
-                <div class="content">
+        <ul class="tilesWrap">
+            <li>
+                <a href="../Programming 2/prog2.html">
+                    <h2>PR2</h2>
                     <h3>Programming 2</h3>
                     <p>focuses on Object-Oriented Programming (OOP),<br> teaching core concepts such as classes, inheritance, <br>polymorphism, and encapsulation.</p>
-                </div>
-            </div></a>
-            <a href="../Probability%201/prop1.html"><div class="list">
-                <div class="imgBx2"><b>PB1</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Probability%201/prop1.html">
+                    <h2>PB1</h2>
                     <h3>Probability 1</h3>
                     <p>introduces the foundational concepts of probability <br>
                         theory, including basic probability rules, random<br>
                         variables, distributions, expectation, and variance.</p>
-                </div>
-            </div></a>
-            <a href="404.html"><div class="list">
-                <div class="imgBx3"><b>STR</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Data%20Structures/data-str.html">
+                    <h2>STR</h2>
                     <h3>Intro to Data Structures</h3>
                     <p>provides an overview of data analysis, including <br>data collection, cleaning and visualization. The course <br>covers key techniques used in data science, such as R.</p>
-                </div>
-            </div></a>
-            <a href="../Ai/ai.html"><div class="list">
-                <div class="imgBx4"><b>ARI</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Ai/ai.html">
+                    <h2>ARI</h2>
                     <h3>Intro to Artificial Intelligence</h3>
                     <p>focuses on searching Algorithms like DFS,BFS,UCS <br>and more of hierarchical searching Methods , <br>Machine learning and Agents </p>
-                </div>
-            </div></a>
-            <a href="../Discrete%20Math/dm.html"><div class="list">
-                <div class="imgBx5"><b>DSM</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Discrete%20Math/dm.html">
+                    <h2>DIM</h2>
                     <h3>Discrete Math</h3>
                     <p>Discrete Mathematics explores mathematical
                         structures<br> that are fundamentally discrete rather than continuous,<br>
                         including topics such as logic, set theory and graph theory</p>
-                </div>
-            </div></a>
-            <a href="../Innovation/inno.html"><div class="list">
-                <div class="imgBx6"><b>INO</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Innovation/inno.html">
+                    <h2>INO</h2>
                     <h3>Innovation</h3>
                     <p>involves understanding how to create and manage new ventures<br>
                         focusing on identifying opportunities, developing innovative <br>
                         solutions, and navigating the challenges of a growing business.</p>
-                </div>
-            </div></a>
-        </div>
+                    <button>Read more</button>
+                </a>
+            </li>
+        </ul>
     </section>
 </div>
-
 <div class="popup2">
     <h2>Page Information</h2>
     <span class="gran"> page code : #6433611455 </span>
