@@ -19,6 +19,161 @@
         box-sizing: border-box;
         font-family: 'Arial Rounded MT Bold', sans-serif;
     }
+    body {
+        background: #262a2b;
+    }
+    a h2{
+        color: aliceblue;
+    }
+    .tilesWrap {
+        padding: 0;
+        margin: 50px auto;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tilesWrap li {
+        display: inline-block;
+        width: 20%; /* Each tile takes up 30% of the width to make a 3-column grid */
+        min-width: 200px;
+        padding: 80px 20px 40px;
+        position: relative;
+        vertical-align: top;
+        margin: 10px;
+        font-family: 'helvetica', san-serif,serif;
+        min-height: 25vh;
+        background: #262a2b;
+        border: 1px solid #252727;
+        text-align: left;
+    }
+    .tilesWrap li h2 {
+        font-size: 114px;
+        margin: 0;
+        position: absolute;
+        opacity: 0.2;
+        top: 50px;
+        right: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    .tilesWrap li h3 {
+        font-size: 30px;
+        color: #b7b7b7;
+        margin-bottom: 5px;
+    }
+    .tilesWrap li p {
+        font-size: 16px;
+        line-height: 18px;
+        color: #b7b7b7;
+        margin-top: 5px;
+    }
+    .tilesWrap li button {
+        background: transparent;
+        border: 1px solid #b7b7b7;
+        padding: 10px 20px;
+        color: #b7b7b7;
+        border-radius: 3px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-40px);
+        opacity: 0;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .tilesWrap li button:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 120%;
+        background: #b7b7b7;
+        top: 0;
+        opacity: 0;
+        left: -140px;
+        border-radius: 0 20px 20px 0;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+
+    }
+    .tilesWrap li:hover button {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+    .tilesWrap li button:hover {
+        color: #262a2b;
+    }
+    .tilesWrap li button:hover:before {
+        left: 0;
+        opacity: 1;
+    }
+    .tilesWrap li:hover h2 {
+        top: 0px;
+        opacity: 0.6;
+    }
+    button{
+    }
+
+    .tilesWrap li:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1;
+        background: #fff;
+        transform: skew(2deg, 2deg);
+    }
+    .tilesWrap li:after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .tilesWrap li:nth-child(1):before {
+        background: #C9FFBF;
+        background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
+        background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+    }
+    .tilesWrap li:nth-child(2):before {
+        background: #f2709c;
+        background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+        background: linear-gradient(to right, #ff9472, #f2709c);
+    }
+    .tilesWrap li:nth-child(3):before {
+        background: #c21500;
+        background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+        background: linear-gradient(to right, #ffc500, #c21500);
+    }
+    .tilesWrap li:nth-child(4):before {
+        background: #FC354C;
+        background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+        background: linear-gradient(to right, #0ABFBC, #FC354C);
+    }
+    .tilesWrap li:nth-child(5):before {
+        background: #FC354C;
+        background: -webkit-linear-gradient(to right, #0ABFBC, #efb94c);
+        background: linear-gradient(to right, #029b05, #0ceeff);
+    }
+    .tilesWrap li:nth-child(6):before {
+        background: #FC354C;
+        background: -webkit-linear-gradient(to right, #2436ff, #efb94c);
+        background: linear-gradient(to right, #c124ff, #029b05);
+    }
+    li{
+        cursor: pointer;
+    }
 
     section {
         position: relative;
@@ -79,92 +234,10 @@
         color: #37a2d0;
     }
 
-    .box {
-        position: relative;
-        min-width: 350px;
-        min-height: 400px;
-        background-color: rgba(255,255,255,0.1);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        border-right: 1px solid rgba(255,255,255,0.2);
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-        border-radius: 10px;
-        z-index: 10;
-        backdrop-filter: blur(10px);
-        contain: layout paint; /* CSS containment */
-    }
-
-    .box .imgBx1, .box .imgBx2, .box .imgBx3, .box .imgBx4, .box .imgBx5, .box .imgBx6, .box .imgBx7 {
-        position: relative;
-        width: 70px;
-        height: 75px;
-        border-radius: 6px;
-        padding: 19px;
-        margin-right: 12px;
-        color: black;
-        justify-content: center;
-        display: flex;
-        font-family: 'Poppins', sans-serif;
-        font-size: 30px;
-    }
-
-    .box .imgBx1 { background: yellow; }
-    .box .imgBx2 { background: #37a2d0; }
-    .box .imgBx3 { background: #30cb0e; }
-    .box .imgBx4 { background: #da0707; }
-    .box .imgBx5 { background: orange; }
-    .box .imgBx6 { background: #a207ff; }
-    .box .imgBx7 { background: #ff4d00; }
-
-    .box a {
-        text-decoration: none;
-    }
-
-    .box .list {
-        padding: 20px;
-        margin: 10px;
-        position: relative;
-        display: flex;
-        background: rgba(0,0,0,0.1);
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.5s;
-        color: white;
-    }
-
-    .box .list:hover {
-        background: white;
-        color: black;
-        transform: scale(1.03);
-    }
-
-    .list .content h3 {
-        background: none;
-        margin: 0;
-        padding: 0;
-        border-bottom: 2px solid white;
-    }
-
-    .list .content p {
-        background: none;
-        margin: 0;
-        padding: 0;
-    }
 
     @media (max-width: 768px) {
         section {
             background: url("../../MDA/525252.jpg") no-repeat center center / cover;
-        }
-        .box{
-            position: relative;
-            min-width: 250px;
-            min-height: 300px;
-            background-color: rgba(255,255,255,0.1);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-right:1px solid rgba(255,255,255,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-            z-index: 10;
-            backdrop-filter: blur(1px);
         }
     }
         .popup2{
@@ -232,10 +305,10 @@
 
     @media (max-width: 768px) {
         section{
-            background: url("../../MDA/mat2.jpg") no-repeat center fixed;
+            background: url("../../MDA/ad1.jpg") no-repeat center fixed;
         }
         .header {
-            background-color: #342019;
+            background-color: transparent;
         }
         .popup2 {
             width: 90%;
@@ -262,6 +335,20 @@
             font-family: Segoe UI Semibold,sans-serif;
 
         }
+        .tilesWrap li {
+            display: inline-block;
+            width: 80%; /* Each tile takes up 30% of the width to make a 3-column grid */
+            min-width: 200px;
+            padding: 80px 20px 40px;
+            position: relative;
+            vertical-align: top;
+            margin: 10px;
+            font-family: 'helvetica', san-serif,serif;
+            min-height: 25vh;
+            background: #262a2b;
+            border: 1px solid #252727;
+            text-align: left;
+        }
     }
     
 </style>
@@ -277,67 +364,74 @@
         </nav>
     </header>
     <section>
-        <div class="box">
-            <a href="../Programming 1/prog1.html"><div class="list">
-                <div class="imgBx1"><b>PR1</b></div>
-                <div class="content">
+        <ul class="tilesWrap">
+            <li>
+                <a href="../Programming 1/prog1.html">
+                    <h2>PR1</h2>
                     <h3>Programming 1</h3>
                     <p>typically covers the basics of Java<br>
                         syntax, object-oriented principles, and foundational<br>
                         programming concepts like variables and simple algorithms.</p>
-                </div>
-            </div></a>
-            <a href="../Linear Algebra/linear.html"><div class="list">
-                <div class="imgBx2"><b>LIA</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Linear%20Algebra/linear.html">
+                    <h2>LIA</h2>
                     <h3>Linear Algebra</h3>
                     <p>involves the study of vectors and matrices,<br>
                         focusing on operations such as addition and multiplication <br>
                         and their applications in systems of linear equations.</p>
-                </div>
-            </div></a>
-            <a href="../Calculus/calc.html"><div class="list">
-                <div class="imgBx3"><b>CAL</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Calculus/calc.html">
+                    <h2>CAL</h2>
                     <h3>Calculus</h3>
                     <p>the mathematical study of continuous change, <br>
                         focusing on concepts such as derivatives, integrals,<br>
                         limits, analyze and model dynamic systems.</p>
-                </div>
-            </div></a>
-            <a href="../Data Science/ds.html"><div class="list">
-                <div class="imgBx4"><b>DAS</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Data%20Science/ds.html">
+                    <h2>DAS</h2>
                     <h3>Introduction to Data Science</h3>
                     <p>This dynamic field blends statistics to uncover insights <br>
                         from vast amounts of data. exploring patterns, predicting <br>
                         or solving problems, it offers the tools to make informed</p>
-                </div>
-            </div></a>
-            <a href="../Computer System/cs.html"><div class="list">
-                <div class="imgBx5"><b>CSY</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Computer%20System/cs.html">
+                    <h2>CSY</h2>
                     <h3>Introduction to Computer System</h3>
                     <p>"Intro to Computer Systems" explores computer hardware, <br>
                         software interactions, and data representation basics <br>
                         and system performance </p>
-                </div>
-            </div></a>
-            <a href="../Math 0/math0.html"><div class="list">
-                <div class="imgBx6"><b>MA0</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Math%200/math0.html">
+                    <h2>MA0</h2>
                     <h3>Math 0</h3>
                     <p>A material intended for science students who did not study <br> mathematics in high school.</p>
-                </div>
-            </div></a>
-            <a href="../Critical Thinking/crit.html"><div class="list">
-                <div class="imgBx7"><b>CRT</b></div>
-                <div class="content">
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Critical%20Thinking/crit.html">
+                    <h2>CRT</h2>
                     <h3>Critical Thinking</h3>
                     <p>التفكير الناقد هو عملية تحليل وتقييم متأنٍ للمعلومات بهدف الوصول إلى استنتاجات<br> منطقية ومدعومة بالأدلة. يسهم في تعزيز الفهم العميق واتخاذ قرارات مستنيرة.</p>
-                </div>
-            </div></a>
-        </div>
+                    <button>Read more</button>
+                </a>
+            </li>
+        </ul>
     </section>
 </div>
 <div class="popup2">
