@@ -1239,3 +1239,15 @@ span{
         left: 20%;
     }
 }
+.timeline-content.locked {
+    pointer-events: none;
+    opacity: 0.5; /* This applies to the content, you can adjust it */
+    position: relative;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 class=%22feather feather-lock%22%3E%3Crect x=%223%22 y=%2211%22 width=%2218%22 height=%2211%22 rx=%222%22 ry=%222%22/%3E%3Cpath d=%22M7 11V7a5 5 0 0 1 10 0v4%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px 200px; /* Adjust the size as needed */
+    background-color: rgb(38, 40, 38); /* Optional: background color to show locking visually */
+    color: white;
+    z-index: 1;
+}
