@@ -118,7 +118,7 @@
             <div class="timeline-dot"></div>
             <div class="timeline-date">Year #1</div>
             <a href="Materials-Section/materials 2.html">
-                <div class="timeline-content">
+                <div class="timeline-content locked">
                     <h3>Second Term</h3>
                     <p>
                         <b>
@@ -153,7 +153,8 @@
                                 <li>Probability 2</li>
                                 <li>DS Methodology</li>
                                 <li>Introduction to Data Structures</li>
-                                <li>Economy Sciences</li>
+                                <li>UNK</li>
+                                <li>UNK</li>
                             </ul>
                         </b>
                     </p>
@@ -165,7 +166,7 @@
             <div class="timeline-dot"></div>
             <div class="timeline-date">Year #2</div>
             <a href="404.html">
-                <div class="timeline-content">
+                <div class="timeline-content locked">
                     <h3>Second Term</h3>
                     <p>
                         <b>
@@ -336,6 +337,10 @@
             console.error('Error:', error);
         });
     });
+    document.querySelectorAll('.timeline-content.locked').forEach(item => {
+        item.closest('a').removeAttribute('href');
+    });
+
 </script>
 </body>
 </html>
