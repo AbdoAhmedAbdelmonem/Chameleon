@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/hell.png" type="image/x-icon">
+
+        <title>ChameHub</title>
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="main">
+    <header class="header">
+        <img src="../MDA/hell.png" class="logo">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="" class="active">home  <i class='bx bxs-home'></i></a>
+            <a href="#" class="popo">About  <i class='bx bx-info-circle'></i></a>
+
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Welcome <span>to</span>The New<span>ChameHub</span></h1>
+            <h3 class="text-animation" style="color:#ffb500">One Of Chameleon Products</h3>
+            <p>
+                <br>
+                Welcome to ChameHub, a new extension of Chameleon focused on data structures. Here, you'll find clear explanations, interactive tools, and practical examples to help you grasp and apply data structures effectively. Whether you're a beginner or advanced learner, Chame Hub is designed to enhance your understanding and boost your skills in computer science.
+            </p>
+        </div>
+        <div class="home-image">
+            <a href="SLL.html"><button>Singly Linked List in Java</button></a>
+            <a href=""><button>Doubly Linked List in Java <i class='bx bx-lock'></i></button></a>
+            <a href=""><button>wait for us <i class='bx bx-lock'></i></button></a>
+            <a href=""><button>wait for us <i class='bx bx-lock'></i></button></a>
+            <a href=""><button>wait for us <i class='bx bx-lock'></i></button></a>
+            <a href=""><button>wait for us <i class='bx bx-lock'></i></button></a>
+
+        </div>
+    </section>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> ChameHub Technology 7788 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+<script src="script.js"></script>
+<script>
+    const bgAnimation = document.getElementById('bgAnimation');
+
+    const numberOfColorBoxes = 400;
+
+    for (let i = 0; i < numberOfColorBoxes; i++) {
+        const colorBox = document.createElement('div');
+        colorBox.classList.add('colorBox');
+        bgAnimation.append(colorBox)
+    }
+</script>
+</body>
+</html>

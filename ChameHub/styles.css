@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+}
+:root{
+    --main-color : #162793;
+
+    --d1-color : #131313;
+    --d2-color : #080808;
+    --white2-color : #d7d7d5;
+    --first-color: hsl(130, 98%, 32%);
+    --first-color-light: hsl(96, 80%, 32%);
+    --first-color-alt: hsla(106, 82%, 32%, 0.3);
+    --second-color: hsl(195, 75%, 52%);
+    --dark-color: hsl(212, 40%, 12%);
+    --white-color: hsl(212, 4%, 95%);
+    --body-color: hsl(212, 42%, 15%);
+    --container-color: hsl(212, 42%, 20%);
+    --body-font: "Bai Jamjuree", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+}
+
+html {
+    font-size:60% ;
+    overflow-x: hidden;
+}
+body{
+    background: url("../MDA/lorem1 (1).jpg") no-repeat fixed;
+    background-size: cover;
+    color: var(--white-color);
+    transition: background 1s ease-in-out;
+}
+body.light{
+    background: var(--white-color);
+    color: var(--d2-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo{
+    font-size: 3rem;
+    color:var(--white-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 90px;
+    margin-left: -120px;
+}
+.logo:hover{
+    transform: scale(1.1);
+}  .logo span{
+       text-shadow: 0 0 25px var(--main-color) ;
+   }
+.navbar{
+    margin-right: -96px;
+    display: flex;
+}
+.navbar a{
+    font-size:1.8rem ;
+    color: var(--white-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.header span{
+    font-family: "Alexandria Thin", sans-serif;
+    font-size: 19px;
+}
+.navbar a:hover,.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.home-content{
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+    justify-content: center;
+    position: relative;
+    max-width: 750px;
+    padding-bottom: 130px;
+}
+span{
+    color: var(--main-color);
+    font-family: "Ink Free", sans-serif;
+
+}
+.logo span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size:3.5rem ;
+}
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+.home-image {
+    display: grid;
+    padding-left: 90px;
+    grid-template-columns: 1fr; /* 1 column */
+    grid-template-rows: repeat(6, auto); /* 6 rows */
+    gap: 10px; /* Optional: space between the buttons */
+    justify-content: center; /* Optional: center align horizontally */
+    align-items: center; /* Optional: center align vertically */
+}
+.popup2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 500px;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.popup2.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup2 h2{
+    font-size: 50px;
+    color: #37a2d0;
+    font-family: Segoe UI Semibold,sans-serif;
+}
+.popup2 .gran{
+    display: inline-block;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.popup2 .btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+
+.popup2 .btn .info-ok-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    background: #37a2d0;
+    border: 2px solid #37a2d0;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.popup2 .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.home-image button {
+    width: 360px;
+    height: 55px;/* Adjust button width as needed */
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(45deg, #5061ec, #f7530c);
+    border: none;
+    transition: 0.3s ease-in-out;
+    font-family: Alexandria,"sans-serif";
+}
+.home-image button:hover {
+    color: white;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    transform: scale(1.12);
+}
+
+@media (max-width: 1285px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px) {
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2em;
+    }
+}
+@media (max-width: 895px) {
+    #menu-icon{
+        display: block;
+
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px) ;
+        -webkit-border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--white-color);
+    }
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size:2.5rem ;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 680px;
+        margin: 0 auto;
+    }
+    @media (max-width: 480px) {
+        .popup2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+        }
+        #menu-icon {
+            display: block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 50%;
+            padding: 1rem 3%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-border-bottom-left-radius: 2rem;
+            border-left: 2px solid var(--main-color);
+            border-bottom: 2px solid var(--main-color);
+            display: none;
+        }
+        .logo{
+            font-size: 3rem;
+            color:var(--white-color);
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s ease;
+            width: 90px;
+            margin-left: 20px;
+        }
+
+        .navbar.active {
+            display: block;
+        }
+
+        .navbar a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+            color: var(--white-color);
+        }
+
+
+        .home-content{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-top: 36rem;
+            position: relative;
+            max-width: 750px;
+            padding-bottom: 60px;
+        }
+        .home-content {
+            margin-top: 18rem; /* Decrease the margin-top */
+        }
+
+        .home-image {
+            margin-top: 0; /* Ensure there's no extra margin */
+            padding-left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -60px;
+        }
+
+        .home-image button {
+            width: 80%;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        a{
+            width: 400px;
+        }
+    }
+}
+.logo img {
+    width: auto;
+    height: 50px;
+    max-width: 100%;
+}

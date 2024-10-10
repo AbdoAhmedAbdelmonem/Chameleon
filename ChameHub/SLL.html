@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="icon" href="../../../MDA/hell.png" type="image/x-icon">
+
+    <title>Singly Linked List Visualization</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #000000;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        margin: 10px 0 10px 0;
+    }
+
+    header h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+        border-left: 15px solid #ffad00;
+        border-right: 15px solid #ffad00;
+        animation: slide-in-down 2s ease-in-out forwards;
+
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    #singly {
+        flex: 1;
+        background-color: #000000;
+        padding: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        color: white;
+        border: 2px solid #232323;
+        animation: slide-in-left 2s ease-in-out forwards;
+
+    }
+
+    #explanation {
+        flex: 1;
+        background-color: #000000;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        color: white;
+        border: 2px solid #363131;
+        animation: slide-in-right 2s ease-in-out forwards;
+
+    }
+
+    pre {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #000000;
+        white-space: pre-wrap;
+        color: white;
+        font-size: 15px;
+        border: 2px solid white;
+    }
+    @keyframes slide-in-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-in-right {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes slide-in-down {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .comment {
+        color: #6A9955;
+    }
+
+    .keyword {
+        color: #569CD6;
+    }
+
+    .class-name {
+        color: #4EC9B0;
+    }
+
+    .function-name {
+        color: #DCDCAA;
+    }
+
+    .variable {
+        color: #9CDCFE;
+    }
+
+    .number {
+        color: #B5CEA8;
+    }
+
+    .string {
+        color: #CE9178;
+    }
+    .method{
+        color: #f55757;
+    }
+    .highlight{
+        color: green;
+    }
+    .yellow{
+        color: #ffad00;
+    }
+
+    .visualization {
+        margin-top: 20px;
+    }
+    strong{
+        color: #fc814e;
+    }
+
+    #singly-list {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #000000;
+        min-height: 50px;
+        background-color: #000000;
+    }
+    .visualization{
+        border: 2px solid white;
+        border-radius: 6px;
+    }
+
+    button {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border: 2px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        border-radius: 6px;
+        animation: slide-in-down 2s ease-in-out forwards;
+
+    }
+
+    button:hover {
+        background-color: #555;
+        transform: scale(1.21);
+    }
+
+    /* New section for the 2x4 grid layout */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+        padding: 20px;
+        animation: slide-in-down 2s ease-in-out forwards;
+
+    }
+
+    .grid-item {
+        border: 2px solid #3b3a3a;
+        background-color: #000000;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        color: white;
+        text-align: left;
+        font-size: 18px;
+        align-content: center;
+    }
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        text-shadow: 6px 6px 12px rgb(255, 255, 255);
+
+    }
+    h1 span{
+        color: #ffb500;
+        text-shadow: 6px 6px 12px rgb(255, 181, 0);
+
+    }
+    @media (max-width: 480px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            padding: 20px;
+
+        }
+        .grid-item {
+            background-color: #1c1c1c;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-align: left;
+            font-size: 12px;
+        }
+        pre {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #000000;
+            white-space: pre-wrap;
+            color: white;
+            font-size: 12px;
+        }
+        .container {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 20px;
+        }
+    }
+</style>
+<body>
+<header>
+    <h1><span>S</span>ingly <span>L</span>inked <span>L</span>ist in <span>J</span>ava</h1>
+    <nav>
+        <ul>
+            <a href="chamehub.html"><button>back to Gate</button></a>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Left section for code and visualization -->
+    <section id="singly">
+        <pre>
+<span class="comment">//Java code for a Node in Singly Linked List</span>
+<span class="keyword">class</span> <span class="class-name">Node</span> {
+    <span class="keyword">int</span> <span class="variable">data</span>;
+    <span class="class-name">Node</span> <span class="variable">next</span>;
+    <span class="function-name">Node</span>(<span class="keyword">int</span> <span class="variable">d</span>) {
+        <span class="variable">data</span> = <span class="variable">d</span>;
+        <span class="variable">next</span> = <span class="keyword">null</span>;
+    }
+}
+
+<span class="comment">//Method to insert a node at a given position</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="function-name">insert</span>(<span class="keyword">char</span> <span class="variable">v</span>, <span class="keyword">int</span> <span class="variable">pos</span>) {
+    <span class="class-name">LinkedListNode</span> <span class="variable">newNode</span> = <span class="keyword">new</span> <span class="class-name">LinkedListNode</span>(<span class="variable">v</span>);
+    <span class="keyword">if</span> (<span class="variable">pos</span> == <span class="number">0</span>) {
+        <span class="variable">newNode.next</span> = <span class="variable">head</span>;
+        <span class="variable">head</span> = <span class="variable">newNode</span>;
+        <span class="keyword">return</span>;
+    }
+    <span class="class-name">LinkedListNode</span> <span class="variable">pointer</span> = <span class="variable">head</span>;
+    <span class="keyword">int</span> <span class="variable">counter</span> = <span class="number">0</span>;
+
+    <span class="keyword">while</span> (<span class="variable">pointer</span> != <span class="keyword">null</span> && <span class="variable">counter</span> &lt; <span class="variable">pos</span> - <span class="number">1</span>) {
+        <span class="variable">pointer</span> = <span class="variable">pointer.next</span>;
+        <span class="variable">counter</span>++;
+    }
+    <span class="keyword">if</span> (<span class="variable">pointer</span> == <span class="keyword">null</span>) {
+        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="class-name">IndexOutOfBoundsException</span>(<span class="string">"Position out of bounds: "</span> + <span class="variable">pos</span>);
+    }
+    <span class="variable">newNode.next</span> = <span class="variable">pointer.next</span>;
+    <span class="variable">pointer.next</span> = <span class="variable">newNode</span>;
+}
+
+<span class="comment">//Method to insert node at the front of the list</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="function-name">push_front</span>(<span class="keyword">char</span> <span class="variable">v</span>) {
+    <span class="class-name">LinkedListNode</span> <span class="variable">newNode</span> = <span class="keyword">new</span> <span class="class-name">LinkedListNode</span>(<span class="variable">v</span>);
+    <span class="variable">newNode.next</span> = <span class="variable">head</span>;
+    <span class="variable">head</span> = <span class="variable">newNode</span>;
+}
+
+<span class="comment">//Method to check if the list is empty</span>
+<span class="keyword">public</span> <span class="keyword">boolean</span> <span class="function-name">isEmpty</span>() {
+    <span class="keyword">return</span> <span class="variable">head</span> == <span class="keyword">null</span>;
+}
+        </pre>
+        <div class="visualization">
+            <h3>Singly Linked List Visualization</h3>
+            <div id="singly-list"></div>
+            <button onclick="insertSingly()">Insert Node</button>
+        </div>
+    </section>
+
+    <!-- Right section for code explanation -->
+    <section id="explanation">
+        <h1 style="background-color: rgba(255,255,255,0.31);border-radius: 6px;color: #4EC9B0;text-shadow: none">Singly Linked List</h1>
+        <p>
+            A <strong>linked list</strong> is a collection of objects called <strong>nodes</strong> that are stored randomly in memory. Each node consists of two fields:
+        </p>
+        <ul>
+            <li><strong>Data:</strong> The information stored at that particular address.</li>
+            <br>
+            <li><strong>Pointer:</strong> A reference that holds the address of the next node in memory. The last node in the list points to <strong>null</strong>.</li>
+        </ul>
+
+        <h2 style="color: #7209b7">Uses of Linked Lists</h2>
+        <p>
+            Linked lists do not require contiguous memory; nodes can be stored anywhere in memory and linked together, leading to optimized space utilization. The size of the list is limited only by available memory, and there’s no need to declare it in advance. Empty nodes cannot exist in a linked list. Values of primitive types or objects can be stored in a singly linked list.
+        </p>
+
+        <h2 style="color: #7209b7">Advantages of Linked Lists Over Arrays</h2>
+        <p>
+            While arrays are a common data structure for organizing elements in memory, they have several limitations:
+        </p>
+        <ul>
+            <li><strong>Fixed Size:</strong> The size of an array must be known in advance, which can be restrictive.</li>
+            <br>
+            <li><strong>Inefficient Resizing:</strong> Increasing the size of an array is time-consuming and often requires creating a new larger array and copying elements.</li>
+            <br>
+            <li><strong>Contiguous Memory:</strong> Arrays require that all elements be stored contiguously in memory, complicating insertion and deletion operations as it requires shifting elements.</li>
+            <br>
+        </ul>
+        <p>
+            In contrast, linked lists offer several benefits:
+        </p>
+        <ul>
+            <br>
+            <li><strong>Dynamic Memory Allocation:</strong> Linked lists allocate memory dynamically, allowing nodes to be non-contiguously stored in memory and linked via pointers.</li>
+            <br>
+            <li><strong>Flexible Sizing:</strong> The size of a linked list is not defined at declaration and can grow as needed, limited only by available memory.</li>
+            <br>
+        </ul>
+
+        <h2 style="color: #7209b7">Singly Linked List (One-Way Chain)</h2>
+        <p>
+            A <strong>singly linked list</strong> is defined as a collection of ordered elements. The number of elements may vary according to the program's needs. Each node in a singly linked list consists of two parts:
+        </p>
+        <ul>
+            <br>
+            <li><strong>Data Part:</strong> Stores the actual information represented by the node.</li>
+            <br>
+            <li><strong>Link Part:</strong> Stores the address of the node’s immediate successor.</li>
+        </ul>
+
+    </section>
+</div>
+
+<h1><span>E</span>ssential <span>F</span>unctions</h1>
+<div class="grid-container">
+    <div class="grid-item"><pre>
+<span class="comment">//Method to insert node at the front of the list</span><br>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="function-name">push_front</span>(<span class="keyword">char</span> <span class="variable">v</span>) {
+    <span class="class-name">LinkedListNode</span> <span class="variable">newNode</span> = <span class="keyword">new</span> <span class="class-name">LinkedListNode</span>(<span class="variable">v</span>);
+    <span class="variable">newNode.next</span> = <span class="variable">head</span>;
+    <span class="variable">head</span> = <span class="variable">newNode</span>;
+}
+    </pre></div>
+    <div class="grid-item">
+        <h5 style="font-family: 'Poppins', sans-serif;font-size: 18px">The <span style="font-family: 'Lucida Console',sans-serif;text-decoration: underline;background-color: rgba(199,197,176,0.35);border-radius: 4px"><span class="function-name">push_front</span>(<span class="keyword">char</span><span class="variable"></span> v)</span> function inserts a new node at the beginning of a linked list. Here's a summary of its key steps:</h5>
+        <ol>
+            <li><strong>Create a New Node:</strong> A new node is created with the value v</li><br>
+            <li><strong>Link to Current Head:</strong> The new node's <span class="yellow">next</span> pointer is set to the current head of the list, linking it to the existing first node</li><br>
+            <li><strong>Update Head:</strong> The list's <span class="method">head pointer</span> is updated to point to the new node, making it the new first element in the list.</li>
+        </ol>
+    </div>
+    <div class="grid-item">
+        <pre>
+<span class="comment">//Method to insert node at the end of the list</span><br>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="function-name">push_back</span>(<span class="keyword">char</span> <span class="variable">v</span>) {
+    <span class="class-name">LinkedListNode</span> <span class="variable">newNode</span> = <span class="keyword">new</span> <span class="class-name">LinkedListNode</span>(<span class="variable">v</span>);
+
+    <span class="keyword">if</span> (<span class="variable">head</span> == <span class="keyword">null</span>) {
+        <span class="variable">head</span> = <span class="variable">newNode</span>;
+        <span class="keyword">return</span>;
+    }
+
+    <span class="class-name">LinkedListNode</span> <span class="variable">pointer</span> = <span class="variable">head</span>;
+
+    <span class="keyword">while</span> (<span class="variable">pointer.next</span> != <span class="keyword">null</span>) {
+        <span class="variable">pointer</span> = <span class="variable">pointer.next</span>;
+    }
+
+    <span class="variable">pointer.next</span> = <span class="variable">newNode</span>;
+}
+        </pre>
+    </div>
+    <div class="grid-item">
+        <h5 style="font-family: 'Poppins', sans-serif;font-size: 18px">The <span style="font-family: 'Lucida Console',sans-serif;text-decoration: underline;background-color: rgba(199,197,176,0.35);border-radius: 4px"><span class="function-name">push_back</span>(<span class="keyword">char</span><span class="variable"></span> v)</span> function adds a new node to the end (or spa <span class="yellow">"back"</span>) of a linked list. Here’s a summary of its key steps:</h5>
+        <ol>
+            <li><strong>Create a New Node:</strong> A new node is created with the value <span class="variable">"v"</span></li>
+            <br>
+            <li><strong>Check for an Empty List:</strong>
+                <ul>
+                    <br>
+                    <li>If the head is null (meaning the list is <span class="highlight">empty</span>), the new node is assigned as the head of the list</li>
+                    <br>
+                    <li>The function then returns, as the insertion is complete</li>
+                    <br>
+                </ul>
+            </li>
+            <li><strong>Traverse to the End of the List:</strong>
+                <ul>
+                    <br>
+                    <li>If the list is not empty, a pointer (<span class="highlight">pointer</span>) is initialized to the head of the list.</li>
+                    <br>
+                    <li>A <span class="yellow">while loop</span> iterates through the list until it reaches the last node (where <span class="method">pointer.next</span> is <span class="method">null)</span>.</li>
+                    <br>
+                </ul></li>
+            <li><strong>Link the New Node:</strong> The new node is linked to the last node by setting <span class="method">pointer.next</span> to the new node.</li>
+        </ol>
+    </div>
+    <div class="grid-item"><pre>
+<span class="comment">//Method to print the linked list</span><br>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="function-name">print</span>() {
+    <span class="class-name">LinkedListNode</span> <span class="variable">pointer</span> = <span class="variable">head</span>;
+    <span class="keyword">while</span> (<span class="variable">pointer</span> != <span class="keyword">null</span>) {
+        <span class="class-name">System</span>.<span class="method">out</span>.<span class="method">print</span>(<span class="variable">pointer.val</span> + <span class="string">" "</span>);
+        <span class="variable">pointer</span> = <span class="variable">pointer.next</span>;
+    }
+}
+    </pre></div>
+    <div class="grid-item">
+        <h5 style="font-family: 'Poppins', sans-serif;font-size: 18px">The <span style="font-family: 'Lucida Console',sans-serif;text-decoration: underline;background-color: rgba(199,197,176,0.35);border-radius: 4px"><span class="function-name">print</span>()</span> function displays all the values in a linked list. Here’s a summary of its key steps:</h5>
+        <ol>
+            <li><strong>Initialize a Pointer:</strong> A pointer (<span class="highlight">pointer</span>) is set to the <span class="method">head</span> of the linked list.</li>
+            <br>
+            <li><strong>Traverse the List:</strong>
+
+                <ul><br>
+                    <li>Inside the loop, the value of the current node (<span class="method">pointer.val</span>) is printed followed by a space.</li>
+                    <br>
+                    <li>A <span class="yellow">while loop</span> iterates through the list as long as <span class="method">pointer</span> is not <span class="method">null</span> .</li>
+                </ul>
+                <br>
+            </li>
+            <li><strong>Move to the Next Node:</strong> The pointer is then updated to the next node in the list (<span class="method">pointer</span> = <span class="variable">pointer.next</span>)</li>
+
+        </ol>
+
+    </div>
+    <div class="grid-item"><pre>
+<span class="comment">//Method to remove node at a given position</span><br>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="function-name">remove</span>(<span class="keyword">int</span> <span class="variable">pos</span>) {
+    <span class="keyword">if</span>(!<span class="method">isEmpty</span>()) {
+        <span class="class-name">LinkedListNode</span> <span class="variable">pointer</span> = <span class="variable">head</span>;
+        <span class="keyword">int</span> <span class="variable">counter</span> = <span class="number">0</span>;
+        <span class="keyword">while</span> (<span class="variable">counter</span> &lt; <span class="variable">pos</span> - <span class="number">1</span>) {
+            <span class="variable">pointer</span> = <span class="variable">pointer.next</span>;
+            <span class="variable">counter</span>++;
+        }
+        <span class="class-name">LinkedListNode</span> <span class="variable">j</span> = <span class="variable">pointer.next</span>;
+        <span class="variable">pointer.next</span> = <span class="variable">j.next</span>;
+    }
+}
+    </pre></div>
+    <div class="grid-item">
+        <h5 style="font-family: 'Poppins', sans-serif;font-size: 18px">The <span style="font-family: 'Lucida Console',sans-serif;text-decoration: underline;background-color: rgba(199,197,176,0.35);border-radius: 4px"><span class="function-name">remove</span>(<span class="keyword">int</span> <span class="variable">pos</span>)</span> function removes a node from a linked list at a specified position. Here’s a summary of its key steps:</h5>
+        <ol>
+            <li>
+                <strong>Check if the List is Not Empty:</strong> The function first checks if the list is not empty using <span class="function-name">isEmpty</span>(). If the list is empty, it does nothing.
+
+            </li><br>
+            <li><strong>Initialize a Pointer and Counter:</strong> A pointer (<span class="method">pointer</span>) is set to the <span class="keyword">head</span> of the list, and a counter is initialized to <span class="method">0</span>.</li>
+            <br>
+            <li><strong>Traverse to the Node Before the Specified Position:</strong>
+                <ul><br>
+                    <li>A <span class="yellow">while loop</span> iterates through the list until it reaches the node just before the desired position <span class="highlight">(pos - 1)</span>.</li>
+                    <br>
+                    <li>The pointer moves to the next node in each iteration, and the counter is incremented.</li>
+                    <br>
+                </ul>
+            </li>
+            <li><strong>Remove the Node:</strong>
+                <ul><br>
+
+                    <li>After reaching the correct position, the function sets <span class="keyword">pointer.next</span> to skip the node at the specified position <span class="variable">(j)</span>, effectively removing it from the list.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    let singlyList = [];
+    function insertSingly() {
+        let newData = prompt("Enter value to insert in Singly Linked List:");
+        if (newData) {
+            singlyList.push(newData);
+            renderSinglyList();
+        }
+    }
+
+    function renderSinglyList() {
+        let singlyDiv = document.getElementById("singly-list");
+        singlyDiv.innerHTML = "";
+
+        singlyDiv.style.display = "flex";
+        singlyDiv.style.alignItems = "center";
+        singlyDiv.style.flexWrap = "wrap";
+
+        singlyList.forEach((node, index) => {
+            if (index === 0) {
+                let headLabel = document.createElement("span");
+                headLabel.innerHTML = "Head →";
+                headLabel.style.marginRight = "10px";
+                headLabel.style.color = "yellow";
+                headLabel.style.display = "inline-block";
+                singlyDiv.appendChild(headLabel);
+            }
+
+            let nodeDiv = document.createElement("div");
+            nodeDiv.classList.add("node");
+            nodeDiv.style.display = "inline-flex";
+            nodeDiv.style.marginRight = "10px";
+            nodeDiv.style.padding = "10px";
+            nodeDiv.style.border = "2px solid white";
+            nodeDiv.style.borderRadius = "6px";
+            nodeDiv.style.color = "white";
+            nodeDiv.style.width = "80px";
+            nodeDiv.style.justifyContent = "space-between";
+
+            let valueDiv = document.createElement("div");
+            valueDiv.innerText = node;
+            valueDiv.style.flex = "1";
+            valueDiv.style.textAlign = "center";
+
+            let refDiv = document.createElement("div");
+            refDiv.innerText = "ref";
+            refDiv.style.flex = "1";
+            refDiv.style.textAlign = "center";
+            refDiv.style.color = "gray";
+            nodeDiv.appendChild(valueDiv);
+            nodeDiv.appendChild(refDiv);
+
+            singlyDiv.appendChild(nodeDiv);
+
+            if (index < singlyList.length - 1) {
+                let arrow = document.createElement("span");
+                arrow.innerHTML = "→";
+                arrow.style.marginRight = "10px";
+                arrow.style.color = "green";
+                arrow.style.display = "inline-block";
+                singlyDiv.appendChild(arrow);
+            }
+
+            if (index === singlyList.length - 1) {
+                let nullLabel = document.createElement("span");
+                nullLabel.innerHTML = "→ Null";
+                nullLabel.style.marginLeft = "10px";
+                nullLabel.style.color = "red";
+                nullLabel.style.display = "inline-block";
+                singlyDiv.appendChild(nullLabel);
+            }
+        });
+    }
+</script>
+</body>
+</html>
