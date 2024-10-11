@@ -55,6 +55,8 @@ body.light{
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    animation: slide-in-up 2s ease-in-out forwards;
+
 }
 .logo{
     font-size: 3rem;
@@ -129,18 +131,24 @@ span{
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size:3.5rem ;
+    animation: slide-in-left 2s ease-in-out forwards;
+
 }
 .home-content h1{
     font-size: 7rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
+    animation: slide-in-left 1s ease-in-out forwards;
+
 }
 .home-content p{
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
+    animation: slide-in-left 3s ease-in-out forwards;
+
 }
 .home-image {
     display: grid;
@@ -216,7 +224,7 @@ span{
 
 .home-image button {
     width: 360px;
-    height: 55px;/* Adjust button width as needed */
+    height: 55px;
     padding: 10px;
     font-size: 20px;
     border-radius: 12px;
@@ -225,6 +233,65 @@ span{
     border: none;
     transition: 0.3s ease-in-out;
     font-family: Alexandria,"sans-serif";
+}
+.btn1{
+    animation: slide-in-right 0.5s ease-in-out forwards;
+}
+.btn2{
+    animation: slide-in-right 1s ease-in-out forwards;
+}
+.btn3{
+    animation: slide-in-right 1.5s ease-in-out forwards;
+}
+.btn4{
+    animation: slide-in-right 2s ease-in-out forwards;
+}
+.btn5{
+    animation: slide-in-right 2.5s ease-in-out forwards;
+}
+.btn6{
+    animation: slide-in-right 3s ease-in-out forwards;
+}
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slide-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slide-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .home-image button:hover {
     color: white;
@@ -288,6 +355,7 @@ span{
         max-width: 680px;
         margin: 0 auto;
     }
+
     @media (max-width: 480px) {
         .popup2{
             position: absolute;
@@ -355,7 +423,7 @@ span{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-bottom: -60px; /* Negative margin might be causing overlap */
+            margin-bottom: -60px;
         }
 
         .home-image button {
