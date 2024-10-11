@@ -14,6 +14,7 @@
         background-color: #000000;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
 
     header {
@@ -56,7 +57,6 @@
         color: white;
         border: 2px solid #232323;
         animation: slide-in-left 2s ease-in-out forwards;
-
     }
 
     #explanation {
@@ -185,7 +185,6 @@
         transform: scale(1.21);
     }
 
-    /* New section for the 2x4 grid layout */
     .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -229,7 +228,7 @@
 
         }
         .grid-item {
-            background-color: #1c1c1c;
+            background-color: #000000;
             padding: 15px;
             border-radius: 6px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -251,6 +250,13 @@
             grid-template-columns: repeat(1, 1fr);
             padding: 20px;
         }
+        #singly {
+            flex: 1;
+            background-color: #000000;
+            padding: 20px;
+            margin-right: 0px;
+            border-radius: 8px;
+        }
     }
 </style>
 <body>
@@ -264,7 +270,6 @@
 </header>
 
 <div class="container">
-    <!-- Left section for code and visualization -->
     <section id="singly">
         <pre>
 <span class="comment">//Java code for a Node in Singly Linked List</span>
@@ -318,7 +323,6 @@
         </div>
     </section>
 
-    <!-- Right section for code explanation -->
     <section id="explanation">
         <h1 style="background-color: rgba(255,255,255,0.31);border-radius: 6px;color: #4EC9B0;text-shadow: none">Singly Linked List</h1>
         <p>
