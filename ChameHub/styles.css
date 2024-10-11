@@ -34,7 +34,7 @@ html {
     overflow-x: hidden;
 }
 body{
-    background: url("lorem1 (1).jpg") no-repeat fixed;
+    background: url("../MDA/lorem1 (1).jpg") no-repeat fixed;
     background-size: cover;
     color: var(--white-color);
     transition: background 1s ease-in-out;
