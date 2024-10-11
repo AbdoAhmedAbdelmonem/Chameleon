@@ -220,14 +220,19 @@
 
     }
     @media (max-width: 480px) {
+        body, html {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
         .grid-container {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 10px;
             margin-top: 20px;
             padding: 20px;
-
+            overflow-x: hidden; /* Ensure grid container doesn't scroll horizontally */
         }
+
         .grid-item {
             background-color: #000000;
             padding: 15px;
@@ -236,7 +241,9 @@
             color: white;
             text-align: left;
             font-size: 12px;
+            overflow-x: hidden; /* Prevent any content overflow in grid items */
         }
+
         pre {
             padding: 10px;
             border-radius: 5px;
@@ -244,26 +251,28 @@
             white-space: pre-wrap;
             color: white;
             font-size: 12px;
+            word-wrap: break-word; /* Ensure long code lines break */
+            max-width: 100%; /* Prevent overflow */
         }
+
         .container {
             display: grid;
             justify-content: space-between;
             grid-template-columns: repeat(1, 1fr);
             padding: 20px;
+            overflow-x: hidden; /* Prevent container from scrolling horizontally */
         }
+
         #singly {
             flex: 1;
             background-color: #000000;
             padding: 20px;
             margin-right: 0px;
             border-radius: 8px;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
-            max-width: 480px;
+            overflow-x: hidden; /* Block any horizontal scrolling */
         }
     }
+
 </style>
 <body>
 <header>
