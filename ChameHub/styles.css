@@ -355,7 +355,7 @@ span{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-bottom: -60px;
+            margin-bottom: -60px; /* Negative margin might be causing overlap */
         }
 
         .home-image button {
