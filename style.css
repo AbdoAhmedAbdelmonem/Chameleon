@@ -10,7 +10,7 @@
     font-family: "Alexandria", sans-serif;
 }
 :root{
-    --main-color : #ffc324;
+    --main-color : #00e1ff;
 
     --d1-color : #131313;
     --d2-color : #080808;
@@ -25,9 +25,12 @@ html {
 body{
     background: var(--d2-color);
     color: var(--white-color);
-    transition: background 1s ease-in-out;
+    transition: background 1s ease-in-out,opacity 0.5s ease-in-out;
     animation: changeColors 390s infinite ease-in-out;
+}
 
+body.fade-out {
+    opacity: 0;
 }
 body.light{
     background: var(--white-color);
@@ -37,7 +40,7 @@ body.light{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 110%;
     padding: 4rem 12% 4rem;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
@@ -138,29 +141,29 @@ section{
     background-size: cover; /* Ensures the image covers the div */
     z-index: 6;
 }
-@keyframes changeColors {
-    0% {--main-color : #ffc324}
-    5%{--main-color : #87ff24}
-    10%{--main-color : #24ffd7}
-    15%{--main-color : #ff5a00}
-    20%{--main-color : #ff2424}
-    25%{--main-color : #0ceeff}
-    30%{--main-color : #0800ff}
-    35%{--main-color : #c124ff}
-    40%{--main-color : #8d8c9f}
-    45%{--main-color : #029b05}
-    50%{--main-color : #a66125}
-    55%{--main-color : #0ceeff}
-    60%{--main-color : #ff2424}
-    65%{--main-color : #2436ff}
-    70%{--main-color : #ffc324}
-    75%{--main-color : #ff5a00}
-    80%{--main-color : #24ff9c}
-    85%{--main-color : #c124ff}
-    90%{--main-color : #41ff24}
-    95%{--main-color : #2436ff}
-    100% {--main-color : #ffc324}
-}
+/*@keyframes changeColors {*/
+/*    0% {--main-color : #ffc324}*/
+/*    5%{--main-color : #87ff24}*/
+/*    10%{--main-color : #24ffd7}*/
+/*    15%{--main-color : #ff5a00}*/
+/*    20%{--main-color : #ff2424}*/
+/*    25%{--main-color : #0ceeff}*/
+/*    30%{--main-color : #0800ff}*/
+/*    35%{--main-color : #c124ff}*/
+/*    40%{--main-color : #8d8c9f}*/
+/*    45%{--main-color : #029b05}*/
+/*    50%{--main-color : #a66125}*/
+/*    55%{--main-color : #0ceeff}*/
+/*    60%{--main-color : #ff2424}*/
+/*    65%{--main-color : #2436ff}*/
+/*    70%{--main-color : #ffc324}*/
+/*    75%{--main-color : #ff5a00}*/
+/*    80%{--main-color : #24ff9c}*/
+/*    85%{--main-color : #c124ff}*/
+/*    90%{--main-color : #41ff24}*/
+/*    95%{--main-color : #2436ff}*/
+/*    100% {--main-color : #ffc324}*/
+/*}*/
 .home-content{
     display: flex;
     flex-direction: column;
