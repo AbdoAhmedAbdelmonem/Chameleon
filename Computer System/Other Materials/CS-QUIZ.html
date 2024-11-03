@@ -7,6 +7,42 @@
   <title>Quizzes</title>
 </head>
 <style>
+  html {
+        height:100%;
+    }
+
+    body {
+        margin:0;
+    }
+
+    .bg {
+        animation:slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #0800ff 50%, #ff2424 50%, #ffa500 50%);
+        bottom:0;
+        left:-50%;
+        opacity:.5;
+        position:fixed;
+        right:-50%;
+        top:0;
+        z-index:-1;
+    }
+
+    .bg2 {
+        animation-direction:alternate-reverse;
+        animation-duration:4s;
+    }
+
+    .bg3 {
+        animation-duration:5s;
+    }
+    @keyframes slide {
+        0% {
+            transform:translateX(-25%);
+        }
+        100% {
+            transform:translateX(25%);
+        }
+    }
     body {
         font-family: Segoe UI Semibold, sans-serif;
         background-color: #0c0c0c;
@@ -281,6 +317,9 @@
 </style>
 <body>
 <div class="main">
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
   <div class="container">
     <header>
       <img src="../../../MDA/panda2.png" class="logo">
