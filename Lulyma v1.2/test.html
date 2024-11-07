@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Norican&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol {
+            list-style: none;
+            font-family: 'Grape Nuts', cursive;
+            font-size: 2.4rem;
+            color: midnightblue;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        @media only screen and (max-width: 624px) {
+            html {
+                font-size: 50%;
+            }
+
+            ul, ol {
+                font-size: 2.8rem; /* Increase the font size for mobile */
+            }
+
+            .task-item {
+                padding: 2rem 3rem; /* Increase padding for task items */
+                font-size: 2.8rem; /* Increase font size for task items */
+            }
+
+            h1 {
+                font-size: 5rem; /* Increase heading size for mobile */
+            }
+
+            #newTask {
+                font-size: 2rem; /* Increase input font size for mobile */
+            }
+
+            button {
+                font-size: 2rem; /* Increase button font size for mobile */
+            }
+        }
+
+        body {
+            font-size: 1.6rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3)), url(https://assets.codepen.io/2509128/paper.jpeg);
+        }
+
+        h1 {
+            margin-top: 2rem;
+            font-family: 'Norican', cursive;
+            color: saddlebrown;
+            font-size: 4rem;
+        }
+
+        #taskList {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .task-item {
+            padding: 1.2rem 2rem;
+            background-color: pink;
+            margin: 1rem 0;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .task-item.done {
+            text-decoration: line-through;
+            background-color: lightgray;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        #addTask {
+            margin: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        #newTask {
+            padding: 0.5rem;
+            font-size: 1.6rem;
+            margin-right: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Todo List</h1>
+<div id="addTask">
+    <input type="text" id="newTask" placeholder="Add a new task..." />
+    <button id="addButton">Add Task</button>
+</div>
+<ul id="taskList"></ul>
+
+<script>
+    const taskList = document.getElementById('taskList');
+    const addButton = document.getElementById('addButton');
+    const newTaskInput = document.getElementById('newTask');
+
+    // Load tasks from localStorage
+    function loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || {};
+        for (const task in tasks) {
+            addTaskToList(task, tasks[task]);
+        }
+    }
+
+    // Add task to the list and to localStorage
+    function addTaskToList(task, done = false) {
+        const li = document.createElement('li');
+        li.textContent = task;
+        li.className = 'task-item' + (done ? ' done' : '');
+        li.addEventListener('click', () => {
+            li.classList.toggle('done');
+            saveTasks(); // Save changes
+        });
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = (e) => {
+            e.stopPropagation(); // Prevent triggering the done toggle
+            li.remove();
+            saveTasks(); // Save changes
+        };
+
+        li.appendChild(deleteButton);
+        taskList.appendChild(li);
+    }
+
+    // Save tasks to localStorage
+    function saveTasks() {
+        const tasks = {};
+        [...taskList.children].forEach(li => {
+            tasks[li.firstChild.textContent] = li.classList.contains('done');
+        });
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    // Event listener for the add button
+    addButton.addEventListener('click', () => {
+        const taskText = newTaskInput.value.trim();
+        if (taskText) {
+            addTaskToList(taskText);
+            newTaskInput.value = ''; // Clear input field
+            saveTasks(); // Save changes
+        }
+    });
+
+    // Load tasks on page load
+    loadTasks();
+</script>
+</body>
+</html>

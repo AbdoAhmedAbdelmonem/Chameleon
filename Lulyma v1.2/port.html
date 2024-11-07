@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #vanta-bg {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        body {
+            font-family: "Segoe UI Semibold", sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            width: 96%;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .navbar-logo {
+            width: 150px;
+            height: auto;
+            transition: 0.3s ease-in-out;
+        }
+
+        .navbar-logo:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .navbar-links a {
+            color: #FFF;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .navbar-links a:hover {
+            color: #f9b234;
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: #f9b234;
+            text-align: center;
+            margin: 100px 0 20px;
+            font-size: 2.5rem;
+            padding-top: 30px;
+        }
+
+        h1 span {
+            background: linear-gradient(
+                    to right, rgb(250,78,10), rgb(247,12,204), rgb(0,106,255), rgb(48,248,255)
+            );
+            background-clip: text;
+            color: transparent;
+            font-family: Segoe UI Semibold, sans-serif;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .ag-format-container {
+            width: 90%;
+            max-width: 1142px;
+            margin: auto;
+        }
+
+        .ag-courses_box {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding-top: 150px;
+        }
+
+        .ag-courses_item {
+            flex-basis: calc(50% - 30px);
+            margin: 0 15px 30px;
+            overflow: hidden;
+            border-radius: 28px;
+        }
+
+        .ag-courses-item_link {
+            display: block;
+            padding: 30px 20px;
+            background-color: #121212;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .ag-courses-item_link:hover,
+        .ag-courses-item_link:hover .ag-courses-item_date {
+            color: #FFF;
+        }
+
+        .ag-courses-item_link:hover .ag-courses-item_bg {
+            transform: scale(10);
+        }
+
+        .ag-courses-item_title {
+            min-height: 30px;
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: #FFF;
+            z-index: 2;
+            position: relative;
+            text-align: left;
+        }
+
+        p {
+            color: white;
+            position: relative;
+            z-index: 2;
+            text-align: left;
+        }
+
+        .ag-courses-item_date-box {
+            font-size: 1rem;
+            color: #FFF;
+            z-index: 2;
+            position: relative;
+            text-align: left;
+        }
+
+        .ag-courses-item_date {
+            font-weight: bold;
+            color: #f9b234;
+            transition: color 0.5s ease;
+            text-align: left;
+        }
+
+        .ag-courses-item_bg {
+            height: 128px;
+            width: 128px;
+            background-color: #f9b234;
+            z-index: 1;
+            position: absolute;
+            top: -75px;
+            right: -75px;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+            background-color: #3ecd5e;
+        }
+
+        .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+            background-color: #e44002;
+        }
+
+        .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+            background-color: #952aff;
+        }
+
+        .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+            background-color: #cd3e94;
+        }
+
+        .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+            background-color: #4c49ea;
+        }
+
+        .popup2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 90%;
+            max-width: 500px;
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 10px 25px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+            z-index: 10;
+        }
+
+        .popup2.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .popup2 h2 {
+            font-size: 2.2rem;
+            color: #ffa500;
+            font-family: Segoe UI Semibold, sans-serif;
+        }
+
+        .popup2 .gran {
+            display: inline-block;
+            font-size: 1rem;
+            color: #000000;
+            font-weight: 500;
+            margin: 4px 0;
+        }
+
+        .popup2 .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #999;
+            margin-top: 10px;
+            padding: 15px 0 7px;
+        }
+
+        .popup2 .info-ok-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            height: 45px;
+            background: #ffa500;
+            border: 2px solid #ffa500;
+            outline: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .popup2 .info-ok-btn:hover {
+            transform: scale(1.12);
+        }
+
+        @media (max-width: 979px) {
+            .ag-courses_item {
+                flex-basis: calc(50% - 30px);
+            }
+
+            .ag-courses-item_title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ag-format-container {
+                width: 100%;
+                margin: auto;
+            }
+
+            .ag-courses_item {
+                flex-basis: 100%;
+            }
+
+            .ag-courses-item_title {
+                min-height: 72px;
+                font-size: 1.4rem;
+                line-height: 1;
+            }
+
+            .navbar {
+                width: 92%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .popup2 h2 {
+                font-size: 1.8rem;
+            }
+            .ag-courses-item_title {
+                min-height: 72px;
+                font-size: 2.5rem;
+                line-height: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="vanta-bg"></div>
+<div class="navbar">
+    <img src="L__1_-removebg-preview.png" alt="" class="navbar-logo">
+    <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="#" class="popo">About</a>
+    </div>
+</div>
+
+<div class="ag-format-container">
+    <div class="ag-courses_box">
+
+        <div class="ag-courses_item">
+            <a href="Quiz.html" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">Quiz-1</div>
+                <p>Created By Levi Ackerman in 7/11/2024 at 05:26 PM</p>
+
+                <div class="ag-courses-item_date-box">
+                    Start: <span class="ag-courses-item_date">Friday : 8/11/2024 04:00 PM</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="ag-courses_item">
+            <a href="Quiz%202.html" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">Quiz-2</div>
+                <p>Created By Levi Ackerman in 7/11/2024 at 05:26 PM</p>
+
+                <div class="ag-courses-item_date-box">
+                    Start: <span class="ag-courses-item_date">Friday : 8/11/2024 04:00 PM</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="ag-courses_item">
+            <a href="Quiz%203.html" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">Quiz-3</div>
+                <p>Created By Levi Ackerman in 7/11/2024 at 05:26 PM</p>
+
+                <div class="ag-courses-item_date-box">
+                    Start: <span class="ag-courses-item_date">Friday : 8/11/2024 04:00 PM</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="ag-courses_item">
+            <a href="Quiz%204.html" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">Quiz-4</div>
+                <p>Created By Levi Ackerman in 7/11/2024 at 05:26 PM</p>
+
+                <div class="ag-courses-item_date-box">
+                    Start: <span class="ag-courses-item_date">Friday : 8/11/2024 04:00 PM</span>
+                </div>
+            </a>
+        </div>
+        <div class="ag-courses_item">
+            <a href="Quiz%205.html" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">Quiz-5</div>
+                <p>Created By Levi Ackerman in 7/11/2024 at 05:26 PM</p>
+
+                <div class="ag-courses-item_date-box">
+                    Start: <span class="ag-courses-item_date">Friday : 8/11/2024 04:00 PM</span>
+                </div>
+            </a>
+        </div>
+        <div class="ag-courses_item">
+            <a href="Quiz%206.html" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">Quiz-6</div>
+                <p>Created By Levi Ackerman in 7/11/2024 at 05:26 PM</p>
+
+                <div class="ag-courses-item_date-box">
+                    Start: <span class="ag-courses-item_date">Friday : 8/11/2024 04:00 PM</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> Page Code : Lulyma Main Page </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
+<script>
+    VANTA.FOG({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xfcfcfc,
+        midtoneColor: 0x8ff85,
+        lowlightColor: 0xffffff,
+        baseColor: 0x0,
+        blurFactor: 0.22,
+        zoom: 0.10
+    })
+    const services = document.querySelector('.services');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        services.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        services.classList.remove('active');
+    };
+</script>
+</body>
+</html>
