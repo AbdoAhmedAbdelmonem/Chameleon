@@ -38,9 +38,9 @@ let question = [
         question: "Convert the binary number 10010 to its decimal form.",
         answer: "C) 18",
         options: [
-            "A) 18",
+            "A) 14",
             "B) 22",
-            "C) 16",
+            "C) 18",
             "D) 20"
         ]
     },
@@ -182,7 +182,7 @@ let question = [
         answer: "A) 110010",
         options: [
             "A) 110010",
-            "B) 110010",
+            "B) 101010",
             "C) 101110",
             "D) 111010"
         ]
