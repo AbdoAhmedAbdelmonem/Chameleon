@@ -222,7 +222,7 @@ let question = [
     {
         numb: 21,
         question: "What is reusable code?",
-        answer: "B) Code segments that can be used multiple times with minor modifications",
+        answer: "A) Code segments that can be used multiple times with minor modifications",
         options:[
             "A) Code segments that can be used multiple times with minor modifications",
             "B) Code that is error-prone and needs frequent updates",
@@ -475,7 +475,7 @@ let question = [
     {
         numb:44 ,
         question: "What is another name for microcomputers?",
-        answer: "",
+        answer: "D) Minicomputers",
         options:[
             "A) Mainframes",
             "B) Personal Computers (PCs)",
@@ -519,7 +519,7 @@ let question = [
     {
         numb: 48,
         question: "Which generation of computers is associated with microprocessors?",
-        answer: "Answer: D) Fourth generation",
+        answer: "D) Fourth generation",
         options:[
             "A) First generation",
             "B) Second generation",
