@@ -43,7 +43,7 @@ body.light{
     width: 110%;
     padding: 4rem 12% 4rem;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,20 +51,34 @@ body.light{
     animation: changeColors 390s infinite ease-in-out;
 
 }
-.logo{
-    font-size: 3rem;
-    color:var(--white-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
-    animation: changeColors 390s infinite ease-in-out;
+.logo {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    z-index: 1;
+    padding: 10px 20px;
+    overflow: hidden;
 }
-.logo:hover{
-    transform: scale(1.1);
+
+.logo .snow {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+    /*animation: fall 5s infinite linear; !* Adds a falling effect *!*/
+    opacity: 1;
 }
-.logo span{
-    text-shadow: 0 0 25px var(--main-color) ;
+
+.logo span {
+    z-index: 3; /* Ensure text is visible above other elements */
 }
+
 .switch {
     font-size: 17px;
     position: relative;
@@ -138,9 +152,35 @@ section{
     align-items: center;
     justify-content: center;
     gap: 15rem;
-    background-size: cover; /* Ensures the image covers the div */
     z-index: 6;
+    background:url("MDA/snowfall.png");
+    /*animation: fall 10s linear infinite;*/
 }
+/* Snow background div */
+.img_snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures it doesn't block interaction */
+    background: url("MDA/snowfall.png") repeat; /* Snowfall image */
+    background-size: cover;
+    animation: snowFall 20s linear infinite; /* Animate the snowfall */
+    z-index: -1; /* Position behind the content */
+}
+
+/* Falling animation */
+@keyframes snowFall {
+    0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
 /*@keyframes changeColors {*/
 /*    0% {--main-color : #ffc324}*/
 /*    5%{--main-color : #87ff24}*/
@@ -265,8 +305,6 @@ span{
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     background-color: transparent;
     animation: slide-in-down 1s ease-in-out forwards;
-
-
 }
 
 .animated-button svg {
@@ -1244,7 +1282,7 @@ span{
 }
 .timeline-content.locked {
     pointer-events: none;
-    opacity: 0.5; /* This applies to the content, you can adjust it */
+    opacity: 0.5;
     position: relative;
     background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 class=%22feather feather-lock%22%3E%3Crect x=%223%22 y=%2211%22 width=%2218%22 height=%2211%22 rx=%222%22 ry=%222%22/%3E%3Cpath d=%22M7 11V7a5 5 0 0 1 10 0v4%22/%3E%3C/svg%3E');
     background-repeat: no-repeat;
