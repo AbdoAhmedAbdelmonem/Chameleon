@@ -13,7 +13,10 @@
 
 <div class="main">
     <header class="header">
-        <a href="#home" class="logo">Chameleon<span>FCDS</span></a>
+        <a href="#home" class="logo">
+            Chameleon<span>FCDS</span>
+            <img src="MDA/Lovepik_com-401658544-melting-snow.png" alt="Snow effect" class="snow">
+        </a>
         <label class="switch">
             <input type="checkbox" onclick="switchMode()">
             <span class="slider"></span>
@@ -25,10 +28,11 @@
             <a href="#contact">Contact <i class='bx bx-conversation'></i></a>
             <a href="https://lulyma-v162.vercel.app/">Lulyma <i class='bx bxs-diamond'></i></a>
             <a href="#" class="popo">User Experience <i class='bx bx-user-pin'></i></a>
-
         </nav>
     </header>
+
     <section class="home" id="home">
+        <div class="img_snow"></div>
         <div class="home-content">
             <h1>Welcome! it's <span>Chameleon<h3>Beta Version 1.6</h3></span> </h1>
             <h3 class="text-animation">I<span></span></h3>
@@ -75,15 +79,12 @@
                             ></path>
                         </svg>
                     </button>
-
                 </a>
             </div>
         </div>
         <div class="background-x"></div>
         <div class="background-y">
         </div>
-
-
         <div class="home-image">
             <img src="MDA/chameleon.png" alt="">
             <div class="ball ball1"></div>
@@ -290,7 +291,6 @@
             send.classList.toggle('light');
             homeImg.classList.toggle('light');
 
-            // Apply light mode to all input boxes
             input_boxes.forEach(box => {
                 box.classList.toggle('light');
             });
@@ -318,22 +318,19 @@
         main.classList.remove('active');
     };
     document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission
+        e.preventDefault();
 
-        // The Google Form URL where data needs to be submitted
         const formURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdOKIPuhZKYQ1Sz8VtL6WnF1QXMR9YHavSWFgCKXDItmd2pAA/formResponse";
 
-        // Construct the form data manually
         const formData = new FormData(this);
 
-        // Send data to Google Form
         fetch(formURL, {
             method: 'POST',
             body: formData,
-            mode: 'no-cors' // Prevent CORS errors
+            mode: 'no-cors'
         }).then(() => {
             alert("Message sent successfully!");
-            this.reset(); // Reset the form after submission
+            this.reset();
         }).catch((error) => {
             alert("There was an error sending your message.");
             console.error('Error:', error);
@@ -361,12 +358,11 @@
 <script>
     function getRandomColor() {
         let r, g, b;
-        // Generate colors with higher RGB values to avoid dark colors
         do {
-            r = Math.floor(Math.random() * 256); // 0 - 255
-            g = Math.floor(Math.random() * 256); // 0 - 255
-            b = Math.floor(Math.random() * 256); // 0 - 255
-        } while (r < 100 && g < 100 && b < 100); // Ensure at least one component is higher than 100
+            r = Math.floor(Math.random() * 256);
+            g = Math.floor(Math.random() * 256);
+            b = Math.floor(Math.random() * 256);
+        } while (r < 100 && g < 100 && b < 100);
 
         return `rgb(${r}, ${g}, ${b})`;
     }
@@ -376,7 +372,6 @@
         document.documentElement.style.setProperty('--main-color', newColor);
     }
 
-    // Change the main color on page load
     window.onload = changeMainColor;
 </script>
 </body>
