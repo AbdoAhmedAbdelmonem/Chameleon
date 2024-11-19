@@ -691,10 +691,11 @@ span{
     width: 50px;
 }
 .contact{
-    background-color: #000000;
+    background: url("MDA/Winter_Ground_with_Snow_PNG_Clipart_Image.png") no-repeat;
+    background-size: cover;
     transition: background 1s ease-in-out;
-
 }
+
 .contact.light{
     background-color: var(--white-color);
 }
