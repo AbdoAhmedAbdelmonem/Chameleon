@@ -59,8 +59,7 @@ body.light{
     color: #fff;
     display: inline-block;
     z-index: 1;
-    padding: 10px 20px;
-    overflow: hidden;
+    margin-left: -40px;
 }
 
 .logo .snow {
@@ -71,7 +70,6 @@ body.light{
     height: auto;
     z-index: 2;
     pointer-events: none;
-    /*animation: fall 5s infinite linear; !* Adds a falling effect *!*/
     opacity: 1;
 }
 
@@ -163,22 +161,38 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Ensures it doesn't block interaction */
+    pointer-events: none;
     background: url("MDA/snowfall.png") repeat; /* Snowfall image */
     background-size: cover;
-    animation: snowFall 20s linear infinite; /* Animate the snowfall */
-    z-index: -1; /* Position behind the content */
+    animation: snowFall 15s linear infinite;
+    will-change: background-position; /* Optimize for animation */
+    backface-visibility: hidden; /* Improve rendering */
+    transform: translateZ(0); /* Force hardware acceleration */
+}
+@media (max-width: 768px) {
+    .img_snow {
+        animation: Fall 15s linear infinite; /* Slower animation for mobile */
+        background-size: contain; /* Reduce resource load */
+    }
 }
 
-/* Falling animation */
+@keyframes Fall {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 200%; /* Move further for smoother effect */
+    }
+}
 @keyframes snowFall {
     0% {
-        background-position: 0 100%;
+        background-position: 0 200%; /* Move further for smoother effect */
     }
     100% {
         background-position: 0 0;
     }
 }
+
 
 
 /*@keyframes changeColors {*/
@@ -1257,6 +1271,7 @@ span{
         display: none;
 
     }
+
 }
 
 .ball {
