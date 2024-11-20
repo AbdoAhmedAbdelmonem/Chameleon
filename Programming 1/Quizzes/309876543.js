@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the primary use of the 'int' data type in Java?",
         answer: "C) To represent integer values",
         options:[
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Which of the following operators is used for integer division in Java?",
         answer: "B) /",
         options:[
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the result of 10 % 3 in Java?",
         answer: "B) 1",
         options:[
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Which of the following has the highest precedence in Java?",
         answer: "A) Parentheses ()",
         options:[
@@ -44,7 +44,7 @@ let question=[
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the primary use of the 'double' data type in Java?",
         answer: "A) To represent real numbers",
         options:[
@@ -55,7 +55,7 @@ let question=[
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Which operator is used for string concatenation in Java?",
         answer: "C) +",
         options:[
@@ -66,7 +66,7 @@ let question=[
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "How do you declare an integer variable 'x' and initialize it to 10?",
         answer: "C) int x = 10;",
         options:[
@@ -77,7 +77,7 @@ let question=[
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What is the value of x after the following code is executed? int x = 5; x = x + 3;",
         answer: "B) 8",
         options:[
@@ -88,7 +88,7 @@ let question=[
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "Which error occurs when a variable is used before it is initialized?",
         answer: "B) Compile Error",
         options:[
@@ -99,7 +99,7 @@ let question=[
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What will be the output of the following code? int x = 10; System.out.println(x);",
         answer: "C) 10",
         options:[
@@ -110,7 +110,7 @@ let question=[
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which of the following is an example of a real number data type in Java?",
         answer: "B) double",
         options:[
@@ -121,7 +121,7 @@ let question=[
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Which symbol is used for the remainder operation in Java?",
         answer: "A) %",
         options:[
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the result of the following expression? 7 + 3 * 2",
         answer: "C) 13",
         options:[
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which of the following is not a Java data type?",
         answer: "D) List",
         options:[
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "How do you declare a variable 'y' of type float?",
         answer: "B) float y;",
         options:[
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What happens if you divide an integer by zero in Java?",
         answer: "B) ArithmeticException",
         options:[
@@ -176,7 +176,7 @@ let question=[
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "Which of the following operators has the lowest precedence?",
         answer: "D) =",
         options:[
@@ -187,7 +187,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which of the following statements is true about variable declaration?",
         answer: "C) Variables must be declared before they are used.",
         options:[
@@ -198,7 +198,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the correct way to print 'Hello World' in Java?",
         answer: "A) System.out.println(\"Hello World\");",
         options:[
@@ -209,7 +209,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Which of the following is used to start the execution of a Java program?",
         answer: "C) main method",
         options:[
