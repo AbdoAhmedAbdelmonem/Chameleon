@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 12",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],image:'../../../MDA/11-1.png'
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 33",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],image:'../../../MDA/11-3.png'
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 11",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],image:'../../../MDA/11-4.png'
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 18",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],image:'../../../MDA/11-5.png'
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 2",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],image:'../../../MDA/11-6.png'
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 10",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],image:'../../../MDA/11-7.png'
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 11",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],image:'../../../MDA/11-8.png'
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 220",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],image:'../../../MDA/11-10.png'
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 5",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],image:'../../../MDA/11-11.png'
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "A) 5",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],image:'../../../MDA/11-12.png'
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 5",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],image:'../../../MDA/11-13.png'
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 26",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],image:'../../../MDA/11-14.png'
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 16",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],image:'../../../MDA/11-15.png'
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "A) 11",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],image:'../../../MDA/11-17.png'
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "A) 8",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],image:'../../../MDA/11-18.png'
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 8",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ],image:'../../../MDA/11-19.png'
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) -28",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ],image:'../../../MDA/11-20.png'
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 19",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ],image:'../../../MDA/11-21.png'
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 6",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ],image:'../../../MDA/11-23.png'
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 4",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ],image:'../../../MDA/11-24.png'
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 12",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ],image:'../../../MDA/11-25.png'
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) 18",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ],image:'../../../MDA/11-26.png'
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "D) 13",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ],image:'../../../MDA/11-27.png'
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "A) 24",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ],image:'../../../MDA/11-28.png'
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 6",
         options: [
