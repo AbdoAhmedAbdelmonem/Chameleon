@@ -1176,11 +1176,11 @@
         }, speed);
     }
     function submitToGoogleForm(Gname,Gscore) {
-        const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdOGnkpXrw5en3tQb9-BrfLK3sGNn90-0CbpAG37Sf7MLYVNg/formResponse";
+        const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfGAmEPb4_IZvhFBLAPrUn0PcRRvHmzuGOeNUgSa8aNQmmL8w/formResponse";
 
         const formData = new FormData();
-        formData.append("entry.1454107863", Gname);
-        formData.append("entry.654712377", Gscore+"(467654321)");
+        formData.append("entry.945655089", Gname);
+        formData.append("entry.1108835872", Gscore+"(300123456)");
         fetch(formUrl, {
             method: "POST",
             body: formData
