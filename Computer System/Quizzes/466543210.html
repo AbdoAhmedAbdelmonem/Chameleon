@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../MDA/L-removebg-preview.png" type="image/x-icon">
+    <link rel="icon" href="L-removebg-preview.png" type="image/x-icon">
 
     <title>Quiz</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -1138,7 +1138,7 @@
         let progressStartValue = 0;
         let progressEndValue = Math.round((userScore / question.length) * 100);// Round to the nearest whole number
         score = progressEndValue;
-        // submitToGoogleForm(name, score)
+        submitToGoogleForm(name, score)
         console.log(name,score);
         let speed = 20;
 
@@ -1174,11 +1174,11 @@
         }, speed);
     }
     function submitToGoogleForm(Gname,Gscore) {
-        const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCya2gZjBgCu7NBE_cc8EHwSoK7xJ1AAAzti6dB4I7sz1Pnw/formResponse";
+        const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdOGnkpXrw5en3tQb9-BrfLK3sGNn90-0CbpAG37Sf7MLYVNg/formResponse";
 
         const formData = new FormData();
-        formData.append("entry.1408644505", Gname);
-        formData.append("entry.725833904", Gscore);
+        formData.append("entry.1454107863", Gname);
+        formData.append("entry.654712377", Gscore);
         fetch(formUrl, {
             method: "POST",
             body: formData
@@ -1196,21 +1196,16 @@
     }
 
     window.addEventListener("beforeunload", function (e) {
-        // Custom message (modern browsers often ignore this message and show a default one)
         const confirmationMessage = "Are you sure you want to refresh this page?";
 
-        // Setting the returnValue property of the event is necessary in some browsers
         e.returnValue = confirmationMessage;
 
-        // This is to ensure the dialog box is shown
         return confirmationMessage;
     });
-    // Disable left-click context menu
     document.addEventListener('contextmenu', function(event) {
         event.preventDefault();
     });
 
-    // Disable F12, Ctrl+Shift+I, and other DevTools shortcuts
     document.addEventListener('keydown', function(event) {
         if (event.key === 'F12' ||
             (event.ctrlKey && event.shiftKey && event.key === 'I') ||
@@ -1220,7 +1215,6 @@
         }
     });
 
-    // Disable Ctrl+S (Save Page As) and Ctrl+P (Print Page)
     document.addEventListener('keydown', function(event) {
         if ((event.ctrlKey && event.key === 'S') ||
             (event.ctrlKey && event.key === 'P')) {
