@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "Which of the following best describes method overloading?",
         answer: "D) Multiple methods with the same name but different parameter lists",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: " What does the term 'self-contained block' refer to in the context of functions?",
         answer: "C) A function that performs a specific task independently",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: " Which of the following is a key benefit of using functions in programming?",
         answer: "A) Makes the program more manageable by dividing it into smaller pieces",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: " What is the correct syntax for declaring a function in Java?",
         answer: "C) return_value_type function_name(parameter_list) { ... }",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: " What is the role of the 'return' statement in a function?",
         answer: "B) To return a value from the function to the calling program",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: " What should you do if no value is expected to be returned from a function?",
         answer: "A) Declare the function with a 'void' return type",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: " In which scenario would you use a 'void' function?",
         answer: "C) When the function does not need to return any data",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: " What is the importance of the 'main' function in a Java program?",
         answer: "B) It is the entry point for program execution",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: " Which of the following is an example of a user-defined function?",
         answer: "D) int sum(int a, int b) { return a + b; }",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: " Which part of a function determines its accessibility within the program?",
         answer: "A) The scope of the function",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: " How does method overloading improve a program?",
         answer: "C) It allows multiple methods with the same name to perform different tasks",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: " What is the significance of the 'formal parameter list' in a method?",
         answer: "B) It defines the data types and names of inputs for the method",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: " What does the keyword 'static' indicate when used in a global variable?",
         answer: "A) The variable is accessible before any object of the class is created",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: " In the context of Java methods, what does the term 'signature' exclude?",
         answer: "C) The returned type value",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: " What is a method in Java?",
         answer: "B) A block of code that performs a specific task and can be called upon when needed",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: " What is the correct way to call a method named 'calculateSum' with two parameters?",
         answer: "D) calculateSum(a, b);",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: " What type of function is typically used for repetitive tasks without returning a value?",
         answer: "A) A void function",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: " What is the primary benefit of dividing a large program into smaller functions?",
         answer: "B) It makes the program easier to develop, debug, and maintain",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: " Which of the following statements is true about global variables?",
         answer: "C) They are accessible from anywhere in the program",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: " What is the correct output of the following code snippet: <br><br>int result = sum(3, 7); <br>System.out.println(result); (assuming sum is a user-defined method that adds two integers)?",
         answer: "D) 10",
         options: [
