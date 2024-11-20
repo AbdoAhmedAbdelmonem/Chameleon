@@ -1,6 +1,6 @@
 let question = [//octal-hexa
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the octal number 17?",
         answer: "A) F",
         options: [
@@ -11,7 +11,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Convert the octal number 25 to its hexadecimal form.",
         answer: "D) 15",
         options: [
@@ -22,7 +22,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the octal number 37?",
         answer: "A) 1F",
         options: [
@@ -33,7 +33,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Convert the octal number 54 to its hexadecimal form.",
         answer: "B) 2C",
         options: [
@@ -44,7 +44,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the octal number 112?",
         answer: "A) 4A",
         options: [
@@ -55,7 +55,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Convert the octal number 145 to its hexadecimal form.",
         answer: "B) 65",
         options: [
@@ -66,7 +66,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the octal number 257?",
         answer: "B) AF",
         options: [
@@ -77,7 +77,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Convert the octal number 371 to its hexadecimal form.",
         answer: "C) F9",
         options: [
@@ -88,7 +88,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the octal number 740?",
         answer: "B) 1E0",
         options: [
@@ -99,7 +99,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Convert the octal number 655 to its hexadecimal form.",
         answer: "D) 1AD",
         options: [
@@ -110,7 +110,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the octal equivalent of the hexadecimal number 1F?",
         answer: "A) 37",
         options: [
@@ -121,7 +121,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Convert the hexadecimal number A7 to its octal form.",
         answer: "A) 247",
         options: [
@@ -132,7 +132,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the octal equivalent of the hexadecimal number 3E?",
         answer: "A) 76",
         options: [
@@ -143,7 +143,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Convert the hexadecimal number C4 to its octal form.",
         answer: "C) 304",
         options: [
@@ -154,7 +154,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the octal equivalent of the hexadecimal number 7B?",
         answer: "B) 173",
         options: [
@@ -165,7 +165,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Convert the hexadecimal number 9F to its octal form.",
         answer: "B) 237",
         options: [
@@ -176,7 +176,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the octal equivalent of the hexadecimal number D8?",
         answer: "A) 330",
         options: [
@@ -187,7 +187,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Convert the hexadecimal number BE to its octal form.",
         answer: "B) 276",
         options: [
@@ -198,7 +198,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the octal equivalent of the hexadecimal number F4?",
         answer: "C) 364",
         options: [
@@ -209,7 +209,7 @@ let question = [//octal-hexa
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Convert the hexadecimal number 2A to its octal form.",
         answer: "A) 52",
         options: [
