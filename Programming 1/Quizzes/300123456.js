@@ -232,7 +232,7 @@ let question= [
     },
     {
         numb: 22,type: "Multiple Choices",
-        question: "What is the result of the following code?",
+        question: "What is the result of the following code?<br>System.out.println((char)('A'+2));",
         answer: "C) 'C'",
         options: [
             "A) 67",
