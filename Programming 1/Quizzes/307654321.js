@@ -1,6 +1,6 @@
 let question= [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What does a relational operator do?",
         answer: "C) Checks the relationship between two operands",
         options: [
@@ -11,7 +11,7 @@ let question= [
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What will be the output of the expression (2 == 3) || (-1 < 5)?",
         answer: "B) true",
         options: [
@@ -22,7 +22,7 @@ let question= [
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "Which of the following is true for the logical AND operator (&&)?",
         answer: "A) True only if all operands are true",
         options: [
@@ -33,7 +33,7 @@ let question= [
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "What does the NOT (!) operator do?",
         answer: "B) Inverts the boolean value",
         options: [
@@ -44,7 +44,7 @@ let question= [
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "Which of the following control statements is used to execute a block of code only when a specific condition is true?",
         answer: "A) if statement",
         options: [
@@ -55,7 +55,7 @@ let question= [
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Which loop is guaranteed to execute at least once?",
         answer: "D) do…while statement",
         options: [
@@ -66,7 +66,7 @@ let question= [
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "In a switch statement, which keyword is used to exit a case block?",
         answer: "C) break",
         options: [
@@ -77,7 +77,7 @@ let question= [
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) true",
         options: [
@@ -88,7 +88,7 @@ let question= [
         ],image:'../../../MDA/6-8.png'
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "Which statement is true about nested if-else statements?",
         answer: "D) They allow multiple paths of execution based on conditions.",
         options: [
@@ -99,7 +99,7 @@ let question= [
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What is the purpose of using the switch statement?",
         answer: "C) To handle multiple selections by evaluating a single expression",
         options: [
@@ -110,7 +110,7 @@ let question= [
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which operator is used to check equality between two values in Java?",
         answer: "B) ==",
         options: [
@@ -121,7 +121,7 @@ let question= [
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "In Java, how do you write a condition to check if x is between 2 and 10 (inclusive)?",
         answer: "C) x >= 2 && x <= 10",
         options: [
@@ -132,7 +132,7 @@ let question= [
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) true",
         options: [
@@ -143,7 +143,7 @@ let question= [
         ],image:'../../../MDA/6-14o.png'
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which of the following is an example of a decision-making statement in Java?",
         answer: "A) if-else statement",
         options: [
@@ -154,7 +154,7 @@ let question= [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "Which of the following is true for the OR (||) logical operator?",
         answer: "B) True if at least one operand is true",
         options: [
@@ -165,7 +165,7 @@ let question= [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "In the following code, what will be the output if the user inputs the grade 'B'?",
         answer: "B) Very Good",
         options: [
@@ -176,7 +176,7 @@ let question= [
         ],image:'../../../MDA/6-17.png'
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the output of the following code if x = 15?",
         answer: "A) false",
         options: [
@@ -187,7 +187,7 @@ let question= [
         ],image:'../../../MDA/6-18o.png'
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "In the following code, what will be the output if gpa = 2.5?}",
         answer: "A) Application accepted",
         options: [
@@ -198,7 +198,7 @@ let question= [
         ],image:'../../../MDA/6-19.png'
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "Which statement would correctly complete this code to check if a number is positive?<br><br>if (x > 0) {",
         answer: "A) System.out.println(\"Positive\");",
         options: [
@@ -209,7 +209,7 @@ let question= [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "What will the following code print if x = 0?",
         answer: "C) Zero",
         options: [
@@ -220,7 +220,7 @@ let question= [
         ],image:'../../../MDA/6-21.png'
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which control statement is used to execute a block of code repeatedly as long as a specified condition is true?",
         answer: "B) while statement",
         options: [
@@ -231,7 +231,7 @@ let question= [
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "B) true",
         options: [
@@ -242,7 +242,7 @@ let question= [
         ],image:'../../../MDA/6-23o.png'
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "Which statement correctly uses a switch statement to print 'Excellent' when the grade is 'A'?",
         answer: "B) switch (grade) { case 'A': System.out.println('Excellent'); break; }",
         options: [
@@ -253,7 +253,7 @@ let question= [
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "What is the output of the following code if grade = 'C'?",
         answer: "C) Good",
         options: [
@@ -264,7 +264,7 @@ let question= [
         ],image:'../../../MDA/6-25.png'
     },
     {
-        numb: 25,
+        numb: 25,type: "RATING",
         question: "Bonus : Rate Chameleon .../4",
         answer: "D) 🌟🌟🌟🌟",
         options: [
