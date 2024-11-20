@@ -1,6 +1,6 @@
 let question= [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is programming primarily considered as?",
         answer: "B) A process of problem-solving",
         options:[
@@ -11,7 +11,7 @@ let question= [
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What is the first step in the Program Development Life Cycle?",
         answer: "C) Analyze the problem",
         options:[
@@ -22,7 +22,7 @@ let question= [
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What does the Program Development Life Cycle suggest you do if the problem is complex?",
         answer: "B) Divide it into sub-problems",
         options:[
@@ -33,7 +33,7 @@ let question= [
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Which of the following is NOT part of the problem analysis step?",
         answer: "C) Writing the code",
         options:[
@@ -44,7 +44,7 @@ let question= [
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "In programming, what is an algorithm?",
         answer: "B) A step-by-step problem-solving process",
         options:[
@@ -55,7 +55,7 @@ let question= [
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What is the output of a program that calculates the area of a rectangle given length and width?",
         answer: "B) The area of the rectangle",
         options:[
@@ -66,7 +66,7 @@ let question= [
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What does 'machine language' refer to?",
         answer: "B) The language of a computer",
         options:[
@@ -77,7 +77,7 @@ let question= [
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What is a binary digit (bit)?",
         answer: "C) The digit 0 or 1",
         options:[
@@ -88,7 +88,7 @@ let question= [
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "Which of the following is NOT a low-level programming language?",
         answer: "C) Java",
         options:[
@@ -99,7 +99,7 @@ let question= [
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What is the role of an Integrated Development Environment (IDE)?",
         answer: "B) To write and correct errors in the program",
         options:[
@@ -110,7 +110,7 @@ let question= [
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is a limitation of using Assembly Language?",
         answer: "C) Each processor type has its own assembly language",
         options:[
@@ -121,7 +121,7 @@ let question= [
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Which of the following is an example of a high-level language?",
         answer: "C) Java",
         options:[
@@ -132,7 +132,7 @@ let question= [
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "Which application translates a high-level language program into machine language?",
         answer: "B) Compiler",
         options:[
@@ -143,7 +143,7 @@ let question= [
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "What does the code 'wages = rate * hours;' represent in Java?",
         answer: "C) A high-level language statement",
         options:[
@@ -154,7 +154,7 @@ let question= [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "Which of the following best describes a low-level programming language?",
         answer: "A) It is closer to machine language",
         options:[
@@ -165,7 +165,7 @@ let question= [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Why is Assembly Language considered to be low-level?",
         answer: "B) It requires knowledge of the processor design",
         options:[
@@ -176,7 +176,7 @@ let question= [
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the advantage of using Assembly Language?",
         answer: "A) It executes faster",
         options:[
@@ -187,7 +187,7 @@ let question= [
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which of the following does NOT involve programming languages?",
         answer: "D) Algorithm",
         options:[
@@ -198,7 +198,7 @@ let question= [
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "In the Program Development Life Cycle, what follows after implementing the algorithm?",
         answer: "A) Maintenance",
         options:[
@@ -209,7 +209,7 @@ let question= [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "What is necessary to write a program in a high-level language?",
         answer: "C) Integrated Development Environment (IDE)",
         options:[
