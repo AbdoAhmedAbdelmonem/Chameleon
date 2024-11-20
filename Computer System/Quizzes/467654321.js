@@ -1,7 +1,7 @@
 //binary-decimal
 let question = [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the decimal equivalent of the binary number 1011?",
         answer: "B) 11",
         options: [
@@ -12,7 +12,7 @@ let question = [
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Convert the binary number 11001 to its decimal form.",
         answer: "B) 25",
         options: [
@@ -23,7 +23,7 @@ let question = [
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the decimal equivalent of the binary number 1110?",
         answer: "B) 14",
         options: [
@@ -34,7 +34,7 @@ let question = [
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Convert the binary number 10010 to its decimal form.",
         answer: "C) 18",
         options: [
@@ -45,7 +45,7 @@ let question = [
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the decimal equivalent of the binary number 110011?",
         answer: "B) 51",
         options: [
@@ -56,7 +56,7 @@ let question = [
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Convert the binary number 10101 to its decimal form.",
         answer: "B) 21",
         options: [
@@ -67,7 +67,7 @@ let question = [
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the decimal equivalent of the binary number 11101?",
         answer: "B) 29",
         options: [
@@ -78,7 +78,7 @@ let question = [
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Convert the binary number 100101 to its decimal form.",
         answer: "A) 37",
         options: [
@@ -89,7 +89,7 @@ let question = [
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the decimal equivalent of the binary number 101111?",
         answer: "B) 47",
         options: [
@@ -100,7 +100,7 @@ let question = [
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Convert the binary number 111111 to its decimal form.",
         answer: "B) 63",
         options: [
@@ -111,7 +111,7 @@ let question = [
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the binary equivalent of the decimal number 13?",
         answer: "C) 1101",
         options: [
@@ -122,7 +122,7 @@ let question = [
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Convert the decimal number 18 to its binary form.",
         answer: "B) 10010",
         options: [
@@ -133,7 +133,7 @@ let question = [
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the binary equivalent of the decimal number 23?",
         answer: "A) 10111",
         options: [
@@ -144,7 +144,7 @@ let question = [
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Convert the decimal number 29 to its binary form.",
         answer: "A) 11101",
         options: [
@@ -155,7 +155,7 @@ let question = [
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the binary equivalent of the decimal number 35?",
         answer: "C) 100011",
         options: [
@@ -166,7 +166,7 @@ let question = [
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Convert the decimal number 42 to its binary form.",
         answer: "A) 101010",
         options: [
@@ -177,7 +177,7 @@ let question = [
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the binary equivalent of the decimal number 50?",
         answer: "A) 110010",
         options: [
@@ -188,7 +188,7 @@ let question = [
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Convert the decimal number 58 to its binary form.",
         answer: "C) 111010",
         options: [
@@ -199,7 +199,7 @@ let question = [
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the binary equivalent of the decimal number 63?",
         answer: "B) 111111",
         options: [
@@ -210,7 +210,7 @@ let question = [
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Convert the decimal number 75 to its binary form.",
         answer: "C) 1001011",
         options: [
