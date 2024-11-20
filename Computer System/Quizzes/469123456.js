@@ -1,6 +1,6 @@
 let question=[//decimal-octal
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the octal equivalent of the decimal number 15?",
         answer: "B) 17",
         options: [
@@ -11,7 +11,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Convert the decimal number 27 to its octal form.",
         answer: "B) 33",
         options: [
@@ -22,7 +22,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the octal equivalent of the decimal number 42?",
         answer: "B) 52",
         options: [
@@ -33,7 +33,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Convert the decimal number 65 to its octal form.",
         answer: "A) 101",
         options: [
@@ -44,7 +44,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the octal equivalent of the decimal number 78?",
         answer: "B) 116",
         options: [
@@ -55,7 +55,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Convert the decimal number 93 to its octal form.",
         answer: "B) 135",
         options: [
@@ -66,7 +66,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the octal equivalent of the decimal number 100?",
         answer: "A) 144",
         options: [
@@ -77,7 +77,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Convert the decimal number 120 to its octal form.",
         answer: "B) 170",
         options: [
@@ -88,7 +88,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the octal equivalent of the decimal number 200?",
         answer: "A) 310",
         options: [
@@ -99,7 +99,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Convert the decimal number 255 to its octal form.",
         answer: "B) 377",
         options: [
@@ -110,7 +110,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the decimal equivalent of the octal number 25?",
         answer: "B) 21",
         options: [
@@ -121,7 +121,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Convert the octal number 34 to its decimal form.",
         answer: "C) 28",
         options: [
@@ -132,7 +132,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the decimal equivalent of the octal number 57?",
         answer: "B) 47",
         options: [
@@ -143,7 +143,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Convert the octal number 71 to its decimal form.",
         answer: "D) 57",
         options: [
@@ -154,7 +154,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the decimal equivalent of the octal number 102?",
         answer: "B) 66",
         options: [
@@ -165,7 +165,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Convert the octal number 114 to its decimal form.",
         answer: "B) 76",
         options: [
@@ -176,7 +176,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the decimal equivalent of the octal number 156?",
         answer: "C) 110",
         options: [
@@ -187,7 +187,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Convert the octal number 200 to its decimal form.",
         answer: "B) 128",
         options: [
@@ -198,7 +198,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the decimal equivalent of the octal number 237?",
         answer: "B) 159",
         options: [
@@ -209,7 +209,7 @@ let question=[//decimal-octal
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Convert the octal number 377 to its decimal form.",
         answer: "B) 255",
         options: [
