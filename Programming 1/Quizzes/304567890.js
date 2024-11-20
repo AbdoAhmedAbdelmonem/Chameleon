@@ -1,6 +1,6 @@
 let question = [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is Java?",
         answer: "C) A high-level programming language",
         options: [
@@ -11,7 +11,7 @@ let question = [
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What is the file extension for Java source files?",
         answer: "C) .java",
         options: [
@@ -22,7 +22,7 @@ let question = [
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "Which method is the entry point for any Java program?",
         answer: "D) main()",
         options: [
@@ -33,7 +33,7 @@ let question = [
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "What is the correct syntax to print a message in Java?",
         answer: "B) System.out.println(\"Hello World\");",
         options: [
@@ -44,7 +44,7 @@ let question = [
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "Which of the following is not a primitive data type in Java?",
         answer: "D) String",
         options: [
@@ -55,7 +55,7 @@ let question = [
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "How many bytes does an 'int' occupy in Java?",
         answer: "C) 4",
         options: [
@@ -66,7 +66,7 @@ let question = [
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the range of a byte data type in Java?",
         answer: "B) -128 to 127",
         options: [
@@ -77,7 +77,7 @@ let question = [
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Which of the following is the correct way to declare a variable in Java?",
         answer: "A) int number;",
         options: [
@@ -88,7 +88,7 @@ let question = [
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What does the term 'JVM' stand for?",
         answer: "C) Java Virtual Machine",
         options: [
@@ -99,7 +99,7 @@ let question = [
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Which data type would you use to store a true or false value?",
         answer: "A) boolean",
         options: [
@@ -110,7 +110,7 @@ let question = [
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which of these is not a loop structure in Java?",
         answer: "C) foreach",
         options: [
@@ -121,7 +121,7 @@ let question = [
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Which symbol is used for single-line comments in Java?",
         answer: "A) //",
         options: [
@@ -132,7 +132,7 @@ let question = [
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println(2 + 3 + \"Hello\");",
         answer: "A) 5Hello",
         options: [
@@ -143,7 +143,7 @@ let question = [
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which method is used to convert a string to lowercase in Java?",
         answer: "C) toLowerCase()",
         options: [
@@ -154,7 +154,7 @@ let question = [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the size of an int data type in Java?",
         answer: "C) 4 bytes",
         options: [
@@ -165,7 +165,7 @@ let question = [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What is the output of the following code?<br><br>System.out.println(\"10\" + 20 + 30);",
         answer: "C) 102030",
         options: [
@@ -176,7 +176,7 @@ let question = [
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println(10 + 20 + \"30\");",
         answer: "D) 3030",
         options: [
@@ -187,7 +187,7 @@ let question = [
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which of the following is a valid method declaration in Java?",
         answer: "C) void myMethod()",
         options: [
@@ -198,7 +198,7 @@ let question = [
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the output of the following code?<br><br>System.out.println(\"Hello\".length());",
         answer: "B) 5",
         options: [
@@ -209,7 +209,7 @@ let question = [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Which of the following is a logical operator in Java?",
         answer: "D) &&",
         options: [
@@ -220,7 +220,7 @@ let question = [
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println(2 + 3 * 5);",
         answer: "D) 17",
         options: [
@@ -231,7 +231,7 @@ let question = [
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What is the result of the following expression?<br><br>10 / 3",
         answer: "B) 3",
         options: [
@@ -242,7 +242,7 @@ let question = [
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "Which of the following is the correct way to check if two strings are equal in Java?",
         answer: "C) str1.equals(str2)",
         options: [
@@ -254,7 +254,7 @@ let question = [
     },
 
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "Which of the following is used to compare two strings in Java?",
         answer: "C) equals()",
         options: [
@@ -265,7 +265,7 @@ let question = [
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "Which of the following is used to generate random numbers in Java?",
         answer: "A) Math.random()",
         options: [
@@ -276,7 +276,7 @@ let question = [
         ],
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println('A' + 1);",
         answer: "C) 66",
         options: [
@@ -287,7 +287,7 @@ let question = [
         ],
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "Which of the following is a valid way to initialize a char variable in Java?",
         answer: "A) char c = 'A';",
         options: [
@@ -298,7 +298,7 @@ let question = [
         ],
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "Which data type is used to represent a single character in Java?",
         answer: "C) char",
         options: [
@@ -309,7 +309,7 @@ let question = [
         ],
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "What is the default value of a boolean variable in Java?",
         answer: "B) false",
         options: [
@@ -320,7 +320,7 @@ let question = [
         ],
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "Which of the following is used to concatenate two strings in Java?",
         answer: "A) +",
         options: [
@@ -331,7 +331,7 @@ let question = [
         ],
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "Which of the following is not a valid identifier in Java?",
         answer: "C) 1variable",
         options: [
@@ -342,7 +342,7 @@ let question = [
         ],
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which of the following is a valid return type for a method in Java?",
         answer: "D) All of the above",
         options: [
@@ -353,7 +353,7 @@ let question = [
         ],
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "What is the default value of an int variable in Java?",
         answer: "A) 0",
         options: [
@@ -364,7 +364,7 @@ let question = [
         ],
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "What is the output of the following code<br><br>System.out.println(10 % 3);",
         answer: "C) 1",
         options: [
@@ -375,7 +375,7 @@ let question = [
         ],
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "Which method is used to find the character at a specific index in a string in Java?",
         answer: "C) charAt()",
         options: [
@@ -386,7 +386,7 @@ let question = [
         ],
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println(\"Java\" + \" is fun!\");",
         answer: "B) Java is fun!",
         options: [
@@ -397,7 +397,7 @@ let question = [
         ],
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "Which method is used to convert a string to uppercase in Java?",
         answer: "A) toUpperCase()",
         options: [
@@ -408,7 +408,7 @@ let question = [
         ],
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "Which of the following is a correct way to initialize a double variable in Java?",
         answer: "B) double d = 10.5;",
         options: [
@@ -419,7 +419,7 @@ let question = [
         ],
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "Which of the following is a valid comment in Java?",
         answer: "C) /* Comment */",
         options: [
@@ -430,7 +430,7 @@ let question = [
         ],
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println(10 > 5);",
         answer: "A) true",
         options: [
@@ -441,7 +441,7 @@ let question = [
         ],
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "Which of the following is the correct way to create a multi-line comment in Java?",
         answer: "B) /* This is a multi-line comment */",
         options: [
@@ -452,7 +452,7 @@ let question = [
         ],
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "Which method is used to check if two strings are equal in Java?",
         answer: "D) equals()",
         options: [
@@ -463,7 +463,7 @@ let question = [
         ],
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "What is the correct way to declare a float variable in Java?",
         answer: "A) float f = 10.5f;",
         options: [
@@ -474,7 +474,7 @@ let question = [
         ],
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "Which of the following is the correct way to declare a method in Java?",
         answer: "B) void myMethod()",
         options: [
@@ -485,7 +485,7 @@ let question = [
         ],
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "What will be the output of the following code?<br><br>System.out.println(\"Hello\".substring(1, 4));",
         answer: "B) ell",
         options: [
@@ -496,7 +496,7 @@ let question = [
         ],
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "Which of the following is a valid identifier in Java?",
         answer: "D) myVariable",
         options: [
@@ -507,7 +507,7 @@ let question = [
         ],
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "Which of the following is a valid method return type in Java?",
         answer: "A) int",
         options: [
@@ -518,7 +518,7 @@ let question = [
         ],
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "What does 'null' mean in Java?",
         answer: "C) A reference with no value",
         options: [
@@ -529,7 +529,7 @@ let question = [
         ],
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "Which of the following is a valid declaration of a string in Java?",
         answer: "A) String str = \"Hello\";",
         options: [
@@ -540,7 +540,7 @@ let question = [
         ],
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "What is the output of the following code?<br><br>System.out.println(\"Hello\".charAt(1));",
         answer: "B) e",
         options: [
