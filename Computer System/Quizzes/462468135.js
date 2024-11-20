@@ -1,6 +1,6 @@
 let question=[//input output
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the primary function of a keyboard?",
         answer: "B) To enter characters into a computer",
         options: [
@@ -11,7 +11,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Which of the following is a type of keyboard used in mobile devices?",
         answer: "C) On-screen keyboard",
         options: [
@@ -22,7 +22,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the main purpose of a mouse?",
         answer: "B) To point and select objects on the screen",
         options: [
@@ -33,7 +33,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Which type of mouse tracks movements using light?",
         answer: "B) Optical mouse",
         options: [
@@ -44,7 +44,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is a stylus used for?",
         answer: "A) Drawing or writing on a screen",
         options: [
@@ -55,7 +55,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Which device is used to convert printed text and images into digital form?",
         answer: "B) Scanner",
         options: [
@@ -66,7 +66,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the function of an Optical Mark Reader (OMR)?",
         answer: "C) To tally exams and questionnaires",
         options: [
@@ -77,7 +77,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Which of the following technologies is used by RFID readers?",
         answer: "B) Radio frequency identification",
         options: [
@@ -88,7 +88,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is a primary feature of a digital camera?",
         answer: "B) Takes pictures and records them as digital images",
         options: [
@@ -99,7 +99,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What is the quality of a digital camera measured in?",
         answer: "B) Megapixels",
         options: [
@@ -110,7 +110,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which of the following is a characteristic of a display device?",
         answer: "B) Displays visual output on a screen",
         options: [
@@ -121,7 +121,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "What is the primary difference between CRT and flat-panel displays?",
         answer: "C) Flat-panel displays use less power and take up less space",
         options: [
@@ -132,7 +132,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "Which of the following types of display is most commonly used in modern devices?",
         answer: "C) Flat-panel displays",
         options: [
@@ -154,7 +154,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "Which printing technology is used to produce multipart forms?",
         answer: "B) Impact printing",
         options: [
@@ -165,7 +165,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What does dpi stand for in printing?",
         answer: "A) Dots per inch",
         options: [
@@ -176,7 +176,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "Which device is used to input voice data into a computer?",
         answer: "B) Microphone",
         options: [
@@ -187,7 +187,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "What is the primary use of a speech recognition system?",
         answer: "B) To recognize and convert spoken words into digital text",
         options: [
@@ -198,7 +198,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "Which of the following is an audio output device?",
         answer: "B) Speaker",
         options: [
@@ -209,7 +209,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "What is a touch screen?",
         answer: "B) A display device that allows input by touching the screen",
         options: [
@@ -220,7 +220,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which device is typically used in gaming and allows for full-body input?",
         answer: "C) Perceptual computing system",
         options: [
@@ -231,7 +231,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What is an example of a biometric reader?",
         answer: "B) A device that captures fingerprint or voice data",
         options: [
@@ -242,7 +242,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What technology do e-readers primarily use?",
         answer: "C) E-paper",
         options: [
@@ -253,7 +253,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "Which of the following is considered an input device?",
         answer: "C) Keyboard",
         options: [
@@ -264,7 +264,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "What does OCR stand for?",
         answer: "C) Optical Character Recognition",
         options: [
@@ -275,7 +275,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "Which of these is a non-impact printer?",
         answer: "B) Laser printer",
         options: [
@@ -286,7 +286,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "What type of scanner would be most appropriate for capturing detailed 3D models?",
         answer: "C) 3D scanner",
         options: [
@@ -297,7 +297,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "Which of these is NOT a characteristic of OLED displays?",
         answer: "B) Require backlighting",
         options: [
@@ -308,7 +308,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "Which technology is most suitable for immersive virtual reality experiences?",
         answer: "B) VR headset",
         options: [
@@ -319,7 +319,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "What type of output is produced by a projector?",
         answer: "C) Visual display",
         options: [
@@ -330,7 +330,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "Which technology is used to display images on a screen by controlling light through liquid crystals?",
         answer: "B) LCD",
         options: [
@@ -341,7 +341,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which device would best allow a user to interact with a computer without touching the screen?",
         answer: "B) Motion sensor",
         options: [
@@ -352,7 +352,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "Which of these is an example of an audio input device?",
         answer: "A) Microphone",
         options: [
@@ -363,7 +363,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "Which technology is used in barcode scanners?",
         answer: "B) Laser scanning",
         options: [
@@ -374,7 +374,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "Which of the following is a characteristic of plasma displays?",
         answer: "A) Use small cells containing electrically charged ionized gases",
         options: [
@@ -385,7 +385,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "What is the main feature of a graphics tablet?",
         answer: "A) Allows users to draw directly on the surface with a stylus",
         options: [
@@ -396,7 +396,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "Which device is often used in retail for quick checkout?",
         answer: "B) Barcode scanner",
         options: [
@@ -407,7 +407,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "What is the primary function of a webcam?",
         answer: "A) Capturing video for online communication",
         options: [
@@ -418,7 +418,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "Which of these devices is most suitable for video conferencing?",
         answer: "A) Webcam",
         options: [
@@ -429,7 +429,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "What type of device is a touchpad?",
         answer: "A) Input device",
         options: [
@@ -440,7 +440,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "What is the main advantage of using a trackball over a traditional mouse?",
         answer: "B) It requires less desk space and is stationary",
         options: [
@@ -451,7 +451,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "Which device is best suited for interactive presentations?",
         answer: "B) Smartboard",
         options: [
@@ -462,7 +462,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "What does a 3D mouse typically allow?",
         answer: "B) Manipulation of objects in a 3D environment",
         options: [
@@ -473,7 +473,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "Which device is designed for capturing video footage in various lighting conditions?",
         answer: "C) Camcorder",
         options: [
@@ -484,7 +484,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "What is the primary use of a VR headset?",
         answer: "B) To experience 3D virtual environments",
         options: [
@@ -495,7 +495,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "Which device can be used to blend real-world and digital environments?",
         answer: "B) Mixed reality headset",
         options: [
@@ -506,7 +506,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "Which input device is crucial for interacting with a virtual reality environment?",
         answer: "B) VR controller",
         options: [
@@ -517,7 +517,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "What kind of displays are typically used in smart glasses?",
         answer: "B) OLED",
         options: [
@@ -528,7 +528,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "Which technology is used for remote surgeries to control surgical tools from a distance?",
         answer: "C) Telepresence robotics",
         options: [
@@ -539,7 +539,7 @@ let question=[//input output
         ],
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "What does LIDAR technology primarily measure?",
         answer: "B) Light reflection to measure distances",
         options: [
