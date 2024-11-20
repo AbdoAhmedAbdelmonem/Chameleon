@@ -1,6 +1,6 @@
 let question=[//system software
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the purpose of a file extension?",
         answer: "B) To identify the type of file",
         options: [
@@ -11,7 +11,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Which of the following is an example of application software?",
         answer: "C) Word Processor",
         options: [
@@ -22,7 +22,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the role of an operating system?",
         answer: "B) To manage and coordinate activities within a computer",
         options: [
@@ -33,7 +33,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Which of the following is not a function of an operating system?",
         answer: "C) Designing websites",
         options: [
@@ -44,7 +44,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "Which of the following is a method to enhance processing efficiency in operating systems?",
         answer: "D) All of the above",
         options: [
@@ -55,7 +55,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What does GUI stand for?",
         answer: "A) Graphical User Interface",
         options: [
@@ -66,7 +66,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the purpose of device drivers?",
         answer: "B) To manage the interaction between hardware and the operating system",
         options: [
@@ -77,7 +77,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What is multitasking?",
         answer: "B) Running multiple programs simultaneously",
         options: [
@@ -88,7 +88,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is virtual memory?",
         answer: "C) Hard drive space used as additional RAM",
         options: [
@@ -99,7 +99,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What does spooling stand for?",
         answer: "B) Simultaneous Peripheral Operations On-Line",
         options: [
@@ -110,7 +110,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which of the following uses a command-line interface?",
         answer: "B) DOS",
         options: [
@@ -121,7 +121,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Which operating system is known for its use in servers and workstations?",
         answer: "C) UNIX",
         options: [
@@ -132,7 +132,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What does PnP stand for in computing?",
         answer: "A) Plug and Play",
         options: [
@@ -143,7 +143,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which operating system is open source and was developed by L.Torvalds?",
         answer: "D) Linux",
         options: [
@@ -154,7 +154,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "Which version of Windows introduced the Aero interface?",
         answer: "C) Windows Vista",
         options: [
@@ -165,7 +165,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What is the primary function of a firewall?",
         answer: "B) To protect against unauthorized access",
         options: [
@@ -176,7 +176,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What does the term 'buffering' refer to in operating systems?",
         answer: "B) Storing data temporarily",
         options: [
@@ -187,7 +187,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which operating system is primarily designed for smartphones?",
         answer: "C) Android",
         options: [
@@ -198,7 +198,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the role of a file management program?",
         answer: "C) To organize and manage files and folders",
         options: [
@@ -209,7 +209,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Which of the following is a common feature in most operating systems today?",
         answer: "B) Graphical user interface",
         options: [
@@ -220,7 +220,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which of the following operating systems is known for being proprietary to Apple?",
         answer: "B) Mac OS",
         options: [
@@ -231,7 +231,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What is a thread in the context of computing?",
         answer: "B) A sequence of instructions within a program",
         options: [
@@ -242,7 +242,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What is the primary purpose of utility programs?",
         answer: "B) To perform specific tasks related to managing or maintaining the computer system",
         options: [
@@ -253,7 +253,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "Which operating system was dominant in the 1980s and early 1990s?",
         answer: "C) DOS",
         options: [
@@ -264,7 +264,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "What is the purpose of file compression programs?",
         answer: "B) To reduce file size for storage and transmission",
         options: [
@@ -275,7 +275,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "What does the term 'multithreading' refer to?",
         answer: "B) Executing multiple threads within a single program simultaneously",
         options: [
@@ -286,7 +286,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "Which operating system was developed by Microsoft Corporation?",
         answer: "C) Windows",
         options: [
@@ -297,7 +297,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "Which version of Windows was designed for both PCs and tablets?",
         answer: "B) Windows 8",
         options: [
@@ -308,7 +308,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "Which of the following is not a type of operating system?",
         answer: "C) Database management system",
         options: [
@@ -319,7 +319,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "What is the primary purpose of a system restore point?",
         answer: "B) To return the system to a previous state",
         options: [
@@ -330,7 +330,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "What is the role of a scheduler in an operating system?",
         answer: "C) To manage the execution of processes",
         options: [
@@ -341,7 +341,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which operating system is open source and based on UNIX?",
         answer: "C) Linux",
         options: [
@@ -352,7 +352,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "What is the purpose of disk cleanup?",
         answer: "B) To remove unnecessary files and free up space",
         options: [
@@ -363,7 +363,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "What is the role of a hypervisor in virtualization?",
         answer: "C) To manage virtual machines",
         options: [
@@ -374,7 +374,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "Which of the following is not a task of the operating system?",
         answer: "D) Compiling code",
         options: [
@@ -385,7 +385,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "What is the purpose of a swap file?",
         answer: "B) To extend the physical memory onto the hard drive",
         options: [
@@ -396,7 +396,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "What is the role of a bootloader in a computer system?",
         answer: "C) To load the operating system into memory",
         options: [
@@ -407,7 +407,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "Which of the following is a characteristic of a real-time operating system (RTOS)?",
         answer: "B) Fast processing of time-critical tasks",
         options: [
@@ -418,7 +418,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "What is the primary purpose of a task manager?",
         answer: "B) To monitor and manage running processes",
         options: [
@@ -429,7 +429,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "Which of the following is a type of system software?",
         answer: "A) Device driver",
         options: [
@@ -440,7 +440,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "What is the purpose of defragmentation?",
         answer: "B) To optimize the layout of files on a disk",
         options: [
@@ -451,7 +451,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "Which of the following is a real-time operating system?",
         answer: "D) RTOS",
         options: [
@@ -462,7 +462,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "What does the term 'booting' refer to?",
         answer: "B) Starting up a computer",
         options: [
@@ -473,7 +473,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "What is the function of the kernel in an operating system?",
         answer: "A) Manage hardware resources",
         options: [
@@ -484,7 +484,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "What is the primary use of a command-line interface?",
         answer: "C) Executing text-based commands",
         options: [
@@ -495,7 +495,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "What is the purpose of an antivirus program?",
         answer: "B) To detect and remove malicious software",
         options: [
@@ -506,7 +506,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "What is the role of the BIOS in a computer system?",
         answer: "B) Initialize and test hardware during the boot process",
         options: [
@@ -517,7 +517,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "Which of the following is not a type of system software?",
         answer: "D) Spreadsheet program",
         options: [
@@ -528,7 +528,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "What is the role of a task manager in an operating system?",
         answer: "B) To display and manage running applications and processes",
         options: [
@@ -539,7 +539,7 @@ let question=[//system software
         ],
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "Which operating system was designed for use in IBM-compatible PCs?",
         answer: "C) Windows",
         options: [
