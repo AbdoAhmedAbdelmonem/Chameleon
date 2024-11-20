@@ -1,6 +1,6 @@
 let question = [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the primary goal of procedural programming?",
         answer: "C) To separate a program into small modules",
         options:[
@@ -11,7 +11,7 @@ let question = [
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "In procedural programming, what is a \"procedure call\"?",
         answer: "C) Locating specific tasks in procedures to be called by the main program",
         options:[
@@ -22,7 +22,7 @@ let question = [
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "Which approach to program design involves breaking the program into small modules using a top-down design?",
         answer: "C) Structured Programming",
         options:[
@@ -33,7 +33,7 @@ let question = [
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "What is the main purpose of using variables in structured programming?",
         answer: "B) To store the current value of data items",
         options:[
@@ -44,7 +44,7 @@ let question = [
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "In Object-Oriented Programming (OOP), what is an \"instance\"?",
         answer: "B) A specific object in a class",
         options:[
@@ -55,7 +55,7 @@ let question = [
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What describes an object's data in OOP?",
         answer: "C) Attributes",
         options:[
@@ -66,7 +66,7 @@ let question = [
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What programming approach allows for functions to be developed and modified individually?",
         answer: "D) Aspect-Oriented Programming",
         options:[
@@ -77,7 +77,7 @@ let question = [
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Which development methodology focuses on adapting the program as it is being written?",
         answer: "A) Adaptive Software Development",
         options:[
@@ -88,7 +88,7 @@ let question = [
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the primary goal of Agile Software Development?",
         answer: "B) To create software quickly",
         options:[
@@ -99,7 +99,7 @@ let question = [
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What is the first phase of the Program Development Life Cycle (PDLC)?",
         answer: "A) Problem Analysis",
         options:[
@@ -110,7 +110,7 @@ let question = [
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "During the Problem Analysis phase of the PDLC, what is developed?",
         answer: "B) Program specifications",
         options:[
@@ -121,7 +121,7 @@ let question = [
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "What is a flowchart used for in the Program Development Life Cycle?",
         answer: "B) To graphically depict the steps a computer program will take",
         options:[
@@ -132,7 +132,7 @@ let question = [
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What does pseudocode represent?",
         answer: "D) English-like statements outlining the logic of a program",
         options:[
@@ -143,7 +143,7 @@ let question = [
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which of the following is a control structure in programming?",
         answer: "C) Sequence Control Structure",
         options:[
@@ -154,7 +154,7 @@ let question = [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What type of control structure repeats a series of statements until a particular condition is met?",
         answer: "C) Repetition Control Structure",
         options:[
@@ -165,7 +165,7 @@ let question = [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What principle should be followed to avoid infinite loops in program design?",
         answer: "A) One-Entry-Point/One-Exit-Point Rule",
         options:[
@@ -176,7 +176,7 @@ let question = [
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the purpose of testing the design of a program?",
         answer: "B) To ensure the logic is correct",
         options:[
@@ -187,7 +187,7 @@ let question = [
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "What is a major consideration when choosing a programming language?",
         answer: "D) Suitability to the application",
         options:[
@@ -198,7 +198,7 @@ let question = [
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is source code?",
         answer: "C) The computer program before it is compiled",
         options:[
@@ -209,7 +209,7 @@ let question = [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "What is the purpose of coding standards?",
         answer: "B) To standardize programming and make it easier to maintain",
         options:[
@@ -220,7 +220,7 @@ let question = [
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "What is reusable code?",
         answer: "A) Code segments that can be used multiple times with minor modifications",
         options:[
@@ -231,7 +231,7 @@ let question = [
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What is the process of ensuring a program is free of errors and works as intended?",
         answer: "B) Debugging",
         options:[
@@ -242,7 +242,7 @@ let question = [
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What is a compiler?",
         answer: "A) A language translator that converts an entire program into machine language before executing it",
         options:[
@@ -253,7 +253,7 @@ let question = [
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "What is the role of an interpreter?",
         answer: "C) It translates one line of code at a time",
         options:[
@@ -264,7 +264,7 @@ let question = [
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "What is a run-time error?",
         answer: "B) An error that occurs when the program is running",
         options:[
@@ -275,7 +275,7 @@ let question = [
         ],
     },
     {
-        numb:26 ,
+        numb:26 ,type: "Multiple Choices",
         question: "What is an alpha test?",
         answer: "D) An internal on-site test",
         options:[
@@ -286,7 +286,7 @@ let question = [
         ],
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "What is the final phase of the Program Development Life Cycle?",
         answer: "C) Implementation and Maintenance",
         options:[
@@ -297,7 +297,7 @@ let question = [
         ],
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "What is Application Lifecycle Management (ALM)?",
         answer: "B) Tools for creating and managing an application during its entire lifecycle",
         options:[
@@ -308,7 +308,7 @@ let question = [
         ],
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "What is the purpose of an Integrated Development Environment (IDE)?",
         answer: "D) To provide a set of programming tools for writing software applications",
         options:[
@@ -319,7 +319,7 @@ let question = [
         ],
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "What is the role of an API in programming?",
         answer: "B) To help applications interface with a particular operating system",
         options:[
@@ -330,7 +330,7 @@ let question = [
         ],
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "What is machine language?",
         answer: "A) A language using 1s and 0s",
         options:[
@@ -341,7 +341,7 @@ let question = [
         ],
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which generation of programming languages includes FORTRAN and COBOL?",
         answer: "C) Third generation",
         options:[
@@ -352,7 +352,7 @@ let question = [
         ],
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "What is the main advantage of fourth-generation languages (4GLs)?",
         answer: "A) They are closer to natural languages and easier to work with",
         options:[
@@ -363,7 +363,7 @@ let question = [
         ],
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "Which programming language is commonly used for scientific applications?",
         answer: "B) FORTRAN",
         options:[
@@ -374,7 +374,7 @@ let question = [
         ],
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "What is the main use of COBOL?",
         answer: "B) Business data processing",
         options:[
@@ -385,7 +385,7 @@ let question = [
         ],
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "What is a microprocessor?",
         answer: "C) The central processing unit (CPU) of a microcomputer",
         options:[
@@ -396,7 +396,7 @@ let question = [
         ],
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "What is the function of an operating system?",
         answer: "B) To manage computer hardware and software resources",
         options:[
@@ -407,7 +407,7 @@ let question = [
         ],
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "What is a GUI?",
         answer: "B) Graphical User Interface",
         options:[
@@ -418,7 +418,7 @@ let question = [
         ],
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "What is the purpose of system software?",
         answer: "D) All of the above",
         options:[
@@ -429,7 +429,7 @@ let question = [
         ],
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "What is the role of application software?",
         answer: "B) To perform specific tasks for users",
         options:[
@@ -440,7 +440,7 @@ let question = [
         ],
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "What type of computer is known for handling large-scale data processing and transaction processing?",
         answer: "C) Mainframe",
         options:[
@@ -451,7 +451,7 @@ let question = [
         ],
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "What is a supercomputer primarily used for?",
         answer: "C) Complex computations like weather forecasting",
         options:[
@@ -462,7 +462,7 @@ let question = [
         ],
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "What is the primary function of a minicomputer?",
         answer: "D) Supporting small to medium-sized organizations",
         options:[
@@ -473,7 +473,7 @@ let question = [
         ],
     },
     {
-        numb:44 ,
+        numb:44 ,type: "Multiple Choices",
         question: "What is another name for microcomputers?",
         answer: "D) Minicomputers",
         options:[
@@ -484,7 +484,7 @@ let question = [
         ],
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "Which of the following is a characteristic of mainframe computers?",
         answer: "C) Used for bulk data processing",
         options:[
@@ -495,7 +495,7 @@ let question = [
         ],
     },
     {
-        numb:46 ,
+        numb:46 ,type: "Multiple Choices",
         question: "What is the key feature of supercomputers?",
         answer: "B) High processing power for complex tasks",
         options:[
@@ -506,7 +506,7 @@ let question = [
         ],
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "What is a central theme in the evolution of computing?",
         answer: "B) Transition from complex hardware to software-driven processes",
         options:[
@@ -517,7 +517,7 @@ let question = [
         ],
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "Which generation of computers is associated with microprocessors?",
         answer: "D) Fourth generation",
         options:[
@@ -528,7 +528,7 @@ let question = [
         ],
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "Which of the following is a major function of an operating system?",
         answer: "A) Executing user applications",
         options:[
@@ -539,7 +539,7 @@ let question = [
         ],
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "What is a significant trend in the evolution of software?",
         answer: "B) Increased focus on user-friendly interfaces",
         options:[
