@@ -64,13 +64,13 @@ body.light{
 
 .logo .snow {
     position: absolute;
-    top: -13px;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 2;
+    width: 110%;
+    height: 60px;
+    z-index: -5;
     pointer-events: none;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 .logo span {
