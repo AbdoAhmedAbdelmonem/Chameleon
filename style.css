@@ -41,7 +41,7 @@ body.light{
     top: 0;
     left: 0;
     width: 110%;
-    padding: 4rem 12% 4rem;
+    padding: 2rem 12% 2rem;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     display: flex;
