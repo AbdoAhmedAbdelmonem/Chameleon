@@ -95,7 +95,7 @@ let question = [
         options: [
             "A) 45",
             "B) 47",
-            "C) 47",
+            "C) 43",
             "D) 49"
         ]
     },
