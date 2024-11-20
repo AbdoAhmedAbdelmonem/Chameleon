@@ -1,6 +1,7 @@
 let question = [
     {
         numb: 1,
+        type: "Multiple Choices",
         question: "Which component was used in first-generation computers?",
         answer: "A) Vacuum tubes",
         options: [
@@ -12,6 +13,7 @@ let question = [
     },
     {
         numb: 2,
+        type: "Multiple Choices",
         question: "What was a key characteristic of second-generation computers?",
         answer: "B) Used transistors",
         options: [
@@ -23,6 +25,7 @@ let question = [
     },
     {
         numb: 3,
+        type: "Multiple Choices",
         question: "Which input/output devices were introduced in third-generation computers?",
         answer: "C) Keyboards and monitors",
         options: [
@@ -34,6 +37,7 @@ let question = [
     },
     {
         numb: 4,
+        type: "Multiple Choices",
         question: "Which of the following describes fourth-generation computers?",
         answer: "D) Use microprocessors",
         options: [
@@ -45,6 +49,7 @@ let question = [
     },
     {
         numb: 5,
+        type: "Multiple Choices",
         question: "What is a possible characteristic of fifth-generation computers?",
         answer: "A) Based on artificial intelligence (AI)",
         options: [
@@ -56,6 +61,7 @@ let question = [
     },
     {
         numb: 6,
+        type: "Multiple Choices",
         question: "How fast is 1 GHz?",
         answer: "C) 1 billion cycles per second",
         options: [
@@ -67,6 +73,7 @@ let question = [
     },
     {
         numb: 7,
+        type: "Multiple Choices",
         question: "What is an embedded computer?",
         answer: "B) A computer embedded into a product to perform specific tasks",
         options: [
@@ -78,6 +85,7 @@ let question = [
     },
     {
         numb: 8,
+        type: "Multiple Choices",
         question: "Which of the following is an example of a mobile device?",
         answer: "A) Smartphone",
         options: [
@@ -89,6 +97,7 @@ let question = [
     },
     {
         numb: 9,
+        type: "Multiple Choices",
         question: "What is a personal computer (PC) designed for?",
         answer: "C) Used by one person at a time",
         options: [
@@ -100,6 +109,7 @@ let question = [
     },
     {
         numb: 10,
+        type: "Multiple Choices",
         question: "Which of the following best describes a midrange server?",
         answer: "A) A medium-sized computer used to host programs and data for a small network",
         options: [
@@ -111,6 +121,7 @@ let question = [
     },
     {
         numb: 11,
+        type: "Multiple Choices",
         question: "What is a mainframe computer typically used for?",
         answer: "B) Managing large amounts of centralized data",
         options: [
@@ -122,6 +133,7 @@ let question = [
     },
     {
         numb: 12,
+        type: "Multiple Choices",
         question: "What is the fastest, most expensive, and most powerful type of computer?",
         answer: "C) Supercomputer",
         options: [
@@ -133,6 +145,7 @@ let question = [
     },
     {
         numb: 13,
+        type: "Multiple Choices",
         question: "What is the primary function of input devices?",
         answer: "A) To input data into the computer",
         options: [
@@ -143,7 +156,7 @@ let question = [
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which of the following is an example of an output device?",
         answer: "D) Monitor",
         options: [
@@ -154,7 +167,7 @@ let question = [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the role of processing devices in a computer?",
         answer: "B) To perform calculations and control the computer’s operation",
         options: [
@@ -165,7 +178,7 @@ let question = [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Which of the following is a primary storage device?",
         answer: "A) Hard drive",
         options: [
@@ -176,7 +189,7 @@ let question = [
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What type of memory is typically used for permanent data storage?",
         answer: "C) ROM",
         options: [
@@ -187,7 +200,7 @@ let question = [
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which device is used to connect multiple computers into a network?",
         answer: "B) Router",
         options: [
@@ -198,7 +211,7 @@ let question = [
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What does an operating system primarily manage?",
         answer: "C) Hardware resources and software applications",
         options: [
@@ -209,7 +222,7 @@ let question = [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Which type of software allows users to perform specific tasks like document editing?",
         answer: "D) Application software",
         options: [
@@ -220,7 +233,7 @@ let question = [
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which of the following is a function of system software?",
         answer: "A) Managing hardware resources",
         options: [
@@ -231,7 +244,7 @@ let question = [
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What type of software would be used to protect a computer from viruses?",
         answer: "B) Antivirus software",
         options: [
@@ -242,7 +255,7 @@ let question = [
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What does 'machine learning' enable a computer to do?",
         answer: "C) Learn from data and improve without being explicitly programmed",
         options: [
@@ -253,7 +266,7 @@ let question = [
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "In artificial neural networks (ANN), what mimics the human brain's structure?",
         answer: "B) Neurons and layers",
         options: [
@@ -264,7 +277,7 @@ let question = [
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "Which technology is integral to the functioning of the Internet of Things (IoT)?",
         answer: "A) Connected sensors and devices",
         options: [
@@ -275,7 +288,7 @@ let question = [
         ],
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "What does 'Big Data' typically refer to?",
         answer: "B) Large volumes of unstructured data that require advanced tools to analyze",
         options: [
@@ -286,7 +299,7 @@ let question = [
         ],
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "What is a key benefit of cloud computing?",
         answer: "C) Scalability and flexibility of resources",
         options: [
@@ -297,7 +310,7 @@ let question = [
         ],
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "What type of computer is commonly used for complex simulations and data analysis?",
         answer: "B) Supercomputer",
         options: [
@@ -308,7 +321,7 @@ let question = [
         ],
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "What does a firewall primarily protect against?",
         answer: "A) Unauthorized access to or from a private network",
         options: [
@@ -319,7 +332,7 @@ let question = [
         ],
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "Which type of memory is considered volatile and is used for temporary data storage?",
         answer: "D) RAM",
         options: [
@@ -330,7 +343,7 @@ let question = [
         ],
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "What is the primary purpose of utility software?",
         answer: "B) To maintain and optimize computer performance",
         options: [
@@ -341,7 +354,7 @@ let question = [
         ],
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "What component connects and allows communication between all other hardware components in a computer?",
         answer: "C) Motherboard",
         options: [
@@ -352,7 +365,7 @@ let question = [
         ],
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "Which type of device is typically used for entering handwritten data into a computer?",
         answer: "A) Stylus and tablet",
         options: [
@@ -363,7 +376,7 @@ let question = [
         ],
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "What is the role of a GPU (Graphics Processing Unit) in a computer?",
         answer: "B) Rendering images and video",
         options: [
@@ -374,7 +387,7 @@ let question = [
         ],
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "Which of the following is a common feature of fifth-generation computers?",
         answer: "C) Voice and gesture-based interactions",
         options: [
@@ -385,7 +398,7 @@ let question = [
         ],
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "What is the main function of a router in a network?",
         answer: "A) Directing data packets between different networks",
         options: [
@@ -396,7 +409,7 @@ let question = [
         ],
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "In the context of computing, what does AI stand for?",
         answer: "C) Artificial Intelligence",
         options: [
@@ -407,7 +420,7 @@ let question = [
         ],
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "Which device is commonly used for long-term storage of data?",
         answer: "B) Hard drive",
         options: [
@@ -418,7 +431,7 @@ let question = [
         ],
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "What does 'data visualization' refer to?",
         answer: "D) The graphical representation of data to understand trends and patterns",
         options: [
@@ -429,7 +442,7 @@ let question = [
         ],
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "What is the primary purpose of an operating system?",
         answer: "A) To manage computer hardware and software resources",
         options: [
@@ -440,7 +453,7 @@ let question = [
         ],
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "What does 'IoT' stand for in computing?",
         answer: "B) Internet of Things",
         options: [
@@ -451,7 +464,7 @@ let question = [
         ],
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "What is the main characteristic of an embedded computer?",
         answer: "A) Designed to perform specific tasks within a product",
         options: [
@@ -462,7 +475,7 @@ let question = [
         ],
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "Which type of computer is often embedded into household appliances?",
         answer: "C) Embedded computer",
         options: [
@@ -473,7 +486,7 @@ let question = [
         ],
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "What is the primary function of a mobile device?",
         answer: "B) To provide computing or internet capability in a portable form",
         options: [
@@ -484,7 +497,7 @@ let question = [
         ],
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "Which of the following is a common use for supercomputers?",
         answer: "C) Weather forecasting",
         options: [
@@ -495,7 +508,7 @@ let question = [
         ],
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "What type of computer is typically used by one person at a time and can be easily transported?",
         answer: "A) Personal computer",
         options: [
@@ -506,7 +519,7 @@ let question = [
         ],
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "What does 'CPU' stand for in computing?",
         answer: "D) Central Processing Unit",
         options: [
@@ -517,7 +530,7 @@ let question = [
         ],
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "Which generation of computers introduced integrated circuits?",
         answer: "B) Third-generation computers",
         options: [
@@ -528,7 +541,7 @@ let question = [
         ],
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "What is the primary advantage of transistors over vacuum tubes in computers?",
         answer: "A) Transistors are smaller, more energy-efficient, and reliable",
         options: [
@@ -539,7 +552,7 @@ let question = [
         ],
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "Which generation of computers is associated with the use of microprocessors?",
         answer: "C) Fourth-generation computers",
         options: [
