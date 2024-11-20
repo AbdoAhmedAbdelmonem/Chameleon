@@ -1,7 +1,7 @@
 //binary-hexa
 let question = [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the binary number 1011?",
         answer: "C) B",
         options: [
@@ -12,7 +12,7 @@ let question = [
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Convert the binary number 11001 to its hexadecimal form.",
         answer: "D) 19",
         options: [
@@ -23,7 +23,7 @@ let question = [
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the binary number 1110?",
         answer: "A) E",
         options: [
@@ -34,7 +34,7 @@ let question = [
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Convert the binary number 10010 to its hexadecimal form.",
         answer: "B) 12",
         options: [
@@ -45,7 +45,7 @@ let question = [
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the binary number 110011?",
         answer: "D) 33",
         options: [
@@ -56,7 +56,7 @@ let question = [
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Convert the binary number 10101 to its hexadecimal form.",
         answer: "B) 15",
         options: [
@@ -67,7 +67,7 @@ let question = [
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the binary number 11101?",
         answer: "B) 1D",
         options: [
@@ -78,7 +78,7 @@ let question = [
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Convert the binary number 100101 to its hexadecimal form.",
         answer: "B) 25",
         options: [
@@ -89,7 +89,7 @@ let question = [
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the binary number 101111?",
         answer: "A) 2F",
         options: [
@@ -100,7 +100,7 @@ let question = [
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Convert the binary number 111111 to its hexadecimal form.",
         answer: "C) 3F",
         options: [
@@ -111,7 +111,7 @@ let question = [
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the binary equivalent of the hexadecimal number A?",
         answer: "A) 1010",
         options: [
@@ -122,7 +122,7 @@ let question = [
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Convert the hexadecimal number F to its binary form.",
         answer: "C) 1111",
         options: [
@@ -133,7 +133,7 @@ let question = [
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the binary equivalent of the hexadecimal number 9?",
         answer: "B) 1001",
         options: [
@@ -144,7 +144,7 @@ let question = [
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Convert the hexadecimal number 1A to its binary form.",
         answer: "A) 11010",
         options: [
@@ -155,7 +155,7 @@ let question = [
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the binary equivalent of the hexadecimal number 2C?",
         answer: "C) 101100",
         options: [
@@ -166,7 +166,7 @@ let question = [
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Convert the hexadecimal number 3E to its binary form.",
         answer: "B) 111110",
         options: [
@@ -177,7 +177,7 @@ let question = [
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the binary equivalent of the hexadecimal number 4D?",
         answer: "A) 1001101",
         options: [
@@ -188,7 +188,7 @@ let question = [
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Convert the hexadecimal number 5F to its binary form.",
         answer: "B) 1011111",
         options: [
@@ -199,7 +199,7 @@ let question = [
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the binary equivalent of the hexadecimal number 6A?",
         answer: "A) 1101010",
         options: [
@@ -210,7 +210,7 @@ let question = [
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Convert the hexadecimal number 7C to its binary form.",
         answer: "A) 1111100",
         options: [
