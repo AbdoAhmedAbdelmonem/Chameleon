@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "Which coding system was developed by IBM primarily for mainframes?",
         answer: "B) EBCDIC",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What is the primary difference between machine language and high-level programming languages?",
         answer: "A) Machine language is binary, while high-level languages use English-like syntax.",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "How many colors can a 24-bit graphic image represent?",
         answer: "C) 16.7 million colors",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Which of the following is a compressed audio file format?",
         answer: "B) MP3",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What does the acronym ALU stand for?",
         answer: "A) Arithmetic and Logic Unit",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What is the term for converting data into digital form so that it can be understood by a computer?",
         answer: "D) Digital Data Representation",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "Which component of the CPU tries to retrieve data and instructions before they are needed?",
         answer: "D) Prefetch Unit",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Which of the following file formats is typically used for still images?",
         answer: "A) GIF",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "Which type of memory is used to permanently store firmware?",
         answer: "B) ROM",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "What is the smallest unit of data in a binary computer system?",
         answer: "C) Bit",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which of the following refers to the computer's main memory?",
         answer: "B) RAM",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "What does CPU stand for?",
         answer: "C) Central Processing Unit",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "Which of the following is a system of encoding used by most computers to represent text?",
         answer: "A) ASCII",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "What is the full form of SSD?",
         answer: "C) Solid State Drive",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "Which of the following is volatile memory?",
         answer: "A) RAM",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What is the primary function of cache memory?",
         answer: "B) To store frequently accessed data and instructions for quicker access",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "Which of the following coding systems uses 32 bits per character to represent text-based data?",
         answer: "D) Unicode",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which storage unit is approximately equal to one million bytes?",
         answer: "C) Megabyte",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "Which unit is used to measure the clock speed of a CPU?",
         answer: "B) Gigahertz (GHz)",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Which of the following is NOT an example of a binary numbering system?",
         answer: "D) Decimal",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ]
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "How many bits are in a byte?",
         answer: "B) 8",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ]
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "Which unit of data measures approximately one trillion bytes?",
         answer: "C) Terabyte",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ]
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "Which component of a computer is responsible for processing visual data and rendering graphics?",
         answer: "D) GPU",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ]
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "What is the name of the main circuit board in a computer?",
         answer: "B) Motherboard",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ]
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "Which of the following is a system for representing text data using 7 or 8 bits per character?",
         answer: "A) ASCII",
         options: [
@@ -275,7 +275,7 @@ let question=[
         ]
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "What type of image is made up of a grid of small dots called pixels?",
         answer: "C) Bitmapped image",
         options: [
@@ -286,7 +286,7 @@ let question=[
         ]
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "What is the function of the system clock in a computer?",
         answer: "B) Synchronize the computer's operations",
         options: [
@@ -297,7 +297,7 @@ let question=[
         ]
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "Which of the following describes the CPU's ability to perform more than one task at a time?",
         answer: "D) Multi-core processing",
         options: [
@@ -308,7 +308,7 @@ let question=[
         ]
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "What type of bus connects the CPU to RAM?",
         answer: "A) Memory Bus",
         options: [
@@ -319,7 +319,7 @@ let question=[
         ]
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "What does ROM stand for?",
         answer: "C) Read-Only Memory",
         options: [
@@ -330,7 +330,7 @@ let question=[
         ]
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "Which component handles arithmetic and logical operations within the CPU?",
         answer: "B) ALU",
         options: [
@@ -341,7 +341,7 @@ let question=[
         ]
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which term refers to the CPU's ability to fetch data before it is needed for processing?",
         answer: "A) Prefetch",
         options: [
@@ -352,7 +352,7 @@ let question=[
         ]
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "Which type of memory is built directly into the CPU?",
         answer: "C) Registers",
         options: [
@@ -363,7 +363,7 @@ let question=[
         ]
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "Which type of processor contains four cores?",
         answer: "B) Quad-core CPU",
         options: [
@@ -374,7 +374,7 @@ let question=[
         ]
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "What is a common unit for measuring CPU clock speed?",
         answer: "A) Gigahertz (GHz)",
         options: [
@@ -385,7 +385,7 @@ let question=[
         ]
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "Which storage device typically uses flash memory technology?",
         answer: "B) SSD",
         options: [
@@ -396,7 +396,7 @@ let question=[
         ]
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "Which port is commonly used to connect external multimedia devices to a computer?",
         answer: "D) FireWire",
         options: [
@@ -407,7 +407,7 @@ let question=[
         ]
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "Which memory is non-volatile and used for long-term storage?",
         answer: "B) ROM",
         options: [
@@ -418,7 +418,7 @@ let question=[
         ]
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "Which component of the CPU performs arithmetic involving decimal numbers?",
         answer: "C) FPU",
         options: [
@@ -429,7 +429,7 @@ let question=[
         ]
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "What is the primary purpose of a heat sink in a computer?",
         answer: "C) To dissipate heat from the CPU",
         options: [
@@ -440,7 +440,7 @@ let question=[
         ]
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "Which type of memory is considered volatile?",
         answer: "A) RAM",
         options: [
@@ -451,7 +451,7 @@ let question=[
         ]
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "Which expansion bus is used to connect peripheral devices such as printers to a computer?",
         answer: "B) USB",
         options: [
@@ -462,7 +462,7 @@ let question=[
         ]
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "Which term describes the amount of data a CPU can process at one time?",
         answer: "C) Word Size",
         options: [
@@ -473,7 +473,7 @@ let question=[
         ]
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "Which of the following is used to represent video data in digital form?",
         answer: "C) Frames",
         options: [
@@ -484,7 +484,7 @@ let question=[
         ]
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "What is the role of the Control Unit in the CPU?",
         answer: "B) To coordinate and control the CPU's activities",
         options: [
@@ -495,7 +495,7 @@ let question=[
         ]
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "Which memory technology is commonly used in smartphones for long-term storage?",
         answer: "C) Flash Memory",
         options: [
@@ -506,7 +506,7 @@ let question=[
         ]
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "Which of the following is a type of bus that connects the CPU to peripheral devices?",
         answer: "D) Expansion Bus",
         options: [
@@ -517,7 +517,7 @@ let question=[
         ]
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "Which coding system is used for universal representation of text data written in any language?",
         answer: "C) Unicode",
         options: [
@@ -528,7 +528,7 @@ let question=[
         ]
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "What does USB stand for?",
         answer: "B) Universal Serial Bus",
         options: [
@@ -539,7 +539,7 @@ let question=[
         ]
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "Which of the following is the most significant component of a computer's processing power?",
         answer: "C) CPU",
         options: [
