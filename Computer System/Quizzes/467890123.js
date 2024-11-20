@@ -1,7 +1,7 @@
 //binary-octal
 let question = [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the octal equivalent of the binary number 1011?",
         answer: "B) 13",
         options: [
@@ -12,7 +12,7 @@ let question = [
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Convert the binary number 110010 to its octal form.",
         answer: "A) 62",
         options: [
@@ -23,7 +23,7 @@ let question = [
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the octal equivalent of the binary number 111000?",
         answer: "A) 70",
         options: [
@@ -34,7 +34,7 @@ let question = [
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Convert the binary number 100101 to its octal form.",
         answer: "B) 45",
         options: [
@@ -45,7 +45,7 @@ let question = [
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the octal equivalent of the binary number 1011101?",
         answer: "B) 135",
         options: [
@@ -56,7 +56,7 @@ let question = [
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Convert the binary number 111010 to its octal form.",
         answer: "A) 72",
         options: [
@@ -67,7 +67,7 @@ let question = [
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the octal equivalent of the binary number 10101010?",
         answer: "C) 252",
         options: [
@@ -78,7 +78,7 @@ let question = [
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Convert the binary number 110011 to its octal form.",
         answer: "A) 63",
         options: [
@@ -89,7 +89,7 @@ let question = [
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the octal equivalent of the binary number 1110111?",
         answer: "B) 167",
         options: [
@@ -100,7 +100,7 @@ let question = [
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Convert the binary number 10111001 to its octal form.",
         answer: "A) 271",
         options: [
@@ -111,7 +111,7 @@ let question = [
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the binary equivalent of the octal number 7?",
         answer: "B) 111",
         options: [
@@ -122,7 +122,7 @@ let question = [
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Convert the octal number 12 to its binary form.",
         answer: "C) 1010",
         options: [
@@ -133,7 +133,7 @@ let question = [
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the binary equivalent of the octal number 17?",
         answer: "A) 1111",
         options: [
@@ -144,7 +144,7 @@ let question = [
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Convert the octal number 25 to its binary form.",
         answer: "A) 10101",
         options: [
@@ -155,7 +155,7 @@ let question = [
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the binary equivalent of the octal number 30?",
         answer: "B) 11000",
         options: [
@@ -166,7 +166,7 @@ let question = [
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Convert the octal number 45 to its binary form.",
         answer: "B) 100101",
         options: [
@@ -177,7 +177,7 @@ let question = [
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the binary equivalent of the octal number 52?",
         answer: "C) 101010",
         options: [
@@ -188,7 +188,7 @@ let question = [
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Convert the octal number 67 to its binary form.",
         answer: "C) 110111",
         options: [
@@ -199,7 +199,7 @@ let question = [
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the binary equivalent of the octal number 74?",
         answer: "B) 111100",
         options: [
@@ -210,7 +210,7 @@ let question = [
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Convert the octal number 100 to its binary form.",
         answer: "A) 1000000",
         options: [
