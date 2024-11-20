@@ -1,6 +1,6 @@
 let question=[//part 2  application software
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "Which of the following best describes multimedia software?",
         answer: "B) Software that handles audio, video, and interactive content.",
         options:[
@@ -11,7 +11,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Which of the following programs is an example of video editing software?",
         answer: "D) Apple iMovie",
         options:[
@@ -22,7 +22,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "Which software allows you to capture and edit sound files?",
         answer: "B) Audacity",
         options:[
@@ -33,7 +33,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "What is the main function of a media player?",
         answer: "D) To play audio and video files.",
         options:[
@@ -44,7 +44,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "Which of the following software is used to play multimedia content?",
         answer: "A) Windows Media Player",
         options:[
@@ -55,7 +55,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What is the purpose of desktop publishing software?",
         answer: "B) To design professional-quality printed materials.",
         options:[
@@ -66,7 +66,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "Which of the following programs is an example of desktop publishing software?",
         answer: "C) Adobe InDesign",
         options:[
@@ -77,7 +77,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Which of the following software is most commonly used for photo editing?",
         answer: "A) Adobe Photoshop",
         options:[
@@ -88,7 +88,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the primary function of sound editing software?",
         answer: "D) To capture, edit, and apply effects to audio files.",
         options:[
@@ -99,7 +99,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Which software would you use to organize and edit video content for a presentation?",
         answer: "B) Adobe Premiere Pro",
         options:[
@@ -110,7 +110,7 @@ let question=[//part 2  application software
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "Which of the following is a key advantage of open-source software?",
         answer: "C) Typically more stable and secure",
         options: [
@@ -122,7 +122,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Which of these is NOT an open-source operating system?",
         answer: "C) Windows",
         options: [
@@ -134,7 +134,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "Shareware is:",
         answer: "C) Distributed on the honor system",
         options: [
@@ -145,7 +145,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Desktop software is typically used on:",
         answer: "B) Personal computers",
         options: [
@@ -157,7 +157,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "Which of these platforms commonly offers mobile apps?",
         answer: "B) Google Play Store",
         options: [
@@ -168,7 +168,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Mobile ticketing allows users to:",
         answer: "B) Download and use digital tickets for events",
         options: [
@@ -179,7 +179,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "Installed software must be:",
         answer: "B) Installed on the device before it can run",
         options: [
@@ -191,7 +191,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "One potential disadvantage of cloud software is:",
         answer: "B) File size limits",
         options: [
@@ -202,7 +202,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "A software suite typically includes:",
         answer: "B) A collection of software programs bundled together",
         options: [
@@ -213,7 +213,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Editing a document usually involves:",
         answer: "B) Changing the content of the document",
         options: [
@@ -225,7 +225,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which feature helps automatically move text to the next line when the end of the screen line is reached?",
         answer: "C) Word wrap",
         options: [
@@ -236,7 +236,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "Paragraph formatting can include:",
         answer: "B) Line spacing and alignment",
         options: [
@@ -247,7 +247,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "Which of the following is NOT a common word processing software program?",
         answer: "B) Adobe Photoshop",
         options: [
@@ -258,7 +258,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "A spreadsheet organizes data into:",
         answer: "B) Cells, rows, and columns",
         options: [
@@ -269,7 +269,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "In a spreadsheet, a single spreadsheet document is known as a:",
         answer: "B) Worksheet",
         options: [
@@ -280,7 +280,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "What-if analysis in a spreadsheet is used to:",
         answer: "B) Explore different scenarios by changing data in a formula",
         options: [
@@ -291,7 +291,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "A chart created from spreadsheet data will:",
         answer: "B) Change automatically if the data changes",
         options: [
@@ -302,7 +302,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "A database is defined as:",
         answer: "B) A collection of related data stored in an organized manner",
         options: [
@@ -314,7 +314,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "In a database, a single type of data (e.g., name, phone number) is stored in a:",
         answer: "C) Field",
         options: [
@@ -325,7 +325,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "A collection of related records in a database is known as a:",
         answer: "D) Table",
         options: [
@@ -336,7 +336,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "A query in a database is used to:",
         answer: "B) Extract specific data based on criteria",
         options: [
@@ -347,7 +347,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which database view is commonly used for data display and editing?",
         answer: "B) Datasheet View",
         options: [
@@ -358,7 +358,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "A slide in a presentation typically contains:",
         answer: "C) Multiple elements such as text, images, and videos",
         options: [
@@ -369,7 +369,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "Which software is commonly used for creating presentation slides?",
         answer: "A) Microsoft PowerPoint",
         options: [
@@ -380,7 +380,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "The Slide Sorter View in presentation software:",
         answer: "B) Displays all slides as thumbnails for easy rearranging",
         options: [
@@ -391,7 +391,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "Slides in a presentation can contain hyperlinks that:",
         answer: "B) Link to web pages or other resources",
         options: [
@@ -402,7 +402,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "Presentation graphics programs can often generate:",
         answer: "C) Web pages or web page content",
         options: [
@@ -413,7 +413,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "Graphics software is commonly used for:",
         answer: "B) Creating or modifying images",
         options: [
@@ -424,7 +424,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "Image editing software is typically used for:",
         answer: "A) Correcting brightness and contrast in photos",
         options: [
@@ -435,7 +435,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "Which of the following is commonly used for audio editing?",
         answer: "B) Audacity",
         options: [
@@ -446,7 +446,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "Video editing software is used for:",
         answer: "A) Modifying existing videos",
         options: [
@@ -457,7 +457,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "Which software is typically used for video editing and DVD authoring?",
         answer: "B) Apple iMovie",
         options: [
@@ -468,7 +468,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "A media player software is used to:",
         answer: "B) Play audio and video files",
         options: [
@@ -479,7 +479,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "Desktop publishing software is commonly used for:",
         answer: "B) Creating professional print materials",
         options: [
@@ -490,7 +490,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "Educational software is primarily used for:",
         answer: "A) Teaching and learning purposes",
         options: [
@@ -501,7 +501,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "Project management software helps with:",
         answer: "B) Planning and organizing projects",
         options: [
@@ -512,7 +512,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "Which software is used for remote access and collaboration?",
         answer: "C) Remote Desktop and TeamViewer",
         options: [
@@ -524,7 +524,7 @@ let question=[//part 2  application software
     },
 
     {
-        numb:48,
+        numb:48,type: "Multiple Choices",
         question: "CAD software is commonly used for:",
         answer: "C) Designing buildings or mechanical components",
         options: [
@@ -535,7 +535,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "Personal finance software helps users with:",
         answer: "B) Organizing personal budgets and expenses",
         options: [
@@ -546,7 +546,7 @@ let question=[//part 2  application software
         ]
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "Multimedia software is primarily used for:",
         answer: "C) Editing and playing audio and video files",
         options: [
