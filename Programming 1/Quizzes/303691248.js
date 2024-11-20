@@ -1,6 +1,6 @@
 let question= [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "1- What is a function in programming?",
         answer: "D) A self-contained block of statements that perform a specific task",
         options: [
@@ -11,7 +11,7 @@ let question= [
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "2- What are the two types of functions in programming?",
         answer: "B) Built-in and User-defined functions",
         options: [
@@ -22,7 +22,7 @@ let question= [
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "3- What does the return type 'void' signify in a function?",
         answer: "A) The function does not return any value",
         options: [
@@ -33,7 +33,7 @@ let question= [
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "4- Where is a global variable declared in a program?",
         answer: "D) Outside of every function definition",
         options: [
@@ -44,7 +44,7 @@ let question= [
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "5- What is method overloading?",
         answer: "C) Defining several methods within a class with the same name but different signatures",
         options: [
@@ -55,7 +55,7 @@ let question= [
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "6- What is the purpose of the parameter list in a function?",
         answer: "B) To provide input data values to the function",
         options: [
@@ -66,7 +66,7 @@ let question= [
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "7- What is a local variable?",
         answer: "A) A variable declared within a function or block",
         options: [
@@ -77,7 +77,7 @@ let question= [
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "8- What is a global variable?",
         answer: "C) A variable declared outside of every function definition",
         options: [
@@ -88,7 +88,7 @@ let question= [
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "9- Which of the following is a correct example of a built-in function in Java?",
         answer: "B) Math.sqrt(x)",
         options: [
@@ -99,7 +99,7 @@ let question= [
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "10- How is a function called in Java?",
         answer: "D) Using the function name followed by the actual parameter list",
         options: [
@@ -110,7 +110,7 @@ let question= [
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "11- Which keyword is used in Java to indicate that a function does not return a value?",
         answer: "A) void",
         options: [
@@ -121,7 +121,7 @@ let question= [
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "12- What does the scope of a variable determine?",
         answer: "C) The context within a program in which a variable is valid and can be used",
         options: [
@@ -132,7 +132,7 @@ let question= [
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "13- What happens if a variable is declared inside a function?",
         answer: "B) It becomes a local variable",
         options: [
@@ -143,7 +143,7 @@ let question= [
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "14- What is method signature?",
         answer: "C) The combination of the method name and formal parameter list",
         options: [
@@ -154,7 +154,7 @@ let question= [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "15- Which of the following is NOT part of a method signature?",
         answer: "B) The returned type value",
         options: [
@@ -165,7 +165,7 @@ let question= [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "16- In the context of functions, what is overloading?",
         answer: "D) Defining multiple methods with the same name but different signatures",
         options: [
@@ -176,7 +176,7 @@ let question= [
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "17- What is the output of the following function call: Math.sqrt(25)?",
         answer: "C) 5.0",
         options: [
@@ -187,7 +187,7 @@ let question= [
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "18- What type of function is used to sum two integer numbers in the provided examples?",
         answer: "B) A user-defined function",
         options: [
@@ -198,7 +198,7 @@ let question= [
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "19- What is required to declare a void function?",
         answer: "A) Use of the keyword void in the function declaration",
         options: [
@@ -209,7 +209,7 @@ let question= [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "20- What is a built-in function?",
         answer: "B) A function provided by the programming language's standard library",
         options: [
