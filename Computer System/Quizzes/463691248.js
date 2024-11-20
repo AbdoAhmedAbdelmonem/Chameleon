@@ -1,6 +1,6 @@
 let question=[//part 1 application software
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "Which of the following is true about open source software?",
         answer: "D) Open source software can be more stable and secure.",
         options:[
@@ -11,7 +11,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What is the most widely used open-source operating system?",
         answer: "A) Linux",
         options:[
@@ -22,7 +22,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is a single-user license typically associated with?",
         answer: "C) Commercial software",
         options:[
@@ -33,7 +33,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Shareware refers to:",
         answer: "B) Copyrighted software distributed on the honor system",
         options:[
@@ -44,7 +44,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is true about mobile software?",
         answer: "D) It is typically downloaded from app stores like Google Play or Apple App Store.",
         options:[
@@ -56,7 +56,7 @@ let question=[//part 1 application software
     },
 
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "What is a potential disadvantage of cloud software?",
         answer: "A) Online applications tend to run more slowly.",
         options:[
@@ -67,7 +67,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is typically included in a software suite?",
         answer: "B) Word processing, spreadsheet, and presentation software.",
         options:[
@@ -78,7 +78,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What is word processing software primarily used for?",
         answer: "C) Creating, editing, saving, and printing written documents.",
         options:[
@@ -89,7 +89,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "Which of the following is a popular word processing software?",
         answer: "A) Microsoft Word",
         options:[
@@ -100,7 +100,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "In a spreadsheet, what is a cell?",
         answer: "C) The intersection of a row and a column.",
         options:[
@@ -111,7 +111,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What symbol is typically used to begin a formula in a spreadsheet?",
         answer: "B) =",
         options:[
@@ -122,7 +122,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "What is a relative cell reference in a spreadsheet?",
         answer: "A) A reference that changes as the formula is copied to other cells.",
         options:[
@@ -133,7 +133,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is 'what-if analysis' in a spreadsheet?",
         answer: "D) A tool used to help make business decisions by changing variables.",
         options:[
@@ -144,7 +144,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which of the following is a common database management system (DBMS)?",
         answer: "A) Microsoft Access",
         options:[
@@ -155,7 +155,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is a table in a database?",
         answer: "C) A collection of related records organized into rows and columns.",
         options:[
@@ -166,7 +166,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What does DBMS stand for?",
         answer: "B) Database Management System",
         options:[
@@ -177,7 +177,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "In databases, what is a query?",
         answer: "A) A request for specific information from the database.",
         options:[
@@ -188,7 +188,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "What is a slide in presentation software?",
         answer: "C) A one-page presentation graphic that can be displayed in a group with others.",
         options:[
@@ -199,7 +199,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the most common presentation graphics software?",
         answer: "A) Microsoft PowerPoint",
         options:[
@@ -210,7 +210,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "What is slide sorter view used for in presentation software?",
         answer: "D) To rearrange the order of slides in the presentation.",
         options:[
@@ -221,7 +221,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which of the following is true about image editing programs?",
         answer: "B) They are used to modify and enhance digital images.",
         options:[
@@ -232,7 +232,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "Which of the following programs is widely used for photo editing?",
         answer: "A) Adobe Photoshop",
         options:[
@@ -243,7 +243,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What is the primary function of audio capture and editing software?",
         answer: "B) To create and edit audio files.",
         options:[
@@ -254,7 +254,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "Which of the following is a common video editing software?",
         answer: "D) Apple iMovie",
         options:[
@@ -265,7 +265,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "What are media players primarily used for?",
         answer: "C) To play audio and video files.",
         options:[
@@ -276,7 +276,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 26,
+        numb: 26,type: "Multiple Choices",
         question: "Which of the following is a popular media player?",
         answer: "B) Apple QuickTime",
         options:[
@@ -287,7 +287,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 27,
+        numb: 27,type: "Multiple Choices",
         question: "What is the purpose of web design software?",
         answer: "A) To create and modify websites and web content.",
         options:[
@@ -298,7 +298,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 28,
+        numb: 28,type: "Multiple Choices",
         question: "Which of the following software types is used for project management?",
         answer: "B) Microsoft Project",
         options:[
@@ -309,7 +309,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 29,
+        numb: 29,type: "Multiple Choices",
         question: "Which software is widely used for personal financial management?",
         answer: "B) Quicken",
         options:[
@@ -320,7 +320,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 30,
+        numb: 30,type: "Multiple Choices",
         question: "Which of the following is a feature of desktop publishing software?",
         answer: "C) Creating complex page layouts for printed materials.",
         options:[
@@ -331,7 +331,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 31,
+        numb: 31,type: "Multiple Choices",
         question: "A key feature of Computer-Aided Design (CAD) software is:",
         answer: "A) The ability to create detailed 2D and 3D models.",
         options:[
@@ -343,7 +343,7 @@ let question=[//part 1 application software
     },
 
     {
-        numb: 32,
+        numb: 32,type: "Multiple Choices",
         question: "Which of the following is a common use for Computer-Aided Design (CAD) software?",
         answer: "B) Designing buildings, machinery, and electronics.",
         options:[
@@ -354,7 +354,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 33,
+        numb: 33,type: "Multiple Choices",
         question: "Which software would you use to create 3D animations and visual effects?",
         answer: "A) Autodesk Maya",
         options:[
@@ -365,7 +365,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 34,
+        numb: 34,type: "Multiple Choices",
         question: "Which of the following software is used to develop web applications?",
         answer: "B) Adobe Dreamweaver",
         options:[
@@ -376,7 +376,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 35,
+        numb: 35,type: "Multiple Choices",
         question: "What is the main purpose of web development software?",
         answer: "C) To create and maintain websites and web applications.",
         options:[
@@ -387,7 +387,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 36,
+        numb: 36,type: "Multiple Choices",
         question: "Which of the following best describes accounting software?",
         answer: "B) Software designed to manage financial transactions and accounts.",
         options:[
@@ -398,7 +398,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 37,
+        numb: 37,type: "Multiple Choices",
         question: "Which software is most commonly used for accounting and financial tasks?",
         answer: "A) QuickBooks",
         options:[
@@ -409,7 +409,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 38,
+        numb: 38,type: "Multiple Choices",
         question: "Which of the following is an example of a project management software?",
         answer: "C) Asana",
         options:[
@@ -420,7 +420,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 39,
+        numb: 39,type: "Multiple Choices",
         question: "What is the main function of project management software?",
         answer: "A) To plan, organize, and manage resources and tasks in a project.",
         options:[
@@ -431,7 +431,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 40,
+        numb: 40,type: "Multiple Choices",
         question: "Which software is widely used for creating graphic designs and illustrations?",
         answer: "D) Adobe Illustrator",
         options:[
@@ -443,7 +443,7 @@ let question=[//part 1 application software
     },
 
     {
-        numb: 41,
+        numb: 41,type: "Multiple Choices",
         question: "Which of the following is an example of note-taking software?",
         answer: "C) Microsoft OneNote",
         options:[
@@ -454,7 +454,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 42,
+        numb: 42,type: "Multiple Choices",
         question: "What is the primary function of desktop publishing software?",
         answer: "B) To create professional-quality printed documents like brochures and newsletters.",
         options:[
@@ -465,7 +465,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 43,
+        numb: 43,type: "Multiple Choices",
         question: "Which software is best suited for managing personal finances?",
         answer: "A) Quicken",
         options:[
@@ -476,7 +476,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 44,
+        numb: 44,type: "Multiple Choices",
         question: "Which software would be used to create an architectural blueprint?",
         answer: "D) AutoCAD",
         options:[
@@ -487,7 +487,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 45,
+        numb: 45,type: "Multiple Choices",
         question: "Which of the following best describes collaboration software?",
         answer: "C) Software that allows multiple people to work together on a single project in real-time.",
         options:[
@@ -498,7 +498,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 46,
+        numb: 46,type: "Multiple Choices",
         question: "Which of these is an example of cloud-based collaboration software?",
         answer: "B) Google Docs",
         options:[
@@ -509,7 +509,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 47,
+        numb: 47,type: "Multiple Choices",
         question: "What is the main advantage of using cloud software?",
         answer: "D) Files can be accessed from any computer with an internet connection.",
         options:[
@@ -520,7 +520,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 48,
+        numb: 48,type: "Multiple Choices",
         question: "Which of the following is a disadvantage of cloud software?",
         answer: "A) Online applications tend to run more slowly.",
         options:[
@@ -531,7 +531,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 49,
+        numb: 49,type: "Multiple Choices",
         question: "Which of the following is a feature of presentation graphics software?",
         answer: "C) Creating slideshows with text, images, and multimedia.",
         options:[
@@ -542,7 +542,7 @@ let question=[//part 1 application software
         ],
     },
     {
-        numb: 50,
+        numb: 50,type: "Multiple Choices",
         question: "Which software is commonly used for creating and presenting slideshows?",
         answer: "A) Microsoft PowerPoint",
         options:[
