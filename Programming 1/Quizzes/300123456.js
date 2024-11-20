@@ -1,6 +1,6 @@
 let question= [
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What does the 'char' data type represent in Java?",
         answer: "D) A primitive data type representing single characters of text",
         options: [
@@ -11,7 +11,7 @@ let question= [
         ],
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "What is the ASCII value of the character 'A'?",
         answer: "B) 65",
         options: [
@@ -22,7 +22,7 @@ let question= [
         ],
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "Which operator is used for incrementing a variable in Java?",
         answer: "A) ++",
         options: [
@@ -33,7 +33,7 @@ let question= [
         ],
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "What does type casting do in Java?",
         answer: "C) Changes the data type of a value",
         options: [
@@ -44,7 +44,7 @@ let question= [
         ],
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the output of 'System.out.println('a' + 2);'?",
         answer: "B) 99",
         options: [
@@ -55,7 +55,7 @@ let question= [
         ],
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Which of the following is an example of type casting?",
         answer: "A) (char) ('a' + 2)",
         options: [
@@ -66,7 +66,7 @@ let question= [
         ],
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "How is the pre-increment operation performed?",
         answer: "C) The variable is incremented first, then the value is used",
         options: [
@@ -77,7 +77,7 @@ let question= [
         ],
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "What will be the output of the following code?",
         answer: "C) 100",
         options: [
@@ -88,7 +88,7 @@ let question= [
         ],image: '../../MDA/4-8.png'
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the result of the following code?",
         answer: "B) 'e'",
         options: [
@@ -99,7 +99,7 @@ let question= [
         ],image:'../../MDA/4-9.png'
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Which of the following represents the post-increment operation?",
         answer: "B) x++",
         options: [
@@ -110,7 +110,7 @@ let question= [
         ],
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the correct way to modify and assign a value to a variable in Java?",
         answer: "C) x += 5;",
         options: [
@@ -121,7 +121,7 @@ let question= [
         ],
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Which of the following is true about ASCII values?",
         answer: "A) Each character is mapped to an integer value",
         options: [
@@ -132,7 +132,7 @@ let question= [
         ],
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What will be the value of x after the following code is executed?",
         answer: "C) 4",
         options: [
@@ -143,7 +143,7 @@ let question= [
         ],image:'../../MDA/img_1.png',
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Which of the following is not a primitive data type in Java?",
         answer: "D) String",
         options: [
@@ -154,7 +154,7 @@ let question= [
         ],
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the purpose of the 'System.out.println' function?",
         answer: "B) To print output to the console",
         options: [
@@ -165,7 +165,7 @@ let question= [
         ],
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "What happens when you mix char and int in an expression in Java?",
         answer: "A) Automatic conversion to int",
         options: [
@@ -176,7 +176,7 @@ let question= [
         ],
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "Which character is represented by the ASCII value 32?",
         answer: "D) ' ' (space)",
         options: [
@@ -187,7 +187,7 @@ let question= [
         ],
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Which data type is used to represent integer values in Java?",
         answer: "A) int",
         options: [
@@ -198,7 +198,7 @@ let question= [
         ],
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What does the expression 'a' + 10 evaluate to in Java?",
         answer: "C) 107",
         options: [
@@ -209,7 +209,7 @@ let question= [
         ],
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "How do you explicitly cast an integer to a character in Java?",
         answer: "A) (char) int_variable",
         options: [
@@ -220,7 +220,7 @@ let question= [
         ],
     },
     {
-        numb: 21,
+        numb: 21,type: "Multiple Choices",
         question: "Which of the following statements about the 'char' data type is true?",
         answer: "B) It is used to store single characters.",
         options: [
@@ -231,7 +231,7 @@ let question= [
         ],
     },
     {
-        numb: 22,
+        numb: 22,type: "Multiple Choices",
         question: "What is the result of the following code?",
         answer: "C) 'C'",
         options: [
@@ -242,7 +242,7 @@ let question= [
         ],
     },
     {
-        numb: 23,
+        numb: 23,type: "Multiple Choices",
         question: "What is the difference between pre-increment and post-increment?",
         answer: "B) Pre-increment increments before the value is used; post-increment increments after.",
         options: [
@@ -253,7 +253,7 @@ let question= [
         ],
     },
     {
-        numb: 24,
+        numb: 24,type: "Multiple Choices",
         question: "Which of the following is an example of modifying and assigning a value in Java?",
         answer: "A) x *= 3;",
         options: [
@@ -264,7 +264,7 @@ let question= [
         ],
     },
     {
-        numb: 25,
+        numb: 25,type: "Multiple Choices",
         question: "Which of the following will produce the character 'e'?",
         answer: "A) (char) ('a' + 4)",
         options: [
