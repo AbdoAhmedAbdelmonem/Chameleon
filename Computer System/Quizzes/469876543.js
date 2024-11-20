@@ -1,6 +1,6 @@
 let question=[//decimal-hexa
     {
-        numb: 1,
+        numb: 1,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the decimal number 15?",
         answer: "B) F",
         options: [
@@ -11,7 +11,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 2,
+        numb: 2,type: "Multiple Choices",
         question: "Convert the decimal number 26 to its hexadecimal form.",
         answer: "A) 1A",
         options: [
@@ -22,7 +22,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 3,
+        numb: 3,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the decimal number 47?",
         answer: "A) 2F",
         options: [
@@ -33,7 +33,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 4,
+        numb: 4,type: "Multiple Choices",
         question: "Convert the decimal number 63 to its hexadecimal form.",
         answer: "B) 3F",
         options: [
@@ -44,7 +44,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 5,
+        numb: 5,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the decimal number 79?",
         answer: "A) 4F",
         options: [
@@ -55,7 +55,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 6,
+        numb: 6,type: "Multiple Choices",
         question: "Convert the decimal number 92 to its hexadecimal form.",
         answer: "C) 5C",
         options: [
@@ -66,7 +66,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 7,
+        numb: 7,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the decimal number 105?",
         answer: "B) 69",
         options: [
@@ -77,7 +77,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 8,
+        numb: 8,type: "Multiple Choices",
         question: "Convert the decimal number 128 to its hexadecimal form.",
         answer: "A) 80",
         options: [
@@ -88,7 +88,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 9,
+        numb: 9,type: "Multiple Choices",
         question: "What is the hexadecimal equivalent of the decimal number 255?",
         answer: "A) FF",
         options: [
@@ -99,7 +99,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 10,
+        numb: 10,type: "Multiple Choices",
         question: "Convert the decimal number 373 to its hexadecimal form.",
         answer: "C) 175",
         options: [
@@ -110,7 +110,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 11,
+        numb: 11,type: "Multiple Choices",
         question: "What is the decimal equivalent of the hexadecimal number A?",
         answer: "B) 10",
         options: [
@@ -121,7 +121,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 12,
+        numb: 12,type: "Multiple Choices",
         question: "Convert the hexadecimal number 1C to its decimal form.",
         answer: "B) 28",
         options: [
@@ -132,7 +132,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 13,
+        numb: 13,type: "Multiple Choices",
         question: "What is the decimal equivalent of the hexadecimal number 2E?",
         answer: "B) 46",
         options: [
@@ -143,7 +143,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 14,
+        numb: 14,type: "Multiple Choices",
         question: "Convert the hexadecimal number 3F to its decimal form.",
         answer: "B) 63",
         options: [
@@ -154,7 +154,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 15,
+        numb: 15,type: "Multiple Choices",
         question: "What is the decimal equivalent of the hexadecimal number 4B?",
         answer: "A) 75",
         options: [
@@ -165,7 +165,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 16,
+        numb: 16,type: "Multiple Choices",
         question: "Convert the hexadecimal number 5C to its decimal form.",
         answer: "B) 92",
         options: [
@@ -176,7 +176,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 17,
+        numb: 17,type: "Multiple Choices",
         question: "What is the decimal equivalent of the hexadecimal number 6D?",
         answer: "B) 109",
         options: [
@@ -187,7 +187,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 18,
+        numb: 18,type: "Multiple Choices",
         question: "Convert the hexadecimal number 7A to its decimal form.",
         answer: "A) 122",
         options: [
@@ -198,7 +198,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 19,
+        numb: 19,type: "Multiple Choices",
         question: "What is the decimal equivalent of the hexadecimal number 8F?",
         answer: "B) 143",
         options: [
@@ -209,7 +209,7 @@ let question=[//decimal-hexa
         ]
     },
     {
-        numb: 20,
+        numb: 20,type: "Multiple Choices",
         question: "Convert the hexadecimal number 9C to its decimal form.",
         answer: "B) 158",
         options: [
