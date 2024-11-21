@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is a dataset?",
         answer: "c) A collection or group of related data that share the same set of attributes or properties",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "Which of the following is an example of structured data?",
         answer: "b) Banking transactions",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "Which type of data does not conform to a data model or schema?",
         answer: "b) Unstructured",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "Semi-structured data is easier to process than which type of data?",
         answer: "b) Unstructured",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "Which of the following is a type of data analytics?",
         answer: "d) All of the above",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "What does descriptive analytics aim to do?",
         answer: "c) Contextualize data to generate information",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "Which question is likely to be answered by diagnostic analytics?",
         answer: "b) Why were Q2 sales less than Q1 sales?",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "Predictive analytics is used to:",
         answer: "c) Predict the outcomes of future events",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "Which analytics category suggests the best course of action?",
         answer: "c) Prescriptive",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "Which of the following is a benefit of data visualization?",
         answer: "b) Qualitative overview of large datasets",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "Which historical event was analyzed using data visualization by John Snow?",
         answer: "b) The 1854 cholera epidemic",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "Which type of data visualization is used to identify outliers?",
         answer: "c) Tukey's Box Plot",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "Scatterplots are particularly useful when trying to:",
         answer: "a) Identify potential root causes of problems",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "Which visualization method uses a multi-plot format with each star representing a single observation?",
         answer: "b) Star Plots",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "Magnification in data visualization refers to:",
         answer: "b) Enlarging the apparent size of an object to show a relative attribute",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "Parallel coordinate plots are valuable when:",
         answer: "c) Data has many parameters",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ],
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "Iconic representation in data visualization uses:",
         answer: "b) Pictorial images to represent actions, objects, and concepts",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "Chernoff Faces are used to:",
         answer: "b) Display multivariate data in the shape of a human face",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "What is the main advantage of using Chernoff Faces in data visualization?",
         answer: "c) Humans easily recognize faces and notice small changes",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "A tag cloud (word cloud) is a visualization used to:",
         answer: "c) Represent text data, highlighting keyword importance",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ],
     },
     {
-        numb: 21,
+        numb: 21,type:"Multiple Choice",
         question: "Which visualization tool is used to show thematic changes over time using a river metaphor?",
         answer: "b) ThemeRiver",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ],
     },
     {
-        numb: 22,
+        numb: 22,type:"Multiple Choice",
         question: "What is the primary purpose of data representation in visualization?",
         answer: "c) To present data clearly to the mind",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ],
     },
     {
-        numb: 23,
+        numb: 23,type:"Multiple Choice",
         question: "Which aspect of data visualization is concerned with human visual performance and cognition?",
         answer: "c) Interaction",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ],
     },
     {
-        numb: 24,
+        numb: 24,type:"Multiple Choice",
         question: "In data visualization, what does the term 'interaction' refer to?",
         answer: "b) The way users explore data and navigate through views",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ],
     },
     {
-        numb: 25,
+        numb: 25,type:"Multiple Choice",
         question: "Which principle should be considered when designing a representation for data visualization?",
         answer: "d) All of the above",
         options: [
