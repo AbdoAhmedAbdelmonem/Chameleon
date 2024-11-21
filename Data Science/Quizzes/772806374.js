@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is the minimum starting size of Big Data?",
         answer: "C) 1 TB",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "Which of the following is a characteristic of Big Data?",
         answer: "D) All of the above",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "How much data does Facebook ingest every day?",
         answer: "D) 500 TB",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "Which of the following generates 240 terabytes of flight data during a single flight across the US?",
         answer: "B) A Boeing 737",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "What is an example of a system that generates massive log data in real-time?",
         answer: "B) Online gaming systems",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "Which of the following is NOT an example of Big Data?",
         answer: "D) Text messages",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "What is required for enhanced decision making and insight discovery in Big Data?",
         answer: "A) New forms of processing",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "Big Data includes various formats, types, and structures EXCEPT:",
         answer: "C) 3D printed objects",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "What characterizes Big Data according to the document?",
         answer: "D) All of the above",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "Where does Big Data often come from?",
         answer: "D) Online social networks",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "Which type of data is described as data exchanged between billions of devices?",
         answer: "B) Machine-to-machine data",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "What does the term 'Variety' in Big Data refer to?",
         answer: "B) The diversity of data types and sources",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "What is a challenge associated with Big Data?",
         answer: "B) It is expensive to manage and hard to extract value from",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "Which phase is NOT part of the Data Analytics Lifecycle?",
         answer: "D) Data archiving",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "What is Data Science primarily concerned with?",
         answer: "B) Managing and interpreting knowledge from data",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "Data Science is an interdisciplinary field that combines which of the following?",
         answer: "B) Computer Science, Statistics, and Machine Learning",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ],
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "Which of the following is NOT a source of data mentioned in the document?",
         answer: "B) Personal emails",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "Which of the following is a primary goal of Data Science?",
         answer: "B) To address challenges in big data",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "What does a data scientist primarily do?",
         answer: "B) Analyzes and extracts knowledge from data",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "The Data Analytics Lifecycle is designed specifically for which type of projects?",
         answer: "C) Big Data problems and data science projects",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ],
     },
     {
-        numb: 21,
+        numb: 21,type:"Multiple Choice",
         question: "Which of the following is considered as part of the 'Variety' in Big Data?",
         answer: "B) The different sources and formats of data",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ],
     },
     {
-        numb: 22,
+        numb: 22,type:"Multiple Choice",
         question: "Which of the following is an example of streaming data?",
         answer: "C) Real-time sensor data",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ],
     },
     {
-        numb: 23,
+        numb: 23,type:"Multiple Choice",
         question: "What is the role of a data scientist in a company?",
         answer: "B) To find patterns in data and advise executives",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ],
     },
     {
-        numb: 24,
+        numb: 24,type:"Multiple Choice",
         question: "What type of data is described as being generated and needing to be processed fast?",
         answer: "C) Real-time data",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ],
     },
     {
-        numb: 25,
+        numb: 25,type:"Multiple Choice",
         question: "Which of the following best defines Big Data?",
         answer: "B) Any data that is expensive to manage and hard to extract value from",
         options: [
