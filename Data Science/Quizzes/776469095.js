@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is the 'IF' part in an IF-THEN rule called?",
         answer: "B) Precondition",
         options:[
@@ -11,7 +11,7 @@ let question=[
         ]
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "How is the accuracy of a rule calculated?",
         answer: "B) ncorrect / ncovers",
         options:[
@@ -22,7 +22,7 @@ let question=[
         ]
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "What does the support of an association rule represent?",
         answer: "B) Percentage of transactions that contain X ∪ Y",
         options:[
@@ -33,7 +33,7 @@ let question=[
         ]
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "How is confidence for an association rule calculated?",
         answer: "A) Support of X → Y / Support of X",
         options:[
@@ -44,7 +44,7 @@ let question=[
         ]
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "What is the main purpose of using association rules in data mining?",
         answer: "B) To discover relationships between variables in large datasets",
         options:[
@@ -55,7 +55,7 @@ let question=[
         ]
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "Is confidence a symmetric measure?",
         answer: "B) No",
         options:[
@@ -66,7 +66,7 @@ let question=[
         ]
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "The Apriori algorithm is primarily used for which purpose?",
         answer: "B) Association rule mining",
         options:[
@@ -77,7 +77,7 @@ let question=[
         ]
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "What is the first step in the Apriori algorithm?",
         answer: "B) Item set generation",
         options:[
@@ -88,7 +88,7 @@ let question=[
         ]
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "What happens to attribute-value combinations that do not meet the coverage requirement in Apriori?",
         answer: "B) They are discarded",
         options:[
@@ -99,7 +99,7 @@ let question=[
         ]
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "Which item set had the highest support in Example 3?",
         answer: "B) {Jam, Diaper}",
         options:[
@@ -111,7 +111,7 @@ let question=[
     },
 
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "What is the purpose of scanning the database in the Apriori algorithm?",
         answer: "B) To count the frequency of item sets",
         options:[
@@ -122,7 +122,7 @@ let question=[
         ]
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "How many candidate item sets are listed in the second iteration of Example 3?",
         answer: "D) 5",
         options:[
@@ -133,7 +133,7 @@ let question=[
         ],image:"../../../MDA/ex3.png",
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "Which of the following is a correct association rule derived from Example 3?",
         answer: "B) Diaper → Jam",
         options:[
@@ -144,7 +144,7 @@ let question=[
         ],image:"../../../MDA/ex3.png",
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "What is the minimum confidence threshold used in the final association rules in Example 3?",
         answer: "C) 70%",
         options:[
@@ -155,7 +155,7 @@ let question=[
         ],image:"../../../MDA/ex3.png",
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "Which item was present in all iterations of the example's Apriori process?",
         answer: "B) Jam",
         options:[
@@ -166,7 +166,7 @@ let question=[
         ],image:"../../../MDA/ex3.png",
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "What is a major advantage of association rules?",
         answer: "B) They can find relationships in large datasets without predefined variables",
         options:[
@@ -177,7 +177,7 @@ let question=[
         ]
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "How many strong association rules were derived in Example 3?",
         answer: "C) 4",
         options:[
@@ -188,7 +188,7 @@ let question=[
         ],image:"../../../MDA/ex3.png",
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "Which item combination has the highest confidence in the final rules?",
         answer: "C) Milk → Jam",
         options:[
@@ -199,7 +199,7 @@ let question=[
         ],image:"../../../MDA/ex3.png",
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "What does 'min_sup' refer to in the context of association rule mining?",
         answer: "A) Minimum support",
         options:[
@@ -210,7 +210,7 @@ let question=[
         ]
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "Which of the following best describes an 'item set'?",
         answer: "C) A set of attribute-value combinations",
         options:[
