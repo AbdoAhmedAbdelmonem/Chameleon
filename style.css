@@ -171,7 +171,7 @@ section{
 }
 @media (max-width: 768px) {
     .img_snow {
-        animation: Fall 15s linear infinite; /* Slower animation for mobile */
+        animation: Fall 25s linear infinite; /* Slower animation for mobile */
         background-size: contain; /* Reduce resource load */
     }
 }
@@ -1134,7 +1134,7 @@ span{
 }
 @media (max-width: 480px) {
     .img_snow {
-        height: 360%;
+        height: 370%;
     }
     #menu-icon {
         display: block;
