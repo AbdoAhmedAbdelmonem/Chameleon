@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is referred to as 'the new Oil'?",
         answer: "B) Data",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "Which of the following is not a type of data mentioned in the document?",
         answer: "D) Analog data",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "Which type of data includes sales, cost, and inventory?",
         answer: "B) Operational data",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "What term is used for data about the data itself?",
         answer: "A) Metadata",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "Analysis of retail point of sale transaction data can yield information on:",
         answer: "D) Products selling and when",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "Knowledge can be derived from:",
         answer: "B) Information",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "Which of the following refers to the process of discovering patterns in large data sets?",
         answer: "A) Data Mining",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "Which of the following is not listed under key data processing activities?",
         answer: "C) Manual Data Entry",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "Statistical Modeling is used for:",
         answer: "C) Knowledge discovery",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "OLAP stands for:",
         answer: "A) Online Analytical Processing",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "Which of the following is a source of data mentioned in the document?",
         answer: "A) Financial transactions",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "Which of these is an example of nonoperational data?",
         answer: "B) Industry sales forecasts",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "What type of data can be processed by a computer?",
         answer: "D) All of the above",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "Which method is used to analyze data for knowledge discovery?",
         answer: "D) All of the above",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "What can provide information when patterns and associations are identified among data?",
         answer: "B) Information",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "Which type of data includes logical database design or data dictionary definitions?",
         answer: "A) Metadata",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ],
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "In data processing, what activity involves searching for specific terms within a data set?",
         answer: "B) Keyword-based search",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "Knowledge discovery often uses which of the following techniques?",
         answer: "C) Statistical Modeling",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "Which of the following is a key feature of Data Warehousing?",
         answer: "B) Aggregation and Statistics",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "The transformation of information into knowledge about historical patterns is an example of:",
         answer: "B) Knowledge Discovery",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ],
     },
     {
-        numb: 21,
+        numb: 21,type:"Multiple Choice",
         question: "What is the goal of pattern matching in data analysis?",
         answer: "B) To match XML/RDF patterns",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ],
     },
     {
-        numb: 22,
+        numb: 22,type:"Multiple Choice",
         question: "people expected system to behave like humans in :",
         answer: "D) All of the above",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ],
     },
     {
-        numb: 23,
+        numb: 23,type:"Multiple Choice",
         question: "Which activity is not part of the data processing workflow mentioned in the document?",
         answer: "C) Manual data analysis",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ],
     },
     {
-        numb: 24,
+        numb: 24,type:"Multiple Choice",
         question: "Which of the following is an example of how data can provide valuable information?",
         answer: "A) Sales patterns",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ],
     },
     {
-        numb: 25,
+        numb: 25,type:"Multiple Choice",
         question: "What is the primary purpose of Data Warehousing?",
         answer: "A) To store large volumes of data",
         options: [
