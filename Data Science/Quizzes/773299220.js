@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "Who is responsible for ensuring key milestones and objectives are met on time and at the expected quality?",
         answer: "C) Project Manager",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "What role provides business domain expertise based on a deep understanding of data and key performance indicators (KPIs)?",
         answer: "B) Business Intelligence Analyst",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "Who provisions and configures the database environment to support the analytics needs of the working team?",
         answer: "C) Database Administrator (DBA)",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "Which of the following roles involves tuning SQL queries for data management and extraction?",
         answer: "C) Data Engineer",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "Who is the key person in acquiring, clearing, representing, and analyzing data for business and research purposes?",
         answer: "A) Data Scientist",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "What does a Business User typically do in a project?",
         answer: "C) Provides domain expertise and benefits from the results",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "What is the primary responsibility of a Project Sponsor?",
         answer: "A) Setting project priorities and funding",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "Which phase of the Data Analytics Lifecycle involves determining the type of model to try and refining the analytic plan?",
         answer: "B) Model Planning",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "During which phase do you ask, 'Do I have enough good quality data to start building the model?'",
         answer: "B) Data Preparation",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "Which of the following is a tip for conducting a sponsor interview?",
         answer: "C) Use open-ended questions",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "What is one of the initial steps in the Discovery phase?",
         answer: "B) Learning the business domain",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "What should be assessed during the Discovery phase to determine if you have sufficient resources to attempt the project?",
         answer: "C) Available technology, data, and people",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "What does framing the problem involve?",
         answer: "B) Stating the analytics problem and identifying stakeholders",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "What is the purpose of formulating initial hypotheses (IH) during the Data Analytics Lifecycle?",
         answer: "B) To guide discussions with stakeholders and inform data exploration",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "What should be included when identifying data sources during the Discovery phase?",
         answer: "C) Review of raw data and understanding data structures",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "What type of problem was Yoyodyne Bank trying to solve in the case study?",
         answer: "B) Reducing churn rate and improving Net Present Value (NPV)",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ],
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "In the Yoyodyne Bank case study, what was one of the key risks for the project?",
         answer: "B) Failing to determine valid predictors of churn",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "What type of data did Yoyodyne Bank plan to use for their training set?",
         answer: "A) 24 months of historical data",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "What is a key factor to consider when determining the success of an analytical project?",
         answer: "C) The business impact and ROI",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "Which of the following is a critical question to ask during the Model Building phase?",
         answer: "B) Is the model robust enough?",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ],
     },
     {
-        numb: 21,
+        numb: 21,type:"Multiple Choice",
         question: "What is a potential outcome if the model fails during the Model Building phase?",
         answer: "C) The project is abandoned",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ],
     },
     {
-        numb: 22,
+        numb: 22,type:"Multiple Choice",
         question: "What should be shared with stakeholders during the Model Planning phase?",
         answer: "C) The analytic plan",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ],
     },
     {
-        numb: 23,
+        numb: 23,type:"Multiple Choice",
         question: "Who benefits directly from the results of an analytics project?",
         answer: "B) Business User",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ],
     },
     {
-        numb: 24,
+        numb: 24,type:"Multiple Choice",
         question: "What is the primary role of the Data Scientist in an analytics project?",
         answer: "A) Providing domain expertise for analytical techniques and data modeling",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ],
     },
     {
-        numb: 25,
+        numb: 25,type:"Multiple Choice",
         question: "Which of the following is NOT part of the Data Analytics Lifecycle phases?",
         answer: "C) Report Writing",
         options: [
