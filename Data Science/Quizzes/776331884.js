@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is the purpose of association rules in data analysis?",
         answer: "B) To discover relationships among data items",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ]
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "Which of the following is an example of an association rule?",
         answer: "A) If X is true, then Y is true",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ]
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "Association rules are most commonly used in which of the following?",
         answer: "B) Market basket analysis",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ]
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "What is a key output of market basket analysis?",
         answer: "B) Customer purchase patterns",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ]
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "Which algorithm is used for learning association rules?",
         answer: "A) Sequential Covering Algorithm",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ]
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "In association rules, what does the 'IF' part represent?",
         answer: "B) Rule Precondition",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ]
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "What is the measure used to assess the accuracy of a rule in association rule mining?",
         answer: "A) Confidence",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ]
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "In association rules, confidence represents:",
         answer: "B) The likelihood that Y occurs when X is observed",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ]
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "Which of the following is an example of rule confidence?",
         answer: "B) 60% of customers who buy milk also buy cookies",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ]
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "What is rule support in association rule mining?",
         answer: "D) The percentage of transactions that meet a rule's conditions",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ]
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "Which metric determines the frequency of a rule in transactions?",
         answer: "B) Support",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ]
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "A recommender system uses association rules to suggest products based on:",
         answer: "B) Historical customer purchasing behavior",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ]
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "Which of the following is an example of a market basket analysis result?",
         answer: "A) People who buy milk are 20% more likely to buy bread",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ]
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "In market basket analysis, confidence is defined as:",
         answer: "B) The ratio of transactions with both items present to the total transactions containing one item",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ]
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "Which of the following is an example of rule confidence?",
         answer: "A) 20% of people who purchase milk also purchase bread",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ]
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "If 100 transactions involve purchasing milk, and 25 of these transactions also include bread, what is the confidence of the rule 'If milk, then bread'?",
         answer: "B) 25%",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ]
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "Which of the following is an example of using association rules in a recommender system?",
         answer: "A) Predicting which movies a customer will like based on their purchase history",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ]
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "In association rules, what does a high support value indicate?",
         answer: "A) The rule involves a large portion of the database",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ]
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "Association rules are frequently used to:",
         answer: "C) Identify interesting patterns in large datasets",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ]
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "Which method is used to measure the significance of an association rule?",
         answer: "C) Support and Confidence",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ]
     },
     {
-        numb: 21,
+        numb: 21,type:"Multiple Choice",
         question: "In association rule mining, which of the following is an example of minimum support?",
         answer: "A) The minimum percentage of transactions that contain both X and Y",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ]
     },
     {
-        numb: 22,
+        numb: 22,type:"Multiple Choice",
         question: "Which of the following is an example of an antecedent in association rules?",
         answer: "B) The itemset that leads to the consequent",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ]
     },
     {
-        numb: 23,
+        numb: 23,type:"Multiple Choice",
         question: "In market basket analysis, how is confidence calculated?",
         answer: "B) By dividing the number of transactions containing both X and Y by the number of transactions containing X",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ]
     },
     {
-        numb: 24,
+        numb: 24,type:"Multiple Choice",
         question: "Which of the following best describes an association rule?",
         answer: "B) A pattern that describes how frequently items are purchased together",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ]
     },
     {
-        numb: 25,
+        numb: 25,type:"Multiple Choice",
         question: "What is the main goal of market basket analysis?",
         answer: "A) To increase sales by recommending related products",
         options: [
