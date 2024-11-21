@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is the first step in building a decision tree?",
         answer: "c) Calculate entropy using frequency tables",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ],
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "In a decision tree, what does a high gain value indicate?",
         answer: "b) The attribute is more significant",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ],
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "Which formula is used to calculate the entropy for an attribute in a decision tree?",
         answer: "c) Entropy = Σ -p * log2(p)",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ],
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "What is the Info(D) for a decision tree with Age(<=30) if the total records are 5 and Yes = 2, No = 3?",
         answer: "b) 0.971",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ],image:"../../../MDA/entropy.png"
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "Which attribute was found to have the largest gain in the example decision tree?",
         answer: "a) Age",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ],image:"../../../MDA/entropy.png"
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "Which attribute is used as the root node in the example provided?",
         answer: "a) Age",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ],image: "../../../MDA/entropy.png"
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "How do you calculate Gain(Student) in a decision tree?",
         answer: "a) Gain(Student) = Info(D) - Info(D) Total Student",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ],image: "../../../MDA/entropy.png"
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "What is the formula to calculate Gain(Income) after determining Info(D) for different income levels?",
         answer: "b) Gain(Income) = Info(D) - Σ Info(D) Total Income",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ],image: "../../../MDA/entropy.png"
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "What is the entropy (Info(D)) calculated for the attribute 'Income' when p(high) = 4/14, p(medium) = 6/14, and p(low) = 4/14?",
         answer: "b) 0.9111",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ],image: "../../../MDA/entropy.png"
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "What is the gain calculated for the attribute 'Credit_rating' when the Info(D) Total Credit_rating is 0.8922?",
         answer: "a) 0.0481",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ],image: "../../../MDA/entropy.png"
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "What is the calculated Gain(Age) when Age is divided into <=30, 31..40, and >40?",
         answer: "a) 0.2467",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ],image: "../../../MDA/entropy.png"
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "Which of the following statements is correct about entropy in decision trees?",
         answer: "a) Entropy increases with more uncertainty",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ],
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "How do you calculate the total Info(D) for an attribute after splitting it into categories?",
         answer: "a) Sum the individual Info(D) values for each category",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ],
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "What is the purpose of calculating gain in a decision tree?",
         answer: "c) To measure the effectiveness of an attribute in classifying the data",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ],
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "Which of the following steps is necessary after calculating entropy for different attributes?",
         answer: "c) Calculate the gain for each attribute",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ],
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "In the context of decision trees, what does the term 'Information Gain' refer to?",
         answer: "a) The decrease in entropy after a dataset is split on an attribute",
         options: [
@@ -177,7 +177,7 @@ let question=[
     },
 
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "How is the gain of a node in a decision tree affected if the attribute perfectly classifies the data?",
         answer: "b) The gain is maximum",
         options: [
@@ -188,7 +188,7 @@ let question=[
         ],
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "What does Info(D) represent in the context of decision trees?",
         answer: "a) The total entropy of the dataset before splitting",
         options: [
@@ -199,7 +199,7 @@ let question=[
         ],
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "Which of the following methods can be used to reduce overfitting in a decision tree?",
         answer: "c) Pruning the tree",
         options: [
@@ -210,7 +210,7 @@ let question=[
         ],
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "What is the result of splitting a dataset on an attribute with zero gain?",
         answer: "d) No reduction in entropy",
         options: [
