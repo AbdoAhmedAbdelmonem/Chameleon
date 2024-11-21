@@ -1,6 +1,6 @@
 let question=[
     {
-        numb: 1,
+        numb: 1,type:"Multiple Choice",
         question: "What is clustering?",
         answer: "B) Grouping similar objects together while separating dissimilar objects",
         options: [
@@ -11,7 +11,7 @@ let question=[
         ]
     },
     {
-        numb: 2,
+        numb: 2,type:"Multiple Choice",
         question: "What type of learning is clustering classified as?",
         answer: "B) Unsupervised learning",
         options: [
@@ -22,7 +22,7 @@ let question=[
         ]
     },
     {
-        numb: 3,
+        numb: 3,type:"Multiple Choice",
         question: "Which of the following is a common clustering method?",
         answer: "B) K-means",
         options: [
@@ -33,7 +33,7 @@ let question=[
         ]
     },
     {
-        numb: 4,
+        numb: 4,type:"Multiple Choice",
         question: "Which of the following is NOT a clustering method?",
         answer: "C) Linear regression",
         options: [
@@ -44,7 +44,7 @@ let question=[
         ]
     },
     {
-        numb: 5,
+        numb: 5,type:"Multiple Choice",
         question: "Which approach involves creating a hierarchical decomposition of the data?",
         answer: "B) Hierarchical clustering",
         options: [
@@ -55,7 +55,7 @@ let question=[
         ]
     },
     {
-        numb: 6,
+        numb: 6,type:"Multiple Choice",
         question: "What type of data is typically used in K-means clustering?",
         answer: "B) Numerical data",
         options: [
@@ -66,7 +66,7 @@ let question=[
         ]
     },
     {
-        numb: 7,
+        numb: 7,type:"Multiple Choice",
         question: "In K-means clustering, what is a 'centroid'?",
         answer: "B) The average of all points in a cluster",
         options: [
@@ -77,7 +77,7 @@ let question=[
         ]
     },
     {
-        numb: 8,
+        numb: 8,type:"Multiple Choice",
         question: "What is the primary measure of distance used in K-means clustering?",
         answer: "C) Euclidean distance",
         options: [
@@ -88,7 +88,7 @@ let question=[
         ]
     },
     {
-        numb: 9,
+        numb: 9,type:"Multiple Choice",
         question: "Which of the following is a step in the K-means clustering algorithm?",
         answer: "B) Choose K centroids randomly",
         options: [
@@ -99,7 +99,7 @@ let question=[
         ]
     },
     {
-        numb: 10,
+        numb: 10,type:"Multiple Choice",
         question: "When does the K-means clustering algorithm stop iterating?",
         answer: "B) When the centroids stop changing positions",
         options: [
@@ -110,7 +110,7 @@ let question=[
         ]
     },
     {
-        numb: 11,
+        numb: 11,type:"Multiple Choice",
         question: "Which of the following is a disadvantage of K-means clustering?",
         answer: "B) The results depend on the initial random assignments",
         options: [
@@ -121,7 +121,7 @@ let question=[
         ]
     },
     {
-        numb: 12,
+        numb: 12,type:"Multiple Choice",
         question: "How many clusters must be specified before running the K-means algorithm?",
         answer: "C) K",
         options: [
@@ -132,7 +132,7 @@ let question=[
         ]
     },
     {
-        numb: 13,
+        numb: 13,type:"Multiple Choice",
         question: "Which of the following represents an iterative step in K-means clustering?",
         answer: "A) Assign records to the closest centroid",
         options: [
@@ -143,7 +143,7 @@ let question=[
         ]
     },
     {
-        numb: 14,
+        numb: 14,type:"Multiple Choice",
         question: "What is the term for recalculating the centroid during K-means clustering?",
         answer: "D) Re-centering",
         options: [
@@ -154,7 +154,7 @@ let question=[
         ]
     },
     {
-        numb: 15,
+        numb: 15,type:"Multiple Choice",
         question: "In the K-means algorithm, what happens when objects no longer change groups?",
         answer: "A) The algorithm stops",
         options: [
@@ -165,7 +165,7 @@ let question=[
         ]
     },
     {
-        numb: 16,
+        numb: 16,type:"Multiple Choice",
         question: "Which clustering approach involves minimizing the sum of square errors?",
         answer: "D) Partitioning methods",
         options: [
@@ -176,7 +176,7 @@ let question=[
         ]
     },
     {
-        numb: 17,
+        numb: 17,type:"Multiple Choice",
         question: "What is the key difference between classification and clustering?",
         answer: "A) Clustering groups objects based on similarity, while classification assigns predefined labels",
         options: [
@@ -187,7 +187,7 @@ let question=[
         ]
     },
     {
-        numb: 18,
+        numb: 18,type:"Multiple Choice",
         question: "Which of the following is an advanced clustering approach?",
         answer: "C) Model-based clustering",
         options: [
@@ -198,7 +198,7 @@ let question=[
         ]
     },
     {
-        numb: 19,
+        numb: 19,type:"Multiple Choice",
         question: "What issue can arise if the K-means algorithm is given few data points?",
         answer: "C) The initial grouping can significantly impact the clusters",
         options: [
@@ -209,7 +209,7 @@ let question=[
         ]
     },
     {
-        numb: 20,
+        numb: 20,type:"Multiple Choice",
         question: "Which of the following is a potential problem with K-means clustering?",
         answer: "C) Different runs of the algorithm can yield different results",
         options: [
@@ -220,7 +220,7 @@ let question=[
         ]
     },
     {
-        numb: 21,
+        numb: 21,type:"Multiple Choice",
         question: "What type of clustering method is K-means considered?",
         answer: "A) Partitioning method",
         options: [
@@ -231,7 +231,7 @@ let question=[
         ]
     },
     {
-        numb: 22,
+        numb: 22,type:"Multiple Choice",
         question: "Why is clustering considered unsupervised learning?",
         answer: "B) It does not involve labeled data",
         options: [
@@ -242,7 +242,7 @@ let question=[
         ]
     },
     {
-        numb: 23,
+        numb: 23,type:"Multiple Choice",
         question: "What is the final result of the K-means algorithm?",
         answer: "C) Final cluster centers and assignments",
         options: [
@@ -253,7 +253,7 @@ let question=[
         ]
     },
     {
-        numb: 24,
+        numb: 24,type:"Multiple Choice",
         question: "What type of data is NOT used in K-means clustering?",
         answer: "C) Text data",
         options: [
@@ -264,7 +264,7 @@ let question=[
         ]
     },
     {
-        numb: 25,
+        numb: 25,type:"Multiple Choice",
         question: "What is the first step in the K-means algorithm?",
         answer: "C) Choose K and select random centroids",
         options: [
