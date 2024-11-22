@@ -210,7 +210,7 @@ let question= [
     },
     {
         numb: 20,type: "Multiple Choices",
-        question: "What will the following code print if x = 0?",
+        question: "printing output if x = 0?",
         answer: "C) Zero",
         options: [
             "A) Positive",
