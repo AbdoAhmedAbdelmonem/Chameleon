@@ -167,7 +167,7 @@ let question=[
     {
         numb: 16,type: "Multiple Choices",
         question: "What will be the output of the following code?",
-        answer: "D) 12",
+        answer: "D) 8",
         options: [
             "A) 11",
             "B) 10",
