@@ -101,7 +101,7 @@ let question=[
     {
         numb: 10,type: "Multiple Choices",
         question: "What will be the output of the following code?",
-        answer: "A) 5",
+        answer: "C) 6",
         options: [
             "A) 5",
             "B) 4",
@@ -167,12 +167,12 @@ let question=[
     {
         numb: 16,type: "Multiple Choices",
         question: "What will be the output of the following code?",
-        answer: "D) 8",
+        answer: "D) 12",
         options: [
             "A) 11",
             "B) 10",
             "C) 12",
-            "8) 8"
+            "D) 8"
         ],image:'../../../MDA/11-19.png'
     },
     {
