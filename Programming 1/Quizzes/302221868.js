@@ -90,7 +90,7 @@ let question=[
     {
         numb: 9,type: "Multiple Choices",
         question: "What will be the output of the following code?",
-        answer: "B) 5",
+        answer: "D) 6",
         options: [
             "A) 4",
             "B) 5",
