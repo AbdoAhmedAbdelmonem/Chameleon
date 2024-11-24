@@ -70,7 +70,7 @@ let question = [
         question: "Convert the Gray Code '1110' to Binary.",
         answer: "D) 1011",
         options: [
-            "A) 1011",
+            "A) 1001",
             "B) 1000",
             "C) 1101",
             "D) 1011"
