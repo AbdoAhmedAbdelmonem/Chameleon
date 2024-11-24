@@ -346,7 +346,7 @@ let question = [
         answer: "B) 1000 1000",
         options: [
             "A) 1110 1000",
-            "B) 1001 1000",
+            "B) 1000 1000",
             "C) 1000 1000",
             "D) 1111 0000"
         ]
@@ -409,7 +409,7 @@ let question = [
     {
         numb: 18,type: "Multiple Choices",
         question: "Convert the Binary '1010 0101' to Gray Code.",
-        answer: "C) 11110111",
+        answer: "C) 1111 0111",
         options: [
             "A) 1000 1010",
             "B) 1011 1001",
