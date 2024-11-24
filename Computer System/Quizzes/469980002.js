@@ -1,7 +1,7 @@
 let question=[
     {
         numb: 1,type: "Multiple Choices",
-        question: "Convert the BCD 0011 to Decimal",
+        question: "Convert the BCD '0011' to Decimal",
         answer: "B) 3",
         options: [
             "A) 5",
@@ -12,7 +12,7 @@ let question=[
     },
     {
         numb: 2,type: "Multiple Choices",
-        question: "Convert the BCD 0111 to Decimal",
+        question: "Convert the BCD '0111' to Decimal",
         answer: "C) 7",
         options: [
             "A) 5",
@@ -23,7 +23,7 @@ let question=[
     },
     {
         numb: 3,type: "Multiple Choices",
-        question: "Convert the BCD 1000 to Decimal",
+        question: "Convert the BCD '1000' to Decimal",
         answer: "A) 8",
         options: [
             "A) 8",
@@ -34,7 +34,7 @@ let question=[
     },
     {
         numb: 4,type: "Multiple Choices",
-        question: "Convert the BCD 1001 to Decimal",
+        question: "Convert the BCD '1001' to Decimal",
         answer: "D) 9",
         options: [
             "A) 5",
@@ -45,7 +45,7 @@ let question=[
     },
     {
         numb: 5,type: "Multiple Choices",
-        question: "Convert the BCD 0000 to Decimal",
+        question: "Convert the BCD '0000' to Decimal",
         answer: "B) 0",
         options: [
             "A) -2",
@@ -56,7 +56,7 @@ let question=[
     },
     {
         numb: 6,type: "Multiple Choices",
-        question: "Convert the BCD 0101 to Decimal",
+        question: "Convert the BCD '0101' to Decimal",
         answer: "A) 5",
         options: [
             "A) 5",
