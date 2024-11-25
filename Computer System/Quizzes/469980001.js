@@ -111,7 +111,7 @@ let question = [
     },
     {
         numb: 11,type: "Multiple Choices",
-        question: "Convert the Binary '1001 0001' to Gray Code.",
+        question: "Convert the Gray code '1001 0001' to Binary.",
         answer: "C) 1110 0001",
         options: [
             "A) 1010 0011",
@@ -122,7 +122,7 @@ let question = [
     },
     {
         numb: 12,type: "Multiple Choices",
-        question: "Convert the Binary '1100 1100' to Gray Code.",
+        question: "Convert the Gray code '1100 1100' to Binary.",
         answer: "B) 1000 1000",
         options: [
             "A) 1001 0010",
@@ -133,7 +133,7 @@ let question = [
     },
     {
         numb: 13,type: "Multiple Choices",
-        question: "Convert the Binary '1010 1010' to Gray Code.",
+        question: "Convert the Gray code '1010 1010' to Binary.",
         answer: "A) 1100 1100",
         options: [
             "A) 1100 1100",
@@ -144,7 +144,7 @@ let question = [
     },
     {
         numb: 14,type: "Multiple Choices",
-        question: "Convert the Binary '1111 0000' to Gray Code.",
+        question: "Convert the Gray code '1111 0000' to Binary.",
         answer: "D) 1010 0000",
         options: [
             "A) 1100 1111",
@@ -155,7 +155,7 @@ let question = [
     },
     {
         numb: 15,type: "Multiple Choices",
-        question: "Convert the Binary '0000 1111' to Gray Code.",
+        question: "Convert the Gray code '0000 1111' to Binary.",
         answer: "C) 0000 1010",
         options: [
             "A) 0011 1100",
