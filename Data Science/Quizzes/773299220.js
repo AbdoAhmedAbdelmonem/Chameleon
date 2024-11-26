@@ -222,7 +222,7 @@ let question=[
     {
         numb: 21,type:"Multiple Choice",
         question: "What is a potential outcome if the model fails during the Model Building phase?",
-        answer: "C) The project is abandoned",
+        answer: "B) The model is revised and rebuilt",
         options: [
             "A) The project timeline is extended",
             "B) The model is revised and rebuilt",
