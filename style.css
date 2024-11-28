@@ -602,7 +602,7 @@ span{
 }
 .timeline-items:nth-child(odd){
     padding-right: calc(50% + 30px);
-    text-align: right;
+    text-align: left;
     animation: slide-in-left 1s ease-in-out forwards;
 
 }
