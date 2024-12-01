@@ -1307,8 +1307,13 @@ span{
         font-weight: 600;
         margin-top: 1.5rem;
     }
+    .home-content h1 span{
+        font-size: 6.6rem;
+        font-weight: 600;
+        margin-top: 1.5rem;
+    }
     .home-content p{
-        font-size: 1.25rem;
+        font-size: 1.375rem;
     }
 }
 .timeline-content.locked {
