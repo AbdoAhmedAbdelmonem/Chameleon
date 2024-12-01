@@ -1298,7 +1298,7 @@ span{
             top: 20%;
             left: 20%;
     }
-    .home-content h3{
+/*     .home-content h3{
         font-size:2.7rem ;
     
     }
@@ -1314,7 +1314,7 @@ span{
     }
     .home-content p{
         font-size: 1.375rem;
-    }
+    } */
 }
 .timeline-content.locked {
     pointer-events: none;
