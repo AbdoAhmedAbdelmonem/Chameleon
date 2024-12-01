@@ -7,7 +7,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Alexandria Medium", sans-serif;
+    font-family: "Alexandria", sans-serif;
 }
 :root{
     --main-color : #00e1ff;
@@ -240,7 +240,7 @@ span{
 
 }
 .home-content h1{
-    font-size: 7rem;
+    font-size: 6.6rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
