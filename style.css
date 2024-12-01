@@ -1311,10 +1311,10 @@ span{
         font-size: 6.6rem;
         font-weight: 600;
         margin-top: 1.5rem;
-    }
-    .home-content p{
-        font-size: 1.375rem;
     } */
+    .home-content p{
+        font-size: 1.37rem;
+    }
 }
 .timeline-content.locked {
     pointer-events: none;
