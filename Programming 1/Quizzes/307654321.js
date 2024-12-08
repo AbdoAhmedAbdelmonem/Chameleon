@@ -266,10 +266,7 @@ let question= [
     {
         numb: 25,type: "RATING",
         question: "Bonus : Rate Chameleon .../4",
-        answer: "A) 🌟",
-            "B) 🌟🌟",
-            "C) 🌟🌟🌟",
-            "D) 🌟🌟🌟🌟",
+        answer:"D) 🌟🌟🌟🌟",
         options: [
             "A) 🌟",
             "B) 🌟🌟",
