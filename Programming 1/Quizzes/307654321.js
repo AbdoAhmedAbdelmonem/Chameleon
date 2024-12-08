@@ -246,7 +246,7 @@ let question= [
         question: "Which statement correctly uses a switch statement to print 'Excellent' when the grade is 'A'?",
         answer: "B) switch (grade) { case 'A': System.out.println('Excellent'); break; }",
         options: [
-            "A) switch (grade) { case 'A': System.out.println('Excellent'); }",
+            "A) switch (grade) { case 'A': System.out.println('Excellent') }",
             "B) switch (grade) { case 'A': System.out.println('Excellent'); break; }",
             "C) switch (grade) { case 'A': System.out.println('Excellent'); break case 'B': System.out.println('Very Good'); }",
             "D) switch (grade) { System.out.println('Excellent'); break; }"
@@ -266,7 +266,10 @@ let question= [
     {
         numb: 25,type: "RATING",
         question: "Bonus : Rate Chameleon .../4",
-        answer: "D) 🌟🌟🌟🌟",
+        answer: "A) 🌟",
+            "B) 🌟🌟",
+            "C) 🌟🌟🌟",
+            "D) 🌟🌟🌟🌟",
         options: [
             "A) 🌟",
             "B) 🌟🌟",
