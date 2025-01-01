@@ -7,10 +7,10 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Alexandria", sans-serif;
+    font-family: "Kristen ITC", sans-serif;
 }
 :root{
-    --main-color : white;
+    --main-color : #24ffd7;
 
     --d1-color : #131313;
     --d2-color : #080808;
@@ -151,8 +151,8 @@ section{
     justify-content: center;
     gap: 15rem;
     z-index: 6;
-/*     background:url("MDA/snowfall.png");
-    /*animation: fall 10s linear infinite;*/ */
+    background:url("MDA/snowfall.png");
+    /*animation: fall 10s linear infinite;*/
 }
 /* Snow background div */
 .img_snow {
@@ -171,7 +171,7 @@ section{
 }
 @media (max-width: 768px) {
     .img_snow {
-        animation: Fall 35s linear infinite; /* Slower animation for mobile */
+        animation: Fall 30s linear infinite; /* Slower animation for mobile */
         background-size: contain; /* Reduce resource load */
     }
 }
@@ -240,7 +240,7 @@ span{
 
 }
 .home-content h1{
-    font-size: 6.6rem;
+    font-size: 7rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
@@ -251,7 +251,7 @@ span{
     animation: changeWallpaper 390s infinite ease-in-out,slide-in-right 1s ease-in-out;
     max-width: 800px;
     height: auto;
-    position: relative; /* Ensures the yellow circle and image are positioned relative to this container */
+    position: relative;
     display: inline-block;
 }
 .home-image img{
@@ -418,8 +418,8 @@ span{
     top: 0;
     width: 90vw;
     height: 80vh;
-    background: linear-gradient(45deg, transparent 70%, green 70%);
-    z-index: 0;
+    background: linear-gradient(45deg, transparent 70%, var(--main-color) 70%);
+    z-index: 1;
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
@@ -429,7 +429,7 @@ span{
     top: 0;
     width: 150vw;
     height: 100vh;
-    background: linear-gradient(135deg, transparent 70%, red 70%);
+    background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
     z-index: -1;
     animation: slide-in-right 2s ease-in-out forwards;
 
@@ -691,13 +691,12 @@ span{
     width: 50px;
 }
 .contact{
-    background: url("MDA/palestine-flag-glow-sunset-background_645756-2260.png") no-repeat;
+    background: url("MDA/pngegg.png") no-repeat;
     background-size: cover;
     transition: background 1s ease-in-out;
 }
-
 .contact.light{
-    background-color: var(--white-color);
+    background-color: var(--white-color) ;
 }
 
 .contact h2{
@@ -1134,7 +1133,7 @@ span{
 }
 @media (max-width: 480px) {
     .img_snow {
-        height: 380%;
+        height: 600%;
     }
     #menu-icon {
         display: block;
@@ -1262,10 +1261,7 @@ span{
         top: 0;
         width: 100%;
         height: 120vh;
-        z-index: -1;
-    }
-     .background-x{
-        position: absolute;
+        background: linear-gradient(135deg, transparent 70%, red 70%);
         z-index: -1;
     }
     .yellow-circle {
@@ -1296,18 +1292,10 @@ span{
 }
 @media(max-width: 480px) {
     .ball.ball1 {
-            width: 300px;
-            height: 300px;
-            top: 20%;
-            left: 20%;
-    }
-    .home-content h1 span{
-        font-size: 6.589rem;
-        font-weight: 600;
-        margin-top: 1.5rem;
-    } 
-    .home-content p{
-        font-size: 1.37rem;
+        width: 300px;
+        height: 300px;
+        top: 20%;
+        left: 20%;
     }
 }
 .timeline-content.locked {
