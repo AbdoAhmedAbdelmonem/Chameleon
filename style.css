@@ -1266,7 +1266,7 @@ span{
     }
      .background-x{
         position: absolute;
-        z-index: 0;
+        z-index: -1;
     }
     .yellow-circle {
         width: 600px; /* Adjust size for smaller screens */
