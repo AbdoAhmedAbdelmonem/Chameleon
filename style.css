@@ -1133,7 +1133,7 @@ span{
 }
 @media (max-width: 480px) {
     .img_snow {
-        height: 375%;
+        height: 400%;
     }
     #menu-icon {
         display: block;
