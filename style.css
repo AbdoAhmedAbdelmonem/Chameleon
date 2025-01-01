@@ -418,7 +418,7 @@ span{
     top: 0;
     width: 90vw;
     height: 80vh;
-    background: linear-gradient(45deg, transparent 70%, var(--main-color) 70%);
+    background: linear-gradient(45deg, transparent 70%, green 70%);
     z-index: -1;
     animation: slide-in-right 2s ease-in-out forwards;
 
@@ -429,7 +429,7 @@ span{
     top: 0;
     width: 150vw;
     height: 100vh;
-    background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
+    background: linear-gradient(135deg, transparent 70%, red 70%);
     z-index: -1;
     animation: slide-in-right 2s ease-in-out forwards;
 
