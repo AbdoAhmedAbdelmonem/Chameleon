@@ -35,12 +35,12 @@ let question=[
     {
         numb: 4,type:"Multiple Choice",
         question: "What is the Info(D) for a decision tree with Age(<=30) if the total records are 5 and Yes = 2, No = 3?",
-        answer: "b) 0.971",
+        answer: "b) 0.346",
         options: [
-            "a) 0.9709",
-            "b) 0.971",
-            "c) 0.918",
-            "d) 0.9403"
+            "a) 0.259",
+            "b) 0.346",
+            "c) 0.328",
+            "d) 0.703"
         ],image:"../../../MDA/entropy.png"
     },
     {
