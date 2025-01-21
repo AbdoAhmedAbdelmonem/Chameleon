@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Programming 2 by Adel Nasim</title>
+</head>
+<style>
+    body {
+        font-family: Rubik, sans-serif;
+        background-color: #0c0c0c;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background:white;
+        background-clip: text;
+        color: transparent;
+        font-family: 'Poppins' ,sans-serif;
+        font-size: 50px;
+    }
+
+    .pdf-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pdf-item {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
+        );
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .pdf-item:hover {
+        transform: scale(1.02) translateY(-7px);
+        background-color: #4169E1;
+        box-shadow: 0 0 35px #7900ff;
+
+
+    }
+    .pdf-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .pdf-item a {
+        text-decoration: none;
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .pdf-item a:hover {
+        text-decoration: underline;
+    }
+    .popup2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 500px;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .popup2.active{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .popup2 h2{
+        font-size: 50px;
+        color: #37a2d0;
+    }
+    .popup2 .gran{
+        display: inline-block;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin: 4px 0;
+    }
+
+    .popup2 .btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #999;
+        margin-top: 10px;
+        padding: 15px 0 7px;
+    }
+
+    .popup2 .btn .info-ok-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 45px;
+        background: #37a2d0;
+        border: 2px solid #37a2d0;
+        outline: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .popup2 .btn {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        .popup2 {
+            width: 90%;
+            padding: 10px;
+            overflow: auto;
+
+        }
+
+        .popup2 h2 {
+            font-size: 36px;
+        }
+
+        .popup2 .gran {
+            font-size: 14px;
+        }
+
+        .popup2 .btn .info-ok-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 14px;
+            overflow: auto;
+
+        }
+    }
+    html {
+        height:100%;
+    }
+
+    body {
+        margin:0;
+    }
+
+    .bg {
+        animation:slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #0ceeff 50%, #c124ff 50%);
+        bottom:0;
+        left:-50%;
+        opacity:.5;
+        position:fixed;
+        right:-50%;
+        top:0;
+        z-index:-1;
+    }
+
+    .bg2 {
+        animation-direction:alternate-reverse;
+        animation-duration:4s;
+    }
+
+    .bg3 {
+        animation-duration:5s;
+    }
+    @keyframes slide {
+        0% {
+            transform:translateX(-25%);
+        }
+        100% {
+            transform:translateX(25%);
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container">
+        <header>
+            <img src="../../../MDA/panda2.png" class="logo">
+            <nav>
+                <a href="../prog2.html">Home</a>
+                <a href="#" class="popo">About</a>
+            </nav>
+        </header>
+        <hr>
+
+        <h1>OOP - Adel Nasim's Videos</h1>
+        <hr>
+
+        <div class="pdf-list">
+            <a href="https://youtu.be/FaaM6uVbuJM?si=-yeUeQObiFZoRkiG" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#030 [JAVA] - Introduction to Object-Oriented Programming</span>
+            </a>
+            <a href="https://youtu.be/JIPwPCkYoLY?si=pCc26-Fd4AKmu0Qw" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#031 [JAVA] - Classes and Objects</span>
+            </a>
+            <a href="https://youtu.be/7iMtBSktIKw?si=jWHvh6NP2sFM42u6" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#032 [JAVA] - Questions and Exercises - Classes and Objects</span>
+            </a>
+            <a href="https://youtu.be/mfIAAwDbdag?si=WP7KHZ4qq9334LL9" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#033 [JAVA] - Constructor (No-Arg, Parameterized, Default)</span>
+            </a>
+            <a href="https://youtu.be/rrgQ5P1g6Ys?si=mCa2iokJTMuY75Yl" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#034 [JAVA] - Constructor (Copy Constructor) / Finalizers vs Destructor</span>
+            </a>
+            <a href="https://youtu.be/7DbGHC8rF14?si=GKTltYVod2tRAECo" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#035 [JAVA] - Static keyword (Static Variable and Methods)</span>
+            </a>
+            <a href="https://youtu.be/3n47zkGMIxc?si=d3ifW5G9fWE_Z2yE" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#036 [JAVA] - Static keyword (Static Block - Static Class)</span>
+            </a>
+            <a href="https://youtu.be/nDc83B16Baw?si=RaweP39Wb7K2MIrr" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#037 [JAVA] - Passing Objects to Methods (by Value vs by Reference / Passing Objects as Arguments)</span>
+            </a>
+            <a href="https://youtu.be/b2vYxHhkBiw?si=ICaZ6xAyYCC8YGzm" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#038 [JAVA] - Passing Objects to Methods (Returning Objects / Comparing Objects)</span>
+            </a>
+            <a href="https://youtu.be/vnzteHmCIg0?si=kAdYwAnmJhmVWuVW" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#039 [JAVA] - Inheritance (Types of Inheritance / Access Modifiers and inheritance)</span>
+            </a>
+            <a href="https://youtu.be/ltuACF2NCh0?si=q2KPDhNMKtjLDR2B" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#040 [JAVA] - Inheritance (Super Keyword / Object Class / Package-Private vs Protected)</span>
+            </a>
+            <a href="https://youtu.be/bI1vqMrIGlQ?si=lV_aiw61kMYqKc_V" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#041 [JAVA] - Polymorphism (Method Overloading and Method Overriding)</span>
+            </a>
+            <a href="https://youtu.be/kBpkPU0zkNk?si=Zn-VT83MiC6GI1T_" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#042 [JAVA] - Polymorphism(Explanation of Examples, Static Methods)</span>
+            </a>
+            <a href="https://youtu.be/mheL52HCGgE?si=Odi98GvyG1-uAaVB" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#043 [JAVA] - Polymorphism(Late binding &quot;Dynamic Polymorphism&quot;, Early binding &quot;Static Polymorphism&quot;)</span>
+            </a>
+            <a href="https://youtu.be/c-KSvbSoVW0?si=t_L-mFEtPU2BcmDf" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#044 [JAVA] - Types of Relationships (Association, Aggregation &quot;has-a&quot;, Composition &quot;part-of&quot;)</span>
+            </a>
+            <a href="https://youtu.be/JXzBz03szvI?si=IgSGmh1GkikupALT" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#045 [JAVA] - Types of Relationships (Association, Aggregation, Composition) With Example</span>
+            </a>
+            <a href="https://youtu.be/yCvJn8kgNGM?si=Sp13TM_I4LCqtD1K" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#046 [JAVA] - Final Keyword (Final Variable, Final Blank Variable, Static Final Blank Variable)</span>
+            </a>
+            <a href="https://youtu.be/neWDRq8S8Lg?si=BoVmF56767pbCwg_" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#047 [JAVA] - Final Keyword (Final Parameters, Final Methods, Final Classes, Final References)</span>
+            </a>
+            <a href="https://youtu.be/e0_ZXY3kgDI?si=HKi-Hjgh4Fpg0rlG" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#048 [JAVA] - ArrayList Class</span>
+            </a>
+            <a href="https://youtu.be/v74F4yG5LE8?si=qAvNRyjJC9kqm7ki" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#049 [JAVA] - ArrayList, Declaration, Print, Methods(Add, Get, AddAll, Copy Constructor, Clone)</span>
+            </a>
+            <a href="https://youtu.be/kBcnOZvoxU0?si=f_0cQ93TIJuPGnsY" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#050 [JAVA] - ArrayList Methods(Set, Remove, Remove All, Remove Range) Polymorphic ArrayList</span>
+            </a>
+            <a href="https://youtu.be/HyqxTy93pXk?si=igPjeXW3YXQtOnVf" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#051 [JAVA] - ArrayList Methods(contains, retainAll, subList, clear, ensureCapacity, sort, min, max)</span>
+            </a>
+            <a href="https://youtu.be/HyqxTy93pXk?si=LmwHizzOUgMXMedK" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#052 [JAVA] - Abstraction (Real-Life Examples, Introduction to Abstract Class, UML Abstract Class)</span>
+            </a>
+            <a href="https://youtu.be/Kp8o-j4FmF8?si=LPcz04VjrW1BcBVo" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#053 [JAVA] - Abstract Class part 1 (Examples, Abstract rules)</span>
+            </a>
+            <a href="https://youtu.be/gQGOCLU2KHs?si=J1s1bjD7kWfMZOYl" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#054 [JAVA] - Abstract Class part 2 (Polymorphism, Benefits of Abstract Class)</span>
+            </a>
+            <a href="https://youtu.be/eC73VoeKlq4?si=3Luj3PYf76FKHzP2" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#055 [JAVA] - Interface Part1 (Real-Life Example, UML, Convention)</span>
+            </a>
+            <a href="https://youtu.be/W7KeYlaPUMM?si=-v4JumVTIs3iJRcP" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#056 [JAVA] - Interface Part2(Practical, Implement Multiple Interfaces, Extends Multiple Interfaces)</span>
+            </a>
+            <a href="https://youtu.be/hlmTREsjc0E?si=rDypzNj0LhO6z5Zc" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#057 [JAVA] - Interface Part3 (Default - Private - Static Methods, Nested Interface)</span>
+            </a>
+            <a href="https://youtu.be/96hAMSmFP4E?si=fcFbL52p7xWEs9sq" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#058 [JAVA] - Interface Part4(Marker or Tagging Interface, Generic Interface, Benefits of Interface) by Adel Nasim 12 minutes, 45 seconds</span>
+            </a>
+            <a href="https://youtu.be/nvSZXiVFrjI?si=olrfzhyS3KMnBjRh" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#059 [JAVA] - Anonymous Inner Class (Extends Class, Implements Interface, Defined Arguments, Lambda)</span>
+            </a>
+            <a href="https://youtu.be/JKm9MUJKqi0?si=apmp01hVkxnfi31N" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#060 [JAVA] - Anonymous Inner Class (Constructor, Extra Methods, Local Variables , Var Keyword)</span>
+            </a>
+            <a href="https://youtu.be/4Iqf3c5kGFo?si=i246fQ-aiuLQtKTx" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#061 [JAVA] - Java Enum (What is Enum, Examples, UML, Enum with switch, Attributes & Methods)</span>
+            </a>
+            <a href="https://youtu.be/pIT98j_Xx2s?si=K2bThHBXYfSz05pC" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#062 [JAVA] - Java Enum ( Real life example,  ordinal, compreTo, toString, name, valueOf, values )</span>
+            </a>
+            <a href="https://youtu.be/zN7CkK_l028?si=dfE-byb_2FeMsNWa" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#063 [JAVA] - Java Enum ( EnumSet & EnumMap classes, Benefits of Enums, Enums vs Classes )</span>
+            </a>
+            <a href="https://youtu.be/QtqPn4qxEL8?si=ukojCTacahfzYE_S" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#064 [JAVA] - Exception Handling (Try-catch block, Multi-catch blocks, Union-catch blocks )</span>
+            </a>
+            <a href="https://youtu.be/hhwwFxSJGM0?si=leG-KTfXTTNMdWpt" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#065 [JAVA] - Exception Handling ( Finally Block, Throws Keyword, Checked vs Unchecked Exception )</span>
+            </a>
+            <a href="https://youtu.be/ebyGDZXWajQ?si=VsnLoSpS-DJeEaXL" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#066 [JAVA] - Exception Handling (Throw keyword, Throw vs Throws, Throw & finally, Custom exception)</span>
+            </a>
+            <a href="https://youtu.be/DxWgHsM-rhs?si=yubz2egE11aSJ_Rr" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#067 [JAVA] - File Handling(java.io, Byte & Character stream, InputStream & OutputStream subclasses)</span>
+            </a>
+            <a href="https://youtu.be/JDkClt0BizQ?si=waj4Jz52ma_oTXmL" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#068 [JAVA] - File Handling ( FileInputStream class, Character size vs String size )</span>
+            </a>
+            <a href="https://youtu.be/rz6MpY1QhkE?si=kvcvjFCacKvyl3Le" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#069 [JAVA] - File Handling (FileOutputStream class, Reading and Writing images, Arabic letters)</span>
+            </a>
+            <a href="https://youtu.be/sHC31jGjjDI?si=3wwJLgHitT0LFyRl" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#070 [JAVA] - File Handling (File class)</span>
+            </a>
+            <a href="https://youtu.be/YzRwDeGpcF0?si=zEc9seHgqnC9-BHs" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#071 [JAVA] - File Handling (File class, Directories &quot;Add/Remove&quot;, Constructors)</span>
+            </a>
+            <a href="https://youtu.be/9hE1z4_lWUc?si=HiOalwWZsZE-IVEx" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#072 [JAVA] - File Handling (Reader class/Writer class hierarchy, FileWriter & FileReader)</span>
+            </a>
+            <a href="https://youtu.be/f8Ti5TP5WzY?si=oSBOoHDAVSydg4KK" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#073 [JAVA] - File Handling (BufferedReader / BufferedWriter classes, Read file line by line)</span>
+            </a>
+            <a href="https://youtu.be/Lv3Zug13iEA?si=JoLDroxgsplsQn0R" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#074 [JAVA] - File Handling (PrintWriter class &quot;Constructors & Methods&quot;)</span>
+            </a>
+            <a href="https://youtu.be/rn30519FPr8?si=FGTsPIB0pM16R1rE" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#075 [JAVA] - File Handling (Scanner class &quot;Constructors & Methods&quot;, useDelimiter, delimiter)</span>
+            </a>
+            <a href="https://youtu.be/gPjMHDK4jz0?si=uVbQpt8kYOgGZdyl" class="pdf-item" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMJJREFUSEvFlusNgzAMhI9NyiawCUwCmzBKOwqb0B5SJBMgwU6s+m9if/H5AQ2crXGOjxSgA7AAeCkfsQIYAXzolwK8f5cIsRghbQ6wWSILn/3xqQz+AugVdTFlQCcWfQAwZSQ8AYIkQbYriaSkOVAxICRAELNhVtKqAjgvcUsXA1wlmr2KXNSmT7pIM9ymGlQFlCw7blLKedhFsURsO/a3dqPerusYoJHj9q4cfXeAVfPkZ1ceWjV/DKiieRzE/a/iC0S/LBksX7zoAAAAAElFTkSuQmCC"/>
+                <span>#076 [JAVA] - File Handling (Serialization and Deserialization ,Read & Write multiple objects)</span>
+            </a>
+        </div>
+        <hr>
+
+    </div>
+</div>
+<div class="popup2">
+    <h2>Mohammed Eldesouky</h2>
+    <span class="gran">This tutorial is prepared for beginners who need to learn java programming language or even for who need to start understanding the programming basic concepts.
+It is delivered in Arabic to come over the language barrier and to concentrate on Understanding the idea behind any programming concept.
+    <br> page code : #2191535920</span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>
