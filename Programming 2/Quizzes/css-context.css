@@ -315,7 +315,7 @@ body{
     font-size: 24px;
     font-weight: 600;
     padding-top: 15px;
-    text-align: left;
+    text-align: center;
 }
 .option-list {
     display: grid;
