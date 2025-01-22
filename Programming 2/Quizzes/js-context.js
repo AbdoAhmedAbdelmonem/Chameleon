@@ -372,7 +372,7 @@ function updateProgressVisual(progress) {
     const genderMessages = {
         Female: [
             { limit: 85, color: '#80e02c', message: 'كملي يا شطورة مستواكي ممتاز اوي !💕' },
-            { limit: 65, color: 'cyan', message: 'كويس جدا يا ملكة كان فاضلٍك تكة وتقفلي! ✨' },
+            { limit: 65, color: 'cyan', message: 'كويس جدا يا بشمهندسة كان فاضلِك تكة وتقفلي! ✨' },
             { limit: 45, color: 'yellow', message: 'ادائِك مقبول شوية بس اكيد فيه احسن 🥰' },
             { limit: 0, color: 'red', message: 'ركزي شوية! حاولي تاني واكيد المرة الجاية هتنجحي 🙈' }
         ],
