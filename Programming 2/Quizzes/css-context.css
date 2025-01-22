@@ -88,7 +88,8 @@ body{
     left: -50%;
     width: 100%;
     display: flex;
-    background: rgb(1, 22, 39);
+    background: url("../../MDA/wallpaperflare.com_wallpaper4.jpg");
+    background-size: cover;
     justify-content: center;
     align-items: center;
     z-index: 100;
