@@ -417,7 +417,9 @@ body{
     transform: translate(-50%, -50%) scale(0.9);
     width: 500px;
     background: transparent;
-    border: 2px solid #0ceeff;
+    
+/*     border: 2px solid #0ceeff;
+    */
     border-radius: 6px;
     padding: 20px;
     display: flex;
