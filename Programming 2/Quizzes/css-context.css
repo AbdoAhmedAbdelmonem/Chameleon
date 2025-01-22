@@ -50,7 +50,6 @@ body{
     color: white;
     text-decoration: none;
     font-weight: 700;
-    filter: drop-shadow(0 0 5px rgba(9, 0, 29, 0.29));
 }
 .logo .img{
     margin-right: -30px;
@@ -88,7 +87,7 @@ body{
     left: -50%;
     width: 100%;
     display: flex;
-    background: url("../../MDA/wallpaperflare.com_wallpaper4.jpg");
+    background:url("../../MDA/wallpaperflare.com_wallpaper4.jpg");
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -316,7 +315,7 @@ body{
     font-size: 24px;
     font-weight: 600;
     padding-top: 15px;
-    text-align: center;
+    text-align: left;
 }
 .option-list {
     display: grid;
@@ -450,33 +449,11 @@ body{
     height :auto;
 }
 
-.percentage-container .circular-progress{
-    position: relative;
-    width: 250px;
-    height: 250px;
-    align-items: center;
-    background: conic-gradient(#37a2d0 3.6deg, rgba(255, 255, 255, 0.1) 0deg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-}
-.percentage-container .circular-progress:before{
-    content: "";
-    position: absolute;
-    width: 210px;
-    height: 210px;
-    background-color: rgb(13, 20, 24);
-    border-radius: 50%;
-}
-.circular-progress .progress-value{
-    position: relative;
-    font-size: 45px;
-    font-weight: 600;
-}
 .percentage-container .score-text{
     font-size: 25px;
     font-weight: 600;
     margin-top: 20px;
+    z-index: 10;
 }
 .buttons .gohome-btn{
     width: 130px;
@@ -669,20 +646,6 @@ input[type="text"]:focus {
         font-size: 36px;
     }
 
-    .percentage-container .circular-progress {
-        width: 200px;
-        height: 200px;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .percentage-container .circular-progress:before {
-        width: 170px;
-        height: 170px;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
     .circular-progress .progress-value {
         font-size: 36px;
     }
@@ -829,4 +792,284 @@ label:last-child span {
 .mydict label:nth-child(2) input[type="radio"]:checked + span {
     background-color: #0c7dff;
     color: white;
+}
+/* From Uiverse.io by neavy_3628 */
+@keyframes move-second-circle {
+  50% {
+    bottom: -42%;
+  }
+  100% {
+    bottom: -50%;
+  }
+}
+
+@keyframes move-third-circle {
+  50% {
+    bottom: -66%;
+  }
+  100% {
+    bottom: -75%;
+  }
+}
+
+@keyframes move-last-progress {
+  50% {
+    bottom: -64%;
+  }
+  100% {
+    bottom: -70%;
+  }
+}
+
+@keyframes move-base {
+  50% {
+    bottom: -94%;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+
+.main-prog {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  position: relative;
+  background-color: #212121;
+}
+
+.prog-bg {
+  position: absolute;
+  left: -40px;
+  top: -40px;
+  right: -40px;
+  bottom: -40px;
+  background: conic-gradient(white, white 20%, #414141 0%);
+  z-index: -1;
+  border-radius: 300px;
+}
+.main-prog::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 430px;
+  width: 430px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.18);
+}
+.main-prog > .separ {
+  height: 192px;
+  width: 10px;
+  background: #212121;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom center;
+}
+.main-prog > .separ:nth-child(1) {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.main-prog > .separ:nth-child(2) {
+  transform: translate(-50%, -100%) rotate(72deg);
+}
+
+.main-prog > .separ:nth-child(3) {
+  transform: translate(-50%, -100%) rotate(144deg);
+}
+.separ:nth-child(3)::before {
+  content: "40";
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -36px) rotate(180deg);
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.main-prog > .separ:nth-child(4) {
+  transform: translate(-50%, -100%) rotate(216deg);
+}
+.separ:nth-child(4)::before {
+  content: "60";
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -36px) rotate(180deg);
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.separ:nth-child(2)::before {
+  content: "20";
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -36px) rotate(180deg);
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.separ:nth-child(5)::before {
+  content: "80";
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -36px) rotate(180deg);
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.main-prog > .separ:nth-child(5) {
+  transform: translate(-50%, -100%) rotate(288deg);
+}
+.content {
+  perspective: 500px;
+  width: 300px;
+  height: 300px;
+}
+.progresses {
+  transform: rotateX(50deg) scaleY(0.6);
+  position: relative;
+}
+
+.second-circle {
+    height: 250px;
+      width: 250px;
+      position: absolute;
+      left: 50%;
+      bottom: -50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      animation: move-second-circle 3s ease-in-out infinite;
+    border: 2px solid white;
+    z-index: -10;
+}
+.third-circle {
+  border: 3px solid #a6a6a6;
+  height: 130px;
+  width: 130px;
+  position: absolute;
+  left: 50%;
+  bottom: -75%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: move-third-circle 3s ease-in-out infinite;
+  animation-delay: 300ms;
+}
+.last-progress {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  bottom: -70%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 0;
+  overflow: visible;
+  animation: move-last-progress 3s ease-in-out infinite;
+  animation-delay: 600ms;
+}
+.last-progress::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background: #212121;
+  height: 58px;
+  width: 58px;
+  border-radius: 50%;
+}
+.last-progress {
+  content: "";
+  position: absolute;
+}
+.progress-bg {
+  position: absolute;
+  left: -40px;
+  top: -40px;
+  right: -40px;
+  bottom: -40px;
+  background-color: transparent;
+  background-image: conic-gradient(white, white 65%, #414141 65%);
+  z-index: 0;
+  border-radius: 300px;
+}
+.base-circle {
+  border: 40px solid rgba(76, 73, 73, 0.55);
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  left: 50%;
+  bottom: -100%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: -2;
+  animation: move-base 3s ease-in-out infinite;
+  animation-delay: 600ms;
+}
+
+.base-circle > .separ2 {
+  height: 100px;
+  width: 3px;
+  background-color: #212121;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom center;
+}
+.separ2:nth-child(2) {
+  transform: translate(-50%, -100%) rotate(45deg);
+}
+.separ2:nth-child(3) {
+  transform: translate(-50%, -100%) rotate(90deg);
+}
+.separ2:nth-child(4) {
+  transform: translate(-50%, -100%) rotate(135deg);
+}
+.separ2:nth-child(5) {
+  transform: translate(-50%, -100%) rotate(180deg);
+}
+.separ2:nth-child(6) {
+  transform: translate(-50%, -100%) rotate(225deg);
+}
+.separ2:nth-child(7) {
+  transform: translate(-50%, -100%) rotate(270deg);
+}
+.separ2:nth-child(8) {
+  transform: translate(-50%, -100%) rotate(315deg);
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  color: white;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0px 12px 22px rgba(0, 0, 0, 0.8);
+}
+.text span:first-child {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 85px;
+}
+.text span:last-child {
+  font-size: 22px;
+}
+.full-progress {
+  height: 385px;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  border-radius: 14px;
+    margin-top: -50px;
 }
