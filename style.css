@@ -1353,7 +1353,7 @@ span{
     height: 100%;
     padding-left: 6px;
     color: var(--main-color);
-    animation: spin_4991 4s infinite;
+    animation: spin_4991 5s infinite;
     text-align: center;
 }
 
