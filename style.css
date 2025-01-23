@@ -1297,6 +1297,10 @@ span{
         top: 20%;
         left: 20%;
     }
+        .loader {
+        font-size: 15px;
+    }
+
 }
 .timeline-content.locked {
     pointer-events: none;
