@@ -456,6 +456,8 @@ body{
     font-weight: 600;
     margin-top: 20px;
     z-index: 10;
+    width: 600px;
+    text-align: center;
 }
 .buttons .gohome-btn{
     width: 130px;
