@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
+:root{
+    --main-quiz:#37a2d0;
+    --2nd-quiz:#0ceeff;
+}
 
 *{
     margin: 0;
@@ -58,7 +61,7 @@ body{
 }
 
 .navbar a:hover{
-    color: #0ceeff;
+    color: var(--2nd-quiz);
 }
 .navbar a.active{
     border-bottom: 2px solid #b0cce0;
@@ -148,8 +151,8 @@ body{
 }
 
 .home-content .start-btn:hover{
-    background: #0ceeff;
-    box-shadow: 0 0 25px #0ceeff,
+    background: var(--2nd-quiz);
+    box-shadow: 0 0 25px var(--2nd-quiz),
     0 0 50px #ffffff;
 }
 
@@ -174,7 +177,7 @@ body{
 }
 .popup-info h2 , .popup2 h2{
     font-size: 50px;
-    color: #079eab;
+    color: var(--2nd-quiz);
     text-align: left;
     padding-bottom: 20px;
 }
@@ -201,8 +204,8 @@ body{
     align-items: center;
     width: 130px;
     height: 45px;
-    background: #0ceeff;
-    border: 2px solid #067e87;
+    background: var(--2nd-quiz);
+    border: 2px solid var(--main-quiz);
     outline: none;
     border-radius: 6px;
     text-decoration: none;
@@ -243,11 +246,11 @@ body{
 
 }
 .popup-info .btn-group .info-btn:nth-child(2):hover{
-    background: #0ceeff;
+    background: var(--main-quiz);
     color: white;
-    box-shadow: 0 0 25px #0ceeff,
-    0 0 50px #0ceeff;
-    border-color: #074c51;
+    box-shadow: 0 0 25px var(--2nd-quiz),
+    0 0 50px var(--2nd-quiz);
+    border-color: var(--main-quiz);
 }
 
 .quiz-section .quiz-box{
@@ -296,7 +299,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 4px solid #0899a4;
+    border-bottom: 4px solid var(--main-quiz);
 
 }
 .quiz-header span{
@@ -305,10 +308,9 @@ body{
     font-family: "Alexandria", sans-serif;
 }
 .quiz-header .header-score{
-    background: #15325d;
+    background: var(--main-quiz);
     border-radius: 3px;
     padding: 7px;
-    box-shadow: 0 0 15px #ffffff;
 }
 
 .quiz-box .question-text{
@@ -328,7 +330,7 @@ body{
 
 .option-list .option {
     background: transparent;
-    border: 2px solid rgb(55, 162, 208);
+    border: 2px solid var(--main-quiz);
     border-radius: 3px;
     font-size: 17px;
     cursor: pointer;
@@ -353,7 +355,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 4px solid #07c0ce;
+    border-top: 4px solid var(--main-quiz);
     padding-top: 20px;
 }
 
@@ -365,8 +367,8 @@ body{
 .quiz-footer .next-btn, .quiz-footer .back-btn{
     width: 100px;
     height: 45px;
-    background: rgb(55, 162, 208);
-    border: 2px solid rgb(55, 162, 208);
+    background: var(--main-quiz);
+    border: 2px solid var(--main-quiz);
     outline: none;
     border-radius: 6px;
     font-size: 16px;
@@ -376,10 +378,10 @@ body{
     transition: 0.5s;
 }
 .quiz-footer .next-btn:hover, .quiz-footer .back-btn:hover{
-    background: #37a2d0;
-    border-color: rgb(55, 162, 208);
-    box-shadow: 0 0 15px #37a2d0,
-    0 0 30px #37a2d0;
+    background: var(--main-quiz);
+    border-color: var(--main-quiz);
+    box-shadow: 0 0 15px var(--main-quiz),
+    0 0 30px var(--main-quiz);
 }
 
 .option-list .option.correct{
@@ -402,12 +404,12 @@ body{
 }
 .quiz-footer .next-btn.active{
     pointer-events: auto;
-    background: #0ceeff;
-    border-color: #0ceeff;
+    background: var(--2nd-quiz);
+    border-color: var(--2nd-quiz);
     color: white;
 }
 .quiz-footer .next-btn.active:hover{
-    border-color: #0ceeff;
+    border-color: var(--2nd-quiz);
 }
 
 .quiz-section .result-box{
@@ -417,9 +419,9 @@ body{
     transform: translate(-50%, -50%) scale(0.9);
     width: 500px;
     background: transparent;
-    
-/*     border: 2px solid #0ceeff;
-    */
+
+    /*     border: 2px solid #0ceeff;
+        */
     border-radius: 6px;
     padding: 20px;
     display: flex;
@@ -459,35 +461,20 @@ body{
     width: 600px;
     text-align: center;
 }
-.buttons .gohome-btn{
-    width: 130px;
-    height: 47px;
-    background: #37a2d0;
-    border: 2px solid #37a2d0;
-    outline: none;
-    border-radius: 6px;
-    font-size: 16px;
-    color: white;
-    font-weight: 600;
-    margin: 0 20px 28px;
-    cursor: pointer;
-    transition: 0.5s;
-}
 .buttons button:nth-child(2){
     background: transparent;
-    color: #37a2d0;
+    color: var(--main-quiz);
 }
 .buttons button:nth-child(2):hover{
     color: white;
-    background: #37a2d0;
+    background: var(--main-quiz);
 }
 .buttons button:nth-child(1){
     background: transparent;
-    color: #37a2d0;
 }
 .buttons button:nth-child(1):hover{
     color: white;
-    background: #37a2d0;
+    background: var(--main-quiz);
 }
 .home-content span{
     font-size: 20px;
@@ -508,8 +495,8 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border-color: #0b9fab;
-    box-shadow: 0 0 5px #0795a0;
+    border-color: var(--main-quiz);
+    box-shadow: 0 0 5px var(--main-quiz);
 }
 
 .info-btn.save-name {
@@ -517,21 +504,21 @@ input[type="text"]:focus {
     justify-content: center;
     align-items: center;
     padding: 10px 25px;
-    background-color: #09d2e1;
+    background-color: var(--main-quiz);
     color: #ffffff;
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
     cursor: pointer;
-    border: 2px solid #0ea6b2;
+    border: 2px solid var(--main-quiz);
     border-radius: 6px;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin-top: 10px;
 }
 
 .info-btn.save-name:hover {
-    background-color: #0ceeff;
-    box-shadow: 0 0 10px #0ceeff, 0 0 20px #0ceeff;
+    background-color: var(--main-quiz);
+    box-shadow: 0 0 10px var(--main-quiz), 0 0 20px var(--main-quiz);
 }
 
 @media (max-width: 760px) {
@@ -699,11 +686,11 @@ input[type="text"]:focus {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -100;
 }
 .question-tag{
     color: #ffa500;
-    text-shadow: 2px 2px 8px #ffffff;
+    /*text-shadow: 2px 2px 8px #ffffff;*/
 }
 .validname{
     display: flex;
@@ -716,7 +703,7 @@ input[type="text"]:focus {
 .validname button{
     border-radius: 8px;
     color: white;
-    background-color: #0baeba;
+    background-color: var(--main-quiz);
     width: 120px;
     height: 40px;
     transition: 0.4s ease-in-out;
@@ -735,8 +722,8 @@ input[type="text"]:focus {
     text-align: left;
 }
 .gran2 a{
-    text-decoration: #12b2be;
-    color: #0ceeff;
+    text-decoration: var(--2nd-quiz);
+    color: var(--main-quiz);
 }
 :focus {
     outline: 0;
@@ -799,281 +786,360 @@ label:last-child span {
 }
 /* From Uiverse.io by neavy_3628 */
 @keyframes move-second-circle {
-  50% {
-    bottom: -42%;
-  }
-  100% {
-    bottom: -50%;
-  }
+    50% {
+        bottom: -42%;
+    }
+    100% {
+        bottom: -50%;
+    }
 }
 
 @keyframes move-third-circle {
-  50% {
-    bottom: -66%;
-  }
-  100% {
-    bottom: -75%;
-  }
+    50% {
+        bottom: -66%;
+    }
+    100% {
+        bottom: -75%;
+    }
 }
 
 @keyframes move-last-progress {
-  50% {
-    bottom: -64%;
-  }
-  100% {
-    bottom: -70%;
-  }
+    50% {
+        bottom: -64%;
+    }
+    100% {
+        bottom: -70%;
+    }
 }
 
 @keyframes move-base {
-  50% {
-    bottom: -94%;
-  }
-  100% {
-    bottom: -100%;
-  }
+    50% {
+        bottom: -94%;
+    }
+    100% {
+        bottom: -100%;
+    }
 }
 
 .main-prog {
-  margin: auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
-  position: relative;
-  background-color: #212121;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    position: relative;
+    background-color: #212121;
 }
 
 .prog-bg {
-  position: absolute;
-  left: -40px;
-  top: -40px;
-  right: -40px;
-  bottom: -40px;
-  background: conic-gradient(white, white 20%, #414141 0%);
-  z-index: -1;
-  border-radius: 300px;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    background: conic-gradient(white, white 20%, #414141 0%);
+    z-index: -1;
+    border-radius: 300px;
 }
 .main-prog::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 430px;
-  width: 430px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 430px;
+    width: 430px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
     border: 10px solid rgba(255, 255, 255, 0.18);
 }
 .main-prog > .separ {
-  height: 192px;
-  width: 10px;
-  background: #212121;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  transform-origin: bottom center;
+    height: 192px;
+    width: 10px;
+    background: #212121;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transform-origin: bottom center;
 }
 .main-prog > .separ:nth-child(1) {
-  transform: translate(-50%, -100%) rotate(0deg);
+    transform: translate(-50%, -100%) rotate(0deg);
 }
 .main-prog > .separ:nth-child(2) {
-  transform: translate(-50%, -100%) rotate(72deg);
+    transform: translate(-50%, -100%) rotate(72deg);
 }
 
 .main-prog > .separ:nth-child(3) {
-  transform: translate(-50%, -100%) rotate(144deg);
+    transform: translate(-50%, -100%) rotate(144deg);
 }
 .separ:nth-child(3)::before {
-  content: "40";
-  color: white;
-  position: absolute;
-  transform: translate(-50%, -36px) rotate(180deg);
-  font-size: 22px;
-  font-family: sans-serif;
-  font-weight: bold;
+    content: "40";
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -36px) rotate(180deg);
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 .main-prog > .separ:nth-child(4) {
-  transform: translate(-50%, -100%) rotate(216deg);
+    transform: translate(-50%, -100%) rotate(216deg);
 }
 .separ:nth-child(4)::before {
-  content: "60";
-  color: white;
-  position: absolute;
-  transform: translate(-50%, -36px) rotate(180deg);
-  font-size: 22px;
-  font-family: sans-serif;
-  font-weight: bold;
+    content: "60";
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -36px) rotate(180deg);
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 .separ:nth-child(2)::before {
-  content: "20";
-  color: white;
-  position: absolute;
-  transform: translate(-50%, -36px) rotate(180deg);
-  font-size: 22px;
-  font-family: sans-serif;
-  font-weight: bold;
+    content: "20";
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -36px) rotate(180deg);
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 .separ:nth-child(5)::before {
-  content: "80";
-  color: white;
-  position: absolute;
-  transform: translate(-50%, -36px) rotate(180deg);
-  font-size: 22px;
-  font-family: sans-serif;
-  font-weight: bold;
+    content: "80";
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -36px) rotate(180deg);
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 .main-prog > .separ:nth-child(5) {
-  transform: translate(-50%, -100%) rotate(288deg);
+    transform: translate(-50%, -100%) rotate(288deg);
 }
 .content {
-  perspective: 500px;
-  width: 300px;
-  height: 300px;
+    perspective: 500px;
+    width: 300px;
+    height: 300px;
 }
 .progresses {
-  transform: rotateX(50deg) scaleY(0.6);
-  position: relative;
+    transform: rotateX(50deg) scaleY(0.6);
+    position: relative;
 }
 
 .second-circle {
     height: 250px;
-      width: 250px;
-      position: absolute;
-      left: 50%;
-      bottom: -50%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      animation: move-second-circle 3s ease-in-out infinite;
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: move-second-circle 3s ease-in-out infinite;
     border: 2px solid white;
     z-index: -10;
 }
 .third-circle {
-  border: 3px solid #a6a6a6;
-  height: 130px;
-  width: 130px;
-  position: absolute;
-  left: 50%;
-  bottom: -75%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  z-index: 1;
-  animation: move-third-circle 3s ease-in-out infinite;
-  animation-delay: 300ms;
+    border: 3px solid #a6a6a6;
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    left: 50%;
+    bottom: -75%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: move-third-circle 3s ease-in-out infinite;
+    animation-delay: 300ms;
 }
 .last-progress {
-  position: absolute;
-  margin: auto;
-  left: 50%;
-  bottom: -70%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  z-index: 0;
-  overflow: visible;
-  animation: move-last-progress 3s ease-in-out infinite;
-  animation-delay: 600ms;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    bottom: -70%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 0;
+    overflow: visible;
+    animation: move-last-progress 3s ease-in-out infinite;
+    animation-delay: 600ms;
 }
 .last-progress::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
-  background: #212121;
-  height: 58px;
-  width: 58px;
-  border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    background: #212121;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%;
 }
 .last-progress {
-  content: "";
-  position: absolute;
+    content: "";
+    position: absolute;
 }
 .progress-bg {
-  position: absolute;
-  left: -40px;
-  top: -40px;
-  right: -40px;
-  bottom: -40px;
-  background-color: transparent;
-  background-image: conic-gradient(white, white 65%, #414141 65%);
-  z-index: 0;
-  border-radius: 300px;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    background-color: transparent;
+    background-image: conic-gradient(white, white 65%, #414141 65%);
+    z-index: 0;
+    border-radius: 300px;
 }
 .base-circle {
-  border: 40px solid rgba(76, 73, 73, 0.55);
-  height: 180px;
-  width: 180px;
-  position: absolute;
-  left: 50%;
-  bottom: -100%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  z-index: -2;
-  animation: move-base 3s ease-in-out infinite;
-  animation-delay: 600ms;
+    border: 40px solid rgba(76, 73, 73, 0.55);
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -2;
+    animation: move-base 3s ease-in-out infinite;
+    animation-delay: 600ms;
 }
 
 .base-circle > .separ2 {
-  height: 100px;
-  width: 3px;
-  background-color: #212121;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  transform-origin: bottom center;
+    height: 100px;
+    width: 3px;
+    background-color: #212121;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transform-origin: bottom center;
 }
 .separ2:nth-child(2) {
-  transform: translate(-50%, -100%) rotate(45deg);
+    transform: translate(-50%, -100%) rotate(45deg);
 }
 .separ2:nth-child(3) {
-  transform: translate(-50%, -100%) rotate(90deg);
+    transform: translate(-50%, -100%) rotate(90deg);
 }
 .separ2:nth-child(4) {
-  transform: translate(-50%, -100%) rotate(135deg);
+    transform: translate(-50%, -100%) rotate(135deg);
 }
 .separ2:nth-child(5) {
-  transform: translate(-50%, -100%) rotate(180deg);
+    transform: translate(-50%, -100%) rotate(180deg);
 }
 .separ2:nth-child(6) {
-  transform: translate(-50%, -100%) rotate(225deg);
+    transform: translate(-50%, -100%) rotate(225deg);
 }
 .separ2:nth-child(7) {
-  transform: translate(-50%, -100%) rotate(270deg);
+    transform: translate(-50%, -100%) rotate(270deg);
 }
 .separ2:nth-child(8) {
-  transform: translate(-50%, -100%) rotate(315deg);
+    transform: translate(-50%, -100%) rotate(315deg);
 }
 
 .text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  color: white;
-  z-index: 4;
-  transform: translate(-50%, -50%);
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-shadow: 0px 12px 22px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: white;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0px 12px 22px rgba(0, 0, 0, 0.8);
 }
 .text span:first-child {
-  font-size: 100px;
-  font-weight: bold;
-  line-height: 85px;
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 85px;
 }
 .text span:last-child {
-  font-size: 22px;
+    font-size: 22px;
 }
 .full-progress {
-  height: 385px;
-  width: 550px;
-  display: flex;
-  justify-content: center;
-  border-radius: 14px;
+    height: 385px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    border-radius: 14px;
     margin-top: -50px;
+}
+
+.gohome-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.2s;
+    transform: scale(2);
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.gohome-btn span {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    color: #fff;
+}
+
+.gohome-btn .liquid {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: var(--main-quiz);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: 0.6s;
+}
+
+.gohome-btn .liquid::after,
+.gohome-btn .liquid::before {
+    position: absolute;
+    content: "🪐";
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -75%);
+}
+
+.gohome-btn .liquid::after {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    box-shadow: 0 0 10px 5px #1798a0, inset 0 0 5px #1798a0;
+    animation: animate 5s linear infinite;
+    opacity: 0.8;
+}
+
+.gohome-btn .liquid::before {
+    content: "🚀";
+    border-radius: 40%;
+    box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+    background: rgba(26, 26, 26, 0.5);
+    animation: animate_3881 7s linear infinite;
+}
+
+@keyframes animate_3881 {
+    0% {
+        transform: translate(-25%, -75%) rotate(0);
+    }
+
+    100% {
+        transform: translate(-25%, -75%) rotate(360deg);
+    }
+}
+
+.gohome-btn:hover .liquid {
+    top: -120px;
+}
+
+.gohome-btn:hover {
+    box-shadow: 0 0 5px #06595f, inset 0 0 5px #06595f;
+    transition-delay: 0.2s;
 }
