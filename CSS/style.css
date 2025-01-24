@@ -162,7 +162,7 @@ section{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: url("MDA/snowfall.png") repeat; /* Snowfall image */
+    background: url("../MDA/snowfall.png") repeat; /* Snowfall image */
     background-size: cover;
     animation: snowFall 15s linear infinite;
     will-change: background-position; /* Optimize for animation */
@@ -193,31 +193,6 @@ section{
     }
 }
 
-
-
-/*@keyframes changeColors {*/
-/*    0% {--main-color : #ffc324}*/
-/*    5%{--main-color : #87ff24}*/
-/*    10%{--main-color : #24ffd7}*/
-/*    15%{--main-color : #ff5a00}*/
-/*    20%{--main-color : #ff2424}*/
-/*    25%{--main-color : #0ceeff}*/
-/*    30%{--main-color : #0800ff}*/
-/*    35%{--main-color : #c124ff}*/
-/*    40%{--main-color : #8d8c9f}*/
-/*    45%{--main-color : #029b05}*/
-/*    50%{--main-color : #a66125}*/
-/*    55%{--main-color : #0ceeff}*/
-/*    60%{--main-color : #ff2424}*/
-/*    65%{--main-color : #2436ff}*/
-/*    70%{--main-color : #ffc324}*/
-/*    75%{--main-color : #ff5a00}*/
-/*    80%{--main-color : #24ff9c}*/
-/*    85%{--main-color : #c124ff}*/
-/*    90%{--main-color : #41ff24}*/
-/*    95%{--main-color : #2436ff}*/
-/*    100% {--main-color : #ffc324}*/
-/*}*/
 .home-content{
     display: flex;
     flex-direction: column;
@@ -691,7 +666,7 @@ span{
     width: 50px;
 }
 .contact{
-    background: url("MDA/pngegg.png") no-repeat;
+    background: url("../MDA/pngegg.png") no-repeat;
     background-size: cover;
     transition: background 1s ease-in-out;
 }
