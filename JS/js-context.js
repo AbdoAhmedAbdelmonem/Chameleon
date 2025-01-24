@@ -48,20 +48,6 @@ function continueQuiz() {
     }
 }
 
-
-VANTA.FOG({
-    el: "#vanta-bg",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    highlightColor: 0x57ff,
-    midtoneColor: 0xfff9,
-    lowlightColor: 0x9f9f9f,
-    blurFactor: 0.26,
-    zoom: 0.10
-})
 const startBtn = document.querySelector('.start-btn');
 const popupInfo = document.querySelector('.popup-info');
 const exitBtn = document.querySelector('.exit-btn');
