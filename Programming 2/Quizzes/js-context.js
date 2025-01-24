@@ -351,7 +351,7 @@ function animateProgress() {
     const progressEndValue = Math.round((userScore / question.length) * 100);
     const status = progressEndValue > 50 ? "Success" : "Failed";
 
-    // submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
+    submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
     console.log(name, progressEndValue);
 
     let progressStartValue = 0;
