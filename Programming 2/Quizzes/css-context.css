@@ -646,9 +646,9 @@ input[type="text"]:focus {
     }
 
     .buttons .gohome-btn {
-        width: 100px;
-        height: 40px;
-        font-size: 14px;
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
     }
 
     .home-content img {
