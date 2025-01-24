@@ -49,19 +49,20 @@ function continueQuiz() {
 }
 
 
-VANTA.FOG({
+VANTA.GLOBE({
     el: "#vanta-bg",
     mouseControls: true,
     touchControls: true,
-    gyroControls: false,
+    gyroControls: true,
     minHeight: 200.00,
     minWidth: 200.00,
-    highlightColor: 0x57ff,
-    midtoneColor: 0xfff9,
-    lowlightColor: 0x9f9f9f,
-    blurFactor: 0.26,
-    zoom: 0.10
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3ff5ff,
+    backgroundColor: 0x0,
+    size:0.7,
 })
+
 const startBtn = document.querySelector('.start-btn');
 const popupInfo = document.querySelector('.popup-info');
 const exitBtn = document.querySelector('.exit-btn');
@@ -350,7 +351,7 @@ function animateProgress() {
     const progressEndValue = Math.round((userScore / question.length) * 100);
     const status = progressEndValue > 50 ? "Success" : "Failed";
 
-     submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
+    // submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
     console.log(name, progressEndValue);
 
     let progressStartValue = 0;
@@ -391,7 +392,6 @@ function updateProgressVisual(progress) {
     document.querySelector('.progress-bg').style.background=`conic-gradient(${color} ${progress}%, #414141 0%)`
     mot.innerHTML = message;
 }
-
 
 function submitToGoogleForm(Gname,Gscore,gender,statue,quizCode) {
     const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSedOLbgGluxVg3wRhI6wOtEBMgw1jE54zZia-nX1anTfeQPgQ/formResponse";
