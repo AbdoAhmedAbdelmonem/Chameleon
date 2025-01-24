@@ -14,8 +14,8 @@ function saveName() {
     if (name && selectedGender) {
         localStorage.setItem('userName', name);
         continueButton.classList.remove('disabled');
-        continueButton.style.background = "#098a94";
-        continueButton.style.borderColor = "#0ceeff";
+        continueButton.style.background = "var(--main-quiz)";
+        continueButton.style.borderColor = "var(--main-quiz)";
         console.log('hello', name , "gender",gender);
     } else {
         alert("مش هتخسر حاجة لو كتبت كل بياناتك صح 🌚");
@@ -259,18 +259,18 @@ function addImage(index) {
             closeButton.style.padding = '5px 10px';
             closeButton.style.border = 'none';
             closeButton.style.borderRadius = '5px';
-            closeButton.style.background = '#0ceeff';
+            closeButton.style.background = 'var(--main-quiz)';
             closeButton.style.color = '#fff';
             closeButton.style.fontSize = '18px';
             closeButton.style.cursor = 'pointer';
             closeButton.style.transition = 'background 0.2s ease-in-out';
 
             closeButton.addEventListener('mouseover', () => {
-                closeButton.style.background = '#0ceeff';
+                closeButton.style.background = 'var(--main-quiz)';
             });
 
             closeButton.addEventListener('mouseout', () => {
-                closeButton.style.background = '#0ceeff';
+                closeButton.style.background = 'var(--main-quiz)';
             });
 
             closeButton.addEventListener('click', function() {
