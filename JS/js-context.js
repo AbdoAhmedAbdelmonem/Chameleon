@@ -14,8 +14,8 @@ function saveName() {
     if (name && selectedGender) {
         localStorage.setItem('userName', name);
         continueButton.classList.remove('disabled');
-        continueButton.style.background = "#098a94";
-        continueButton.style.borderColor = "#0ceeff";
+        continueButton.style.background = "var(--main-quiz)";
+        continueButton.style.borderColor = "var(--main-quiz)";
         console.log('hello', name , "gender",gender);
     } else {
         alert("مش هتخسر حاجة لو كتبت كل بياناتك صح 🌚");
@@ -244,18 +244,18 @@ function addImage(index) {
             closeButton.style.padding = '5px 10px';
             closeButton.style.border = 'none';
             closeButton.style.borderRadius = '5px';
-            closeButton.style.background = '#0ceeff';
+            closeButton.style.background = 'var(--main-quiz)';
             closeButton.style.color = '#fff';
             closeButton.style.fontSize = '18px';
             closeButton.style.cursor = 'pointer';
             closeButton.style.transition = 'background 0.2s ease-in-out';
 
             closeButton.addEventListener('mouseover', () => {
-                closeButton.style.background = '#0ceeff';
+                closeButton.style.background = 'var(--main-quiz)';
             });
 
             closeButton.addEventListener('mouseout', () => {
-                closeButton.style.background = '#0ceeff';
+                closeButton.style.background = 'var(--main-quiz)';
             });
 
             closeButton.addEventListener('click', function() {
@@ -321,63 +321,61 @@ function showResultBox() {
     mot.setAttribute("dir", "rtl");
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
+
+    updateScoreText();
+    animateProgress();
+}
+
+function updateScoreText() {
     const scoreText = document.querySelector('.score-text');
     scoreText.textContent = `You Scored ${userScore} out of ${question.length}`;
+}
 
-    const circularProgress = document.querySelector('.circular-progress');
+function animateProgress() {
     const progressValue = document.querySelector('.progress-value');
+    const progressEndValue = Math.round((userScore / question.length) * 100);
+    const status = progressEndValue > 50 ? "Success" : "Failed";
+
+    submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
+    console.log(name, progressEndValue);
+
     let progressStartValue = 0;
-    let progressEndValue = Math.round((userScore / question.length) * 100); // Round to the nearest whole number
-    if(progressEndValue>50){
-        statue = "Success";
-    }else{
-        statue = "Failed"
-    }
-    score = progressEndValue;
-    submitToGoogleForm(name, score, gender,statue,quizCode);
-    console.log(name, score);
-    let speed = 20;
-
-    let progress = setInterval(() => {
-        progressStartValue++;
-
+    const speed = 20;
+    const progress = setInterval(() => {
         if (progressStartValue > progressEndValue) {
             clearInterval(progress);
             return;
         }
 
-        progressValue.textContent = `${progressStartValue}%`;
-
-        if (gender === "Female") {
-            if (progressStartValue > 85) {
-                circularProgress.style.background = `conic-gradient(#80e02c ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = `كملي يا شطورة مستواكي ممتاز اوي !💕`;
-            } else if (progressStartValue > 65) {
-                circularProgress.style.background = `conic-gradient(cyan ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = 'كويس جدا يا ملكة كان فاضلٍك تكة وتقفلي! ✨'
-            } else if (progressStartValue > 45) {
-                circularProgress.style.background = `conic-gradient(yellow ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = ` ادائِك مقبول شوية بس اكيد فيه احسن 🥰`;
-            } else {
-                circularProgress.style.background = `conic-gradient(red ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = ` ركزي شوية! حاولي تاني واكيد المرة الجاية هتنجحي 🙈 `;
-            }
-        } else if (gender === "Male") {
-            if (progressStartValue > 85) {
-                circularProgress.style.background = `conic-gradient(#80e02c ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = `اداء اسطوري! كمل يا بطل مستقبلك مستنيك 💪`;
-            } else if (progressStartValue > 65) {
-                circularProgress.style.background = `conic-gradient(cyan ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = `عمل رائع! كان فاضلك تكة وتبقي الافضل 🥳`;
-            } else if (progressStartValue > 45) {
-                circularProgress.style.background = `conic-gradient(yellow ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = `اداء مقبل شوية! بس تحسينه هيكون خطوة رائعة 👌`;
-            } else {
-                circularProgress.style.background = `conic-gradient(red ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) ${progressStartValue * 3.6}deg)`;
-                mot.innerHTML = `ركز شوية ! حاول تاني واكيد هتنجح المرة الجاية 🌚`;
-            }
-        }
+        progressValue.textContent = `${progressStartValue}`;
+        updateProgressVisual(progressStartValue);
+        progressStartValue++;
     }, speed);
+}
+
+function updateProgressVisual(progress) {
+    const mot = document.querySelector('.motivate');
+    const genderMessages = {
+        Female: [
+            { limit: 85, color: '#80e02c', message: 'كملي يا شطورة مستواكي ممتاز اوي !💕' },
+            { limit: 65, color: 'cyan', message: 'كويس جدا يا بشمهندسة كان فاضلِك تكة وتقفلي! ✨' },
+            { limit: 45, color: 'yellow', message: 'ادائِك مقبول شوية بس اكيد فيه احسن 🥰' },
+            { limit: 0, color: 'red', message: 'ركزي شوية! حاولي تاني واكيد المرة الجاية هتنجحي 🙈' }
+        ],
+        Male: [
+            { limit: 85, color: '#80e02c', message: 'اداء اسطوري! كمل يا بطل مستقبلك مستنيك 💪' },
+            { limit: 65, color: 'cyan', message: 'عمل رائع! كان فاضلك تكة وتبقي الافضل 🥳' },
+            { limit: 45, color: 'yellow', message: 'اداء مقبل شوية! بس تحسينه هيكون خطوة رائعة 👌' },
+            { limit: 0, color: 'red', message: 'ركز شوية ! حاول تاني واكيد هتنجح المرة الجاية 🌚' }
+        ]
+    };
+
+    const messages = genderMessages[gender] || genderMessages.Male;
+    const { color, message } = messages.find(item => progress > item.limit) || messages[messages.length - 1];
+
+    document.querySelector('.prog-bg').style.background = `conic-gradient(${color} ${progress}%, #414141 0%)`;
+    document.querySelector('.progress-bg').style.background=`conic-gradient(${color} ${progress}%, #414141 0%)`
+    mot.innerHTML = message;
 }
 
 function submitToGoogleForm(Gname,Gscore,gender,statue,quizCode) {
