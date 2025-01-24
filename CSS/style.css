@@ -151,7 +151,7 @@ section{
     justify-content: center;
     gap: 15rem;
     z-index: 6;
-    background:url("MDA/snowfall.png");
+    background:url("../MDA/snowfall.png");
     /*animation: fall 10s linear infinite;*/
 }
 /* Snow background div */
