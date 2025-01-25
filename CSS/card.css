@@ -143,7 +143,6 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
-    border: 3px solid black;
 }
 .popup2.active{
     opacity: 1;
