@@ -4,275 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/MatC.css">
     <title>Eng.Hossam elsokary</title>
 </head>
-<style>
-    html {
-        height:100%;
-    }
-
-    body {
-        margin:0;
-    }
-
-    .bg {
-        animation:slide 3s ease-in-out infinite alternate;
-        background-image: linear-gradient(-60deg, #0800ff 50%, #ff2424 50%, #ffa500 50%);
-        bottom:0;
-        left:-50%;
-        opacity:.5;
-        position:fixed;
-        right:-50%;
-        top:0;
-        z-index:-1;
-    }
-
-    .bg2 {
-        animation-direction:alternate-reverse;
-        animation-duration:4s;
-    }
-
-    .bg3 {
-        animation-duration:5s;
-    }
-    @keyframes slide {
-        0% {
-            transform:translateX(-25%);
-        }
-        100% {
-            transform:translateX(25%);
-        }
-    }
-    body {
-        font-family: Segoe UI Semibold, sans-serif;
-        background-color: #0c0c0c;
-        color: white;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .logo {
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 110px;
-    }
-
-    nav a {
-        color: white;
-        margin-left: 20px;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        background: linear-gradient(
-                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
-        );
-        background-clip: text;
-        color: transparent;
-        font-family: Segoe UI Semibold, sans-serif;
-        font-size: 50px;
-    }
-
-    .pdf-list {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .pdf-item {
-        display: flex;
-        align-items: center;
-        background: linear-gradient(
-                to right,rgb(250,78,10),rgb(247,12,204),rgb(0,106,255),rgb(48,248,255)
-        );
-        border: 2px solid #ffffff;
-        border-radius: 10px;
-        padding: 10px;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        text-decoration: none;
-        color: #ffffff;
-    }
-
-    .pdf-item:hover {
-        transform: scale(1.02) translateY(-7px);
-        background-color: #4169E1;
-        box-shadow: 0 0 35px #7900ff;
-
-
-    }
-    .pdf-item img .golden-item img{
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
-    .pdf-item a {
-        text-decoration: none;
-        font-size: 18px;
-        color: inherit;
-    }
-
-    .pdf-item a:hover {
-        text-decoration: underline;
-    }
-    .golden-item{
-        padding: 10px;
-        display: flex;
-        font-weight: bold;
-        align-items: center;
-        color: #000000;
-        background: linear-gradient(45deg,#FFD700, #FFD700,#FFD700, #ffffff, #FFD700,#FFD700,#FFD700);
-        background-size: 400% 400%;
-        border: 2px solid #ffffff;
-        border-radius: 10px;
-        text-decoration: none;
-        cursor: pointer;
-        animation: gold-animation 2.5s infinite;
-        transition: transform 0.3s;
-    }
-    @keyframes gold-animation {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    .golden-item span{
-        padding-left: 10px;
-    }
-    .golden-item:hover{
-        transform: scale(1.02) translateY(-7px);
-        background-color: #ffffff;
-        box-shadow: 0 0 35px #ffad00;
-    }
-
-    .pdf-item a .golden-item a{
-        text-decoration: none;
-        font-size: 18px;
-        color: inherit;
-    }
-
-    .pdf-item a:hover .golden-item a:hover {
-        text-decoration: underline;
-    }
-    .popup2{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.9);
-        width: 500px;
-        background: #ffffff;
-        border-radius: 6px;
-        padding: 10px 25px;
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.3s ease;
-    }
-    .popup2.active{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    .blur {
-        filter: blur(8px);
-        transition: filter 0.3s ease;
-    }
-    .popup2 h2{
-        font-size: 50px;
-        color: #37a2d0;
-    }
-    .popup2 .gran{
-        display: inline-block;
-        font-size: 16px;
-        color: #000000;
-        font-weight: 500;
-        margin: 4px 0;
-    }
-
-    .popup2 .btn{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid #999;
-        margin-top: 10px;
-        padding: 15px 0 7px;
-    }
-
-    .popup2 .btn .info-ok-btn{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 130px;
-        height: 45px;
-        background: #37a2d0;
-        border: 2px solid #37a2d0;
-        outline: none;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 16px;
-        color: #fff;
-        font-weight: 600;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: 0.5s;
-    }
-    .popup2 .btn {
-        display: flex;
-        justify-content: center;
-    }
-    @media (max-width: 768px) {
-        .popup2 {
-            width: 90%;
-            padding: 10px;
-            overflow: auto;
-
-        }
-
-        .popup2 h2 {
-            font-size: 36px;
-        }
-
-        .popup2 .gran {
-            font-size: 14px;
-        }
-
-        .popup2 .btn .info-ok-btn {
-            width: 100px;
-            height: 40px;
-            font-size: 14px;
-            overflow: auto;
-
-        }
-    }
-
-</style>
 <body>
 <div class="main">
 <div class="bg"></div>
@@ -289,8 +26,7 @@
         <hr>
 
         <h1>Eng.Hossam Elsokary</h1>
-                <hr>
-
+        <hr>
         <div class="pdf-list">
             Materials
             <a href="https://drive.google.com/file/d/1J-oL0_JVtcO76u73JQaDZMbERDF-lt69/view?usp=drive_link" class="pdf-item" target="_blank">
@@ -329,8 +65,7 @@
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVZJREFUSEvN1rEuBFEUxvHfhkopEiQSGrVCoaVQiE7JK1ASHTqJEq/hBTTUGr2GhELjCRT2bHaSyezszszuXbun2WRz5/zvd8537r0tE4rWhLjqgOdxgJURNvmJB/xkOarAS3jF4gjQ7NNvbCB+KxUf4zYBNEsR+e7rgC9xkRB81c4VOSsVTx34CzMIDzSJ2oqjzJ3SFOIJ+zjDKeZq0pOAd7qwGLNrHNZoXSk4389szPr1+BnbBZVbXcduDlA/FnBm1lAeFSg7cMYGzsQutD3wgrWC+rGCj/5bcfQ2TqXodb9IqngZN6ldPWiO93CeYo6bjFNccxFNr8qRS13zoOpZNv3g1PfxCe6K12JZj+MAeMPssLXNffeLdbzXAceaVewOYaT8XsOMj/jI/sy/ucoUJxBanmIqwKmMVPVy7ZQgvyiVkRqDUxmp7KnU0+hauxuHwyYG/gPtGFQfCq3nNAAAAABJRU5ErkJggg=="/>                <span>Flowgorithm 3 - introduction to arrays</span>
             </a>
         </div>
-                <hr>
-
+        <hr>
     </div>
 </div>
 <div class="popup2">
@@ -340,20 +75,6 @@
         <button class="info-ok-btn">OK</button>
     </div>
 </div>
-<script>
-    const main = document.querySelector('.main');
-    const about = document.querySelector('.popo');
-    const popup2 = document.querySelector('.popup2');
-    const ok = document.querySelector('.info-ok-btn');
-
-    about.onclick=()=>{
-        popup2.classList.add('active');
-        main.classList.add('active');
-    };
-    ok.onclick=()=>{
-        popup2.classList.remove('active');
-        main.classList.remove('active');
-    };
-</script>
+<script src="../../JS/popup.js"></script>
 </body>
 </html>
