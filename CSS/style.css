@@ -81,7 +81,6 @@ body.light{
     display: inline-block;
     width: 3.5em;
     height: 2em;
-    animation: slide-in-left 1s ease-in-out forwards;
 }
 
 .switch input {
@@ -126,7 +125,6 @@ body.light{
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
-    animation: slide-in-left 1s ease-in-out forwards
 }
 .navbar a:hover,.navbar a.active{
     color: var(--main-color);
