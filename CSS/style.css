@@ -1128,7 +1128,7 @@ span{
         position: absolute;
         top: 100%;
         right: 0;
-        width: 50%;
+        width: 400px;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
