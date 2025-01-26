@@ -11,9 +11,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Baloo+Bhaijaan+2:wght@400..800&family=Blaka&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -42,7 +41,9 @@
         <div class="img_snow"></div>
         <div class="home-content">
             <h1>Welcome! it's <span style="font-family: Lobster,sans-serif;font-size: 95px">Chameleon<h3>Winter Version 1.7☃️</h3></span> </h1>
-            <h3 class="text-animation">I<span></span></h3>
+            <div class="fade-div">
+                <div id="fade-text">+1 Year of Developing FCDS</div>
+            </div>
             <p>
                 <b>
                     Chameleon is a comprehensive educational site that aims to provide students and faculty with a wealth of resources to enhance learning and research. My platform is dedicated to fostering a collaborative and engaging environment for all computer science and data science enthusiasts.
@@ -277,5 +278,28 @@
     </div>
 </div>
 <script src="JS/script.js"></script>
+<script>
+    const statements = [
+        "I Have Everything",
+        "I'm Coming For Changing",
+        "I'll Never Give Up",
+        "I Want to reach the horizon",
+        "I'm Levi Ackerman >_<"
+    ];
+
+    let index = 0;
+    function changeText() {
+        const textDiv = document.getElementById("fade-text");
+        textDiv.style.opacity = 0;
+
+        setTimeout(() => {
+            index = (index + 1) % statements.length;
+            textDiv.textContent = statements[index];
+            textDiv.style.opacity = 1;
+        }, 1000);
+    }
+
+    setInterval(changeText, 3000);
+</script>
 </body>
 </html>
