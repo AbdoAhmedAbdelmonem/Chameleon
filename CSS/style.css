@@ -1110,6 +1110,9 @@ span{
     .img_snow {
         height: 409%;
     }
+    .L {
+        font-size: 20px;
+    }
     #menu-icon {
         display: block;
     }
