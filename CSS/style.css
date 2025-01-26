@@ -409,7 +409,7 @@ span{
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
-/* .text-animation span:before{
+.text-animation span:before{
     content:"'m Never Give Up";
     color: var(--main-color);
     animation: words 20s infinite;
@@ -481,7 +481,7 @@ span{
     85%{
         width: calc(100% + 8px);
     }
-} */
+}
 
 @keyframes slide-in-left {
     0% {
@@ -1376,26 +1376,4 @@ span{
         -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
     }
-}
-.card-main {
-    border-radius: 1.25rem;
-    animation: slide-in-left 1s ease-in-out forwards;
-}
-.L {
-    display: block;
-    height: 100%;
-    color: var(--main-color);
-    animation: spin_4991 7s infinite;
-    text-align: left;
-}
-.loader-main {
-    color: rgb(124, 124, 124);
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    justify-content: center;
-    box-sizing: content-box;
-    height: 40px;
-    display: flex;
-    border-radius: 8px;
 }
