@@ -147,8 +147,8 @@ section{
     justify-content: center;
     gap: 15rem;
     z-index: 6;
-    background:url("../MDA/snowfall.png");
-    /*animation: fall 10s linear infinite;*/
+/*     background:url("../MDA/snowfall.png");
+    /*animation: fall 10s linear infinite;*/ */
 }
 /* Snow background div */
 .img_snow {
@@ -158,8 +158,8 @@ section{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: url("../MDA/snowfall.png") repeat; /* Snowfall image */
-    background-size: cover;
+/*     background: url("../MDA/snowfall.png") repeat; /* Snowfall image */
+    background-size: cover; */
     animation: snowFall 15s linear infinite;
     will-change: background-position; /* Optimize for animation */
     backface-visibility: hidden; /* Improve rendering */
