@@ -1377,3 +1377,29 @@ span{
         transform: translateY(-400%);
     }
 }
+.card-main {
+    border-radius: 1.25rem;
+    animation: slide-in-left 1s ease-in-out forwards;
+}
+.loader-main {
+    color: rgb(124, 124, 124);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    justify-content: center;
+    box-sizing: content-box;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+}
+.L {
+    display: block;
+    height: 100%;
+    color: var(--main-color);
+    animation: spin_4991 7s infinite;
+    text-align: left;
+}
+
