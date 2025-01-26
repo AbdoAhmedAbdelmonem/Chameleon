@@ -151,7 +151,7 @@ section{
     justify-content: center;
     gap: 15rem;
     z-index: 6;
-    background:url("../MDA/snowfall.png");
+    background:url("MDA/snowfall.png");
     /*animation: fall 10s linear infinite;*/
 }
 /* Snow background div */
@@ -162,7 +162,7 @@ section{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: url("../MDA/snowfall.png") repeat; /* Snowfall image */
+    background: url("MDA/snowfall.png") repeat; /* Snowfall image */
     background-size: cover;
     animation: snowFall 15s linear infinite;
     will-change: background-position; /* Optimize for animation */
@@ -193,6 +193,31 @@ section{
     }
 }
 
+
+
+/*@keyframes changeColors {*/
+/*    0% {--main-color : #ffc324}*/
+/*    5%{--main-color : #87ff24}*/
+/*    10%{--main-color : #24ffd7}*/
+/*    15%{--main-color : #ff5a00}*/
+/*    20%{--main-color : #ff2424}*/
+/*    25%{--main-color : #0ceeff}*/
+/*    30%{--main-color : #0800ff}*/
+/*    35%{--main-color : #c124ff}*/
+/*    40%{--main-color : #8d8c9f}*/
+/*    45%{--main-color : #029b05}*/
+/*    50%{--main-color : #a66125}*/
+/*    55%{--main-color : #0ceeff}*/
+/*    60%{--main-color : #ff2424}*/
+/*    65%{--main-color : #2436ff}*/
+/*    70%{--main-color : #ffc324}*/
+/*    75%{--main-color : #ff5a00}*/
+/*    80%{--main-color : #24ff9c}*/
+/*    85%{--main-color : #c124ff}*/
+/*    90%{--main-color : #41ff24}*/
+/*    95%{--main-color : #2436ff}*/
+/*    100% {--main-color : #ffc324}*/
+/*}*/
 .home-content{
     display: flex;
     flex-direction: column;
@@ -252,7 +277,7 @@ span{
     line-height: 1.8;
     max-width: 1000px;
     animation: slide-in-left 1s ease-in-out forwards;
-
+    background: rgba(var(--main-color), 0.5);
 }
 .social-icons a {
     display: inline-flex;
@@ -378,7 +403,7 @@ span{
     gap: 1.5rem;
 }
 
-/* .text-animation{
+.text-animation{
     font-size: 34rem;
     font-weight: 600;
     min-width: 280px;
@@ -386,7 +411,7 @@ span{
 }
 .text-animation span{
     position: relative;
-} */
+}
 .background-x {
     position: absolute;
     right: 0;
@@ -394,7 +419,7 @@ span{
     width: 90vw;
     height: 80vh;
     background: linear-gradient(45deg, transparent 70%, var(--main-color) 70%);
-    z-index: -1;
+    z-index: 1;
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
@@ -409,7 +434,7 @@ span{
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
-/* .text-animation span:before{
+.text-animation span:before{
     content:"'m Never Give Up";
     color: var(--main-color);
     animation: words 20s infinite;
@@ -481,7 +506,7 @@ span{
     85%{
         width: calc(100% + 8px);
     }
-} */
+}
 
 @keyframes slide-in-left {
     0% {
@@ -666,7 +691,7 @@ span{
     width: 50px;
 }
 .contact{
-    background: url("../MDA/pngegg.png") no-repeat;
+    background: url("MDA/pngegg.png") no-repeat;
     background-size: cover;
     transition: background 1s ease-in-out;
 }
@@ -1108,10 +1133,7 @@ span{
 }
 @media (max-width: 480px) {
     .img_snow {
-        height: 409%;
-    }
-    .L {
-        font-size: 20px;
+        height: 600%;
     }
     #menu-icon {
         display: block;
@@ -1239,7 +1261,7 @@ span{
         top: 0;
         width: 100%;
         height: 120vh;
-        background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
+        background: linear-gradient(135deg, transparent 70%, red 70%);
         z-index: -1;
     }
     .yellow-circle {
@@ -1275,10 +1297,9 @@ span{
         top: 20%;
         left: 20%;
     }
-        .words  {
-        font-size: 19px;
+    .loader {
+        font-size: 15px;
     }
-
 }
 .timeline-content.locked {
     pointer-events: none;
@@ -1287,12 +1308,11 @@ span{
     background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 class=%22feather feather-lock%22%3E%3Crect x=%223%22 y=%2211%22 width=%2218%22 height=%2211%22 rx=%222%22 ry=%222%22/%3E%3Cpath d=%22M7 11V7a5 5 0 0 1 10 0v4%22/%3E%3C/svg%3E');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 200px 200px;
-    background-color: rgb(38, 40, 38); 
+    background-size: 200px 200px; /* Adjust the size as needed */
+    background-color: rgb(38, 40, 38); /* Optional: background color to show locking visually */
     color: white;
     z-index: 1;
 }
-
 
 .card {
     padding: 1rem 2rem;
@@ -1300,7 +1320,7 @@ span{
 }
 .loader {
     color: rgb(124, 124, 124);
-    font-family: "Alexandria", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 25px;
     -webkit-box-sizing: content-box;
@@ -1314,14 +1334,20 @@ span{
     border-radius: 8px;
 }
 
-.words,.words-main {
+
+.words {
     overflow: hidden;
     position: relative;
 }
-
-.words::after,.words-main:after {
+.words::after {
     content: "";
     inset: 0;
+    background: linear-gradient(
+            var(--bg-color) 10%,
+            transparent 30%,
+            transparent 70%,
+            var(--bg-color) 90%
+    );
     z-index: 20;
 }
 
@@ -1330,7 +1356,7 @@ span{
     height: 100%;
     padding-left: 6px;
     color: var(--main-color);
-    animation: spin_4991 5s infinite;
+    animation: spin_4991 9s infinite;
     text-align: center;
 }
 
@@ -1375,27 +1401,3 @@ span{
         transform: translateY(-400%);
     }
 }
-.card-main {
-    border-radius: 1.25rem;
-    animation: slide-in-left 1s ease-in-out forwards;
-}
-.L {
-    display: block;
-    height: 100%;
-    color: var(--main-color);
-    animation: spin_4991 7s infinite;
-    text-align: left;
-    font-family: 'Alexandria';
-    font-size: 30px;
-}
-.loader-main {
-    font-family: "Alexandria", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    justify-content: center;
-    height: 40px;
-    display: flex;
-    border-radius: 8px;
-    margin-top:-18px;
-}
-
