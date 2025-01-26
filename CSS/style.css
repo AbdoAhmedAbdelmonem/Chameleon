@@ -73,7 +73,7 @@ body.light{
 }
 
 .logo span {
-    z-index: 3; /* Ensure text is visible above other elements */
+    z-index: 3;
 }
 
 .switch {
@@ -1135,7 +1135,7 @@ span{
         -webkit-border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: none;
+        display: flex;
     }
 
     .navbar.active {
