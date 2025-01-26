@@ -1382,6 +1382,8 @@ span{
     color: var(--main-color);
     animation: spin_4991 7s infinite;
     text-align: left;
+    font-family: 'Alexandria';
+    font-size: 30px;
 }
 .loader-main {
     font-family: "Alexandria", sans-serif;
