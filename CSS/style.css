@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poetsen One", sans-serif;
+    font-family: "Alexandria", sans-serif;
 }
 :root{
     --main-color : #24ffd7;
@@ -408,7 +408,7 @@ span{
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
-/* .text-animation span:before{
+.text-animation span:before{
     content:"'m Never Give Up";
     color: var(--main-color);
     animation: words 20s infinite;
@@ -481,7 +481,7 @@ span{
         width: calc(100% + 8px);
     }
 }
- */
+
 @keyframes slide-in-left {
     0% {
         opacity: 0;
@@ -1376,17 +1376,4 @@ span{
         -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
     }
-}
-#fade-text {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-    padding-bottom: 20px;
-    color: var(--main-color);
-    font-family: "Poetsen One", san-serif, serif;
-}
-.fade-div{
-    animation: slide-in-left 1.04s ease-in-out forwards;
 }
