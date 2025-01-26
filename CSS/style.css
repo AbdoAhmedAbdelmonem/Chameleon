@@ -1289,45 +1289,6 @@ span{
     z-index: 1;
 }
 
-
-.card {
-    padding: 1rem 2rem;
-    border-radius: 1.25rem;
-}
-.loader {
-    color: rgb(124, 124, 124);
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    -webkit-box-sizing: content-box;
-    justify-content: center;
-    box-sizing: content-box;
-    height: 40px;
-    padding: 10px 10px;
-/*     display: flex;
-    border-radius: 8px; */
-}
-
-.words {
-    overflow: hidden;
-    position: relative;
-}
-
-.words::after {
-    content: "";
-    inset: 0;
-    z-index: 20;
-}
-
-.word {
-    display: block;
-    height: 100%;
-    padding-left: 6px;
-    color: var(--main-color);
-    animation: spin_4991 5s infinite;
-    text-align: center;
-}
-
 @keyframes spin_4991 {
     10% {
         -webkit-transform: translateY(-102%);
@@ -1370,10 +1331,10 @@ span{
     }
 }
 
-.card-m {
+.card{
     border-radius: 1.25rem;
 }
-.loader-m {
+.loader{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 25px;
@@ -1387,18 +1348,18 @@ span{
     border-radius: 8px;
 }
 
-.words-m{
+.words{
     overflow: hidden;
     position: relative;
 }
 
-.words-m::after {
+.words::after {
     content: "";
     inset: 0;
     z-index: 20;
 }
 
-.word-m {
+.word {
     display: block;
     height: 100%;
     color: var(--main-color);
