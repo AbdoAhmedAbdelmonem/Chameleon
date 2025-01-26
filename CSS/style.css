@@ -378,7 +378,7 @@ span{
     gap: 1.5rem;
 }
 
-.text-animation{
+/* .text-animation{
     font-size: 34rem;
     font-weight: 600;
     min-width: 280px;
@@ -386,7 +386,7 @@ span{
 }
 .text-animation span{
     position: relative;
-}
+} */
 .background-x {
     position: absolute;
     right: 0;
@@ -409,7 +409,7 @@ span{
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
-.text-animation span:before{
+/* .text-animation span:before{
     content:"'m Never Give Up";
     color: var(--main-color);
     animation: words 20s infinite;
@@ -481,7 +481,7 @@ span{
     85%{
         width: calc(100% + 8px);
     }
-}
+} */
 
 @keyframes slide-in-left {
     0% {
