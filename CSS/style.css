@@ -1311,19 +1311,14 @@ span{
     border-radius: 8px;
 }
 
-.words {
+.words,.words-main {
     overflow: hidden;
     position: relative;
 }
-.words::after {
+
+.words::after,.words-main:after {
     content: "";
     inset: 0;
-    background: linear-gradient(
-            var(--bg-color) 10%,
-            transparent 30%,
-            transparent 70%,
-            var(--bg-color) 90%
-    );
     z-index: 20;
 }
 
@@ -1377,3 +1372,24 @@ span{
         transform: translateY(-400%);
     }
 }
+.card-main {
+    border-radius: 1.25rem;
+    animation: slide-in-left 1s ease-in-out forwards;
+}
+.L {
+    display: block;
+    height: 100%;
+    color: var(--main-color);
+    animation: spin_4991 7s infinite;
+    text-align: left;
+}
+.loader-main {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    justify-content: center;
+    height: 40px;
+    display: flex;
+    border-radius: 8px;
+}
+
