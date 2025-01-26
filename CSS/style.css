@@ -1137,6 +1137,9 @@ span{
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
+    .header{
+        width:94%
+    }
 
     .navbar.active {
         display: block;
