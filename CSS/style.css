@@ -10,7 +10,6 @@
 }
 :root{
     --main-color : #24ffd7;
-
     --d1-color : #131313;
     --d2-color : #080808;
     --white-color : white;
@@ -1314,4 +1313,5 @@ span{
     padding-bottom: 20px;
     color: var(--main-color);
     font-family: "Poetsen One", san-serif, serif;
+    font-size:30px
 }
