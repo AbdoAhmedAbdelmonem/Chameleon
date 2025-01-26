@@ -408,79 +408,79 @@ span{
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
-.text-animation span:before{
-    content:"'m Never Give Up";
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-.text-animation.light span:before{
-    content:"'m Never Give Up";
-    color: var(--main-color);
-    animation: words 20s infinite , background-colorChange 1s ease-in-out;
-}
-.text-animation span:after{
-    content: "";
-    background-color: var(--d2-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--d2-color);
-    right: -8px;
-    transition: background-color 1s ease-in-out;
-    animation: cursor 0.6s infinite , typing 20s steps(14) infinite ;
-}
-.text-animation.light span:after{
-    content: "";
-    background-color: var(--white-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--d2-color);
-    right: -8px;
-    animation: cursor 0.6s infinite , typing 20s steps(14) infinite  ;
-}
-@keyframes cursor {
-    to{
-        border-left: 2px solid var(--main-color);
-    }
-}
-@keyframes words {
-    0%,
-    20% {content: " Have EveryThing";}
-    21%,
-    40%{content: "'m Coming For Changing" ;}
-    41%,
-    60%{content: "'ll Never Give Up";}
-    61%,
-    80%{content: " Want to reach the horizon" ;}
-    81%,
-    100%{content: " Levi Ackerman >_<" ;}
-}
-@keyframes typing {
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
-    }
-}
+/*.text-animation span:before{*/
+/*    content:"'m Never Give Up";*/
+/*    color: var(--main-color);*/
+/*    animation: words 20s infinite;*/
+/*}*/
+/*.text-animation.light span:before{*/
+/*    content:"'m Never Give Up";*/
+/*    color: var(--main-color);*/
+/*    animation: words 20s infinite , background-colorChange 1s ease-in-out;*/
+/*}*/
+/*.text-animation span:after{*/
+/*    content: "";*/
+/*    background-color: var(--d2-color);*/
+/*    position: absolute;*/
+/*    width: calc(100% + 8px);*/
+/*    height: 100%;*/
+/*    border-left: 3px solid var(--d2-color);*/
+/*    right: -8px;*/
+/*    transition: background-color 1s ease-in-out;*/
+/*    animation: cursor 0.6s infinite , typing 20s steps(14) infinite ;*/
+/*}*/
+/*.text-animation.light span:after{*/
+/*    content: "";*/
+/*    background-color: var(--white-color);*/
+/*    position: absolute;*/
+/*    width: calc(100% + 8px);*/
+/*    height: 100%;*/
+/*    border-left: 3px solid var(--d2-color);*/
+/*    right: -8px;*/
+/*    animation: cursor 0.6s infinite , typing 20s steps(14) infinite  ;*/
+/*}*/
+/*@keyframes cursor {*/
+/*    to{*/
+/*        border-left: 2px solid var(--main-color);*/
+/*    }*/
+/*}*/
+/*@keyframes words {*/
+/*    0%,*/
+/*    20% {content: " Have EveryThing";}*/
+/*    21%,*/
+/*    40%{content: "'m Coming For Changing" ;}*/
+/*    41%,*/
+/*    60%{content: "'ll Never Give Up";}*/
+/*    61%,*/
+/*    80%{content: " Want to reach the horizon" ;}*/
+/*    81%,*/
+/*    100%{content: " Levi Ackerman >_<" ;}*/
+/*}*/
+/*@keyframes typing {*/
+/*    10%,*/
+/*    15%,*/
+/*    30%,*/
+/*    35%,*/
+/*    50%,*/
+/*    55%,*/
+/*    70%,*/
+/*    75%,*/
+/*    90%,*/
+/*    95%{*/
+/*        width: 0;*/
+/*    }*/
+/*    5%,*/
+/*    20%,*/
+/*    25%,*/
+/*    40%,*/
+/*    45%,*/
+/*    60%,*/
+/*    65%,*/
+/*    80%,*/
+/*    85%{*/
+/*        width: calc(100% + 8px);*/
+/*    }*/
+/*}*/
 
 @keyframes slide-in-left {
     0% {
@@ -1271,7 +1271,7 @@ span{
         top: 20%;
         left: 20%;
     }
-        .words  {
+    .words  {
         font-size: 19px;
     }
 
@@ -1284,7 +1284,7 @@ span{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200px 200px;
-    background-color: rgb(38, 40, 38); 
+    background-color: rgb(38, 40, 38);
     color: white;
     z-index: 1;
 }
@@ -1376,4 +1376,40 @@ span{
         -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
     }
+}
+
+.card-m {
+    border-radius: 1.25rem;
+}
+.loader-m {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    justify-content: center;
+    box-sizing: content-box;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+}
+
+.words-m{
+    overflow: hidden;
+    position: relative;
+}
+
+.words-m::after {
+    content: "";
+    inset: 0;
+    z-index: 20;
+}
+
+.word-m {
+    display: block;
+    height: 100%;
+    color: var(--main-color);
+    animation: spin_4991 5s infinite;
+    text-align: left;
 }
