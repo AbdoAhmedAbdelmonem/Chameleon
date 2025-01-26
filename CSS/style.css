@@ -73,7 +73,7 @@ body.light{
 }
 
 .logo span {
-    z-index: 3;
+    z-index: 3; /* Ensure text is visible above other elements */
 }
 
 .switch {
@@ -408,79 +408,79 @@ span{
     animation: slide-in-right 2s ease-in-out forwards;
 
 }
-/*.text-animation span:before{*/
-/*    content:"'m Never Give Up";*/
-/*    color: var(--main-color);*/
-/*    animation: words 20s infinite;*/
-/*}*/
-/*.text-animation.light span:before{*/
-/*    content:"'m Never Give Up";*/
-/*    color: var(--main-color);*/
-/*    animation: words 20s infinite , background-colorChange 1s ease-in-out;*/
-/*}*/
-/*.text-animation span:after{*/
-/*    content: "";*/
-/*    background-color: var(--d2-color);*/
-/*    position: absolute;*/
-/*    width: calc(100% + 8px);*/
-/*    height: 100%;*/
-/*    border-left: 3px solid var(--d2-color);*/
-/*    right: -8px;*/
-/*    transition: background-color 1s ease-in-out;*/
-/*    animation: cursor 0.6s infinite , typing 20s steps(14) infinite ;*/
-/*}*/
-/*.text-animation.light span:after{*/
-/*    content: "";*/
-/*    background-color: var(--white-color);*/
-/*    position: absolute;*/
-/*    width: calc(100% + 8px);*/
-/*    height: 100%;*/
-/*    border-left: 3px solid var(--d2-color);*/
-/*    right: -8px;*/
-/*    animation: cursor 0.6s infinite , typing 20s steps(14) infinite  ;*/
-/*}*/
-/*@keyframes cursor {*/
-/*    to{*/
-/*        border-left: 2px solid var(--main-color);*/
-/*    }*/
-/*}*/
-/*@keyframes words {*/
-/*    0%,*/
-/*    20% {content: " Have EveryThing";}*/
-/*    21%,*/
-/*    40%{content: "'m Coming For Changing" ;}*/
-/*    41%,*/
-/*    60%{content: "'ll Never Give Up";}*/
-/*    61%,*/
-/*    80%{content: " Want to reach the horizon" ;}*/
-/*    81%,*/
-/*    100%{content: " Levi Ackerman >_<" ;}*/
-/*}*/
-/*@keyframes typing {*/
-/*    10%,*/
-/*    15%,*/
-/*    30%,*/
-/*    35%,*/
-/*    50%,*/
-/*    55%,*/
-/*    70%,*/
-/*    75%,*/
-/*    90%,*/
-/*    95%{*/
-/*        width: 0;*/
-/*    }*/
-/*    5%,*/
-/*    20%,*/
-/*    25%,*/
-/*    40%,*/
-/*    45%,*/
-/*    60%,*/
-/*    65%,*/
-/*    80%,*/
-/*    85%{*/
-/*        width: calc(100% + 8px);*/
-/*    }*/
-/*}*/
+.text-animation span:before{
+    content:"'m Never Give Up";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation.light span:before{
+    content:"'m Never Give Up";
+    color: var(--main-color);
+    animation: words 20s infinite , background-colorChange 1s ease-in-out;
+}
+.text-animation span:after{
+    content: "";
+    background-color: var(--d2-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--d2-color);
+    right: -8px;
+    transition: background-color 1s ease-in-out;
+    animation: cursor 0.6s infinite , typing 20s steps(14) infinite ;
+}
+.text-animation.light span:after{
+    content: "";
+    background-color: var(--white-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--d2-color);
+    right: -8px;
+    animation: cursor 0.6s infinite , typing 20s steps(14) infinite  ;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words {
+    0%,
+    20% {content: " Have EveryThing";}
+    21%,
+    40%{content: "'m Coming For Changing" ;}
+    41%,
+    60%{content: "'ll Never Give Up";}
+    61%,
+    80%{content: " Want to reach the horizon" ;}
+    81%,
+    100%{content: " Levi Ackerman >_<" ;}
+}
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
 
 @keyframes slide-in-left {
     0% {
@@ -1128,14 +1128,14 @@ span{
         position: absolute;
         top: 100%;
         right: 0;
-        width: 400px;
+        width: 50%;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         -webkit-border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: flex;
+        display: none;
     }
 
     .navbar.active {
@@ -1289,6 +1289,53 @@ span{
     z-index: 1;
 }
 
+
+.card {
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+}
+.loader {
+    color: rgb(124, 124, 124);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    justify-content: center;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+}
+
+.words {
+    overflow: hidden;
+    position: relative;
+}
+
+.words::after {
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+            var(--bg-color) 10%,
+            transparent 30%,
+            transparent 70%,
+            var(--bg-color) 90%
+    );
+    z-index: 20;
+}
+
+.word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: var(--main-color);
+    animation: spin_4991 5s infinite;
+    text-align: center;
+}
+
 @keyframes spin_4991 {
     10% {
         -webkit-transform: translateY(-102%);
@@ -1329,40 +1376,4 @@ span{
         -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
     }
-}
-
-.card{
-    border-radius: 1.25rem;
-}
-.loader{
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    -webkit-box-sizing: content-box;
-    justify-content: center;
-    box-sizing: content-box;
-    height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border-radius: 8px;
-}
-
-.words{
-    overflow: hidden;
-    position: relative;
-}
-
-.words::after {
-    content: "";
-    inset: 0;
-    z-index: 20;
-}
-
-.word {
-    display: block;
-    height: 100%;
-    color: var(--main-color);
-    animation: spin_4991 5s infinite;
-    text-align: left;
 }
