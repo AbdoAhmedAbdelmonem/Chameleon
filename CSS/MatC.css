@@ -305,3 +305,8 @@ h1 {
 .container span{
     padding-left: 10px;
 }
+
+  .main.active {
+            filter: blur(100px);
+            pointer-events: none;
+        }
