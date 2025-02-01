@@ -148,9 +148,8 @@ section{
     gap: 15rem;
     z-index: 6;
 /*     background:url("../MDA/snowfall.png");
-    /*animation: fall 10s linear infinite;*/ */
+    /*animation: fall 10s linear infinite;*/
 }
-/* Snow background div */
 .img_snow {
     position: absolute;
     top: 0;
@@ -158,17 +157,17 @@ section{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: url("../MDA/flowers.png") repeat; /* Snowfall image */
+/*     background: url("../MDA/flowers.png") repeat;*/
     background-size: cover;
     animation: snowFall 15s linear infinite;
-    will-change: background-position; /* Optimize for animation */
-    backface-visibility: hidden; /* Improve rendering */
-    transform: translateZ(0); /* Force hardware acceleration */
+    will-change: background-position;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 @media (max-width: 768px) {
     .img_snow {
-        animation: Fall 30s linear infinite; /* Slower animation for mobile */
-        background-size: contain; /* Reduce resource load */
+        animation: Fall 30s linear infinite;
+        background-size: contain;
     }
 }
 
@@ -177,7 +176,7 @@ section{
         background-position: 0 0;
     }
     100% {
-        background-position: 0 200%; /* Move further for smoother effect */
+        background-position: 0 200%;
     }
 }
 @keyframes snowFall {
