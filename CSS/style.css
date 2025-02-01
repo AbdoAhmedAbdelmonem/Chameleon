@@ -1301,3 +1301,7 @@ span{
     font-family: "Poetsen One", san-serif, serif;
     font-size:30px
 }
+  .main.active {
+            filter: blur(100px);
+            pointer-events: none;
+        }
