@@ -977,19 +977,6 @@ span{
     #menu-icon{
         display: block;
     }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px) ;
-        -webkit-border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        display: none;
-    }
     .navbar.active{
         display: block;
     }
@@ -1047,18 +1034,20 @@ span{
     .yellow-circle{
         opacity: 0;
     }
-    .navbar {
-        position: absolute;
+     .navbar{
+        position: fixed;
         top: 100%;
-        right: 0;
-        width: 50%;
+        width: 69%;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         -webkit-border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
+        border-right: 2px solid var(--main-color);
+        border-radius: 11px;
         display: none;
+        text-align: center;
     }
 
     .navbar.active {
