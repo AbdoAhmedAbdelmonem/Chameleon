@@ -178,7 +178,7 @@ let question=[
     {
         numb: 17,type: "Multiple Choices",
         question: "What will be the result of running the following code?",
-        answer: "C) Compilation error",
+        answer: "B) 10",
         options: [
             "A) 5",
             "B) 10",
