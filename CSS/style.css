@@ -243,7 +243,8 @@ span{
     margin-top: 1.5rem;
     line-height: 1;
     animation: nebula-drift 1s ease-in-out forwards;
-    filter: drop-shadow(0px 0px 6px var(--main-color));
+/*     filter: drop-shadow(0px 0px 6px var(--main-color));
+} */
 }
 .home-content h1 span{
     font-family: Audiowide,sans-serif;
