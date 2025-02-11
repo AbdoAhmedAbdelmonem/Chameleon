@@ -248,13 +248,13 @@ span{
 .home-content h1 span{
     font-family: Audiowide,sans-serif;
     font-size: 90px;
-    filter: drop-shadow(0px 0px 5px var(--main-color));
-
+/*     filter: drop-shadow(0px 0px 5px var(--main-color));
+ */
 }
 .home-content h1 span h3 {
     font-size: 26px;
-    filter: drop-shadow(0px 0px 6px var(--main-color));
-
+/*     filter: drop-shadow(0px 0px 6px var(--main-color));
+ */
 }
 .home-image{
     border-radius: 50%;
