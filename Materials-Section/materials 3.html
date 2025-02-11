@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/GATE8.css">
+    <title>2-1 Materials</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+<div class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../../MDA/panda2.png" class="img" width="150" height="102" alt="">
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <section>
+        <ul class="tilesWrap">
+            <li>
+                <a href="../Advanced%20Calculus/adv%20calc.html">
+                    <h2>ADV</h2>
+                    <h3>Advanced Calculus</h3>
+                    <p>Advanced calculus extends basic calculus concepts, focusing <br>
+                        on rigorous proofs, multivariable functions, and topics like vector calculus,<br>
+                        differential forms, and real analysis. It is essential for higher mathematics</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Numerical/Numerical.html">
+                    <h2>NUM</h2>
+                    <h3>Numerical</h3>
+                    <p>Numerical Methods focuses on algorithms for solving mathematical<br>
+                        problems numerically. It includes techniques for approximation, <br>
+                        integration, differentiation, and solving equations, providing practical
+                        <br>solutions for complex computations..</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Probability%202/prob2.html">
+                    <h2>PB2</h2>
+                    <h3>Probability II</h3>
+                    <p>Probability 2 explores more advanced concepts in probability<br>
+                        theory, building on foundational principles to cover topics <br>
+                        like conditional probability, Bayes' theorem, and distributions<br>
+                    </p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../DS%20Methodology/Dsm.html">
+                    <h2>DSM</h2>
+                    <h3>DS Methodology</h3>
+                    <p>Data Science Methodology outlines a structured approach to<br>
+                        solving data problems, covering steps like data collection,<br>
+                        exploration, modeling, and evaluation. It ensures data-driven <br>
+                        decision-making and valuable insights for effective solutions.</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Data%20Base/DB.html">
+                    <h2>DBA</h2>
+                    <h3>Introduction To Data Base</h3>
+                    <p>
+                        Introduction to Databases provides an overview of how data <br>
+                        is organized, stored, and managed in digital systems , SQL, <br>
+                        data modeling, and the role of databases in modern applications</p>
+                    <button>Read more</button>
+
+                </a>
+            </li>
+            <li>
+                <a href="../404.html">
+                    <h2>ECO</h2>
+                    <h3>Economy Sciences</h3>
+                    <p>Economic science is the study of resource allocation<br>
+                        among individuals, businesses, and governments. It<br>
+                        examines the production, distribution, and consumption<br>
+                        of goods and services. The goal is to understand and predict<br>
+                        economic behavior and inform policy decisions.</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code : #7489378023 </span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>
