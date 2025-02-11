@@ -186,7 +186,7 @@ section{
 /*        background-position: 0 0;*/
 /*    }*/
 /*}*/
-@keyframes nebula-drift {
+/* @keyframes nebula-drift {
     0% {
         opacity: 0;
         transform: translateX(-20%) translateY(20%) scale(0.8);
@@ -202,7 +202,7 @@ section{
         transform: translateX(0) translateY(0) scale(1);
         filter: blur(0);
     }
-}
+} */
 @keyframes zero-gravity-float {
     0% {
         transform: translateY(0);
