@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../MDA/1212.jpg" type="image/x-icon">
+
+    <title>404 Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #000000;
+            overflow: hidden;
+            position: relative; /* Added for positioning balls */
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically on small screens */
+            align-items: center;
+            text-align: center; /* Center text for better mobile view */
+            max-width: 800px;
+            padding: 20px;
+            background-color: #000000;
+            box-shadow: 0 0 15px rgb(255, 255, 255);
+            border-radius: 8px;
+            z-index: 10;
+        }
+        .text {
+            padding: 20px;
+        }
+        .text h1 {
+            font-size: 72px;
+            margin: 0;
+            color: #ffb500;
+        }
+        .text p {
+            font-size: 21px;
+            margin: 20px 0;
+            color: white;
+        }
+        .text a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ffad00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.5s ease-in-out;
+        }
+        .text a:hover {
+            background-color: #ffb500;
+            transform: scale(1.14);
+        }
+        .image {
+            margin-top: 20px; /* Added margin for spacing */
+        }
+        .image img {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+        }
+        /* Styles for the yellow balls */
+        .ball {
+            position: absolute;
+            background-color: #ffb500;
+            border-radius: 50%;
+            z-index: 5;
+        }
+        .ball.ball1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 5%;
+        }
+        .ball.ball2 {
+            width: 110px;
+            height: 110px;
+            top: 60%;
+            right: 20%;
+        }
+        .ball.ball3 {
+            width: 150px;
+            height: 150px;
+            bottom: 10%;
+            left: 10%;
+        }
+        .ball.ball4 {
+            width: 250px;
+            height: 250px;
+            bottom: 60%;
+            right: 5%;
+        }
+        .ball.ball5 {
+            width: 25px;
+            height: 25px;
+            top: 35%;
+            right: 40%;
+        }
+        @media(max-width: 760px) {
+            .container {
+                padding: 10px; /* Reduce padding on small screens */
+            }
+            .text h1 {
+                font-size: 48px; /* Smaller font size for mobile */
+            }
+            .text p {
+                font-size: 18px; /* Smaller font size for mobile */
+            }
+            .ball.ball1 {
+                width: 200px;
+                height: 200px;
+                top: -20%;
+                left: -20%;
+            }
+            .ball.ball2 {
+                width: 80px;
+                height: 80px;
+                top: 80%;
+                right: 80%;
+            }
+            .ball.ball3 {
+                width: 100px;
+                height: 100px;
+                bottom: -5%;
+                left: 70%;
+            }
+            .ball.ball4 {
+                width: 150px;
+                height: 150px;
+                bottom: 50%;
+                right: -20%;
+            }
+            .ball.ball5 {
+                width: 100px;
+                height: 100px;
+                top: 60%;
+                right: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="text">
+        <h1>404</h1>
+        <p>Oops! The page you’re looking for can’t be found.</p>
+        <a href="index.html">Go to Homepage</a>
+    </div>
+    <div class="image">
+        <img src="../MDA/1212-error.jpg" alt="404 Image">
+    </div>
+</div>
+<div class="ball ball1"></div>
+<div class="ball ball2"></div>
+<div class="ball ball3"></div>
+<div class="ball ball4"></div>
+<div class="ball ball5"></div>
+</body>
+</html>
