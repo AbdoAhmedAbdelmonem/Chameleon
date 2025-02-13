@@ -40,6 +40,8 @@
         background: #000000;
         border: 1px solid #252727;
         text-align: left;
+        transition: 0.6s ease-in-out;
+
     }
   .tilesWrap li:hover {
       background: rgba(0, 0, 0, 0.75);
