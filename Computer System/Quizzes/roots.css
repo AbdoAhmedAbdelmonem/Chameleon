@@ -1,0 +1,18 @@
+:root{
+    --main-quiz: #15ce19;
+    --2nd-quiz: #119712;
+}
+
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    background:url("../../MDA/xr.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
+}
