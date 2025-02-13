@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../CSS/GATE8.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Baloo+Bhaijaan+2:wght@400..800&family=Blaka&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+  <title>3-2 Materials</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+<div class="main">
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="../MDA/panda2.png" class="img" width="150" height="102" alt="">
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="#" class="popo">About</a>
+    </nav>
+  </header>
+  <section>
+    <ul class="tilesWrap">
+      <li>
+        <a href="../Advanced%20Database%20Systems/ADB.html">
+          <h2>ADB</h2>
+          <h3>Advanced Database System</h3>
+          <p>Advanced Database is the study of complex data management systems and techniques for handling large-scale, distributed, and high-performance databases.</p>
+          <button>Read more</button>
+        </a>
+      </li>
+      <li>
+        <a href="../Algorithm%20Design/ALD.html">
+          <h2>ALD</h2>
+          <h3>Algorithm Design</h3>
+          <p>Algorithm Design is the study of creating efficient and optimized step-by-step procedures to solve computational problems. It explores techniques such as divide and conquer, dynamic programming, and greedy algorithms</p>
+          <button>Read more</button>
+        </a>
+      </li>
+      <li>
+        <a href="../Computer%20Networks/CPN.html">
+          <h2>CPN</h2>
+          <h3>Computer Networks</h3>
+          <p>Computer Networks is the study of communication systems that enable data exchange between devices. It explores network architectures, protocols, data transmission, and security mechanisms</p>
+          <button>Read more</button>
+        </a>
+      </li>
+      <li>
+        <a href="../Computer%20Intensive%20Statistical%20Methods/CIS.html">
+          <h2>CIS</h2>
+          <h3>Computer Intensive Statistical Methods</h3>
+          <p>Computer-Intensive Statistical Methods is the study of computational techniques used to analyze complex data through simulations and resampling methods.</p>
+          <button>Read more</button>
+        </a>
+      </li>
+      <li>
+        <a href="../Convex%20Optimization/CXO.html">
+          <h2>CXO</h2>
+          <h3>Convex Optimization</h3>
+          <p>Convex Optimization is the study of mathematical techniques for optimizing functions where the feasible region and objective function are convex. It explores methods such as gradient descent, interior-point algorithms, and duality theory. </p>
+          <button>Read more</button>
+        </a>
+      </li>
+      <li>
+        <a href="../Data%20Computation%20and%20Analysis/DCA.html">
+          <h2>DCA</h2>
+          <h3>Data Computation and Analysis</h3>
+          <p>Data Computation and Analysis is the study of techniques and algorithms for processing, analyzing, and interpreting large datasets. It explores data structures, statistical methods, and computational tools to extract meaningful insights.</p>
+          <button>Read more</button>
+        </a>
+      </li>
+      <li>
+        <a href="../Survey%20Methodology/SVM.html">
+          <h2>SVM</h2>
+          <h3>Survey Methodology</h3>
+          <p>Survey Methodology is the study of techniques for designing, conducting, and analyzing surveys to collect reliable data. It explores sampling methods, questionnaire design, data collection techniques, and statistical analysis.</p>
+          <button>Read more</button>
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="popup2">
+  <h2>Page Information</h2>
+  <span class="gran"> page code: #927290427 </span>
+  <br>
+  <br>
+  <hr>
+  <div class="gran" style="font-size: 30px">ChameGate Admins:</div>
+  <br>
+  <span class="gran" style="color: #28adff;font-weight: 1000"></span><br>
+  <span class="gran" style="color: #ffffff"></span><br>
+  <span class="gran" style="color: #ffffff"></span><br>
+  <span class="gran" style="color: #ffffff"></span><br>
+  <span class="gran" style="color: #ffffff"></span>
+  <div class="btn">
+    <button class="info-ok-btn">OK</button>
+  </div>
+</div>
+<script>
+  const main = document.querySelector('.main');
+  const about = document.querySelector('.popo');
+  const popup2 = document.querySelector('.popup2');
+  const ok = document.querySelector('.info-ok-btn');
+
+  about.onclick=()=>{
+    popup2.classList.add('active');
+    main.classList.add('active');
+  };
+  ok.onclick=()=>{
+    popup2.classList.remove('active');
+    main.classList.remove('active');
+  };
+</script>
+</body>
+</html>
