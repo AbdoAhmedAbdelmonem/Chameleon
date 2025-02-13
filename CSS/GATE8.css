@@ -41,6 +41,9 @@
         border: 1px solid #252727;
         text-align: left;
     }
+  .tilesWrap li:hover {
+      background: rgba(0, 0, 0, 0.75);
+  }
     .tilesWrap li h2 {
         font-size: 114px;
         margin: 0;
@@ -155,6 +158,16 @@
         background: -webkit-linear-gradient(to right, #2436ff, #efb94c);
         background: linear-gradient(to right, #c124ff, #029b05);
     }
+  .tilesWrap li:nth-child(7):before {
+      background: #f7530c;
+      background: -webkit-linear-gradient(to right, #4aff00, #706d6d);
+      background: linear-gradient(to right, #22ff00, #da1212);
+  }
+  .tilesWrap li:nth-child(8):before {
+      background: #28adff;
+      background: -webkit-linear-gradient(to right, #4aff00, #706d6d);
+      background: linear-gradient(to right, #9160f3, #f7530c);
+  }
     li{
         cursor: pointer;
     }
