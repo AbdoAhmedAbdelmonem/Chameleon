@@ -135,8 +135,11 @@ body.light{
     color: var(--main-color);
     display: none;
     animation: changeColors 390s infinite ease-in-out;
-
 }
+.popup2 .btn .info-ok-btn:hover {
+    transform: scale(1.05);
+}
+
 section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
@@ -431,7 +434,7 @@ span{
     width: 90vw;
     height: 80vh;
     background: linear-gradient(45deg, transparent 70%, var(--main-color) 70%);
-    z-index: 0;
+    z-index: -1;
     animation: slide-in-x 2s ease-in-out forwards;
 
 }
@@ -442,7 +445,7 @@ span{
     width: 150vw;
     height: 116vh;
     background: linear-gradient(135deg, transparent 70%, var(--main-color) 70%);
-    z-index: -1;
+    z-index: -2;
     animation: slide-in-x 2s ease-in-out forwards;
 
 }
@@ -968,7 +971,7 @@ span{
     color: #fff;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
 }
 .popup2 .btn {
     display: flex;
@@ -1211,8 +1214,9 @@ span{
         height: 40px;
         font-size: 14px;
         overflow: auto;
-
+        transition: 0.3s ease-in-out;
     }
+
     .background-y,.background-x{
         display: none;
     }
@@ -1379,7 +1383,7 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -100;
     object-fit: cover;
 }
 #background-audio {
@@ -1388,9 +1392,10 @@ span{
 
 .background-x img{
     margin-left: 1000px;
-    z-index: 1100;
+    z-index: -5;
 }
 .background-y img{
     margin-top: 300px;
     margin-left: 1800px;
+    z-index: -5;
 }
