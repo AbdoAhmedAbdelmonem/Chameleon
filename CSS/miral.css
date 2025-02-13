@@ -83,7 +83,13 @@ h1 {
 .card-header{
     font-weight: bold;
     font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
 }
+
 .user-name,.size{
     font-size: 10px;
 }
