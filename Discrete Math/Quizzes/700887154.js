@@ -1,0 +1,152 @@
+let question = [//lecture 1 (intro to discrete math)
+    {
+        numb: 1,type:"Multiple Choices",
+        question: "What is the primary focus of discrete mathematics?",
+        options: ["Continuous data", "Discrete objects and their properties", "Statistical analysis", "Calculus"],
+        answer: "Discrete objects and their properties",
+    },
+    {
+        numb: 2,type: "Multiple Choices",
+        question: "Which of the following is NOT a topic in discrete mathematics?",
+        options: ["Logic", "Set Theory", "Probability", "Differential Equations"],
+        answer: "Differential Equations",
+    },
+    {
+        numb: 3,type: "Multiple Choices",
+        question: "What is a proposition in logic?",
+        options: ["A question", "A command", "A declarative sentence that is either true or false", "An exclamation"],
+        answer: "A declarative sentence that is either true or false",
+    },
+    {
+        numb: 4,type: "Multiple Choices",
+        question: "Which of the following is an example of a proposition?",
+        options: ["What time is it?", "Close the door.", "2 + 3 = 5", "Ha ha ha"],
+        answer: "2 + 3 = 5",
+    },
+    {
+        numb: 5,type: "Multiple Choices",
+        question: "What is the negation of the proposition 'Cairo is the capital of Egypt'?",
+        options: ["Cairo is the capital of Egypt.", "Cairo is not the capital of Egypt.", "Cairo might be the capital of Egypt.", "Cairo is a city in Egypt."],
+        answer: "Cairo is not the capital of Egypt."
+    },
+    {
+        numb: 6,type: "Multiple Choices",
+        question: "Which operator is used to denote 'and' in propositional logic?",
+        options: ["∨", "∧", "⊕", "→"],
+        answer: "∧",
+    },
+    {
+        numb: 7,type: "Multiple Choices",
+        question: "What is the truth value of the conjunction p ∧ q if p is true and q is false?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "False"
+    },
+    {
+        numb: 8,type: "Multiple Choices",
+        question: "Which of the following is the disjunction operator?",
+        options: ["∧", "∨", "⊕", "→"],
+        answer: "∨",
+    },
+    {
+        numb: 9,type: "Multiple Choices",
+        question: "What is the truth value of the disjunction p ∨ q if p is false and q is true?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "True",
+    },
+    {
+        numb: 10,type: "Multiple Choices",
+        question: "What is the exclusive OR (XOR) of p and q if p is true and q is true?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "False",
+    },
+    {
+        numb: 11,type: "Multiple Choices",
+        question: "What is the conditional statement p → q if p is true and q is false?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "False",
+    },
+    {
+        numb: 12,type: "Multiple Choices",
+        question: "What is the converse of the conditional statement p → q?",
+        options: ["q → p", "¬p → ¬q", "¬q → ¬p", "p ∧ q"],
+        answer: "q → p",
+    },
+    {
+        numb: 13,type: "Multiple Choices",
+        question: "What is the contrapositive of the conditional statement p → q?",
+        options: ["q → p", "¬p → ¬q", "¬q → ¬p", "p ∧ q"],
+        answer: "¬q → ¬p",
+    },
+    {
+        numb: 14,type: "Multiple Choices",
+        question: "Which of the following is equivalent to the conditional statement p → q?",
+        options: ["Converse", "Inverse", "Contrapositive", "Disjunction"],
+        answer: "Contrapositive",
+    },
+    {
+        numb: 15,type: "Multiple Choices",
+        question: "What is the biconditional statement p ↔ q equivalent to?",
+        options: ["p → q", "q → p", "(p → q) ∧ (q → p)", "p ∨ q"],
+        answer: "(p → q) ∧ (q → p)",
+    },
+    {
+        numb: 16,type: "Multiple Choices",
+        question: "Which of the following is the correct precedence order for logical operators?",
+        options: ["[¬, ∧, ∨, →, ↔]", "[∧, ∨, ¬, →, ↔]", "[¬, ∨, ∧, →, ↔]", "[∧, ¬, ∨, →, ↔]"],
+        answer: "[¬, ∧, ∨, →, ↔]",
+    },
+    {
+        numb: 17,type: "Multiple Choices",
+        question: "What is the truth value of the compound proposition (p ∨ ¬q) → (p ∧ q) if p is true and q is false?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "False",
+    },
+    {
+        numb: 18,type: "Multiple Choices",
+        question: "Which of the following is a compound proposition?",
+        options: ["p", "¬p", "p ∧ q", "All of the above"],
+        answer: "All of the above",
+    },
+    {
+        numb: 19,type: "Multiple Choices",
+        question: "What is the truth value of the proposition 'The moon is made of cheese'?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "False",
+    },
+    {
+        numb: 20,type: "Multiple Choices",
+        question: "Which of the following is a propositional variable?",
+        options: ["p", "2 + 3 = 5", "Today is Friday", "All of the above"],
+        answer: "p",
+    },
+    {
+        numb: 21,type: "Multiple Choices",
+        question: "What is the negation of the proposition 'Today is Friday'?",
+        options: ["Today is not Friday", "Today is Monday", "Today is a weekend", "Today is a holiday"],
+        answer: "Today is not Friday",
+    },
+    {
+        numb: 22,type: "Multiple Choices",
+        question: "Which of the following is an example of a non-propositional sentence?",
+        options: ["2 + 3 = 5", "What time is it?", "Cairo is the capital of Egypt", "Today is Friday"],
+        answer: "What time is it?",
+    },
+    {
+        numb: 23,type: "Multiple Choices",
+        question: "What is the truth value of the proposition 'x + 3 = 7' for x = 4?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "True",
+    },
+    {
+        numb: 24,type: "Multiple Choices",
+        question: "Which of the following is a logical operator?",
+        options: ["And", "Or", "Not", "All of the above"],
+        answer: "All of the above",
+    },
+    {
+        numb: 25,type: "Multiple Choices",
+        question: "What is the truth value of the proposition 'The dog is a bird'?",
+        options: ["True", "False", "Undefined", "Neither"],
+        answer: "False",
+    },
+];

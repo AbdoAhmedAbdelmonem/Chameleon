@@ -1,0 +1,142 @@
+let question = [
+    {
+        numb: 1,
+        type: "Multiple Choices",
+        question: "What is a hash table?",
+        options: ["A data structure that maps keys to values", "A data structure that stores elements in a sorted order", "A data structure that stores elements in a linked list", "A data structure that stores elements in a stack"],
+        answer: "A data structure that maps keys to values",
+    },
+    {
+        numb: 2,
+        type: "Multiple Choices",
+        question: "What is the purpose of a hash function?",
+        options: ["To map keys to array indices", "To sort elements in a hash table", "To store elements in a linked list", "To delete elements from a hash table"],
+        answer: "To map keys to array indices",
+    },
+    {
+        numb: 3,
+        type: "Multiple Choices",
+        question: "What is a collision in a hash table?",
+        options: ["When two keys map to the same index", "When a key is not found in the hash table", "When the hash table is full", "When the hash function is not working"],
+        answer: "When two keys map to the same index",
+    },
+    {
+        numb: 4,
+        type: "Multiple Choices",
+        question: "What is the time complexity of searching for an element in a hash table?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        answer: "O(1)",
+    },
+    {
+        numb: 5,
+        type: "Multiple Choices",
+        question: "What is the time complexity of inserting an element into a hash table?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        answer: "O(1)",
+    },
+    {
+        numb: 6,
+        type: "Multiple Choices",
+        question: "What is the time complexity of deleting an element from a hash table?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        answer: "O(1)",
+    },
+    {
+        numb: 7,
+        type: "Multiple Choices",
+        question: "What is the main advantage of using a hash table?",
+        options: ["Fast access to elements", "Sorted storage of elements", "Low memory usage", "Ease of implementation"],
+        answer: "Fast access to elements",
+    },
+    {
+        numb: 8,
+        type: "Multiple Choices",
+        question: "What is the main disadvantage of using a hash table?",
+        options: ["Risk of collisions", "Slow access to elements", "High memory usage", "Hard to implement"],
+        answer: "Risk of collisions",
+    },
+    {
+        numb: 9,
+        type: "Multiple Choices",
+        question: "What is the purpose of linear probing in hash tables?",
+        options: ["To resolve collisions", "To sort elements in a hash table", "To delete elements from a hash table", "To insert elements into a hash table"],
+        answer: "To resolve collisions",
+    },
+    {
+        numb: 10,
+        type: "Multiple Choices",
+        question: "What is the time complexity of resolving collisions using linear probing?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        answer: "O(n)",
+    },
+    {
+        numb: 11,
+        type: "Multiple Choices",
+        question: "What is the purpose of chaining in hash tables?",
+        options: ["To resolve collisions", "To sort elements in a hash table", "To delete elements from a hash table", "To insert elements into a hash table"],
+        answer: "To resolve collisions",
+    },
+    {
+        numb: 12,
+        type: "Multiple Choices",
+        question: "What is the time complexity of resolving collisions using chaining?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        answer: "O(1)",
+    },
+    {
+        numb: 13,
+        type: "Multiple Choices",
+        question: "What is the main advantage of using chaining over linear probing?",
+        options: ["Better handling of collisions", "Faster access to elements", "Lower memory usage", "Easier implementation"],
+        answer: "Better handling of collisions",
+    },
+    {
+        numb: 14,
+        type: "Multiple Choices",
+        question: "What is the main disadvantage of using chaining over linear probing?",
+        options: ["Higher memory usage", "Slower access to elements", "Harder implementation", "Risk of infinite loops"],
+        answer: "Higher memory usage",
+    },
+    {
+        numb: 15,
+        type: "Multiple Choices",
+        question: "What is the purpose of a hash function in a hash table?",
+        options: ["To map keys to array indices", "To sort elements in a hash table", "To delete elements from a hash table", "To insert elements into a hash table"],
+        answer: "To map keys to array indices",
+    },
+    {
+        numb: 16,
+        type: "Multiple Choices",
+        question: "Which hashing method uses linked lists to store multiple elements in the same bucket?",
+        options: ["Open addressing", "Linear probing", "Chaining", "Quadratic probing"],
+        answer: "Chaining"
+    },
+    {
+        numb: 17,
+        type: "Multiple Choices",
+        question: "What is the worst-case time complexity of searching in a hash table?",
+        options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        answer: "O(n)"
+    },
+    {
+        numb: 18,
+        type: "Multiple Choices",
+        question: "Which property makes a good hash function?",
+        options: ["Deterministic and uniform distribution", "Generating the same hash value for all keys", "Being dependent on input order", "Generating hash values that are easy to predict"],
+        answer: "Deterministic and uniform distribution"
+    },
+    {
+        numb: 19,
+        type: "Multiple Choices",
+        question: "What is the primary disadvantage of hashing?",
+        options: ["Inefficient for large datasets", "Collisions", "Consumes too much memory", "Takes too long to compute"],
+        answer: "Collisions"
+    },
+    {
+        numb: 20,
+        type: "Multiple Choices",
+        question: "What is a collision in hashing?",
+        options: ["When two keys generate the same hash value", "When a hash table is full", "When data is lost", "When hashing fails"],
+        answer: "When two keys generate the same hash value"
+    },
+]
