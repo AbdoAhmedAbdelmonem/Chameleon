@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/GATE8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Baloo+Bhaijaan+2:wght@400..800&family=Blaka&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>1-2 Materials</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+<div class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../../MDA/panda2.png" class="img" width="150" height="102" alt="">
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <section>
+        <ul class="tilesWrap">
+            <li>
+                <a href="../Programming 2/prog2.html">
+                    <h2>PR2</h2>
+                    <h3>Programming 2</h3>
+                    <p>focuses on Object-Oriented Programming (OOP),<br> teaching core concepts such as classes, inheritance, <br>polymorphism, and encapsulation.</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Probability%201/prop1.html">
+                    <h2>PB1</h2>
+                    <h3>Probability 1</h3>
+                    <p>introduces the foundational concepts of probability <br>
+                        theory, including basic probability rules, random<br>
+                        variables, distributions, expectation, and variance.</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Data%20Structures/data-str.html">
+                    <h2>DSA</h2>
+                    <h3>Data Structures And Algorithms</h3>
+                    <p>Data Structures involve organizing and storing data efficiently <br>
+                        for optimal access and modification. Common types include arrays. <br>
+                        linked lists, stacks, queues, and trees,</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Ai/ai.html">
+                    <h2>ARI</h2>
+                    <h3>Intro to Artificial Intelligence</h3>
+                    <p>focuses on searching Algorithms like DFS,BFS,UCS <br>and more of hierarchical searching Methods , <br>Machine learning and Agents </p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Discrete%20Math/dm.html">
+                    <h2>DIM</h2>
+                    <h3>Discrete Math</h3>
+                    <p>Discrete Mathematics explores mathematical
+                        structures<br> that are fundamentally discrete rather than continuous,<br>
+                        including topics such as logic, set theory and graph theory</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Innovation/inno.html">
+                    <h2>INO</h2>
+                    <h3>Innovation</h3>
+                    <p>involves understanding how to create and manage new ventures<br>
+                        focusing on identifying opportunities, developing innovative <br>
+                        solutions, and navigating the challenges of a growing business.</p>
+                    <button>Read more</button>
+                </a>
+                <span style="color: #ffb500;text-align: center">(Elective)</span>
+            </li>
+            <li style="text-align: right">
+                <a href="../Fitness/fitness.html">
+                    <h2>FIT</h2>
+                    <h3>اللياقة البدنية</h3>
+                    <p>علم اللياقة البدنية هو دراسة تحسين الصحة والقدرة البدنية من خلال التمارين والنشاط البدني. فهو يبحث في تأثير الرياضة على الجسم، وأساليب التدريب، والتغذية السليمة. والهدف هو تعزيز اللياقة والصحة العامة وتحسين الأداء البدني والوقاية من الأمراض.</p>
+                    <button>تعرف على المزيد</button>
+                </a>
+                <span style="color: #ffb500;text-align: center">(Elective)</span>
+            </li>
+        </ul>
+    </section>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code : #6433611455</span>
+    <br>
+    <br>
+    <hr>
+    <div class="gran" style="font-size: 30px">ChameGate Admins:</div>
+    <br>
+    <span class="gran" style="color: #28adff;font-weight: 1000" >Mohammed Allam</span><br>
+    <span class="gran" style="color: #ffffff">Menah Eslam</span><br>
+    <span class="gran" style="color: #ffffff">Fares Ahmed</span><br>
+    <span class="gran" style="color: #ffffff">Nour"Eldeen" Ali</span><br>
+    <span class="gran" style="color: #ffffff">Abdelrahman Mosharafa</span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

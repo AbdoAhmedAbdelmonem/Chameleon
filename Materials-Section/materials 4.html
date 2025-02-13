@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/GATE8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Baloo+Bhaijaan+2:wght@400..800&family=Blaka&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>2-2 Materials</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+<div class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../MDA/panda2.png" class="img" width="150" height="102" alt="">
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <section>
+        <ul class="tilesWrap">
+            <li>
+                <a href="../CloudComputing/cloud.html">
+                    <h2>CLC</h2>
+                    <h3>Cloud Computing</h3>
+                    <p>Cloud computing science is the study of designing and managing computing resources over the internet. It explores data storage, information processing, and cloud service delivery</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Data%20Mining/DATA%20MINIG.html">
+                    <h2>DMA</h2>
+                    <h3>Data Mining and Analytics</h3>
+                    <p>Data Mining and Analytics is the study of extracting useful information and patterns from large datasets. It explores techniques for data collection, processing, and interpretation</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Data%20Science%20Tools/DSTS.html">
+                    <h2>DST</h2>
+                    <h3>Data Science Tools and Software</h3>
+                    <p>Data Science Tools and Software is the study of technologies and platforms used for data analysis, processing, and visualization. It explores programming languages, machine learning frameworks, and data management systems</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Machine%20Learning/ML.html">
+                    <h2>MLG</h2>
+                    <h3>Machine Learning</h3>
+                    <p>Machine Learning (ML) is the study of algorithms and statistical models that enable computers to learn from data and make predictions. It explores supervised and unsupervised learning, neural networks, and pattern recognition</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Regression%20Analysis/REG.html">
+                    <h2>RGA</h2>
+                    <h3>Regression Analysis</h3>
+                    <p>Regression Analysis is the study of statistical techniques used to examine relationships between variables and make predictions. It explores linear and nonlinear models, correlation, and trend forecasting</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li style="text-align: right">
+                <a href="../First%20Aids/FAD.html">
+                    <h2>FAD</h2>
+                    <h3>اسعافات اولية</h3>
+                    <p>علم الإسعافات الأولية هو دراسة التقنيات والإجراءات الطبية الأساسية المستخدمة لتقديم الرعاية الطارئة للمصابين قبل وصول المساعدة الطبية المتخصصة. فهو يبحث في طرق التعامل مع الإصابات، والكسور، والنزيف، والحالات الطارئة مثل النوبات القلبية والاختناق.</p>
+                    <button>تعرف على المزيد</button>
+                </a>
+                <span style="color: #ffb500;text-align: center">(Elective)</span>
+            </li>
+            <li style="text-align: right">
+                <a href="../Pets%20breeding/PBD.html">
+                    <h2>PBD</h2>
+                    <h3>تربية حيوانات اليفة</h3>
+                    <p>علم تربية الحيوانات الأليفة هو دراسة رعاية وتغذية الحيوانات المنزلية لضمان صحتها ورفاهيتها. فهو يبحث في سلوك الحيوانات، والاحتياجات الغذائية، والرعاية الطبية، وأساليب التدريب.</p>
+                    <button>تعرف على المزيد</button>
+                </a>
+                <span style="color: #ffb500;text-align: center">(Elective)</span>
+            </li>
+        </ul>
+    </section>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code: #7489378023 </span>
+    <br>
+    <br>
+    <hr>
+    <div class="gran" style="font-size: 30px">ChameGate Admins:</div>
+    <br>
+    <span class="gran" style="color: #28adff;font-weight: 1000">Mostafa El-Hosseny</span><br>
+    <span class="gran" style="color: #ffffff">Maram Rashed</span><br>
+    <span class="gran" style="color: #ffffff">Mahmoud Ezat</span><br>
+    <span class="gran" style="color: #ffffff">Abdelrahman Ahmed</span><br>
+    <span class="gran" style="color: #ffffff">Abdelrahman Elbrens</span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>

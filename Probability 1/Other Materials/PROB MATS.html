@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="../../../MDA/1212.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/miral.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Probability 1 Lectures</title>
+</head>
+<body>
+<div class="main">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container">
+        <header>
+            <img src="../../MDA/mirul.png" class="logo">
+            <nav>
+                <a href="../prop1.html">Home</a>
+                <a href="#" class="popo">About</a>
+                <a id="backButton" style="background: none; border: none; color: white; cursor: pointer; margin-left: 20px; font-size: 16px;">Back</a>
+            </nav>
+        </header>
+        <hr>
+        <h1 class="heading">Loading...</h1>
+        <hr>
+        <div id="fileGrid" class="grid pdf-list"></div>
+        <div id="noFiles" class="no-files" style="display: none; height: 190%; justify-content: center; text-align: center;">
+            <img src="https://cdn-icons-png.flaticon.com/256/6983/6983865.png" alt="" style="max-width: 100%; height: auto;justify-self: center;">
+            <p>It seems no materials here</p><br>
+            <p style="margin-top: -30px;">Contact support if you think something is wrong. </p>
+        </div>
+    </div>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"></span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<div class="file-details-popup">
+    <h2>File Details</h2>
+    <div class="file-details-content">
+        <p><strong>Uploader:</strong> <span id="fileUploader"></span></p>
+        <p><strong>Time of Upload:</strong> <span id="fileUploadTime"></span></p>
+        <p style="color: #ffa500">this Message Will Automatically disappear after 5 seconds</p>
+        <div class="btn">
+            <button id="downloadButton">Download PDF</button>
+            <button class="close-details-btn">Close</button>
+        </div>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const backButton = document.getElementById('backButton');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+    const heading = document.querySelector(".heading");
+    const fileGrid = document.getElementById("fileGrid");
+    const noFiles = document.getElementById("noFiles");
+    const gran = document.querySelector(".gran");
+    const fileDetailsPopup = document.querySelector('.file-details-popup');
+    const fileUploader = document.getElementById('fileUploader');
+    const fileUploadTime = document.getElementById('fileUploadTime');
+    const downloadButton = document.getElementById('downloadButton');
+    const closeDetailsBtn = document.querySelector('.close-details-btn');
+
+    about.onclick = () => {
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+
+    ok.onclick = () => {
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+    const driveFolderId = "14WxYDv-3V5hBNF2FTrLEKkZpPQJjwyUb";
+    const apiKey = "AIzaSyALQYyTG9yMs9Xd2leIqYgcxybOzFWciY0";
+    let folderHistory = [driveFolderId];
+    let currentFolderName = "Eighth Term";
+
+    async function fetchFolderName(folderId = driveFolderId) {
+        const response = await fetch(
+            `https://www.googleapis.com/drive/v3/files/${folderId}?key=${apiKey}&fields=name`
+        );
+        const data = await response.json();
+        currentFolderName = data.name || "Folder Name Not Found";
+        heading.innerText = currentFolderName;
+        gran.innerHTML = `Page Code : ${currentFolderName}`;
+    }
+
+    async function fetchDriveItems(folderId = driveFolderId) {
+        const response = await fetch(
+            `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType,size,owners,createdTime,shortcutDetails)`
+        );
+        const data = await response.json();
+        fileGrid.innerHTML = "";
+        noFiles.style.display = "none";
+        if (!data.files || data.files.length === 0) {
+            noFiles.style.display = "grid";
+            heading.style.display = "block";
+            return;
+        }
+        data.files.sort((a, b) => {
+            const nameA = a.name;
+            const nameB = b.name;
+            const numA = parseFloat(nameA);
+            const numB = parseFloat(nameB);
+            if (!isNaN(numA) && !isNaN(numB)) {
+                return numA - numB;
+            }
+            return nameA.localeCompare(nameB);
+        });
+
+        for (const item of data.files) {
+            let targetItem = item;
+            if (item.mimeType === "application/vnd.google-apps.shortcut") {
+                const shortcutResponse = await fetch(
+                    `https://www.googleapis.com/drive/v3/files/${item.shortcutDetails.targetId}?key=${apiKey}&fields=id,name,mimeType,size,owners,createdTime`
+                );
+                const shortcutData = await shortcutResponse.json();
+                targetItem = shortcutData;
+            }
+
+            const div = document.createElement("div");
+            let ownerName = targetItem.owners && targetItem.owners.length > 0 ? targetItem.owners[0].displayName : 'Unknown';
+            if (ownerName === "tokyo9900777" || ownerName === "xofofozahmed" || ownerName === "poz659312") {
+                ownerName = 'Chameleon LLC';
+            } else if (ownerName === "tlmostafa20051650ti") {
+                ownerName = "TLMO";
+            } else if (ownerName === "mahmoudezat507") {
+                ownerName = "Mahmoud Ezat";
+            } else if (ownerName === "mohamedlolbarca4") {
+                ownerName = "ZOQLOT";
+            }
+            let itemClass = "pdf-item";
+
+            if (targetItem.mimeType === "application/pdf") {
+                if (targetItem.name.includes("Levo") || targetItem.name.includes("Levi") || targetItem.name.includes("Chameleon")) {
+                    itemClass = "diamond-item";
+                } else if (targetItem.name.includes("GI") || targetItem.name.includes("TLMO") || targetItem.name.includes("Prince") || targetItem.name.includes("Bebo") || targetItem.name.includes("Habiba") || targetItem.name.includes("مش عارف اسمي") || targetItem.name.includes("Agent 64")) {
+                    itemClass = "golden-item";
+                }
+            } else if (targetItem.mimeType === "application/vnd.google-apps.folder") {
+                itemClass = "folder-item";
+            }
+            div.className = itemClass;
+            div.innerHTML = `
+            <div class="card-header">${targetItem.name}</div>
+            <div class="user-name"><i class='bx bx-id-card' style='color:#000000'></i> Uploaded by: ${ownerName}</div>
+            <div class="size"><i class='bx bx-memory-card' style='color:#000000'></i> Size: ${targetItem.size ? (targetItem.size / (1024 * 1024)).toFixed(4) + ' MB' : 'N/A'}</div>
+            <i class='bx bx-dots-vertical-rounded three-dots'></i>
+        `;
+
+            // Create three dots icon
+            const threeDots = div.querySelector('.three-dots');
+            threeDots.onclick = (e) => {
+                e.stopPropagation();
+                showFileDetails(targetItem, ownerName);
+            };
+
+            if (targetItem.mimeType === "application/pdf") {
+                div.onclick = () => window.open(`https://drive.google.com/file/d/${targetItem.id}/view`, '_blank');
+            } else if (targetItem.mimeType === "application/vnd.google-apps.folder") {
+                div.onclick = () => openFolder(targetItem.id);
+            } else {
+                const fileLink = `https://drive.google.com/file/d/${targetItem.id}/view`;
+                div.onclick = () => window.open(fileLink, '_blank');
+            }
+            fileGrid.appendChild(div);
+        }
+    }
+
+    function showFileDetails(item, uploader) {
+        fileUploader.innerText = uploader;
+        fileUploadTime.innerText = new Date(item.createdTime).toLocaleString();
+        downloadButton.onclick = () => window.open(`https://drive.google.com/uc?id=${item.id}&export=download`, '_blank');
+        fileDetailsPopup.classList.add('active');
+        setTimeout(() => {
+            closePopup();
+        }, 5000);
+    }
+
+    function closePopup() {
+        fileDetailsPopup.classList.remove('active');
+    }
+
+    closeDetailsBtn.onclick = () => {
+        fileDetailsPopup.classList.remove('active');
+    };
+
+    function openFolder(folderId) {
+        folderHistory.push(folderId);
+        fetchFolderName(folderId);
+        fetchDriveItems(folderId);
+    }
+
+    function goBack() {
+        if (folderHistory.length > 1) {
+            folderHistory.pop();
+            const previousFolderId = folderHistory[folderHistory.length - 1];
+            fetchFolderName(previousFolderId);
+            fetchDriveItems(previousFolderId);
+        }
+    }
+
+    backButton.onclick = goBack;
+    window.addEventListener('popstate', goBack);
+    fetchFolderName();
+    fetchDriveItems();
+</script>
+</body>
+</html>
