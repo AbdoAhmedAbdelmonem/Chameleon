@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MDA/1212.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/GATE8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Baloo+Bhaijaan+2:wght@400..800&family=Blaka&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>4-2 Materials</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+<div class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../MDA/panda2.png" class="img" width="150" height="102" alt="">
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <section>
+        <ul class="tilesWrap">
+            <li>
+                <a href="../Bayesian%20Statistics/BYS.html">
+                    <h2>BYS</h2>
+                    <h3>Bayesian Statistics</h3>
+                    <p>Bayesian Statistics is the study of probabilistic methods that update beliefs based on new evidence using Bayes' theorem. It explores prior and posterior distributions, Bayesian inference, and applications in decision-making and machine learning</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Distributed%20Data%20Analysis/DDA.html">
+                    <h2>DDA</h2>
+                    <h3>Distributed Data Analysis</h3>
+                    <p>Distributed Data Analysis is the study of techniques for processing and analyzing large datasets across multiple machines or systems. It explores parallel computing, distributed databases, and frameworks like Hadoop and Spark</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Social%20Data%20Analytics/SDA.html">
+                    <h2>SDA</h2>
+                    <h3>Social Data Analysis</h3>
+                    <p>Social Data Analysis is the study of techniques for collecting, processing, and interpreting data from social interactions, networks, and behaviors. It explores methods such as sentiment analysis, network analysis, and trend detection</p>
+                    <button>Read more</button>
+                </a>
+            </li>
+            <li>
+                <a href="../Stream%20Processing/STP.html">
+                    <h2>STP</h2>
+                    <h3>Stream Processing</h3>
+                    <p>Stream Processing is the study of real-time data processing techniques that analyze and act on continuous data streams. It explores frameworks like Apache Kafka, Apache Flink, and Spark Streaming, focusing on low-latency computations, event-driven architectures, and fault tolerance. </p>
+                    <button>Read more</button>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<div class="popup2">
+    <h2>Page Information</h2>
+    <span class="gran"> page code: #988878798 </span>
+    <br>
+    <br>
+    <hr>
+    <div class="gran" style="font-size: 30px">ChameGate Admins:</div>
+    <br>
+    <span class="gran" style="color: #28adff;font-weight: 1000"></span><br>
+    <span class="gran" style="color: #ffffff"></span><br>
+    <span class="gran" style="color: #ffffff"></span><br>
+    <span class="gran" style="color: #ffffff"></span><br>
+    <span class="gran" style="color: #ffffff"></span>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script>
+    const main = document.querySelector('.main');
+    const about = document.querySelector('.popo');
+    const popup2 = document.querySelector('.popup2');
+    const ok = document.querySelector('.info-ok-btn');
+
+    about.onclick=()=>{
+        popup2.classList.add('active');
+        main.classList.add('active');
+    };
+    ok.onclick=()=>{
+        popup2.classList.remove('active');
+        main.classList.remove('active');
+    };
+</script>
+</body>
+</html>
