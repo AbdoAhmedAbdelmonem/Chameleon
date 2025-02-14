@@ -308,8 +308,18 @@ span{
     margin: 3rem 1.5rem 3rem 0;
     text-decoration: none;
     transition: 0.3s ease-in-out;
-    animation: nebula-drift 1s ease-in-out forwards;
-
+    animation: opacity 3s ease-in-out forwards;
+}
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .social-icons a:hover{
     color:var(--white-color);
