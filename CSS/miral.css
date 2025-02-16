@@ -425,3 +425,6 @@ h1 {
    transform: translateY(-50%);
    cursor: pointer;
 }
+.no-files p{
+    font-family: "Rubik",sans-serif;
+}
