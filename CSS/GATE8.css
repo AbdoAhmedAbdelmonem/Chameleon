@@ -40,8 +40,7 @@
         background: #000000;
         border: 1px solid #252727;
         text-align: left;
-        transition: 0.6s ease-in-out;
-
+        transition: 0.5s ease-in-out;
     }
   .tilesWrap li:hover {
       background: rgba(0, 0, 0, 0.75);
@@ -57,20 +56,20 @@
     }
     .tilesWrap li h3 {
         font-size: 30px;
-        color: #b7b7b7;
+        color: #ffffff;
         margin-bottom: 5px;
     }
     .tilesWrap li p {
         font-size: 16px;
         line-height: 18px;
-        color: #b7b7b7;
+        color: #ffffff;
         margin-top: 5px;
     }
     .tilesWrap li button {
         background: transparent;
-        border: 1px solid #b7b7b7;
+        border: 1px solid #ffffff;
         padding: 10px 20px;
-        color: #b7b7b7;
+        color: #ffffff;
         border-radius: 3px;
         position: relative;
         transition: all 0.3s ease-in-out;
@@ -84,7 +83,7 @@
         position: absolute;
         height: 100%;
         width: 120%;
-        background: #b7b7b7;
+        background: #ffffff;
         top: 0;
         opacity: 0;
         left: -140px;
@@ -354,4 +353,47 @@
         pointer-events: none;
       overflow: hidden;
  }
-    
+  /* Add your existing CSS here */
+  /* Add styles for the mobile menu */
+  .nav-links {
+      display: flex;
+      align-items: center;
+  }
+
+  .nav-links a {
+      margin: 0 15px;
+  }
+
+  .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px; /* Adjust based on your header height */
+          left: 0;
+          background-color: rgba(0,0,0,0.4);
+          width: 100%;
+          z-index: 1000;
+          justify-items: center;
+      }
+
+      .nav-links.active {
+          display: flex;
+          text-align: center;
+          padding: 20px;
+          border-radius: 23px;
+          backdrop-filter: blur(13px);
+      }
+
+      .menu-icon {
+          display: block;
+      }
+  }
