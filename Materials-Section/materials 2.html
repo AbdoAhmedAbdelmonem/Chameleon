@@ -18,10 +18,11 @@
         <a href="#" class="logo">
             <img src="../../MDA/panda2.png" class="img" width="150" height="102" alt="">
         </a>
-        <nav class="nav-links">
-            <a href="../index.html">🏠</a>
-            <a href="https://docs.google.com/spreadsheets/d/1RIXgOlj5eQVzWrgfcWcFFqQoWdGM53slrEPzFGVTBu4/edit?usp=drive_link">📄</a>
-            <a href="#" class="popo">❔</a>
+        <div class="menu-icon" id="menu-icon">☰</div> <!-- Hamburger icon -->
+        <nav class="nav-links" id="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="popo">About</a>
+            <a href="https://docs.google.com/spreadsheets/d/1RIXgOlj5eQVzWrgfcWcFFqQoWdGM53slrEPzFGVTBu4/edit?usp=drive_link">Assignments</a>
         </nav>
     </header>
     <section>
@@ -103,11 +104,11 @@
     <hr>
     <div class="gran" style="font-size: 30px">ChameGate Admins:</div>
     <br>
-    <span class="gran" style="color: #28adff;font-weight: 1000" >- Mohammed Allam</span><br>
-    <span class="gran" style="color: #ffffff">- Menah Eslam</span><br>
-    <span class="gran" style="color: #ffffff">- Fares Ahmed</span><br>
-    <span class="gran" style="color: #ffffff">- Nour"Eldeen" Ali</span><br>
-    <span class="gran" style="color: #ffffff">- Abdelrahman Mosharafa</span>
+    <span class="gran" style="color: #28adff;font-weight: 1000" >Mohammed Allam</span><br>
+    <span class="gran" style="color: #ffffff">Menah Eslam</span><br>
+    <span class="gran" style="color: #ffffff">Fares Ahmed</span><br>
+    <span class="gran" style="color: #ffffff">Nour"Eldeen" Ali</span><br>
+    <span class="gran" style="color: #ffffff">Abdelrahman Mosharafa</span>
     <div class="btn">
         <button class="info-ok-btn">OK</button>
     </div>
@@ -117,14 +118,22 @@
     const about = document.querySelector('.popo');
     const popup2 = document.querySelector('.popup2');
     const ok = document.querySelector('.info-ok-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
 
-    about.onclick=()=>{
+    about.onclick = () => {
         popup2.classList.add('active');
         main.classList.add('active');
     };
-    ok.onclick=()=>{
+
+    ok.onclick = () => {
         popup2.classList.remove('active');
         main.classList.remove('active');
+    };
+
+    // Toggle mobile menu
+    menuIcon.onclick = () => {
+        navLinks.classList.toggle('active');
     };
 </script>
 </body>
