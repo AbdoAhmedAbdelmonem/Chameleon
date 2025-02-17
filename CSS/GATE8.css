@@ -410,8 +410,7 @@
   .btn-53 {
       -webkit-tap-highlight-color: transparent;
       -webkit-appearance: button;
-      background-color: #000;
-      background-image: none;
+      background: rgba(255, 255, 255, 0.02);
       color: #fff;
       cursor: pointer;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
