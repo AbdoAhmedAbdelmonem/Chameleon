@@ -18,6 +18,7 @@
         <a href="#" class="logo">
             <img src="../MDA/panda2.png" class="img" width="150" height="102" alt="">
         </a>
+        <div class="menu-icon" id="menu-icon">☰</div> <!-- Hamburger icon -->
         <nav class="nav-links">
             <a href="../index.html">Home</a>
             <a href="#" class="popo">About</a>
@@ -108,14 +109,22 @@
     const about = document.querySelector('.popo');
     const popup2 = document.querySelector('.popup2');
     const ok = document.querySelector('.info-ok-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
 
-    about.onclick=()=>{
+    about.onclick = () => {
         popup2.classList.add('active');
         main.classList.add('active');
     };
-    ok.onclick=()=>{
+
+    ok.onclick = () => {
         popup2.classList.remove('active');
         main.classList.remove('active');
+    };
+
+    // Toggle mobile menu
+    menuIcon.onclick = () => {
+        navLinks.classList.toggle('active');
     };
 </script>
 </body>
