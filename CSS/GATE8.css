@@ -177,7 +177,7 @@
         position: relative;
         background: url("../MDA/black0106.jpg") no-repeat center center / cover;
         min-height: 100vh;
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: center;
         padding-top: 100px; /* Ensure this is needed */
