@@ -104,7 +104,7 @@ h1 {
 .pdf-item {
     /*display: flex;*/
     align-items: center;
-    background: blue;
+    background: #60bcd1;
     border: 3px solid #ffffff;
     border-radius: 10px;
     padding: 10px;
