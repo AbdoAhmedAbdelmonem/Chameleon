@@ -1388,7 +1388,7 @@ span{
     overflow: hidden;
 }
 
-/* .video-background {
+.video-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -1400,7 +1400,7 @@ span{
 #background-audio {
     display: none;
 }
- */
+
 .background-x img{
     margin-left: 1000px;
     z-index: -5;
