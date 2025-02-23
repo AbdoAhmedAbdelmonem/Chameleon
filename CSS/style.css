@@ -150,7 +150,7 @@ section{
     justify-content: center;
     gap: 15rem;
     z-index: 6;
-    background-image:url("https://cdn.pixabay.com/video/2022/09/21/132102-752283588_large.mp4");
+/*     background-image:url("https://cdn.pixabay.com/video/2022/09/21/132102-752283588_large.mp4");*/
 }
 .img_snow {
     position: absolute;
@@ -159,7 +159,7 @@ section{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background-image:url("https://cdn.pixabay.com/video/2022/09/21/132102-752283588_large.mp4");
+/*     background-image:url("https://cdn.pixabay.com/video/2022/09/21/132102-752283588_large.mp4"); */
     background-size: cover;
     animation: snowFall 15s linear infinite;
     will-change: background-position;
