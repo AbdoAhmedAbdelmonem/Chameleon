@@ -380,7 +380,7 @@
           position: absolute;
           top: 60px; /* Adjust based on your header height */
           left: 0;
-          background-color: rgba(0,0,0,0.4);
+          background-color: rgba(0,0,0,0.79);
           width: 100%;
           z-index: 1000;
           justify-items: center;
