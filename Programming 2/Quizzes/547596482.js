@@ -53,7 +53,7 @@ let question = [
             "C) 2",
             "D) Error"
         ],
-        answer: "C) 2",
+        answer: "D) Error",
         image: "../../../MDA/stat5.png",
     },
     {
