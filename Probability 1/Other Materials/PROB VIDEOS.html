@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Margarine&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Probability 1 Videos</title>
+    <title>Cloud Computing Videos</title>
 </head>
 <body>
 <div class="main">
@@ -27,13 +27,21 @@
             </nav>
         </header>
         <hr>
-        <h1 class="heading">Loading...</h1>
+        <h1 class="heading">Select a Playlist</h1>
         <hr>
+        <div class="playlist-selector">
+            <label for="playlist-select"></label>
+            <select id="playlist-select" onchange="selectPlaylist(this.value)">
+                <option value="">Select a Playlist</option>
+                <option value="PL7snZ0LSsq3g9NUio7xFDtC9IVIj649GV">Dr. Mervat Mikhail</option>
+                <option value="PLXCWPoTuIpYbXgbNuQkBHlMwjK6DpnQ3l">Eng. Fouad Ashraf</option>
+            </select>
+        </div>
         <div id="videoGrid" class="grid pdf-list"></div>
-        <div id="noVideos" class="no-files" style="display: none; height: 190%; justify-content: center; text-align: center;">
-            <img src="https://cdn-icons-png.flaticon.com/256/6983/6983865.png" alt="" style="max-width: 100%; height: auto;justify-self: center;">
+        <div id="noVideos" class="no-files" style="display: none;">
+            <img src="https://cdn-icons-png.flaticon.com/256/6983/6983865.png" alt="">
             <p>It seems no videos here</p><br>
-            <p style="margin-top: -30px;">Contact support if you think something is wrong. </p>
+            <p style="margin-top: -30px;">Contact support if you think something is wrong.</p>
         </div>
     </div>
 </div>
@@ -64,7 +72,7 @@
         popup2.classList.remove('active');
         main.classList.remove('active');
     };
-    const playlistId = "PL7snZ0LSsq3g9NUio7xFDtC9IVIj649GV";
+
     const apiKey = "AIzaSyCBwCuVsuYAPoT4lkCoqBMiL3CwT439KnQ";
 
     async function fetchPlaylistTitle(playlistId) {
@@ -102,18 +110,25 @@
 
             div.className = "video";
             div.innerHTML = `
-            <div class="card-header">${videoTitle}</div>
-            <div class="user-name"><i class='bx bxl-youtube'></i> Channel: ${channelTitle}</div>
-            <div class="size"><i class='bx bx-video' style='color:#000000'></i> Video ID: ${videoId}</div>
-        `;
+                <div class="card-header">${videoTitle}</div>
+                <div class="user-name"><i class='bx bxl-youtube'></i> Channel: ${channelTitle}</div>
+                <div class="size"><i class='bx bx-video' style='color:#000000'></i> Video ID: ${videoId}</div>
+            `;
             div.onclick = () => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
             videoGrid.appendChild(div);
         });
     }
 
-    // Fetch the playlist title and items
-    fetchPlaylistTitle(playlistId);
-    fetchPlaylistItems(playlistId);
+    function selectPlaylist(playlistId) {
+        if (playlistId) {
+            fetchPlaylistTitle(playlistId);
+            fetchPlaylistItems(playlistId);
+        } else {
+            heading.innerText = "Select a Playlist";
+            videoGrid.innerHTML = "";
+            noVideos.style.display = "none";
+        }
+    }
 </script>
 </body>
 </html>
