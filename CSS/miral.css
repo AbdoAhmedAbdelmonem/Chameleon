@@ -9,6 +9,41 @@ body {
     margin: 0;
     padding: 0;
 }
+        .playlist-selector {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .playlist-selector label {
+            font-size: 16px;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+        }
+
+        .playlist-selector select {
+            padding: 10px;
+            font-size: 16px;
+            font-family: Rubik, sans-serif;
+            color: #fff;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .playlist-selector select:hover {
+            background-color: #b30000;
+            cursor: pointer;
+        }
+
+        .playlist-selector select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.5);
+        }
 
 .bg {
     animation: slide 3s ease-in-out infinite alternate;
