@@ -207,14 +207,14 @@ let question = [
     {
         numb: 18,
         type: "Multiple Choices",
-        question: "What is the typical Maximum endurance of E²PROM until our current time?",
+        question: "What is the typical endurance of E²PROM until our current time?",
         options: [
             "1,000 cycles",
             "1,000,000 cycles",
             "100,000 cycles",
             "10,000 cycles",
         ],
-        answer: "1,000,000 cycles"
+        answer: "100,000 cycles"
     },
     {
         numb: 19,
@@ -243,7 +243,7 @@ let question = [
     {
         numb: 21,
         type: "Multiple Choices",
-        question: "What is the typical Minimum endurance of Flash memory?",
+        question: "What is the typical endurance of Flash memory?",
         options: [
             "1,000 cycles",
             "10,000 cycles",
