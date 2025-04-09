@@ -147,3 +147,22 @@ menuIcon.onclick=()=>{
                 slidesToScroll: 1,
             }
         }]});
+
+document.addEventListener('DOMContentLoaded', function() {
+        // Animate dots sequentially
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.style.animationDelay = `${index * 0.2 + 2.5}s`;
+        });
+
+        // Remove intro after animation completes
+        setTimeout(function() {
+            const intro = document.querySelector('.handwritten-intro');
+            intro.style.opacity = '0';
+            intro.style.transition = 'opacity 0.8s ease-out';
+
+            setTimeout(function() {
+                intro.style.display = 'none';
+            }, 800);
+        }, 4500); // Total animation duration
+    });
