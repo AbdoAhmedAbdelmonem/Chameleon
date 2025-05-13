@@ -1,0 +1,31 @@
+:root{
+    --main-quiz: #9729f1;
+    --2nd-quiz: #6713ab;
+}
+body{
+    font-family: Magneto,sans-serif;
+}
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    background:url("../../MDA/BY.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
+}
+/*https://cdn.pixabay.com/video/2022/12/25/144257-784302968_tiny.mp4*/
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    object-fit: cover;
+}
