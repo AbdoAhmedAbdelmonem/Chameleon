@@ -21,7 +21,8 @@ body{
 .quiz-section::before {
     content: "";
     position: absolute;
-    top: -10px; left: -5px;
+/*     top: -10px; left: -5px; */
+    
     width: 100%; height: 105%;
     background-size: cover;
     background: url("https://cdn.britannica.com/25/214625-050-A37D76CC/heart-rate-monitor-illustration-heartbeat.jpg") center;
