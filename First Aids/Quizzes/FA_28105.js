@@ -174,11 +174,11 @@ let question = [
         question: "Which body part burned would require immediate medical attention?",
         options: [
             "Back (large area)",
-            "Face or hands",
+            "Face",
             "Lower leg (small area)",
             "Upper arm (minor burn)"
         ],
-        answer: "Face or hands"
+        answer: "Face"
     },
 
     // True/False Questions (T/F)
