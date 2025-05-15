@@ -1,0 +1,81 @@
+:root{
+    --main-quiz: #08c292;
+    --2nd-quiz: #02ffc0;
+}
+body{
+    font-family: Magneto,sans-serif;
+}
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
+}
+
+.video-background {
+    position: absolute;
+    filter: blur(5px);
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    z-index: -100;
+    object-fit: cover;
+}
+
+
+.start-btn {
+  position: relative;
+  display: inline-block;
+  padding: 1em 2em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, var(--main-quiz), var(--2nd-quiz));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(30, 60, 114, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.start-btn::before,
+.start-btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  transform: rotate(45deg);
+  animation: shine 2s infinite linear;
+  pointer-events: none;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, var(--main-quiz), var(--2nd-quiz));
+  box-shadow: 0 0 25px var(--main-quiz), 0 0 40px var(--2nd-quiz) inset;
+  transform: scale(1.05);
+}
+
+.start-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px var(--2nd-quiz) inset;
+}
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translate(-100%, -100%);
+  }
+  100% {
+    transform: rotate(45deg) translate(100%, 100%);
+  }
+}
