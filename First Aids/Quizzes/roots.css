@@ -20,7 +20,6 @@ body{
 
 .video-background {
     position: absolute;
-    filter: blur(5px);
     top: -5px;
     left: 0;
     width: 100%;
