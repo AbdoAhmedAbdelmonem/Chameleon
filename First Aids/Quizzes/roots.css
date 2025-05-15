@@ -27,7 +27,8 @@ body{
     background-size: cover;
     background: url("https://cdn.britannica.com/25/214625-050-A37D76CC/heart-rate-monitor-illustration-heartbeat.jpg") center;
     background-size: cover;
-    filter: blur(10px);
+/*     filter: blur(10px);
+     */
     z-index: -1; /* Places the blur layer behind content */
 }
 
