@@ -147,14 +147,14 @@ let question = [
     {
         numb: 13,
         type: "Multiple Choices",
-        question: "Which vaccine helps prevent tetanus?",
+        question: "Which of the following is NOT classified as a wounds?",
         options: [
-            "MMR",
-            "DTaP",
-            "HPV",
-            "Hepatitis B"
+            "Clean wound",
+            "Contaminated wound",
+            "Infected wound",
+            "Colorized wound"
         ],
-        answer: "DTaP"
+        answer: "Colorized wound"
     },
     {
         numb: 14,
