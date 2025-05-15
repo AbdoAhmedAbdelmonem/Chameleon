@@ -10,25 +10,35 @@ body{
     left: -50%;
     width: 100%;
     display: flex;
-    background-size: cover;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
     transition: 0.8s ease-in-out;
     transition-delay: 0.25s;
 }
 
+.quiz-section::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -5px;
+    width: 100%; height: 105%;
+    background-size: cover;
+    background: url("https://cdn.britannica.com/25/214625-050-A37D76CC/heart-rate-monitor-illustration-heartbeat.jpg") center;
+    filter: blur(10px);
+    z-index: -1; /* Places the blur layer behind content */
+}
+
+
 .video-background {
     position: absolute;
+    filter: blur(5px);
     top: -5px;
-    buttom: -5px;
-    right: -5px;
-    left: -5;
+    left: 0;
     width: 100%;
     height: 105%;
     z-index: -100;
     object-fit: cover;
-    filter:blur(2px);
 }
 
 
