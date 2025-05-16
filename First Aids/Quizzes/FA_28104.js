@@ -152,9 +152,9 @@ let question = [
             "Clean wound",
             "Contaminated wound",
             "Infected wound",
-            "Colorized wound"
+            "زبادي خلاط"
         ],
-        answer: "Colorized wound"
+        answer: "زبادي خلاط"
     },
     {
         numb: 14,
