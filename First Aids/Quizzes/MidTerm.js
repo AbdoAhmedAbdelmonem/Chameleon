@@ -200,12 +200,12 @@ let question = [
         type: "Multiple Choices",
         question: "How long should you check for breathing while performing CPR",
         options: [
-            "seconds 30",
-            "seconds 2",
-            "seconds 10",
-            "seconds 5"
+            "30 seconds",
+            "2 seconds",
+            "10 seconds",
+            "5 seconds"
         ],
-        answer: "seconds 10"
+        answer: "10 seconds"
     },
     {
         numb: 19,
