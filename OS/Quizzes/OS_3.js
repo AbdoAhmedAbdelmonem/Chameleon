@@ -214,7 +214,7 @@ let question = [
             "100,000 cycles",
             "10,000 cycles",
         ],
-        answer: "1,000,000 cycles"
+        answer: "100,000 cycles"
     },
     {
         numb: 19,
