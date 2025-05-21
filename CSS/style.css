@@ -6,10 +6,10 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Audiowide", sans-serif;
+    font-family: "Mansalva", sans-serif;
 }
 :root{
-    --main-color : #000000;
+    --main-color : #ffffff;
     --d1-color : #131313;
     --d2-color : #080808;
     --white-color : white;
@@ -47,6 +47,7 @@ body.light{
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    border-radius: 6px;
     animation: changeColors 390s infinite ease-in-out;
 
 }
@@ -252,7 +253,7 @@ span{
 } */
 }
 .home-content h1 span{
-    font-family: Audiowide,sans-serif;
+    font-family: Mansalva,sans-serif;
     font-size: 90px;
 /*     filter: drop-shadow(0px 0px 5px var(--main-color));
  */
@@ -263,7 +264,7 @@ span{
  */
 }
 .home-image{
-    border-radius: 50%;
+    border-radius: 10% 80% 10% 80% / 80% 10% 80% 10%;
     animation: zero-gravity-float 2.5s ease-in-out infinite;
     max-width: 800px;
     height: auto;
@@ -355,6 +356,13 @@ span{
     z-index: 9;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
+.animated-button:hover svg {
+    position: absolute;
+    width: 24px;
+    fill: var(--main-color);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
 .animated-button .arr-1 {
     right: 16px;
@@ -372,7 +380,7 @@ span{
     width: 20px;
     height: 20px;
     background-color: var(--main-color);
-    border-radius: 50%;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 0 10px var(--main-color);
@@ -402,7 +410,7 @@ span{
 
 .animated-button:hover .text {
     transform: translateX(12px);
-    color: black;
+    color: #ffffff;
 }
 
 .animated-button:hover svg {
@@ -592,7 +600,7 @@ span{
     box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
     position: absolute;
     left: calc(50% - 10px); /* Center dot correctly */
-    border-radius: 50%;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     top: 0; /* Adjust top position if necessary */
     animation: zero-gravity-float 2.5s ease-in-out infinite;
 }
@@ -613,7 +621,7 @@ span{
 .timeline-content{
     background-color: var(--d2-color);
     border: 3px solid var(--main-color);
-    border-radius: 4rem;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     padding: 30px 50px;
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
@@ -708,7 +716,7 @@ span{
     font-size: 1.8rem;
     color: var(--white-color);
     background: var(--d1-color);
-    border-radius: 2rem;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     border: 2px solid var(--main-color);
     margin: 1.5rem 0;
     resize: none;
@@ -934,7 +942,7 @@ span{
     transform: translate(-50%, -50%) scale(0.9);
     width: 500px;
     background: #2f2b2b;
-    border-radius: 6px;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     padding: 10px 25px;
     opacity: 0;
     pointer-events: none;
@@ -978,7 +986,7 @@ span{
     height: 55px;
     background: var(--main-color);
     outline: none;
-    border-radius: 6px;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     text-decoration: none;
     font-size: 16px;
     color: #fff;
@@ -1145,7 +1153,7 @@ span{
     }
 
     .home-content h1 span{
-        font-family: Audiowide,sans-serif;
+        font-family: Mansalva,sans-serif;
         font-size: 66px
     }
     .home-content h1 span h3 {
@@ -1289,11 +1297,11 @@ span{
 
 .card {
     padding: 1rem 2rem;
-    border-radius: 1.25rem;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
 }
 .loader {
     color: rgb(124, 124, 124);
-    font-family: "Audiowide", sans-serif;
+    font-family: "Mansalva", sans-serif;
     font-weight: 500;
     font-size: 25px;
     -webkit-box-sizing: content-box;
@@ -1383,7 +1391,7 @@ span{
     transition: opacity 1s ease-in-out;
     padding-bottom: 20px;
     color: var(--main-color);
-    font-family: "Audiowide", san-serif, serif;
+    font-family: Mansalva, san-serif, serif;
     filter: drop-shadow(0px 0px 6px var(--main-color));
 }
 .main.active {
@@ -1410,9 +1418,10 @@ span{
     z-index: -5;
 }
 .background-y img{
-    margin-top: 300px;
-    margin-left: 1800px;
+    margin-top: 600px;
+    margin-left: 1600px;
     z-index: -5;
+    rotate: 160deg;
 }
 
 .section{
@@ -1462,7 +1471,7 @@ span{
     background: transparent;
     margin: 0px 15px;
     border: 0;
-    border-radius: 12px;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
     transition: 0.3s ease-in-out;
 }
 .section .title .arrows button:hover i{
@@ -1478,7 +1487,7 @@ span{
     color: white;
     font-size: 1.3rem;
     border: 1px solid #fff;
-    border-radius: 12px;
+    border-radius: 5% 80% 5% 80% / 90% 5% 90% 5%;
 }
 
 
@@ -1758,14 +1767,14 @@ span{
 
 @-webkit-keyframes btn-content {
     0% {
-        outline: 0.2em solid var(--color-background);
+        outline: 0.2em solid var(--d1-color);
         outline-offset: 0;
     }
 }
 
 @keyframes btn-content {
     0% {
-        outline: 0.2em solid var(--color-background);
+        outline: 0.2em solid var(--d2-color);
         outline-offset: 0;
     }
 }
@@ -1842,232 +1851,3 @@ span{
     scale: 0;
     transform: rotate(-45deg);
 }
-    @font-face {
-        font-family: 'DancingScript';
-        src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
-    }
-
-    @font-face {
-        font-family: 'Caveat';
-        src: url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
-    }
-
-    @font-face {
-        font-family:'Lavishly Yours' ;
-        src: url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
-    }
-
-    .handwritten-intro {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #121212;
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23222222' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Audiowide', cursive;
-        overflow: hidden;
-    }
-
-    .welcome-container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-        padding: 2rem;
-        max-width: 90%;
-    }
-
-    .welcome-text {
-        font-size: clamp(2.5rem, 8vw, 5rem);
-        font-weight: 700;
-        color: #e0e0e0;
-        margin-bottom: -0.5rem;
-        white-space: nowrap;
-    }
-
-    .chameleon-text {
-        font-size: clamp(3rem, 10vw, 6.5rem);
-        font-weight: 700;
-        color: #7cb342;
-        white-space: nowrap;
-        margin-bottom: 1.5rem;
-        position: relative;
-    }
-
-    .welcome-word, .chameleon-letter {
-        display: inline-block;
-        opacity: 0;
-        position: relative;
-        animation: fadeInUp 0.5s ease-out forwards;
-        animation-delay: var(--delay);
-    }
-
-    .chameleon-letter {
-        color: #fccc02;
-        text-shadow: 2px 2px 10px rgba(252, 204, 2, 0.42);
-    }
-
-    .signature {
-        margin-top: 2rem;
-        position: relative;
-    }
-
-    .by-line {
-        width: clamp(100px, 30vw, 150px);
-        height: 1px;
-        background: rgba(224, 224, 224, 0.3);
-        margin: 0 auto 0.5rem;
-        opacity: 0.5;
-    }
-
-    .producer {
-        font-family:'Lavishly Yours' , cursive;
-        font-size: clamp(1.2rem, 4vw, 1.8rem);
-        color: #9e9e9e;
-        font-weight: 700;
-        opacity: 0;
-        animation: fadeIn 1s ease-out 2.5s forwards;
-    }
-
-    .loading-dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.8rem;
-        margin-top: 2rem;
-    }
-
-    .dot {
-        width: clamp(8px, 2.5vw, 12px);
-        height: clamp(8px, 2.5vw, 12px);
-        background: #fccc02;
-        border-radius: 50%;
-        opacity: 0;
-        animation: bounce 0.6s infinite alternate;
-        animation-delay: var(--delay);
-        animation-fill-mode: both;
-    }
-
-    .ink-blot-1, .ink-blot-2, .ink-blot-3 {
-        position: absolute;
-        background: rgba(124, 179, 66, 0.05);
-        border-radius: 50%;
-        filter: blur(10px);
-        z-index: 1;
-    }
-
-    .ink-blot-1 {
-        width: clamp(200px, 60vw, 300px);
-        height: clamp(200px, 60vw, 300px);
-        top: -10%;
-        left: -10%;
-        animation: float 15s ease-in-out infinite;
-    }
-
-    .ink-blot-2 {
-        width: clamp(150px, 40vw, 200px);
-        height: clamp(150px, 40vw, 200px);
-        bottom: -5%;
-        right: -5%;
-        animation: float 12s ease-in-out infinite reverse;
-    }
-
-    .ink-blot-3 {
-        width: clamp(100px, 30vw, 150px);
-        height: clamp(100px, 30vw, 150px);
-        top: 40%;
-        right: 15%;
-        animation: float 10s ease-in-out infinite 2s;
-    }
-
-    .chameleon-silhouette {
-        position: absolute;
-        bottom: 5%;
-        right: 5%;
-        width: clamp(100px, 30vw, 150px);
-        height: clamp(70px, 20vw, 100px);
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70"><path d="M85,35c0,10-15,20-35,20S15,45,15,35c0-10,15-20,35-20S85,25,85,35z" fill="none" stroke="%237cb342" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.3"/></svg>');
-        background-repeat: no-repeat;
-        opacity: 0;
-        z-index: 2;
-        animation: fadeIn 2s ease-out 1s forwards;
-    }
-
-    .pen-stroke {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%237cb342" stroke-width="0.5" stroke-dasharray="10,5" opacity="0.1"/></svg>');
-        z-index: 1;
-    }
-
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    @keyframes bounce {
-        0% {
-            opacity: 0.3;
-            transform: translateY(0);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(-10px);
-        }
-    }
-
-    @keyframes float {
-        0%, 100% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(10px, 10px);
-        }
-    }
-
-    /* Mobile-specific adjustments */
-    @media (max-width: 480px) {
-        .welcome-text {
-            margin-bottom: -0.3rem;
-        }
-
-        .chameleon-text {
-            margin-bottom: 1rem;
-        }
-
-        .signature {
-            margin-top: 1.5rem;
-        }
-
-        .loading-dots {
-            margin-top: 3.65rem;
-            gap: 0.6rem;
-        }
-
-        .ink-blot-1 {
-            top: -15%;
-            left: -15%;
-        }
-
-        .ink-blot-2 {
-            bottom: -10%;
-            right: -10%;
-        }
-    }
