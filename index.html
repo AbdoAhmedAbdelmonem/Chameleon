@@ -20,9 +20,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet"></head>
-<body>
+<link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <style>
+ .countdown-container {
+            text-align: center;
+            background-color: transparent;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
 
+        h1 {
+            color: var(--second-color);
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .countdown-box {
+            background: transparent;
+            padding: 15px 20px;
+            border-radius: 10px;
+            min-width: 80px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--main-color);
+        }
+
+        .countdown-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--main-color);
+            margin-bottom: 5px;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            color: var(--second-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .msg {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 500px) {
+            .countdown {
+                gap: 10px;
+            }
+
+            .countdown-box {
+                min-width: 70px;
+                padding: 10px 15px;
+            }
+
+            .countdown-value {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }    </style>
+</head>
+<body>
 <div class="main">
     <header class="header">
         <a href="#home" class="logo">
@@ -108,12 +181,34 @@
     </section>
         <section class="section" id="board">
         <div class="title">
-            <h2 style="font-size: 40px">Some Important <span style="font-family: Mansalva, sans-serif">Things 😍</span></h2>
+            <h2 style="font-size: 40px">Some Important <span style="font-family: Mansalva,sans-serif">Things 😍</span></h2>
             <div class="arrows">
                 <button><i class="fa-solid fa-arrow-left" id="left-arrow"></i></button>
                 <button><i class="fa-solid fa-arrow-right" id="right-arrow"></i></button>
             </div>
         </div>
+                    <div class="countdown-container">
+        <h1>Feliz cumpleaños camaleón !</h1>
+        <div class="countdown" id="countdown">
+            <div class="countdown-box">
+                <div class="countdown-value" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-value" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-value" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-value" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+        <div id="msg" class="message"></div>
+    </div>
         <div class="team-members">
             <a href="https://drive.google.com/file/d/1cVLMWYipnxrAgyw1WFHQFwF1AtKVT_fD/view?usp=drive_link" target="_blank">
             <div class="member-card1">
@@ -153,7 +248,7 @@
             </div>
             </a>
         </div>
-            <h2>Provided by Faculty of Computer and Data Science</h2> <br>
+            <h2 style="margin-top: 40px">Provided by Faculty of Computer and Data Science</h2> <br>
             <img src="MDA/FCDS.png" alt="" style="width: 200px">
     </section>
     <section class="education" id="education">
@@ -458,6 +553,37 @@
 });
 
     setInterval(changeText, 3000);
+
+      // Set the date we're counting down to (August 18, 2025)
+        const countDownDate = new Date("Aug 18, 2025 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const countdownFunction = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the countdown date
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("msg").innerHTML = "The countdown has ended! August 18, 2025 has arrived!";
+            }
+        }, 1000);
 </script>
 </body>
 </html>
