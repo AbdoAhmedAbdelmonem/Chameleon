@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Mansalva", sans-serif;
+    font-family: "Lacquer", sans-serif;
 }
 :root{
     --main-color : #ffffff;
@@ -253,7 +253,7 @@ span{
 } */
 }
 .home-content h1 span{
-    font-family: Mansalva,sans-serif;
+    font-family: Lacquer,sans-serif;
     font-size: 90px;
 /*     filter: drop-shadow(0px 0px 5px var(--main-color));
  */
@@ -295,8 +295,11 @@ span{
     max-width: 1000px;
     animation: nebula-drift 1s ease-in-out forwards;
     filter: drop-shadow(0px 0px 6px var(--main-color));
+    font-family: Lacquer,sans-serif;
 }
-
+b{
+    font-family: Lacquer,sans-serif;
+}
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -1153,7 +1156,7 @@ span{
     }
 
     .home-content h1 span{
-        font-family: Mansalva,sans-serif;
+        font-family: Lacquer,sans-serif;
         font-size: 66px
     }
     .home-content h1 span h3 {
@@ -1301,7 +1304,7 @@ span{
 }
 .loader {
     color: rgb(124, 124, 124);
-    font-family: "Mansalva", sans-serif;
+    font-family: "Lacquer", sans-serif;
     font-weight: 500;
     font-size: 25px;
     -webkit-box-sizing: content-box;
@@ -1391,7 +1394,7 @@ span{
     transition: opacity 1s ease-in-out;
     padding-bottom: 20px;
     color: var(--main-color);
-    font-family: Mansalva, san-serif, serif;
+    font-family: Lacquer, san-serif, serif;
     filter: drop-shadow(0px 0px 6px var(--main-color));
 }
 .main.active {
