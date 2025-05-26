@@ -3,6 +3,12 @@ let quizText = document.querySelector(".gran").textContent;
 let quizCode = quizText.split("#")[1].trim();
 console.log(quizCode);
 
+// Timer and submission tracking variables
+let quizDuration = 30 * 60 * 1000; // 30 minutes in milliseconds
+let quizTimer;
+let timeExpired = false;
+let hasSubmitted = false; // Track if form has been submitted
+
 function saveName() {
     let selectedGender = document.querySelector('input[name="radio"]:checked');
     let gen = selectedGender ? selectedGender.nextElementSibling.textContent : "Not Selected";
@@ -35,9 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 function checkGender() {
     console.log('Selected gender:', gender);
 }
+
 function continueQuiz() {
     const name = localStorage.getItem('userName');
 
@@ -46,6 +54,71 @@ function continueQuiz() {
     } else {
         alert("Please save your name first.");
     }
+}
+
+// Add these functions to your existing code
+function triggerFeedback(isCorrect) {
+    // Vibrate for 200ms (only works on mobile or with user interaction)
+    if (navigator.vibrate) {
+        navigator.vibrate(isCorrect ? [100, 50, 100] : 200);
+    }
+
+    // Visual feedback
+    if (isCorrect) {
+        showFireworks();
+    } else {
+        showRedFlash();
+    }
+}
+
+function showRedFlash() {
+    const flash = document.createElement('div');
+    flash.style.position = 'fixed';
+    flash.style.bottom = '0';
+    flash.style.left = '0';
+    flash.style.width = '100%';
+    flash.style.height = '20px';
+    flash.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+    flash.style.boxShadow = '0 0 30px 10px rgba(255, 0, 0, 0.5)';
+    flash.style.zIndex = '9999';
+    flash.style.animation = 'fadeOut 2s forwards';
+    document.body.appendChild(flash);
+
+    setTimeout(() => {
+        flash.remove();
+    }, 2000);
+}
+
+function showFireworks() {
+    const fireworks = document.createElement('div');
+    fireworks.style.position = 'fixed';
+    fireworks.style.top = '0';
+    fireworks.style.left = '0';
+    fireworks.style.width = '100%';
+    fireworks.style.height = '100%';
+    fireworks.style.zIndex = '9998';
+    fireworks.style.pointerEvents = 'none';
+    fireworks.style.background = 'transparent';
+    fireworks.style.display = 'flex';
+    fireworks.style.justifyContent = 'center';
+    fireworks.style.alignItems = 'center';
+
+    const gif = document.createElement('img');
+    gif.src = 'https://cdn.pixabay.com/animation/2023/08/29/02/43/02-43-52-729_512.gif';
+    gif.style.width = '100%';
+    gif.style.height = '100%';
+    gif.style.objectFit = 'cover';
+
+    fireworks.appendChild(gif);
+    document.body.appendChild(fireworks);
+
+    setTimeout(() => {
+        fireworks.style.opacity = '0';
+        fireworks.style.transition = 'opacity 1s';
+        setTimeout(() => {
+            fireworks.remove();
+        }, 1000);
+    }, 2000);
 }
 
 const startBtn = document.querySelector('.start-btn');
@@ -92,6 +165,7 @@ continueBtn.onclick = () => {
     showQuestions(0);
     questionCounter(1);
     headerScore();
+    startQuizTimer();
 }
 
 let questionCount = 0;
@@ -130,7 +204,7 @@ backBtn.onclick = () => {
 const optionList = document.querySelector('.option-list');
 
 function showQuestions(index) {
-    console.log('Showing question:', index); // Debug line
+    console.log('Showing question:', index);
     const questionText = document.querySelector('.question-text');
     const questionTag = document.querySelector('.question-tag');
     const userC = document.querySelector('.user')
@@ -171,7 +245,6 @@ function showQuestions(index) {
         console.error('Question text element not found.');
     }
 }
-
 
 function addImage(index) {
     const questionText = document.querySelector('.question-text');
@@ -229,7 +302,6 @@ function addImage(index) {
 
             if (window.matchMedia("(max-width: 480px)").matches) {
                 img.style.width = '250px';
-
             } else {
                 img.style.width = '450px';
             }
@@ -283,6 +355,7 @@ style.textContent = `
 }`;
 document.head.appendChild(style);
 
+// Add this to your optionSelected function
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = question[questionCount].answer;
@@ -292,8 +365,10 @@ function optionSelected(answer) {
         userScore++;
         headerScore();
         answer.classList.add('correct');
+        triggerFeedback(true); // Correct feedback
     } else {
         answer.classList.add('incorrect');
+        triggerFeedback(false); // Incorrect feedback
         for (let i = 0; i < allOptions; i++) {
             if (optionList.children[i].textContent === correctAnswer) {
                 optionList.children[i].setAttribute('class', 'option correct');
@@ -307,6 +382,25 @@ function optionSelected(answer) {
     answeredQuestions[questionCount] = { userAnswer: userAnswer };
 }
 
+// Add this CSS animation
+const feedbackStyle = document.createElement('style');
+feedbackStyle.textContent = `
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.incorrect {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}`;
+document.head.appendChild(feedbackStyle);
+
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total');
     questionTotal.textContent = `${index} of ${question.length} Questions`;
@@ -316,7 +410,15 @@ function headerScore() {
     const headerScoreText = document.querySelector('.header-score ');
     headerScoreText.textContent = `You answered correctly ${userScore} / ${question.length}`;
 }
+
 function showResultBox() {
+    // Clear the timer if the user finishes before time expires
+    if (quizTimer) {
+        clearTimeout(quizTimer);
+        quizTimer = null;
+        document.querySelector('.quiz-timer')?.remove();
+    }
+
     const mot = document.querySelector('.motivate');
     mot.setAttribute("dir", "rtl");
     quizBox.classList.remove('active');
@@ -337,7 +439,7 @@ function animateProgress() {
     const status = progressEndValue > 50 ? "Success" : "Failed";
 
     submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
-    console.log(name, progressEndValue);
+    console.log('Submitted quiz results:', {name, score: progressEndValue, gender, status, quizCode});
 
     let progressStartValue = 0;
     const speed = 20;
@@ -378,30 +480,183 @@ function updateProgressVisual(progress) {
     mot.innerHTML = message;
 }
 
-function submitToGoogleForm(Gname,Gscore,gender,statue,quizCode) {
+function submitToGoogleForm(Gname, Gscore, gender, statue, quizCode) {
+    if (hasSubmitted) {
+        console.log('Form already submitted, skipping duplicate');
+        return;
+    }
+    hasSubmitted = true;
+
+    console.log('Submitting form data:', {
+        name: Gname,
+        score: Gscore,
+        gender,
+        status: statue,
+        quizCode
+    });
+
     const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSedOLbgGluxVg3wRhI6wOtEBMgw1jE54zZia-nX1anTfeQPgQ/formResponse";
 
     const formData = new FormData();
     formData.append("entry.1593857870", Gname);
     formData.append("entry.629029072", Gscore);
-    formData.append("entry.165525936",gender)
-    formData.append("entry.197465168",statue);
-    formData.append("entry.359515664",quizCode)
+    formData.append("entry.165525936", gender);
+    formData.append("entry.197465168", statue);
+    formData.append("entry.359515664", quizCode);
+
     fetch(formUrl, {
         method: "POST",
-        body: formData
+        body: formData,
+        mode: 'no-cors'
     })
-        .then(response => {
-            if (response.ok) {
-                alert("Form submitted successfully");
-            } else {
-                alert("Error submitting form");
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+    .then(() => {
+        console.log('Form submitted successfully at:', new Date().toLocaleTimeString());
+        showSubmissionSuccess();
+    })
+    .catch(error => {
+        console.error('Form submission failed:', error);
+        showSubmissionError();
+    });
 }
+
+function showSubmissionSuccess() {
+    const successMsg = document.createElement('div');
+    successMsg.textContent = 'Results submitted successfully!';
+    successMsg.style.position = 'fixed';
+    successMsg.style.bottom = '20px';
+    successMsg.style.right = '20px';
+    successMsg.style.backgroundColor = '#4CAF50';
+    successMsg.style.color = 'white';
+    successMsg.style.padding = '10px 20px';
+    successMsg.style.borderRadius = '5px';
+    successMsg.style.zIndex = '1000';
+    successMsg.style.animation = 'fadeIn 0.3s ease-in-out';
+    document.body.appendChild(successMsg);
+
+    setTimeout(() => {
+        successMsg.style.animation = 'fadeOut 0.3s ease-in-out';
+        setTimeout(() => successMsg.remove(), 300);
+    }, 3000);
+}
+
+function showSubmissionError() {
+    const errorMsg = document.createElement('div');
+    errorMsg.textContent = 'Submission failed. Please check your connection.';
+    errorMsg.style.position = 'fixed';
+    errorMsg.style.bottom = '20px';
+    errorMsg.style.right = '20px';
+    errorMsg.style.backgroundColor = '#f44336';
+    errorMsg.style.color = 'white';
+    errorMsg.style.padding = '10px 20px';
+    errorMsg.style.borderRadius = '5px';
+    errorMsg.style.zIndex = '1000';
+    errorMsg.style.animation = 'fadeIn 0.3s ease-in-out';
+    document.body.appendChild(errorMsg);
+
+    setTimeout(() => {
+        errorMsg.style.animation = 'fadeOut 0.3s ease-in-out';
+        setTimeout(() => errorMsg.remove(), 300);
+    }, 3000);
+}
+
+// Timer functions
+function startQuizTimer() {
+    // Clear any existing timer
+    if (quizTimer) {
+        clearTimeout(quizTimer);
+    }
+
+    // Set new timer
+    quizTimer = setTimeout(() => {
+        timeExpired = true;
+        alert("Time's up! Your quiz will be submitted automatically.");
+        forceSubmitQuiz();
+    }, quizDuration);
+
+    // Display countdown timer
+    startCountdownDisplay();
+}
+
+function forceSubmitQuiz() {
+    if (hasSubmitted) return;
+
+    // Calculate current score percentage
+    const progressEndValue = Math.round((userScore / question.length) * 100);
+    const status = progressEndValue > 50 ? "Success" : "Failed";
+
+    // Submit to Google Form
+    submitToGoogleForm(name, progressEndValue, gender, status, quizCode);
+
+    // Show results
+    showResultBox();
+
+    // Disable all options and navigation
+    disableQuizInteraction();
+}
+
+function startCountdownDisplay() {
+    // Remove existing timer if any
+    document.querySelector('.quiz-timer')?.remove();
+
+    const timerDisplay = document.createElement('div');
+    timerDisplay.className = 'quiz-timer';
+    timerDisplay.style.position = 'fixed';
+    timerDisplay.style.top = '20px';
+    timerDisplay.style.right = '20px';
+    timerDisplay.style.backgroundColor = 'rgba(0,0,0,0.7)';
+    timerDisplay.style.color = 'white';
+    timerDisplay.style.padding = '10px 15px';
+    timerDisplay.style.borderRadius = '5px';
+    timerDisplay.style.zIndex = '1000';
+    timerDisplay.style.fontSize = '18px';
+    timerDisplay.style.fontWeight = 'bold';
+    document.body.appendChild(timerDisplay);
+
+    let timeLeft = quizDuration / 1000; // convert to seconds
+    const countdown = setInterval(() => {
+        if (timeLeft <= 0 || timeExpired) {
+            clearInterval(countdown);
+            timerDisplay.textContent = 'Time Expired!';
+            return;
+        }
+
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+    }, 1000);
+}
+
+function disableQuizInteraction() {
+    // Disable all options
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.add('disabled');
+    });
+
+    // Disable navigation buttons
+    nextBtn.classList.add('disabled');
+    backBtn.classList.add('disabled');
+}
+
+// Add timer styles
+const timerStyle = document.createElement('style');
+timerStyle.textContent = `
+
+.submission-message {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .quiz-timer {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}`;
+document.head.appendChild(timerStyle);
+
 window.addEventListener("beforeunload", function (e) {
     const confirmationMessage = "Are you sure you want to refresh this page?";
 
