@@ -1,0 +1,175 @@
+:root{
+    --main-quiz: #127c98;
+    --2nd-quiz: #4cbbd9;
+}
+body{
+    font-family: Magneto,sans-serif;
+}
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
+}
+
+.quiz-section::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -5px;
+    right: 10px;
+    width: 103%; height: 105%;
+    background-size: cover;
+    background: url("../../MDA/bg_cloud.png") center;
+    background-size: cover;
+    z-index: -1; /* Places the blur layer behind content */
+}
+
+
+.video-background {
+    position: absolute;
+    filter: blur(5px);
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    z-index: -100;
+    object-fit: cover;
+}
+
+
+.start-btn {
+  position: relative;
+  display: inline-block;
+  padding: 1em 2em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, var(--main-quiz), var(--2nd-quiz));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(30, 60, 114, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.start-btn::before,
+.start-btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  transform: rotate(45deg);
+  animation: shine 2s infinite linear;
+  pointer-events: none;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, var(--main-quiz), var(--2nd-quiz));
+  box-shadow: 0 0 25px var(--main-quiz), 0 0 40px var(--2nd-quiz) inset;
+  transform: scale(1.05);
+}
+
+.start-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px var(--2nd-quiz) inset;
+}
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translate(-100%, -100%);
+  }
+  100% {
+    transform: rotate(45deg) translate(100%, 100%);
+  }
+}
+
+/* Counter Styles */
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.counter-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #6e8efb, #4a6cf7);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.counter-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+    background: linear-gradient(145deg, #f6f9ff, #eef4ff);
+    padding: 5px 15px;
+    border-radius: 30px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.counter-range {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Animation for counter change */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 0.3s ease;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -100; /* ensure it's always at the back */
+    pointer-events: none; /* allows clicks to pass through */
+}
