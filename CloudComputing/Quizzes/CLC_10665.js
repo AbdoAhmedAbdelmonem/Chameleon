@@ -283,7 +283,7 @@ let question = [
             "AES-128",
             "AES-256",
             "RSA-2048",
-            "DES"
+            "DES-256"
         ],
         answer: "AES-256"
     },
