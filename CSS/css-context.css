@@ -1139,3 +1139,16 @@ label:last-child span {
     box-shadow: 0 0 5px #06595f, inset 0 0 5px #06595f;
     transition-delay: 0.2s;
 }
+
+@keyframes diamond {
+    0% { background: conic-gradient(#fff 10%, #ffd700 30%, #ff69b4 60%, #00ffff 90%, #fff 100%); }
+    25% { background: conic-gradient(#ffd700 10%, #ff69b4 40%, #00ffff 70%, #fff 100%); }
+    50% { background: conic-gradient(#ff69b4 10%, #00ffff 40%, #fff 70%, #ffd700 100%); }
+    75% { background: conic-gradient(#00ffff 10%, #fff 40%, #ffd700 70%, #ff69b4 100%); }
+    100% { background: conic-gradient(#fff 10%, #ffd700 30%, #ff69b4 60%, #00ffff 90%, #fff 100%); }
+}
+
+.diamond-shine {
+    animation: diamond 3s linear infinite;
+    background-size: 200% 200%;
+}
