@@ -187,7 +187,7 @@ continueBtn.onclick = () => {
         timerDisplay.style.zIndex = '1000';
         timerDisplay.style.fontSize = '18px';
         timerDisplay.style.fontWeight = 'bold';
-        timerDisplay.textContent = 'Free Mode (No time limit)';
+        timerDisplay.textContent = 'Free Mode';
         document.body.appendChild(timerDisplay);
     }
 }
