@@ -483,12 +483,14 @@ function updateProgressVisual(progress) {
     const mot = document.querySelector('.motivate');
     const genderMessages = {
         Female: [
+            { limit: 100, color: '#ffd700', message: 'انتي جايبة الدرجة النهائية يا ملكة الشطار! 👑🔥 فخر لينا كلنا 💖' },
             { limit: 85, color: '#80e02c', message: 'كملي يا شطورة مستواكي ممتاز اوي !💕' },
             { limit: 65, color: 'cyan', message: 'كويس جدا يا بشمهندسة كان فاضلِك تكة وتقفلي! ✨' },
             { limit: 45, color: 'yellow', message: 'ادائِك مقبول شوية بس اكيد فيه احسن 🥰' },
             { limit: 0, color: 'red', message: 'ركزي شوية! حاولي تاني واكيد المرة الجاية هتنجحي 🙈' }
         ],
         Male: [
+            { limit: 100, color: '#ffd700', message: 'جبت الدرجة النهائية يا نجم النجوم! 🌟🔥 انت فخر لكل الكتاكيت 💪' },
             { limit: 85, color: '#80e02c', message: 'اداء اسطوري! اشطر كتكوت مستقبلك مستنيك 💪' },
             { limit: 65, color: 'cyan', message: 'عمل رائع! كان فاضلك تكة وتبقي الافضل 🥳' },
             { limit: 45, color: 'yellow', message: 'اداء مقبل شوية! بس تحسينه هيكون خطوة رائعة 👌' },
@@ -497,12 +499,21 @@ function updateProgressVisual(progress) {
     };
 
     const messages = genderMessages[gender] || genderMessages.Male;
-    const { color, message } = messages.find(item => progress > item.limit) || messages[messages.length - 1];
+
+    let selected;
+    if (progress === 100) {
+        selected = messages.find(item => item.limit === 100);
+    } else {
+        selected = messages.find(item => progress > item.limit) || messages[messages.length - 1];
+    }
+
+    const { color, message } = selected;
 
     document.querySelector('.prog-bg').style.background = `conic-gradient(${color} ${progress}%, #414141 0%)`;
-    document.querySelector('.progress-bg').style.background=`conic-gradient(${color} ${progress}%, #414141 0%)`
+    document.querySelector('.progress-bg').style.background = `conic-gradient(${color} ${progress}%, #414141 0%)`;
     mot.innerHTML = message;
 }
+
 
 function submitToGoogleForm(Gname, Gscore, gender, statue, quizCode) {
     if (hasSubmitted) {
