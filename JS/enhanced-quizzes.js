@@ -499,25 +499,26 @@ function updateProgressVisual(progress) {
     };
 
     const messages = genderMessages[gender] || genderMessages.Male;
-
     let selected;
+
+    const progBg = document.querySelector('.prog-bg');
+    const progressBg = document.querySelector('.progress-bg');
+
     if (progress === 100) {
         selected = messages.find(item => item.limit === 100);
-        document.querySelector('.prog-bg').classList.add('diamond-shine');
-        document.querySelector('.progress-bg').classList.add('diamond-shine');
+        progBg.classList.add('diamond-shine');
+        progressBg.classList.add('diamond-shine');
     } else {
         selected = messages.find(item => progress > item.limit) || messages[messages.length - 1];
-        document.querySelector('.prog-bg').classList.remove('diamond-shine');
-        document.querySelector('.progress-bg').classList.remove('diamond-shine');
+        progBg.classList.remove('diamond-shine');
+        progressBg.classList.remove('diamond-shine');
+        progBg.style.background = `conic-gradient(${selected.color} ${progress}%, #414141 0%)`;
+        progressBg.style.background = `conic-gradient(${selected.color} ${progress}%, #414141 0%)`;
     }
 
-
-    const { color, message } = selected;
-
-    document.querySelector('.prog-bg').style.background = `conic-gradient(${color} ${progress}%, #414141 0%)`;
-    document.querySelector('.progress-bg').style.background = `conic-gradient(${color} ${progress}%, #414141 0%)`;
-    mot.innerHTML = message;
+    mot.innerHTML = selected.message;
 }
+
 
 
 function submitToGoogleForm(Gname, Gscore, gender, statue, quizCode) {
