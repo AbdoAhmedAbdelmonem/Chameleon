@@ -352,9 +352,9 @@ let question = [
         type: "Multiple Choices",
         question: "Which compliance standard is mentioned for cloud storage security?",
         options: [
-            "PCI DSS",
+            "HIPAA",
             "GDPR",
-            "ISO 9001",
+            "SOC2",
             "All of the above"
         ],
         answer: "All of the above"
