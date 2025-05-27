@@ -503,9 +503,14 @@ function updateProgressVisual(progress) {
     let selected;
     if (progress === 100) {
         selected = messages.find(item => item.limit === 100);
+        document.querySelector('.prog-bg').classList.add('diamond-shine');
+        document.querySelector('.progress-bg').classList.add('diamond-shine');
     } else {
         selected = messages.find(item => progress > item.limit) || messages[messages.length - 1];
+        document.querySelector('.prog-bg').classList.remove('diamond-shine');
+        document.querySelector('.progress-bg').classList.remove('diamond-shine');
     }
+
 
     const { color, message } = selected;
 
