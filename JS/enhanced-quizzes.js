@@ -430,7 +430,7 @@ function questionCounter(index) {
 
 function headerScore() {
     const headerScoreText = document.querySelector('.header-score ');
-    headerScoreText.textContent = `You answered correctly ${userScore} / ${question.length}`;
+    headerScoreText.textContent = `correct ${userScore} / ${question.length} !`;
 }
 
 function showResultBox() {
