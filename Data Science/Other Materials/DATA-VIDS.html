@@ -44,6 +44,8 @@
         <button class="info-ok-btn">OK</button>
     </div>
 </div>
+<script src="../../JS/config.js"></script>
+
 <script>
     const main = document.querySelector('.main');
     const about = document.querySelector('.popo');
@@ -65,7 +67,6 @@
         main.classList.remove('active');
     };
     const playlistId = "PLNVsyemi1cQyXLWT3vm4GbWzVxAK_4nbR";
-    const apiKey = "AIzaSyCBwCuVsuYAPoT4lkCoqBMiL3CwT439KnQ";
 
     async function fetchPlaylistTitle(playlistId) {
         const response = await fetch(
