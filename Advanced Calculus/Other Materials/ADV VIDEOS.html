@@ -44,6 +44,7 @@
         <button class="info-ok-btn">OK</button>
     </div>
 </div>
+    <script src="../../JS/config.js"></script>
 <script>
     const main = document.querySelector('.main');
     const about = document.querySelector('.popo');
@@ -66,7 +67,6 @@
     };
 
     const playlistId = "";
-    const apiKey = "AIzaSyCBwCuVsuYAPoT4lkCoqBMiL3CwT439KnQ";
 
     async function fetchPlaylistTitle(playlistId) {
         const response = await fetch(
