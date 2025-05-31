@@ -29,7 +29,7 @@ let question = [
         question: "What is an alternative name for Data Mining mentioned in the lecture?",
         options: [
             "Data Warehousing",
-            "Knowledge Discovery in Databases (KDD)",
+            "Knowledge Discovery in Databases",
             "Data Collection",
             "Information Processing"
         ],
