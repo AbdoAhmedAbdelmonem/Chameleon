@@ -33,7 +33,7 @@ let question = [
             "Data Collection",
             "Information Processing"
         ],
-        answer: "Knowledge Discovery in Databases (KDD)"
+        answer: "Knowledge Discovery in Databases"
     },
     {
         numb: 4,
@@ -42,10 +42,10 @@ let question = [
         options: [
             "Data cleaning",
             "Data integration",
-            "Pattern evaluation",
+            "Pattern Generation",
             "Data selection"
         ],
-        answer: "Pattern evaluation"
+        answer: "Pattern Generation"
     },
     {
         numb: 5,
