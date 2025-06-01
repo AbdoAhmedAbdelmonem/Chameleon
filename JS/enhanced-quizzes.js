@@ -4,7 +4,7 @@ let quizCode = quizText.split("#")[1].trim();
 console.log(quizCode);
 
 // Timer and submission tracking variables
-let quizDuration = 20 * 60 * 1000; // 30 minutes in milliseconds
+let quizDuration = 20 * 60 * 1000; // 20 minutes in milliseconds
 let quizTimer;
 let timeExpired = false;
 let hasSubmitted = false; // Track if form has been submitted
