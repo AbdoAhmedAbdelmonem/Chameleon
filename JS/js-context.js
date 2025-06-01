@@ -349,7 +349,7 @@ function showImagePopup(index, button) {
     const popup = document.createElement('div');
     popup.id = 'image-popup';
     popup.style.position = 'relative';
-    popup.style.background = '#fff';
+    popup.style.background = 'rgba(255,255,255,0)';
     popup.style.padding = '20px';
     popup.style.borderRadius = '10px';
     popup.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
