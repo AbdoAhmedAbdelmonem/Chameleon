@@ -1,4 +1,4 @@
-let questions = [
+let question = [
     {
         numb: 1,
         question: "What is the main difference between hierarchical and partitional clustering algorithms?",
