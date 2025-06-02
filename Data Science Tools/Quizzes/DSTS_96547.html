@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../MDA/Lulyma_banner_blue.png" type="image/x-icon">
+    <title>Quiz</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/css-context.css">
+    <link rel="stylesheet" href="roots.css">
+</head>
+<body>
+<video autoplay muted loop id="background-video">
+    <source src="../../MDA/Last%20Background%201.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+<main class="main">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../../MDA/Lulyma__blue.png" alt="" CLASS="img">
+        </a>
+        <nav class="navbar">
+            <a href="../DSTS.html" class="active">Home</a>
+            <a href="#" class="popo">About</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="quiz-section">
+            <video class="video-background" autoplay muted loop>
+                <source src="../../MDA/Last%20Background%201.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="quiz-box">
+                <div class="quiz-header">
+                    <img src="../../MDA/Lulyma__blue.png" alt="" CLASS="img">
+                    <span class="header-score"> score: 0 / 5</span>
+                </div>
+                <div class="Q-img">
+                </div>
+                <div class="question-text"></div>
+                <div class="option-list"></div>
+                <div class="question-tag"></div><div class="user"></div>
+
+                <div class="quiz-footer">
+                    <span class="question-total">1 of 5 Questions</span>
+                    <button class="back-btn">Back</button>
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+            <div class="result-box">
+                <h2>Quiz Result</h2>
+                <div class="percentage-container">
+                    <div class="full-progress">
+                        <div class="content">
+                            <div class="text">
+                                <span class="progress-value">65</span>
+                                <span>PERCENT</span>
+                            </div>
+                            <div class="progresses">
+                                <div class="main-prog">
+                                    <div class="prog-bg"></div>
+                                    <div class="separ"></div>
+                                    <div class="separ"></div>
+                                    <div class="separ"></div>
+                                    <div class="separ"></div>
+                                    <div class="separ"></div>
+                                </div>
+                                <div class="base-circle"></div>
+                                <div class="second-circle"></div>
+                                <div class="third-circle"></div>
+                                <div class="last-progress">
+                                    <div class="progress-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="score-text">Your score 0 out of 5</span>
+                    <span class="motivate"></span>
+                </div>
+                <div class="buttons">
+                    <button class="gohome-btn">
+                        <span>Go Home</span>
+                        <span class="liquid"></span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+        <section class="home">
+            <div class="home-content">
+                <img src="../../MDA/Lulyma_banner_blue.png" alt="">
+                    <div style="text-align: center; margin-bottom: 20px">
+                        <h2 style="font-weight: bold; margin-bottom: 10px">Welcome to Data Science Tools Quiz</h2>
+                        Explore the powerful tools that drive data-driven innovation across every industry.
+                        <br>
+                        From Jupyter to TensorFlow, each tool expands your ability to analyze, visualize, and model data.
+                        <br>
+                        Trust your toolkit. Mastering these tools is the first step toward becoming a proficient data scientist.
+                    </div>
+                <button CLASS="start-btn">Start Quiz</button>
+                </div>
+        </section>
+    </div>
+</main>
+<div class="popup-info">
+    <h2>Quiz Guide</h2>
+    <span class="info">1- Handout 7 (Feature Selection and Reduction)</span><br>
+    <span class="info">2- 30 Multiple Choice Questions (MCQ)</span><br>
+    <span class="info">3- Ranged From Easy To Hard</span><br>
+    <span class="info">4- A Timer is set for only 20:00 Minuets and Free Mode Available </span><br>
+    <span class="info">5- Created by Levi Ackerman in 1/6/2025 at 11:29 PM</span>
+    <div class="mode-selection">
+      <h3>Choose Quiz Mode:</h3>
+      <div class="radio-inline">
+        <input type="radio" id="timer-mode" name="quiz-mode" value="timer" checked>
+        <label for="timer-mode" class="animated-radio">Timer 20 mins</label>
+
+        <input type="radio" id="free-mode" name="quiz-mode" value="free">
+        <label for="free-mode" class="animated-radio" style="border: none">Free Mode</label>
+      </div>
+    </div>
+    <div class="validname">
+        <div class="mydict">
+            <div>
+                <label>
+                    <input type="radio" name="radio">
+                    <span>Female</span>
+                </label>
+                <label>
+                    <input type="radio" name="radio">
+                    <span>Male</span>
+                </label>
+            </div>
+        </div>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name For Better Experience" required>
+        <button type="button" onclick="saveName()" class="info-btn">Save Name</button>
+    </div>
+
+    <div class="btn-group">
+        <button class="info-btn exit-btn">Exit</button>
+        <a href="#" class="info-btn continue-btn disabled" id="continue-btn" onclick="continueQuiz()">Continue</a>
+    </div>
+</div>
+
+
+<div class="popup2">
+    <h2>Quiz Information</h2>
+    <div class="gran2">
+        <span class="gran"> Quiz Code : #DSTS_96547</span>
+        <br>
+        <span class="gran">You Can Directly Access to The Main Lecture <a href="https://drive.google.com/file/d/1NQgi4hLCPX0IUBjrlLJxnSlbydpOlZqQ/view?usp=drive_link" target="_blank">From Here</a></span>
+    </div>
+    <div class="btn">
+        <button class="info-ok-btn">OK</button>
+    </div>
+</div>
+<script src="DSTS_96547.js"></script>
+<script src="../../JS/enhanced-quizzes.js"></script>
+</body>
+</html>
