@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 html {
     height:100%;
 }
@@ -80,7 +82,7 @@ h1 {
     background:white;
     background-clip: text;
     color: transparent;
-    font-family: Segoe UI Semibold, sans-serif;
+    font-family:Rubik, sans-serif;
     font-size: 50px;
 }
 
