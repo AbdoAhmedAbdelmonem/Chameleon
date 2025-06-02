@@ -1,4 +1,4 @@
-let questions = [
+let question = [
     {
         numb: 1,
         question: "What is the primary task in the text document classification case study?",
