@@ -392,7 +392,7 @@ let question = [
             "4"
         ],
         image: "Q-imgs/IntelliJ_Plugin-main_cpp (6).png",
-        answer: "4"
+        answer: "2"
     },
     {
         numb: 34,
@@ -418,7 +418,7 @@ let question = [
             "4"
         ],
         image: "Q-imgs/IntelliJ_Plugin-main_cpp (6).png",
-        answer: "2"
+        answer: "3"
     },
     {
         numb: 36,
