@@ -1,4 +1,4 @@
-let questions = [
+let question = [
     {
         numb: 1,
         question: "What is the primary goal of dimensionality reduction?",
