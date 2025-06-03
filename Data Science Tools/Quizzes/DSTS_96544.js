@@ -177,7 +177,7 @@ let question = [
     },
     {
         numb: 17,
-        question: "Which of the following companies is NOT mentioned as using NoSQL databases?",
+        question: "Which of the following companies is using NoSQL databases?",
         options: [
             "Google",
             "Amazon",
