@@ -384,7 +384,7 @@ let question = [
     {
         numb: 33,
         type: "Multiple Choice",
-        question: "how many records (rows) will be in the dataframe df,  after executing the code'",
+        question: "how many records (rows) will be in the dataframe df, before executing the 3rd line",
         options: [
             "1",
             "3",
@@ -397,7 +397,7 @@ let question = [
     {
         numb: 34,
         type: "Multiple Choice",
-        question: "how many columns will be printed?",
+        question: "how many columns will be printed after excuting all the code?",
         options: [
             "6",
             "2",
@@ -410,7 +410,7 @@ let question = [
     {
         numb: 35,
         type: "Multiple Choice",
-        question: "how many rows will be printed",
+        question: "how many rows will be printed after excuting all the code?",
         options: [
             "6",
             "2",
