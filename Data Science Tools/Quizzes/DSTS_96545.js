@@ -221,14 +221,14 @@ let question = [
     },
     {
         numb: 21,
-        question: "In the Python example, what does the Outcome column value '1' represent?",
+        question: "is a metric for evaluating clustering algorithms, is an internal evaluation scheme, where the validation of how well the clustering has been done is made using quantities and features inherent to the dataset",
         options: [
-            "Non-diabetic patients",
-            "Diabetic patients",
-            "Missing data",
-            "Invalid entry"
+            "DBI",
+            "MBC",
+            "CPR",
+            "DML"
         ],
-        answer: "Diabetic patients"
+        answer: "DBI"
     },
     {
         numb: 22,
