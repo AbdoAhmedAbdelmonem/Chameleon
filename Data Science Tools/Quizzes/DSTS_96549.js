@@ -571,7 +571,8 @@ let question = [
             "3",
             "4",
             "0.25"
-        ],
+        ],        image:"Q-imgs/46.jpg",
+
         answer: "0.25"
     },
     {
@@ -582,9 +583,10 @@ let question = [
             "3",
             "1",
             "1/3",
-            "0"
-        ],
-        answer: "1"
+            "Not Here"
+        ],        image:"Q-imgs/46.jpg",
+
+        answer: "Not Here"
     },
     {
         numb: 49,
@@ -595,7 +597,8 @@ let question = [
             "1",
             "3",
             "5"
-        ],
+        ],        image:"Q-imgs/46.jpg",
+
         answer: "0"
     },
     {
@@ -607,7 +610,8 @@ let question = [
             "4 × 4",
             "5×5",
             "3×3"
-        ],
+        ],        image:"Q-imgs/46.jpg",
+
         answer: "3×3"
     },
     {
@@ -619,7 +623,8 @@ let question = [
             "[1 0 0 0 1]",
             "[1 0 1 1]",
             "[2 1 1]"
-        ],
+        ],        image:"Q-imgs/46.jpg",
+
         answer: "[1 1 1 0 0]"
     },
     {
