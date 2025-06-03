@@ -85,7 +85,7 @@ let question = [
             "X_s = (X - Min)/(Max - Min)",
             "X_s = X^2"
         ],
-        answer: "X_s = (X - Min)/(Max - Min)"
+        answer: "X_s = (X - Mean)/StdDev"
     },
     {
         numb: 9,
