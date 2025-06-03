@@ -460,12 +460,12 @@ let question = [
             "D(10:30,5:20)",
             "D(10101,01111)"
         ],
-        answer: "D('Hello','HALA')"
+        answer: "D(10:30,5:20)"
     },
     {
         numb: 39,
         type: "Multiple Choice",
-        question: "Which of the following is an example of Application of Dimensionality Reduction?",
+        question: "Which of the following is NOT an example of Application of Dimensionality Reduction?",
         options: [
             "Microarray data analysis",
             "Protein classification",
