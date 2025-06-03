@@ -130,13 +130,13 @@ let question = [
         type: "Multiple Choice",
         question: "The inverse document frequency idf('Yamen',D)",
         options: [
-            "3",
-            "1",
-            "1/3",
+            "0.369",
+            "0.662",
+            "0.477",
             "0"
         ],
         image:"Q-imgs/9 final.png",
-        answer: "1"
+        answer: "0.477"
     },
     {
         numb: 12,
@@ -157,7 +157,7 @@ let question = [
         question: "The resulting distance matrix will be of size",
         options: [
             "3×5",
-            "4 × 4",
+            "4×4",
             "5×5",
             "3×3"
         ],
