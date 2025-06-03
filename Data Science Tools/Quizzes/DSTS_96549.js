@@ -373,9 +373,9 @@ let question = [
             "SAS",
             "Weka",
             "RapidMiner",
-            "SAS and WEKA"
+            "Not any one"
         ],
-        answer: "SAS and WEKA"
+        answer: "Not any one"
     },
     {
         numb: 32,
