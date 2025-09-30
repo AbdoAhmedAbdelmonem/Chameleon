@@ -209,7 +209,7 @@
                 <div class="countdown-label">Seconds</div>
             </div>
         </div>
-        <div id="msg" class="message" style="font-size: 23px"></div>
+        <div id="msg" class="message" style="font-size: 23px">this site now is out-to-date, please go to <a href="chameleon-nu.tech">Chameleon 2.0</a> for more updated content</div>
     </div>
         <div class="team-members">
             <a href="https://drive.google.com/file/d/1cVLMWYipnxrAgyw1WFHQFwF1AtKVT_fD/view?usp=drive_link" target="_blank">
@@ -578,16 +578,10 @@
             document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
             document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
             document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-            // If the countdown is over, display a message
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").style.display = "none";
-                document.getElementById("msg").innerHTML = "معليش اخوي بننتقل حاليا لمنزلنا الجديد - قريبا هيتم الاعلان بشكل رسمي";
-            }
         }, 1000);
 </script>
 </body>
 </html>
+
 
 
