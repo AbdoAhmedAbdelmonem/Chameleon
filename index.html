@@ -190,25 +190,6 @@
                 <button><i class="fa-solid fa-arrow-right" id="right-arrow"></i></button>
             </div>
         </div>
-                    <div class="countdown-container">
-        <div class="countdown" id="countdown">
-            <div class="countdown-box">
-                <div class="countdown-value" id="days">00</div>
-                <div class="countdown-label">Days</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-value" id="hours">00</div>
-                <div class="countdown-label">Hours</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-value" id="minutes">00</div>
-                <div class="countdown-label">Minutes</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-value" id="seconds">00</div>
-                <div class="countdown-label">Seconds</div>
-            </div>
-        </div>
         <div id="msg" class="message" style="font-size: 23px">this site now is out-to-date, please go to <a href="chameleon-nu.tech">Chameleon 2.0</a> for more updated content</div>
     </div>
         <div class="team-members">
@@ -572,16 +553,11 @@
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
         }, 1000);
 </script>
 </body>
 </html>
+
 
 
 
