@@ -170,6 +170,7 @@ let question = [
             "D) 9"
         ],
         answer: "C) 6",
-        image: "../../../MDA/REC13.png",
+        image: "../../../MDA/REC15.png",
     }
+
 ];
